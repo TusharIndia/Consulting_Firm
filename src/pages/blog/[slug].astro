@@ -1,0 +1,33 @@
+---
+import { fetchBlogData } from '../../utils/dataMapping.ts';
+import BlogPostLayout from '../../components/layout/BlogPostLayout.astro';
+
+// Define getStaticPaths to pre-generate paths for each blog post
+export async function getStaticPaths() {
+  const posts = await fetchBlogData();
+  return posts.map((post) => ({
+    params: { slug: post.slug },  // Generate paths for each slug
+  }));
+}
+
+// Fetch the current blog post based on the slug
+const { slug } = Astro.params;
+const posts = await fetchBlogData();
+const post = posts.find((p) => p.slug === slug); // Find the post by slug
+
+if (!post) {
+  throw new Error(`Post not found for slug: ${slug}`);
+}
+
+const { Content } = await post.render(); // This will render the markdown content
+---
+
+<BlogPostLayout
+  title={post.data.title}
+  description={post.data.description}
+  date={post.data.date}
+  author={post.data.author}
+  readingTime={post.data.readingTime}
+>
+    <Content />
+</BlogPostLayout>

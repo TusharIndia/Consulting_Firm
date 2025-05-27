@@ -1,0 +1,23 @@
+---
+// Import Button component
+import Button from "../Button.astro";
+
+const HeroData = Astro.props.Content || { heading: "Default Heading", text: "Default text." };
+const GeneralData = Astro.props.GeneralData || { phoneNumber: "Default Phone Number" };
+---
+
+
+<section class="hero px-4 relative hero-section">
+    <img src="/imgs/about-img-2.jpg" alt="" class="absolute inset-0 h-full w-full object-cover object-center z-[-1]" / >
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between relative z-10 ">
+        <!-- Left Content -->
+        <div class="hero__content mb-8 md:mb-0 text-white md:w-1/2">
+            <h1 class="hero__title mb-4 !leading-tight ">{HeroData.heading}</h1>
+            <p class="hero__text text-lg mb-6 ">{HeroData.text}</p>
+            <div class="hero__actions flex items-center gap-4">
+                <Button buttonText="VERIFY INSURANCE →" buttonLink="#" buttonClass="primary-button" />
+                <span class="hero__phone-number text-lg font-semibold">{GeneralData.phoneNumber}</span>
+            </div>
+        </div>
+    </div>
+</section>

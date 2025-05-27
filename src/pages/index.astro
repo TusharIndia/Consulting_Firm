@@ -1,0 +1,32 @@
+---
+import { fetchGeneralData, fetchHomeData } from '../utils/dataMapping.ts';
+
+import MainLayout from "../layouts/MainLayout.astro"
+
+import Hero from '../components/sections/HeroHome.astro';
+import About from "../components/sections/About.astro";
+import ProgramCards from "../components/sections/ProgramCards.astro";
+import Testimonials from "../components/sections/Testimonials.astro";
+import TestimonialsOffered from "../components/sections/TestimonialsOffered.astro";
+import IconCards from "../components/sections/IconCards.astro";
+import DisorderGrid from "../components/sections/DisorderGrid.astro";
+import InsuranceOptions from "../components/sections/InsuranceOptions.astro";
+import BlogSection from "../components/sections/BlogSection.astro";
+import CTA from "../components/CTA.astro";
+import PatientJourney from '../components/sections/PatientJourney.astro';
+
+const GeneralData = await fetchGeneralData();
+const { data: HomeData } = await fetchHomeData();
+---
+
+<MainLayout title="Home" description="Alcohol and Drug Rehab in Boca Raton, Florida">
+	<Hero Content={HomeData.hero} GeneralData={GeneralData}/>
+	<About Content={HomeData.about}/>
+	<ProgramCards Content={HomeData.programs}/>
+	<InsuranceOptions Content={HomeData.insuranceOptions} />
+	<Testimonials Content={HomeData.testimonials} />
+	<TestimonialsOffered Content={HomeData.therapies}/>
+	<PatientJourney Content={HomeData.patientJourney}/>
+	<DisorderGrid  Content={HomeData.disorders} />
+	<CTA Content={HomeData.cta}/>
+</MainLayout>

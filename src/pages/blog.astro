@@ -1,0 +1,14 @@
+---
+import { fetchGeneralData } from '../utils/dataMapping.ts';
+import MainLayout from "../layouts/MainLayout.astro"
+import Hero from '../components/layout/Hero.astro';
+import BlogSection from '../components/sections/BlogSection.astro';
+
+const GeneralData = await fetchGeneralData();
+const Data = { heading: "Blog", text: "Providing personalized care for substance use and mental health to help individuals achieve lasting recovery."}
+---
+
+<MainLayout title="About" description="Alcohol and Drug Rehab in Boca Raton, Florida">
+	<Hero Content={Data} GeneralData={GeneralData}/>
+    <BlogSection />
+</MainLayout>

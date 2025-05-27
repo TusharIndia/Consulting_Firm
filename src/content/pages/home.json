@@ -1,0 +1,326 @@
+{
+  "hero": {
+    "backgroundImage": "/imgs/hero_home_bg.png",
+    "backgroundImageAlt": "Background image of mental health treatment facility",
+    "logo": "/imgs/hero_logo.png",
+    "buttonText": "Call (123) 456-7890",
+    "textBox1": "Interventional Psychiatry",
+    "textBox2_Part_1": "Highly",
+    "textBox2_Part_2": "effective evidence",
+    "textBox2_Part_3": "-based mental health treatment",
+    "textBox3": "Clear Path's treatments address the root cause of anxiety, depression, ADHD, and PTSD symptoms.",
+    "buttonOne": "Get Started",
+    "buttonTwo": "Have a question?",
+    "telephoneNumber": "1234567890",
+    "heroLinks": [
+      {
+        "text": "Treatments",
+        "link": "#",
+        "sublinks": [
+          {
+            "text": "Medication Management",
+            "link": "/medication-management"
+          },
+          {
+            "text": "Transcranial Magnetic Stimulation (TMS)",
+            "link": "/tms"
+          },
+          {
+            "text": "Spravato® (Esketamine) ",
+            "link": "/spravato"
+          },
+          {
+            "text": "Psychotherapy",
+            "link": "/psychotherapy"
+          }
+        ],
+        "sublinks2": [
+          {
+            "text": "Depression",
+            "link": "/depression"
+          },
+          {
+            "text": "Anxiety",
+            "link": "/anxiety"
+          },
+          {
+            "text": "ADHD",
+            "link": "/adhd"
+          },
+          {
+            "text": "PTSD",
+            "link": "/ptsd"
+          },
+          {
+            "text": "BiPolar",
+            "link": "/bipolar"
+          },
+          {
+            "text": "Stress",
+            "link": "/stress"
+          },
+          {
+            "text": "OCD",
+            "link": "/ocd"
+          },
+          {
+            "text": "Addiction",
+            "link": "/addiction"
+          },
+          {
+            "text": "and more",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "text": "Locations",
+        "link": "/locations",
+        "sublinks": [],
+        "sublinks2": []
+      },
+      {
+        "text": "Pricing",
+        "link": "/pricing",
+        "sublinks": [],
+        "sublinks2": []
+      },
+      {
+        "text": "Resources",
+        "link": "/resources",
+        "sublinks": [],
+        "sublinks2": []
+      },
+      {
+        "text": "Get Started",
+        "link": "/get-started",
+        "sublinks": [],
+        "sublinks2": []
+      }
+    ]
+  },
+  "about": {
+    "headingOne_Part_1": "Clear",
+    "headingOne_Part_2": "Path Behavioral",
+    "headingTwo": "Health Provider", 
+    "textOne": "specializing in medication management and mental health intervention services. With a focus on offering in-person care, Clear Path differentiates itself from telehealth-only providers by ensuring patients receive direct, face-to-face treatment from experienced psychiatrists and psychiatric physician assistants (PAs).",
+    "buttonOne": "Get Started",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "Call (123) 456-7890",
+    "buttonTwo_Number": "1234567890"
+  },
+  "testimonials": {
+    "list": [
+    {
+      "name": "Veronica L.",
+      "position": "Client from United States",
+      "text": "Clearpath gave me the strength to overcome my anxiety. The compassionate therapists provided unwavering support, and I've found a renewed sense of purpose andtranquility in my life.",
+      "image": "/imgs/testimonial_1.png"
+    },
+    {
+      "name": "Pushpender Singh",
+      "position": "Client from Florida",
+      "text": "Clearpath helped me regain control of my life. The personalized treatment plan and the caring staff made all the difference. I am now on a path to recovery and happiness.",
+      "image": "/imgs/testimonial_1.png"
+    }
+  ]},
+  "therapies": {
+    "image": "/imgs/testimonial_offered.png",
+    "heading": "Treatments Offered",
+    "headingTwo_Part_1": "At launch,",
+    "headingTwo_Part_2": "Clear Path will offer the",
+    "headingTwo_Part_3": "following core treatments",
+    "buttonText": "Get Started",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "Call (123) 456-7890",
+    "list": [
+      {
+        "title": "Medication Management",
+        "description": "Ongoing evaluation and adjustment of psychiatric medications to manage mental health conditions.",
+        "image": "/imgs/medication_management.svg"
+      },
+      {
+        "title": "Transcranial Magnetic Stimulation (TMS)",
+        "description": "A non-invasive procedure used to treat depression by stimulating nerve cells in the brain.",
+        "image": "/imgs/tms_icon.svg"
+      },
+      {
+        "title": "Spravato (Esketamine) Infusions",
+        "description": "A cutting-edge treatment for treatment-resistant depression, administered under medical supervision.",
+        "image": "/imgs/spravato_icon.svg"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Start Your Journey To Recovery Today",
+    "text": "Are you or a loved one struggling with addiction? Discover Health Group is here to help you take the first step towards a healthier, happier life. Our compassionate team is ready to support you through every stage of your recovery journey. Contact us today to learn more about our programs, schedule a visit, or start the admissions process. Your path to recovery begins here.",
+    "buttonText": "Call Us Now!"
+  },
+  "programs": {
+    "heading": "Conditions Treated",
+    "text": "Clear Path focuses on addressing a wide range of mental health conditions through psychiatric care and medication management. The primary target conditions include:",
+    "programs": [
+      {
+        "title": "Depression",
+        "image": "/imgs/depression_icon.svg"
+      },
+      {
+        "title": "Anxiety",
+        "image": "/imgs/anxiety_icon.svg"
+      },
+      {
+        "title": "ADHD",
+        "image": "/imgs/adhd_icon.svg"
+      },
+      {
+        "title": "PTSD",
+        "image": "/imgs/ptsd_icon.svg"
+      },
+      {
+        "title": "Bipolar Disorder",
+        "image": "/imgs/bipolar_icon.svg"
+      },
+      {
+        "title": "OCD",
+        "image": "/imgs/ocd_icon.svg"
+      },
+      {
+        "title": "OCD",
+        "image": "/imgs/ocd_icon2.svg"
+      },
+      {
+        "title": "Addiction",
+        "image": "/imgs/addiction_icon.svg"
+      },
+      {
+        "title": "More",
+        "image": ""
+      }
+    ]
+  },
+  "services": {
+    "heading": "Services",
+    "description": "Brand North offers a variety of additional services to support your recovery journey:",
+    "services": [
+      {
+        "iconName": "features/icon-medication-treatment",
+        "title": "Medication-Assisted Treatment (MAT)",
+        "description": "Plans to implement mental health outpatient care and psychiatric services, including medications such as Suboxone, Methadone, Vivitrol, and Subutex."
+      },
+      {
+        "iconName": "programs/icon-sober-homes",
+        "title": "Sober Living Placement",
+        "description": "Strong partnership with Sober Living ensures access to supportive, substance-free housing environments."
+      },
+      {
+        "iconName": "features/icon-transport",
+        "title": "Transportation Coordination",
+        "description": "Assistance in arranging transportation services to ensure clients can attend their sessions."
+      },
+      {
+        "iconName": "features/icon-dining",
+        "title": "Nutritional Counseling",
+        "description": "A nutritionist provides guidance on healthy eating habits and diet plans, with snacks and lunch available for full day treatment clients."
+      },
+      {
+        "iconName": "features/icon-evidence-2",
+        "title": "Case Management",
+        "description": "Assistance with resume building, job search, court paperwork, and accessing community resources to help clients develop life skills and achieve long-term stability."
+      }
+    ]
+  },
+  "patientJourney": {
+    "heading": "Patient Journey and Process",
+    "headingTwo_Part_1": "Patient Journey",
+    "headingTwo_Part_2": "and Process",
+    "image": "/imgs/patient_journey.png",
+    "imageAlt": "Patient showing signs of distress while sitting with laptop",
+    "steps": [
+      {
+        "title": "Booking and Initial Assessment",
+        "description": "Patients can book appointments directly through the website using Zocdoc integration. New patients will undergo an initial assessment to establish care and begin treatment."
+      },
+      {
+        "title": "Treatment Path",
+        "description": "Following the initial assessment, patients will receive ongoing medication management and, when necessary, be introduced to additional services like TMS or Spravato."
+      },
+      {
+        "title": "Follow-up Appointments",
+        "description": "Patients will typically attend monthly in-person follow-up appointments to ensure progress and make medication adjustments as needed."
+      }
+    ]
+  },
+  "disorders": {
+    "heading": "OUR INSIGHTS",
+    "headingTwo_Part_1": "Expert guidance for your ",
+    "headingTwo_Part_2": "mental health ",
+    "headingTwo_Part_3": "journey",
+    "disorders": [
+      {
+        "link": "/depression",
+        "title": "Effective Strategies for Managing Depression",
+        "image": "/imgs/Depression_Article.png"
+      },
+      {
+        "link": "/anxiety",
+        "title": "Effective Strategies for Managing Anxiety",
+        "image": "/imgs/Anxiety_Article.png"
+      },
+      {
+        "link": "/adhd",
+        "title": "Effective Strategies for Managing ADHD",
+        "image": "/imgs/ADHD_Article.png"
+      },
+      {
+        "link": "/ptsd",
+        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
+        "image": "/imgs/PTSD_Article.png"
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "faq": [
+      {
+        "title": "What is Medication-Assisted Treatment?",
+        "details": "Medication-Assisted Treatment (MAT) involves using medication, along with counseling and behavioral therapies, to treat substance use disorders."
+      },
+      {
+        "title": "How does Sober Living Placement work?",
+        "details": "Sober Living Placement helps individuals find safe and supportive housing environments where they can continue their recovery journey."
+      },
+      {
+        "title": "What services are included in Case Management?",
+        "details": "Case Management includes resume building, job search assistance, accessing community resources, and more."
+      }
+    ]
+  },
+  "insuranceOptions": {
+    "headingOne": "Insurance",
+    "headingTwo": "Partners",
+    "description": "We work with multiple insurance providers and healthcare networks to ensure accessible mental health care for our patients.",
+    "buttonText": "Check Your Insurance",
+    "insuranceOptions": [
+      {
+        "logo": "/imgs/blue_cross.png",
+        "alt": "Blue Cross Blue Shield"
+      },
+      {
+        "logo": "/imgs/aetna.png",
+        "alt": "Aetna"
+      },
+      {
+        "logo": "/imgs/anthem.png",
+        "alt": "Anthem"
+      },
+      {
+        "logo": "/imgs/tufts.png",
+        "alt": "Tufts Health Plan"
+      },
+      {
+        "logo": "/imgs/cigna.png",
+        "alt": "Cigna"
+      }
+    ]
+  }
+}

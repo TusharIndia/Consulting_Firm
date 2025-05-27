@@ -1,0 +1,131 @@
+---
+const { list } = Astro.props.Content;
+---
+<section
+  class="flex justify-center items-center px-5 py-10 w-full min-h-[630px] mx-auto my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl relative"
+  style="background: url('/imgs/testimonial_bg.png') no-repeat center/cover;"
+>
+  <article id="testimonial-slider" class="relative p-10 w-full rounded-3xl max-w-[1320px] max-md:p-8 max-sm:p-5">
+    {list.map((testimonial, index) => (
+      <div
+        class={`testimonial-item flex-col gap-6 items-center mx-auto my-0 text-center max-w-[917px] opacity-0 transition-opacity duration-500 ${index === 0 ? 'active opacity-100 flex' : 'hidden'}`}
+        data-index={index}
+      >
+        <span class="px-6 py-2 text-base leading-6 text-white bg-purple-900 rounded-full">
+          # Testimonials
+        </span>
+        <blockquote class="mx-0 my-5 text-4xl font-medium leading-[64px] text-neutral-800 max-md:text-3xl max-md:leading-10 max-sm:text-2xl max-sm:leading-9">
+          &quot;{testimonial.text}&quot;
+        </blockquote>
+        <figure class="flex gap-4 items-center max-sm:flex-col max-sm:text-center">
+          <div class="relative w-20 h-20">
+            <img
+              src={testimonial.image}
+              alt={`Photo of ${testimonial.name}`}
+              class="object-cover w-20 h-20 rounded-full"
+            />
+            <div class="absolute top-0 left-0 border-white border-solid border-4 rounded-full w-20 h-20"></div>
+          </div>
+          <figcaption class="flex flex-col gap-1.5">
+            <h3 class="text-2xl font-bold leading-8 text-neutral-800">
+              {testimonial.name}
+            </h3>
+            <p class="text-base leading-6 opacity-50 text-neutral-800">
+              {testimonial.location}
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    ))}
+
+    <div class="flex absolute inset-x-0 top-1/2 justify-between px-12 -translate-y-1/2 max-md:px-5 max-sm:px-2.5">
+      <button id="prev-btn" class="flex justify-center items-center p-0 w-14 h-14 bg-white rounded-full cursor-pointer border-none max-sm:w-10 max-sm:h-10" aria-label="Previous testimonial">
+        <svg
+          width="56"
+          height="56"
+          viewBox="0 0 56 56"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0)">
+            <path
+              d="M0.430752 27.9999C0.430752 12.7738 12.7739 0.430664 28 0.430664C43.226 0.430664 55.5692 12.7738 55.5692 27.9999C55.5692 43.226 43.226 55.5691 28 55.5691C12.7739 55.5691 0.430752 43.226 0.430752 27.9999Z"
+              fill="white"
+            />
+            <path
+              d="M17.3565 28.305L20.7071 31.6565L20.098 24.9545L17.3565 28.305ZM38.3384 28.4308H17.6615V27.5693H38.3384V28.4308Z"
+              fill="#222222"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <rect width="56" height="55.1385" transform="translate(0 0.430664)" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+      <button id="next-btn" class="flex justify-center items-center p-0 w-14 h-14 bg-white rounded-full cursor-pointer border-none max-sm:w-10 max-sm:h-10" aria-label="Next testimonial">
+        <svg
+          width="56"
+          height="56"
+          viewBox="0 0 56 56"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip1)">
+            <path
+              d="M55.5691 27.9999C55.5691 12.7738 43.226 0.430664 28 0.430664C12.7738 0.430664 0.430664 12.7738 0.430664 27.9999C0.430664 43.226 12.7738 55.5691 28 55.5691C43.226 55.5691 55.5691 43.226 55.5691 27.9999Z"
+              fill="white"
+            />
+            <path
+              d="M38.6435 28.305L35.2929 31.6565L35.9021 24.9545L38.6435 28.305ZM17.6616 28.4308H38.3385V27.5693H17.6616V28.4308Z"
+              fill="#222222"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip1">
+              <rect width="56" height="55.1385" transform="translate(0 0.430664)" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+    </div>
+  </article>
+
+  <script is:inline>
+    const items = document.querySelectorAll('.testimonial-item');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    let currentIndex = 0;
+    let autoSlideInterval;
+    const SLIDE_INTERVAL = 5000; // 5 seconds
+
+    function showTestimonial(newIndex) {
+      items[currentIndex].classList.remove('active', 'opacity-100', 'flex');
+      items[currentIndex].classList.add('opacity-0', 'hidden');
+
+      currentIndex = (newIndex + items.length) % items.length;
+
+      items[currentIndex].classList.add('active', 'opacity-100', 'flex');
+      items[currentIndex].classList.remove('opacity-0', 'hidden');
+
+      resetAutoSlide();
+    }
+
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => {
+        showTestimonial(currentIndex + 1);
+      }, SLIDE_INTERVAL);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
+
+    prevBtn.addEventListener('click', () => showTestimonial(currentIndex - 1));
+    nextBtn.addEventListener('click', () => showTestimonial(currentIndex + 1));
+
+    document.addEventListener('DOMContentLoaded', startAutoSlide);
+  </script>
+</section>

@@ -1,0 +1,53 @@
+---
+import { fetchGeneralData, fetchTreatmentarchive } from '../utils/dataMapping.ts';
+import Hero from "../components/layout/Hero.astro";
+import AboutSection from "../components/sections/About.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import CTA from '../components/CTA.astro';
+import FAQ from '../components/sections/FAQ.astro';
+import ProgramCards from '../components/sections/ProgramCards.astro';
+import DisorderGrid from '../components/sections/DisorderGrid.astro';
+
+const GeneralData = await fetchGeneralData();
+const { data: treatmentAr } = await fetchTreatmentarchive();
+---
+
+<MainLayout title="Program Archive">
+    <Hero Content={treatmentAr.hero} GeneralData={GeneralData}/>
+    <AboutSection Content={treatmentAr.about} />
+
+    <!-- What We Offer -->
+    <DisorderGrid  Content={treatmentAr.disorders} />
+
+ 
+  
+
+
+    <ProgramCards Content={treatmentAr.programs} />
+    <CTA Content={treatmentAr.cta} />
+
+  <!-- Treatment
+
+  <section class="section">
+    <div class="container text-black">
+        <div class="w-full max-w-[900px] mx-auto text-center mb-10">
+        <h2>What Drug Addiction <br>Treatments We Offer?</h2>
+        <p>At Placeholder Company, we provide a comprehensive range of drug addiction treatments designed to address both the physical and psychological aspects of addiction. Our dedicated team utilizes evidence-based approaches to ensure effective and lasting recovery. We offer specialized detox services, followed by tailored rehabilitation plans that include therapy, counseling, and support groups.</p></div>
+        <ul class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full bg-white rounded-2xl gap-5">
+           <IconCard text="Alcohol Detox" icon="icon-acohol" class="bg-[#e6fff7] rounded-lg" />
+           <IconCard text="Benzodiazepine Detox" icon="icon-pills-3" class="bg-[#e6fff7] rounded-lg" />
+           <IconCard text="Cocaine Detox" icon="icon-cocaine" class="bg-[#e6fff7] rounded-lg" />
+           <IconCard text="Meth Detox" icon="icon-meth" class="bg-[#e6fff7] rounded-lg" />
+           <IconCard text="Heroin Detox" icon="icon-cocaine" class="bg-[#e6fff7] rounded-lg" />
+           <IconCard text="Fentanyl Detox" icon="icon-pills-2" class="bg-[#e6fff7] rounded-lg" />
+           <IconCard text="Alcohol Detox" icon="icon-acohol" class="bg-[#e6fff7] rounded-lg" />
+           <IconCard text="Benzodiazepine Detox" icon="icon-pills-3" class="bg-[#e6fff7] rounded-lg" />
+           <IconCard text="Cocaine Detox" icon="icon-cocaine" class="bg-[#e6fff7] rounded-lg" />
+        </ul>
+    </div>
+</section> -->
+
+    <FAQ Content={treatmentAr.faq} />
+    <CTA Content={treatmentAr.footerCta} />
+
+</MainLayout> 

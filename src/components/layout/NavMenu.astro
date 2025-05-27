@@ -1,0 +1,245 @@
+---
+import { Icon } from "astro-icon/components";
+
+import Button from "../Button.astro";
+
+// Define your menu items
+const menuItems = [
+  
+];
+
+const otherMenuItems = [
+    { name: "Privacy Policy", link: "/privacy" },
+    { name: "Term & Condition", link: "/terms" },
+];
+
+// Define your dropdown menus
+const dropdownMenus = [
+
+    {
+        title: "What We Treat",
+        titleLink: "/programarchive",
+        items: [
+            { name: "Residential Detox", link: "/program" },
+            // Add more items as needed
+        ],
+    },
+    {
+        title: "How We Treat",
+        titleLink: "/treatmentarchive",
+        items: [
+            // Add more items as needed
+        ],
+    },
+    {
+        title: "About",
+        titleLink: "/about",
+        items: [
+            { name: "Team", link: "/team" },
+            { name: "Admissions", link: "/admissions" },
+            // Add more items as needed
+        ],
+    },
+    // Add more dropdowns here as needed
+];
+---
+
+<nav class="flex space-x-6 items-center md:pr-5">
+    <button id="burger-menu-button" class="md:hidden">
+        <!-- <Icon name="hamburger" " /> -->
+        <Icon name="hamburger" class="text-3xl" />
+    </button>
+    <ul class="hidden md:flex flex-row gap-4 items-center" id="desktop-nav">
+        {
+            dropdownMenus.map((dropdown) => (
+                <li>
+                    <div class="relative group">
+                        <button
+                            class="flex text-xl items-center text-gray-700  hover:text-primary-100 hover:underline focus:outline-none font-normal py-2 menu-link"
+                            data-dropdown-toggle
+                        >
+                            <a href={dropdown.titleLink}>
+                            <span>{dropdown.title}</span>
+                        </a>
+                            <Icon
+                                name="chevron-down"
+                                class="ml-1 text-base-900 w-5 h-5 menu-icon  transition-all"
+                            />
+                        </button>
+                        <div class="absolute left-0 hidden group-hover:block bg-white shadow-lg border border-gray-100 rounded-md w-max   rounded-b-xl overflow-hidden">
+                            <ul class="text-sm text-gray-700 bg-primary-100 rounded-b-xl ">
+                                {dropdown.items.map((item) => (
+                                    <li>
+                                        <a
+                                            href={item.link}
+                                            class="dropdown__link text-lg text-white hover:text-black flex px-4 py-2 hover:bg-accent-500"
+                                        >
+                                            {item.name}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            ))
+        }
+        {
+            menuItems.map((item) => (
+                <li>
+                    <a
+                        href={item.link}
+                        class="text-gray-700 hover:text-primary-100 font-normal hover:underline text-xl"
+                    >
+                        {item.name}
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</nav>
+
+
+<!-- Mobile Menu -->
+
+<div
+    id="dropdown"
+    class="flex flex-col fixed top-0 right-0 bg-white text-black w-full z-50 h-full translate-x-full transition-all duration-300 ease-in-out md:hidden"
+>
+    <div class="mb-4 px-6 pt-6 flex items-center justify-between">
+        <a href="/">
+            <img
+                src="/branding/brand-north-logo-dark.svg"
+                alt="Company Logo"
+                class="h-12"
+            />
+        </a>
+        <button
+            class="rounded-full grid place-content-center ml-auto"
+            id="close-dropdown-button"
+        >
+            <span class="block text-3xl font-extralight">✕</span>
+        </button>
+    </div>
+    <div class="h-[1px] w-full bg-[#f1e4e4] mb-4"></div>
+    <div class="px-6 flex flex-col gap-4">
+        {
+            dropdownMenus.map((dropdown) => (
+                <div>
+                    <button
+                        class="text-2xl font-semibold w-full text-left dropdown-toggle flex items-center "
+                        data-dropdown-title
+                    >
+                        {dropdown.title}
+                        <Icon
+                            name="chevron-down"
+                            class="ml-1 text-base-900 w-8 h-8"
+                        />
+                    </button>
+                    <ul class="hidden text-sm text-gray-700 dropdown-menu pl-2 mt-4">
+                        {dropdown.items.map((item) => (
+                            <li>
+                                <a
+                                    href={item.link}
+                                    class="py-2 block transition-transform duration-500 ease-in-out link font-bold text-lg"
+                                >
+                                    {item.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))
+        }
+        {
+            menuItems.map((item) => (
+                <a
+                    href={item.link}
+                    class="text-2xl font-semibold w-full text-left dropdown-toggle flex items-center"
+                >
+                    {item.name}
+                </a>
+            ))
+        }
+    </div>
+    <div class="w-full pt-6 mt-6 border-t border-gray-100 px-6">
+        <p class="policy-heading text-xl text-black font-bold mb-4">
+            Other Pages
+        </p>
+        <ul class="columns-2">
+            {
+                otherMenuItems.map((item) => (
+                    <li>
+                        <a
+                            class="py-2 block transition-transform duration-500 ease-in-out link font-normal text-lg"
+                            href={item.link}
+                        >
+                            {item.name}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+    <div
+        class="mt-auto mx-auto pb-4 grid grid-cols-1 sm:grid-cols-2 w-full gap-3 px-6"
+    >
+        <Button
+            buttonText="Verify Insurance"
+            buttonLink="/insurance"
+            buttonClass="outline-button"
+        />
+        <Button
+            buttonText="555-555-5555"
+            buttonLink="tel:555-555-5555"
+            buttonClass="primary-button"
+        />
+    </div>
+</div>
+
+
+<style>
+.menu-link:hover .menu-icon{
+    @apply rotate-180 ;
+}
+
+</style>
+<script>
+    const openBurgerMenuButton = document.getElementById("burger-menu-button");
+    const dropdown = document.getElementById("dropdown");
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+    const dropdownMenus = document.querySelectorAll(".dropdown-menu");
+
+    function openBurgerMenu() {
+        dropdown.classList.remove("translate-x-full");
+        dropdown.classList.add("translate-x-0");
+    }
+
+    function closeBurgerMenu() {
+        dropdown.classList.remove("translate-x-0");
+        dropdown.classList.add("translate-x-full");
+    }
+
+    // Handle burger menu toggle
+    openBurgerMenuButton.addEventListener("click", () => {
+        if (dropdown.classList.contains("translate-x-full")) {
+            openBurgerMenu();
+        } else {
+            closeBurgerMenu();
+        }
+    });
+
+    // Handle dropdown toggle on mobile
+    dropdownToggles.forEach((toggle, index) => {
+        toggle.addEventListener("click", () => {
+            dropdownMenus[index].classList.toggle("hidden");
+        });
+    });
+
+    // Close the dropdown menu when the close button is clicked
+    document
+        .getElementById("close-dropdown-button")
+        .addEventListener("click", () => {
+            closeBurgerMenu();
+        });
+</script>

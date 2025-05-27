@@ -1,0 +1,17 @@
+---
+import { fetchBlogData } from '../../utils/dataMapping.ts';
+
+const posts = await fetchBlogData();
+
+---
+
+<h1>Blog</h1>
+<p>Here is a list of all blog posts:</p>
+
+<ul>
+  {posts.map((post) => (
+    <li>
+      <a href={`/blog/{post.slug}`}>{post.data.title}</a> - {post.data.date.toLocaleDateString()}
+    </li>
+  ))}
+</ul>

@@ -1,0 +1,47 @@
+---
+const { heading, description,nextSteps } = Astro.props.Content;
+
+---
+
+<section class="admission-next-step bg-base-50 section">
+    <div class="container program-container ">
+    <div class="next-step-header flex flex-col items-center gap-5">
+        <h2 class="font-medium text-center">{heading}</h2>
+        <p class="text-center">{description}</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8 ">
+
+        {nextSteps.map((nextSteps) => (
+            <div class="next-step-card bg-white">
+            <h3 class="w-full bg-base-50 py-3 px-5 text-2xl text-center font-semibold">{nextSteps.title}</h3>
+            <div class="flex flex-col gap-4 p-8">
+                <a class="font-semibold underline" href={nextSteps.linkOneUrl}>{nextSteps.linkOne}</a>
+                <a class="font-semibold underline" href={nextSteps.linkTwoUrl}>{nextSteps.linkTwo}</a>
+            </div>
+        </div>
+          ))}
+
+
+        
+        <!-- <div class="next-step-card bg-white ">
+            <h3 class="w-full bg-base-50 py-3 px-5 text-2xl text-center font-semibold">Tour Our Facility</h3>
+            <div class="flex flex-col gap-4 p-8">
+                <a class="font-semibold underline" href="#">About the Center</a>
+                <a class="font-semibold underline" href="#">Meet the Team</a>
+            </div>
+        </div> -->
+    </div>
+    </div>
+</section>
+
+
+
+<style>
+     .program-container {
+        max-width: 1300px;
+    }
+  .next-step-card{
+        box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.07);
+        
+    }
+    </style>

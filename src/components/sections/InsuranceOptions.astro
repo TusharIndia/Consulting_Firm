@@ -1,0 +1,66 @@
+---
+const { headingOne, headingTwo, description, insuranceOptions } = Astro.props.Content;
+---
+
+<section class="flex flex-col items-center px-5 py-10 mx-auto my-0 max-w-[1440px]">
+  <header class="flex flex-col items-center mb-14 text-center">
+    <span class="px-6 py-2 mb-5 text-base text-white bg-purple-900 rounded-[50px]">
+      Our Network
+    </span>
+    <h2 class="mb-5 text-5xl font-medium leading-[72px] max-sm:text-4xl max-sm:leading-tight">
+      <span class="text-neutral-800">{headingOne}</span>
+      <span class="text-blue-900">{headingTwo}</span>
+    </h2>
+    <p class="text-lg leading-9 opacity-60 max-w-[610px] text-neutral-800 max-sm:text-base max-sm:leading-normal">
+      {description}
+    </p>
+  </header>
+
+  <div class="relative w-full overflow-hidden mb-14 mask-fade-sides">
+    <div class="flex w-[200%] animate-marquee gap-8">
+      <div class="flex gap-8 marquee-content">
+        {insuranceOptions.map((option) => (
+          <figure class="flex justify-center items-center w-72 bg-white rounded-xl h-[126px] shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:w-60 **max-sm:w-40 max-sm:h-24**">
+            <img src={option.logo} alt={option.alt} class="h-auto max-w-[80%]" />
+          </figure>
+        ))}
+      </div>
+
+      <div class="flex gap-8 marquee-content">
+        {insuranceOptions.map((option) => (
+          <figure class="flex justify-center items-center w-72 bg-white rounded-xl h-[126px] shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:w-60 **max-sm:w-40 max-sm:h-24**">
+            <img src={option.logo} alt={option.alt} class="h-auto max-w-[80%]" />
+          </figure>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="flex gap-3 justify-center max-md:flex-col max-md:w-full max-md:max-w-[400px] max-sm:gap-2.5">
+    <button class="px-5 py-4 text-lg font-semibold text-center bg-amber-300 cursor-pointer min-w-[270px] rounded-[50px] text-neutral-800 max-sm:w-full max-sm:min-w-[unset]">
+      Get Started
+    </button>
+    <div class="flex flex-col items-center px-5 py-1 text-white bg-purple-900 min-w-[270px] rounded-[50px] max-sm:w-full max-sm:min-w-[unset]">
+      <p class="mb-1 text-xs text-white">Have a question?</p>
+      <p class="text-xs font-semibold text-white">Call (123) 456-7890</p>
+    </div>
+  </div>
+
+  <style>
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .animate-marquee {
+      animation: marquee 30s linear infinite;
+    }
+    .mask-fade-sides {
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+  </style>
+</section>

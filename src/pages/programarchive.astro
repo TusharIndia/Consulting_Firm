@@ -1,0 +1,22 @@
+---
+import { fetchGeneralData, fetchProgramarchiveData } from '../utils/dataMapping.ts';
+import Hero from "../components/layout/Hero.astro";
+import AboutSection from "../components/sections/About.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import CTA from '../components/CTA.astro';
+import FAQ from '../components/sections/FAQ.astro';
+import ProgramCards from '../components/sections/ProgramCards.astro';
+
+const GeneralData = await fetchGeneralData();
+const { data: ProgramAr } = await fetchProgramarchiveData();
+---
+
+<MainLayout title="Program Archive">
+    <Hero Content={ProgramAr.hero} GeneralData={GeneralData}/>
+    <AboutSection Content={ProgramAr.about} />
+    <ProgramCards Content={ProgramAr.programs} />
+    <CTA Content={ProgramAr.cta} />
+    <FAQ Content={ProgramAr.faq} />
+    <CTA Content={ProgramAr.footerCta} />
+
+</MainLayout> 

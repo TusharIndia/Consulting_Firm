@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "heading": "About Us",
+    "text": "Get help for yourself or a loved one today!"
+  },
+  "about": {
+    "headingOne": "Our Story",
+    "textOne": "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.",
+    "headingTwo": "Mission Statement",
+    "textTwo": "Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
+    "images": {
+      "imageOne": "/imgs/about-img-1.jpg",
+      "imageTwo": "/imgs/about-img-2.jpg"
+    }
+  },
+
+  
+  "coreValues": {
+    "heading": "Core Values",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    "list": [
+      {
+        "title": "Borem Ipsum Dolor Sit Amet",
+        "description": "Porem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+      },
+      {
+        "title": "Qorem Ipsum Dolor Sit Amet",
+        "description": "Forem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+      },
+      {
+        "title": "Lorem Ipsum Dolor Sit Amet",
+        "description": "Sorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+      },
+      {
+        "title": "Horem Ipsum Dolor Sit Amet",
+        "description": "Worem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+      },
+      {
+        "title": "Norem Ipsum Dolor Sit Amet",
+        "description": "Vorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+      }
+    ],
+    "buttonText": "Call Us Now!"
+  },
+  "facility": {
+    "heading": "Our Facility",
+    "text": "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl. Ut commodo efficitur neque.",
+    "buttonText": "Learn More",
+    "images": {
+      "imageOne": "/imgs/about-img-1.jpg",
+      "imageTwo": "/imgs/about-img-2.jpg"
+    }
+  },
+  "approach": {
+    "headingOne": "Our Approach",
+    "textOne": "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.",
+    "headingTwo": "Why Choose Us?",
+    "textTwo": "Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
+    "images": {
+      "imageOne": "/imgs/about-img-1.jpg",
+      "imageTwo": "/imgs/about-img-2.jpg"
+    }
+  },
+  "team": {
+     "heading": "Our Team",
+     "buttonText": "More about our team",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
+    "team": [
+      {
+        "name": "Emily Rodriguez, LCSW",
+        "designation": "Founder and Managing Partner",
+        "image": "/imgs/about-img-1.jpg"
+      },
+      {
+        "name": "Jenna Moulton",
+        "designation": "Chief Executive Officer",
+        "image": "/imgs/about-img-1.jpg"
+      },
+      {
+        "name": "Sheena Bice",
+        "designation": "Clinical Director",
+        "image": "/imgs/about-img-1.jpg"
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "faq": [
+      {
+        "title": "What is Medication-Assisted Treatment?",
+        "details": "Medication-Assisted Treatment (MAT) involves using medication, along with counseling and behavioral therapies, to treat substance use disorders."
+      },
+      {
+        "title": "How does Sober Living Placement work?",
+        "details": "Sober Living Placement helps individuals find safe and supportive housing environments where they can continue their recovery journey."
+      },
+      {
+        "title": "What services are included in Case Management?",
+        "details": "Case Management includes resume building, job search assistance, accessing community resources, and more."
+      }
+    ]
+  }
+}

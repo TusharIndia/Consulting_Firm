@@ -1,0 +1,74 @@
+---
+const { heading, text, programs } = Astro.props.Content;
+---
+
+<section class="rounded-none mx-auto my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl">
+  <div class="flex overflow-hidden flex-col px-20 py-14 w-full rounded-3xl max-md:px-5 max-md:max-w-full" style="background: linear-gradient(270deg, #F6F2EE 0%, #F3EFEC 100%);">
+    <!-- Services Badge -->
+    <header>
+      <span class="self-start px-10 py-3 text-base text-white bg-purple-900 rounded-[50px] max-md:px-5">
+        # Services
+      </span>
+    </header>
+
+    <!-- Main Content Header -->
+    <div class="mt-20 max-md:mt-10 max-md:max-w-full">
+      <div class="flex gap-5 max-md:flex-col">
+        <div class="w-[39%] max-md:ml-0 max-md:w-full">
+          <div class="grow mt-16 text-neutral-800 max-md:mt-10 max-md:max-w-full">
+            <h2 class="text-5xl font-medium leading-[72px] max-md:text-4xl max-md:leading-[64px]">
+              {heading}
+            </h2>
+            <p class="mt-4 text-lg leading-9 max-md:max-w-full">
+              {text}
+            </p>
+          </div>
+        </div>
+        <div class="ml-5 w-[61%] max-md:ml-0 max-md:w-full">
+          <img
+            src="/imgs/condition_retreated_img.png"
+            alt="Mental health conditions illustration"
+            class="object-contain grow w-full rounded-none aspect-[1.86] max-md:mt-10 max-md:max-w-full"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Conditions Grid Dynamic Rendering -->
+    {(() => {
+      const rows = [];
+      for (let i = 0; i < programs.length; i += 3) {
+        rows.push(programs.slice(i, i + 3));
+      }
+      return rows.map((row, rowIndex) => (
+        <div class={`flex flex-wrap gap-6 items-center ${rowIndex === 0 ? 'mt-14' : 'mt-7'} text-2xl font-medium leading-loose whitespace-nowrap text-neutral-800`}>
+          {row.map(program => (
+            <div class="flex-1 shrink self-stretch my-auto basis-0 min-w-60">
+              <div class="flex gap-10 justify-between items-center w-full">
+                <div class="flex gap-3 items-center self-stretch my-auto">
+                  {program.image && (
+                  <img
+                    src={program.image}
+                    alt={`${program.title} icon`}
+                    class="object-contain shrink-0 self-stretch my-auto w-10 aspect-square"
+                  />
+                  )}
+                  <h3 class="self-stretch my-auto">{program.title}</h3>
+                  {!program.image && (
+                    <div class="w-10 aspect-square"></div>
+                  )}
+                </div>
+                <img
+                  src="/imgs/expand_arrow.svg"
+                  alt="Expand arrow"
+                  class="object-contain shrink-0 self-stretch my-auto aspect-[5.13] w-[41px]"
+                />
+              </div>
+              <hr class="mt-4 w-full min-h-px border-black" />
+            </div>
+          ))}
+        </div>
+      ));
+    })()}
+  </div>
+</section>

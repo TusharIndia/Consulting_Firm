@@ -1,0 +1,51 @@
+---
+const { headingOne, textOne, headingTwo, textTwo, images } = Astro.props.Content;
+
+---
+
+<section class="mx-auto my-20 max-w-[1320px] max-md:my-10 max-md:rounded-3xl relative">
+    <div class="rounded-none">
+        <div class="flex gap-5 max-md:flex-col">
+            <article class="w-[56%] max-md:ml-0 max-md:w-full">
+            <img
+                src="/imgs/program_about.png"
+                alt="Clear Path TMS Treatment"
+                class="object-contain self-stretch my-auto w-full rounded-3xl aspect-[1.35] max-md:mt-10 max-md:max-w-full"
+            />
+            </article>
+            <article class="ml-5 w-[44%] max-md:ml-0 max-md:w-full">
+            <div class="w-full max-md:mt-10 max-md:max-w-full">
+                <h2 class="w-full text-5xl font-medium leading-[72px] text-neutral-800 max-md:max-w-full max-md:text-4xl max-md:leading-[64px]">
+                Clear Path TMS: Cutting-
+                <span class="text-[#5E81E9]">
+                    Edge Care for Mental Well-Being
+                </span>
+                </h2>
+                <p class="mt-8 text-lg leading-9 text-neutral-800 max-md:max-w-full">
+                Transcranial Magnetic Stimulation (TMS) is a groundbreaking treatment
+                designed to improve mental well-being and provide relief for
+                individuals struggling with depression and other mental health
+                conditions. At Clear Path, our TMS program offers a personalized,
+                non-invasive approach to care, making it a safe and effective solution
+                for those seeking innovative treatment options.
+                </p>
+                <div class="flex flex-wrap gap-3 mt-8 w-full max-md:max-w-full">
+                <a href="#get-started" class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
+                    Get Started
+                </a>
+                <a href="tel:1234567890" class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 min-w-60 rounded-[50px]">
+                    <div class="flex flex-col items-center">
+                    <span class="text-xs">
+                        Have a question?
+                    </span>
+                    <span class="text-xs font-semibold leading-6">
+                        Call (123) 456-7890
+                    </span>
+                    </div>
+                </a>
+                </div>
+            </div>
+            </article>
+        </div>
+    </div>
+</section>

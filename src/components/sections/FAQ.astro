@@ -1,0 +1,110 @@
+---
+import Accordion from "../ui/Accordion.astro";
+
+const { heading, faq } = Astro.props.Content;
+
+---
+
+<section class="flex flex-col gap-14 items-center px-5 py-10 mx-auto my-0 w-[1050px] max-md:gap-10 max-md:px-5 max-md:py-8 max-md:w-full max-md:max-w-[756px] max-sm:gap-8 max-sm:px-4 max-sm:py-6">
+  <header class="flex flex-col gap-3 items-center w-[756px] max-md:w-full">
+    <h2 class="self-stretch text-5xl font-medium text-center leading-[72px] text-neutral-800 max-md:text-4xl max-md:leading-[56px] max-sm:text-3xl max-sm:leading-10">
+      Frequently Asked Questions
+    </h2>
+    <p class="self-stretch text-lg leading-9 text-center opacity-75 text-neutral-800 max-md:text-base max-md:leading-7 max-sm:text-sm max-sm:leading-6">
+      Find answers to common questions about our services and support
+    </p>
+  </header>
+
+  <div class="flex flex-col gap-6 justify-center items-start self-stretch max-sm:gap-5">
+    <details class="flex flex-col gap-4 items-start self-stretch max-sm:gap-3 group w-full">
+      <summary class="flex justify-between items-center self-stretch w-full cursor-pointer list-none">
+        <h3 class="flex-1 gap-3 text-2xl font-medium leading-10 text-neutral-800 w-[252px] max-md:text-xl max-md:leading-8 max-sm:flex-1 max-sm:w-auto max-sm:text-lg max-sm:leading-7">
+          Is TMS safe?
+        </h3>
+        <div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+               class="faq-arrow transition-transform duration-300 group-open:rotate-180">
+            <path d="M2.47888 7.88312L3.89813 6.46387L12.1326 14.6984L20.3671 6.46387L21.7864 7.88312L12.1326 17.5369L2.47888 7.88312Z" fill="#222222"></path>
+          </svg>
+        </div>
+      </summary>
+      <p class="text-base leading-7 text-neutral-800 opacity-75 group-open:pb-4">
+        Yes, Transcranial Magnetic Stimulation (TMS) is generally considered safe and is FDA-cleared for the treatment of depression and obsessive-compulsive disorder (OCD). It's a non-invasive procedure with minimal side effects, often milder than those associated with medication. Your healthcare provider will assess your medical history to ensure TMS is appropriate for you.
+      </p>
+      <div class="self-stretch h-px border-b border-solid border-b-neutral-800 group-open:hidden"></div>
+    </details>
+
+    <details class="flex flex-col gap-4 items-start self-stretch max-sm:gap-3 group w-full">
+      <summary class="flex justify-between items-center self-stretch w-full cursor-pointer list-none">
+        <h3 class="flex-1 gap-3 text-2xl font-medium leading-10 text-neutral-800 w-[252px] max-md:text-xl max-md:leading-8 max-sm:flex-1 max-sm:w-auto max-sm:text-lg max-sm:leading-7">
+          Does TMS replace medication or therapy?
+        </h3>
+        <div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+               class="faq-arrow transition-transform duration-300 group-open:rotate-180">
+            <path d="M2.47888 7.88312L3.89813 6.46387L12.1326 14.6984L20.3671 6.46387L21.7864 7.88312L12.1326 17.5369L2.47888 7.88312Z" fill="#222222"></path>
+          </svg>
+        </div>
+      </summary>
+      <p class="text-base leading-7 text-neutral-800 opacity-75 group-open:pb-4">
+        TMS can be used as a standalone treatment or in conjunction with medication and psychotherapy. For many, it offers an alternative when other treatments haven't been effective. Your doctor will discuss the best treatment plan for your individual needs.
+      </p>
+      <div class="self-stretch h-px border-b border-solid border-b-neutral-800 group-open:hidden"></div>
+    </details>
+
+    <details class="flex flex-col gap-4 items-start self-stretch max-sm:gap-3 group w-full">
+      <summary class="flex justify-between items-center self-stretch w-full cursor-pointer list-none">
+        <h3 class="flex-1 gap-3 text-2xl font-medium leading-10 text-neutral-800 w-[252px] max-md:text-xl max-md:leading-8 max-sm:flex-1 max-sm:w-auto max-sm:text-lg max-sm:leading-7">
+          How long does a TMS session take?
+        </h3>
+        <div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+               class="faq-arrow transition-transform duration-300 group-open:rotate-180">
+            <path d="M2.47888 7.88312L3.89813 6.46387L12.1326 14.6984L20.3671 6.46387L21.7864 7.88312L12.1326 17.5369L2.47888 7.88312Z" fill="#222222"></path>
+          </svg>
+        </div>
+      </summary>
+      <p class="text-base leading-7 text-neutral-800 opacity-75 group-open:pb-4">
+        A typical TMS session lasts between 20 to 40 minutes, depending on the specific protocol used. You can resume your normal activities immediately after a session.
+      </p>
+      <div class="self-stretch h-px border-b border-solid border-b-neutral-800 group-open:hidden"></div>
+    </details>
+
+    <details class="flex flex-col gap-4 items-start self-stretch max-sm:gap-3 group w-full">
+      <summary class="flex justify-between items-center self-stretch w-full cursor-pointer list-none">
+        <h3 class="flex-1 gap-3 text-2xl font-medium leading-10 text-neutral-800 w-[252px] max-md:text-xl max-md:leading-8 max-sm:flex-1 max-sm:w-auto max-sm:text-lg max-sm:leading-7">
+          How many TMS sessions are needed?
+        </h3>
+        <div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+               class="faq-arrow transition-transform duration-300 group-open:rotate-180">
+            <path d="M2.47888 7.88312L3.89813 6.46387L12.1326 14.6984L20.3671 6.46387L21.7864 7.88312L12.1326 17.5369L2.47888 7.88312Z" fill="#222222"></path>
+          </svg>
+        </div>
+      </summary>
+      <p class="text-base leading-7 text-neutral-800 opacity-75 group-open:pb-4">
+        The standard course of TMS treatment for depression typically involves daily sessions (5 days a week) for 4-6 weeks. The exact number of sessions will be determined by your doctor based on your response to treatment.
+      </p>
+      <div class="self-stretch h-px border-b border-solid border-b-neutral-800 group-open:hidden"></div>
+    </details>
+
+    <details class="flex flex-col gap-4 items-start self-stretch max-sm:gap-3 group w-full">
+      <summary class="flex justify-between items-center self-stretch w-full cursor-pointer list-none">
+        <h3 class="flex-1 gap-3 text-2xl font-medium leading-10 text-neutral-800 w-[252px] max-md:text-xl max-md:leading-8 max-sm:flex-1 max-sm:w-auto max-sm:text-lg max-sm:leading-7">
+          Are there side effects of TMS?
+        </h3>
+        <div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+               class="faq-arrow transition-transform duration-300 group-open:rotate-180">
+            <path d="M2.47888 7.88312L3.89813 6.46387L12.1326 14.6984L20.3671 6.46387L21.7864 7.88312L12.1326 17.5369L2.47888 7.88312Z" fill="#222222"></path>
+          </svg>
+        </div>
+      </summary>
+      <p class="text-base leading-7 text-neutral-800 opacity-75 group-open:pb-4">
+        Most side effects of TMS are mild and temporary, often occurring during the first week of treatment. These can include headache or scalp discomfort at the treatment site. Serious side effects like seizures are rare. Your treatment team will discuss all potential side effects with you.
+      </p>
+      <div class="self-stretch h-px border-b border-solid border-b-neutral-800 group-open:hidden"></div>
+    </details>
+  </div>
+</section>
+

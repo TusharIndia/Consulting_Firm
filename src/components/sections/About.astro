@@ -1,0 +1,38 @@
+---
+const { headingOne_Part_1, headingOne_Part_2, headingTwo, textOne, buttonOne, buttonTwo_Part_1, buttonTwo_Part_2, buttonTwo_Number  } = Astro.props.Content;
+---
+
+<section class="about-us-section my-20">
+    <div class="flex gap-16 py-0 mx-auto my-0 max-w-[1320px] max-md:flex-col max-md:gap-10 max-md:px-8 max-md:py-0 max-sm:gap-8 max-sm:px-5 max-sm:py-0
+            **sm:py-4 md:py-0**">
+      <div class="rounded-3xl bg-gray-200 h-[528px] w-[706px] max-md:w-full max-md:h-[400px] max-sm:h-[300px]">
+        <img src="/imgs/about_us.png" class="w-full h-full object-cover object-center"/>
+      </div>
+      <article class="flex flex-col gap-8 pt-0.5 max-w-[552px] max-md:max-w-full">
+        <header class="flex flex-col gap-4">
+          <h2 class="text-lg font-medium text-neutral-800">ABOUT US</h2>
+          <h1 class="text-5xl font-medium leading-[72px] max-md:text-4xl max-md:leading-[56px] max-sm:text-3xl max-sm:leading-10">
+            <span class="text-neutral-800">{headingOne_Part_1}</span>
+            <span class="text-blue-900">{headingOne_Part_2}</span>
+            <span class="text-neutral-800">{headingTwo}</span>
+          </h1>
+        </header>
+        <p class="text-lg leading-9 opacity-75 text-neutral-800 max-sm:text-base max-sm:leading-7">
+          {textOne}
+        </p>
+        <div class="flex flex-col gap-4 max-sm:gap-3">
+          <div class="flex gap-3 items-center w-full max-w-[800px] max-md:max-w-[600px] max-sm:flex-col max-sm:gap-4 max-sm:w-full">
+            <a href="#" class="flex-1 px-5 py-4 text-lg font-bold leading-6 bg-amber-300 cursor-pointer rounded-[50px] text-neutral-800 max-sm:w-full text-center">
+              {buttonOne}
+            </a>
+            <a href={`tel:${buttonTwo_Number}`} class="flex flex-col flex-1 justify-center items-center px-5 py-2 bg-purple-900 cursor-pointer rounded-[50px] max-sm:w-full">
+              <span class="mb-1 text-xs text-white">{buttonTwo_Part_1}</span>
+              <span class="text-xs font-bold leading-6 text-white">
+                {buttonTwo_Part_2}
+              </span>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>

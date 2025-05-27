@@ -1,0 +1,76 @@
+---
+// Define props with default values for original content
+const {
+  title = "Why Choose Transcranial Magnetic Stimulation (TMS)?",
+  content = {
+    paragraph1: "TMS offers a transformative option for individuals seeking relief from symptoms of depression and other mental health conditions. Unlike medications, which can have side effects or may not work for everyone, TMS directly stimulates the brain to encourage natural healing and improved functionality. This non-invasive treatment is well-tolerated, requires no anesthesia, and involves no downtime, making it a convenient and accessible solution for busy individuals.",
+    paragraph2: "For those with dual diagnoses or treatment-resistant conditions, TMS complements other therapies to create a comprehensive and effective pathway to recovery. By focusing on targeted areas of the brain, TMS fosters emotional stability, enhances daily functioning, and helps individuals regain control of their mental health."
+  },
+  imageUrl = "/imgs/why_choose_us.png",
+  imageAlt = "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office"
+} = Astro.props;
+
+// Get the first part of the title (before "Magnetic")
+const firstPart = title.includes("Magnetic") 
+  ? title.substring(0, title.indexOf("Magnetic")).trim() 
+  : title;
+
+// Get the TMS part
+const tmsText = "Magnetic Stimulation (TMS)";
+
+// Get the last part (if any)
+const lastPart = title.includes("Magnetic") && title.indexOf("Magnetic") + tmsText.length < title.length 
+  ? title.substring(title.indexOf("Magnetic") + tmsText.length).trim()
+  : "";
+---
+
+<section class="mx-auto my-12 max-w-[1280px] px-4 md:px-8">
+    <div class="box-border flex flex-col gap-6 items-start w-full">
+        <header class="w-full mb-2">
+            <h2 class="text-3xl sm:text-3xl md:text-4xl font-semibold leading-tight text-left max-w-[900px] mx-auto">
+                <span class="text-neutral-800">{firstPart}</span>
+                <span class="text-[#556BF4]">{tmsText}</span>
+                {lastPart && <span class="text-neutral-800">{lastPart}</span>}
+            </h2>
+        </header>
+
+        <article class="text-base leading-7 text-neutral-700 opacity-90 mb-6 max-w-[900px] mx-auto">
+            <p class="text-left">
+                {content.paragraph1}
+            </p>
+            <br />
+            <p class="text-left">
+                {content.paragraph2 || ''}
+            </p>
+        </article>
+
+        <div class="flex gap-4 items-center justify-center w-full max-w-[550px] mx-auto mb-8 max-sm:flex-col">
+            <button class="flex flex-col gap-2.5 justify-center items-center px-6 py-4 bg-amber-300 cursor-pointer rounded-[50px] min-w-[180px] flex-1 max-sm:w-full">
+                <span class="text-base font-semibold text-neutral-800">
+                    Get Started
+                </span>
+            </button>
+
+            <button class="flex flex-col gap-2.5 justify-center items-center px-6 py-3 bg-[#562987] cursor-pointer rounded-[50px] min-w-[180px] flex-1 max-sm:w-full">
+                <div class="flex flex-col items-center">
+                    <span class="text-xs text-white">
+                        Have a question?
+                    </span>
+                    <span class="text-xs font-bold text-white">
+                        Call (123) 456-7890
+                    </span>
+                </div>
+            </button>
+        </div>
+    </div>
+    
+    <div class="w-full max-w-[950px] mx-auto mt-4">
+        <figure class="w-full overflow-hidden rounded-2xl shadow-md border-8 border-white bg-white p-1">
+            <img
+                src={imageUrl}
+                alt={imageAlt}
+                class="w-full h-auto object-cover aspect-[16/9] rounded-lg"
+            />
+        </figure>
+    </div>
+</section>

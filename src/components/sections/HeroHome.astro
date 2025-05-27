@@ -1,0 +1,348 @@
+---
+const { 
+  backgroundImage, 
+  backgroundImageAlt, 
+  logo, 
+  buttonText, 
+  heroLinks, 
+  textBox1, 
+  textBox2_Part_1, 
+  textBox2_Part_2, 
+  textBox2_Part_3, 
+  textBox3,
+  buttonOne,
+  buttonTwo,
+  telephoneNumber
+} = Astro.props.Content;
+const GeneralData = Astro.props.GeneralData;
+---
+
+<div class="max-md:hidden">
+  <section
+    class="rounded-none mx-auto mb-10 max-w-[1320px] relative"
+  >
+    <div
+      class="flex overflow-hidden relative flex-col w-full rounded-b-3xl min-h-[672px]"
+    >
+      <img
+        src={backgroundImage}
+        alt={backgroundImageAlt}
+        class="object-cover absolute inset-0 size-full"
+      />
+
+      <div
+        class="flex relative flex-col pt-6 pr-20 w-full max-md:pr-5 max-md:max-w-full"
+      >
+        <nav
+          class="flex flex-wrap gap-10 justify-between items-center self-end w-full text-base max-w-[1160px] max-md:max-w-full"
+        >
+          <img
+            src={logo}
+            alt="Clear Path logo"
+            class="object-contain shrink-0 self-stretch my-auto aspect-[4.67] w-[159px]"
+          />
+
+          <ul
+            class="flex flex-wrap gap-10 items-center self-stretch my-auto text-white min-w-60 max-md:max-w-full"
+          >
+            {heroLinks.map((link) => (
+              <li class="group relative self-stretch my-auto whitespace-nowrap">
+                <a href={link.link} class="text-white self-stretch my-auto flex items-center">
+                  {link.text}
+                  {link.sublinks && link.sublinks.length > 0 && (
+                    <img
+                      src="/imgs/dropdown_arrow.svg"
+                      alt="Dropdown arrow"
+                      class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square ml-1"
+                    />
+                  )}
+                </a>
+                {link.sublinks && link.sublinks.length > 0 && (
+                  <div class="absolute left-0 top-full hidden group-hover:block z-10 pt-2">
+                    <section class="flex gap-2.5 p-6 mx-auto my-0 bg-white rounded-xl shadow-2xl max-w-[686px] max-md:p-5 max-sm:flex-col max-sm:p-4">
+                      <article class="flex flex-col flex-1 gap-5">
+                        <h2 class="text-lg font-medium text-neutral-800">
+                          By Treatment Offering
+                        </h2>
+                        <ul class="flex flex-col gap-3">
+                          {link.sublinks.map((sublink) => (
+                            <li class="text-sm text-blue-900">
+                              <a href={sublink.link}>{sublink.text}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      </article>
+
+                      <div class="mx-5 my-0 w-px bg-neutral-800 bg-opacity-10 max-sm:mx-0 max-sm:my-5 max-sm:w-full max-sm:h-px"></div>
+
+                      <article class="flex flex-col flex-1 gap-5">
+                        <h2 class="text-lg font-medium text-neutral-800">
+                          By what your experiencing
+                        </h2>
+                        <ul class="flex flex-col gap-3">
+                          {link.sublinks2.map((sublink) => (
+                            <li class="text-sm text-blue-900">
+                              <a href={sublink.link}>{sublink.text}</a>
+                            </li>
+                            ))}
+                        </ul>
+                      </article>
+                    </section>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={`tel:${telephoneNumber}`}
+            class="flex flex-col justify-center self-stretch px-5 py-2 my-auto text-blue-900 bg-white min-h-10 rounded-[50px]"
+          >
+            <span class="gap-1 self-stretch">{buttonText}</span>
+          </a>
+        </nav>
+
+        <div class="mt-52 max-md:mt-10 max-md:max-w-full">
+          <div class="flex gap-5 max-md:flex-col">
+            <div class="w-[61%] max-md:ml-0 max-md:w-full">
+              <div
+                class="flex flex-col mt-20 w-full font-medium max-md:mt-10 max-md:max-w-full"
+              >
+                  <span
+                  class="gap-2.5 self-start px-6 py-4 ml-20 text-2xl text-white rounded-[20px] border border-[rgba(255,255,255,0.53)] bg-[linear-gradient(96deg,rgba(10,39,126,0.50)_0%,rgba(10,39,126,0.50)_100%)] leading-[49px] max-md:px-5 max-md:ml-2.5"
+                  >
+                  {textBox1}
+                  </span>
+
+                <h1
+                  class="overflow-hidden px-6 py-8 mt-8 text-4xl bg-white rounded-none rounded-tr-[24px] leading-[72px] text-neutral-800 max-md:px-5 max-md:max-w-full"
+                >
+                  {textBox2_Part_1}
+                  <span style="color: rgba(10, 39, 126, 1)">
+                    {textBox2_Part_2}</span
+                  >
+                  {textBox2_Part_3}
+                </h1>
+              </div>
+            </div>
+
+            <div class="ml-5 w-[39%] max-md:ml-0 max-md:w-full">
+              <div class="w-full max-md:mt-10 max-md:max-w-full">
+                  <p
+                  class="flex-1 shrink gap-2.5 self-stretch px-6 py-8 text-3xl font-medium text-white rounded-[20px] border border-solid basis-0 leading-[49px] max-md:px-5 bg-[linear-gradient(96deg,rgba(10,39,126,0.50)_0%,rgba(10,39,126,0.50)_100%)] border-[rgba(255,255,255,0.53)]"
+                  >
+                  {textBox3}
+                  </p>
+
+                <div class="flex gap-3 mt-6 max-md:max-w-full">
+                  <a
+                    href="#"
+                    class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 rounded-[50px] text-neutral-800"
+                  >
+                    {buttonOne}
+                  </a>
+
+                  <a
+                    href={`tel:${telephoneNumber}`}
+                    class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 rounded-[50px]"
+                  >
+                    <div class="flex flex-col items-center">
+                      <span class="text-xs">{buttonTwo}</span>
+                      <span class="text-xs font-semibold leading-6"
+                        >{buttonText}</span
+                      >
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="md:hidden">
+  <header class="relative flex items-center justify-between p-4 bg-transparent z-20">
+    <img
+      src={logo}
+      alt="Clear Path logo"
+      class="object-contain w-28"
+    />
+    <button id="hamburger-menu-button" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </header>
+
+  <section
+    class="relative flex flex-col justify-center items-center py-10 px-5 text-center text-white min-h-[400px] -mt-20 pt-20"
+    style={`background-image: url(${backgroundImage}); background-size: cover; background-position: center;`}
+  >
+    <div class="bg-white rounded-xl p-6 mb-6 max-w-4xl">
+      <h1 class="text-3xl font-bold leading-tight mb-4">
+        {textBox2_Part_1}
+        <span class="text-blue-200">{textBox2_Part_2}</span>
+        {textBox2_Part_3}
+      </h1>
+    </div>
+    {textBox3 && (
+      <div class="bg-white rounded-xl p-6 mb-8 max-w-md">
+        <p class="text-lg leading-relaxed">
+          {textBox3}
+        </p>
+      </div>
+    )}
+    <a
+      href="#"
+      class="w-full inline-block px-8 py-4 text-lg font-semibold rounded-full bg-amber-300 text-neutral-800 hover:bg-amber-400 transition-colors shadow-lg"
+    >
+      {buttonOne}
+    </a>
+    {telephoneNumber && (
+      <a
+        href={`tel:${telephoneNumber}`}
+        class="w-full flex flex-col flex-1 shrink justify-center items-center px-5 py-4 mt-4 text-white bg-purple-900 rounded-[50px] transition-colors shadow-md"
+      >
+        <div class="flex flex-col items-center">
+          <span class="text-xs">{buttonTwo}</span>
+          <span class="text-xs font-semibold leading-6">{buttonText}</span>
+        </div>
+      </a>
+    )}
+  </section>
+
+  <nav
+    id="mobile-nav-overlay"
+    class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center h-screen"
+  >
+    <div class="bg-white shadow-2xl p-6 w-full max-w-md mx-auto relative max-h-[90vh] overflow-y-auto">
+      <button id="close-menu-button" class="absolute top-4 right-4 p-2 text-gray-600 hover:text-gray-900">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <ul class="flex flex-col gap-4 mt-8">
+        {heroLinks.map((link) => (
+          <li class="relative">
+            {link.sublinks && link.sublinks.length > 0 ? (
+              <>
+                <button
+                  class="mobile-nav-toggle flex justify-between items-center w-full text-lg font-medium text-neutral-800 py-2"
+                >
+                  {link.text}
+                  <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="mobile-sublinks-container hidden pl-4 pt-2 border-l border-gray-200 mt-2">
+                  <h3 class="text-md font-semibold text-neutral-700 mb-2">By Treatment Offering</h3>
+                  <ul class="flex flex-col gap-2">
+                    {link.sublinks.map((sublink) => (
+                      <li>
+                        <a href={sublink.link} class="text-sm text-blue-700 hover:underline block py-1">
+                          {sublink.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                  {link.sublinks2 && link.sublinks2.length > 0 && (
+                    <>
+                      <div class="my-3 h-px bg-gray-200"></div>
+                      <h3 class="text-md font-semibold text-neutral-700 mb-2">By what you're experiencing</h3>
+                      <ul class="flex flex-col gap-2">
+                        {link.sublinks2.map((sublink) => (
+                          <li>
+                            <a href={sublink.link} class="text-sm text-blue-700 hover:underline block py-1">
+                              {sublink.text}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </div>
+              </>
+            ) : (
+              <a href={link.link} class="block text-lg font-medium text-neutral-800 py-2 hover:underline">
+                {link.text}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+
+      <div class="mt-8">
+        <a
+          href={`tel:${telephoneNumber}`}
+          class="block w-full text-center px-5 py-3 text-lg font-semibold bg-purple-900 text-white rounded-[50px] hover:bg-purple-800 transition-colors shadow-md"
+        >
+          {buttonText}
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerButton = document.getElementById('hamburger-menu-button');
+    const closeButton = document.getElementById('close-menu-button');
+    const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+    const mobileNavToggles = document.querySelectorAll('.mobile-nav-toggle');
+
+    // Function to open the mobile navigation
+    function openMobileNav() {
+      mobileNavOverlay.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Prevent body scroll
+    }
+
+    // Function to close the mobile navigation
+    function closeMobileNav() {
+      mobileNavOverlay.classList.add('hidden');
+      document.body.style.overflow = ''; // Restore body scroll
+    }
+
+    // Event listener for hamburger button click
+    if (hamburgerButton) {
+      hamburgerButton.addEventListener('click', openMobileNav);
+    }
+
+    // Event listener for close button click
+    if (closeButton) {
+      closeButton.addEventListener('click', closeMobileNav);
+    }
+
+    // Event listeners for sublink toggles
+    mobileNavToggles.forEach(button => {
+      button.addEventListener('click', () => {
+        const sublinksContainer = button.nextElementSibling;
+        const arrowIcon = button.querySelector('.mobile-nav-arrow');
+
+        if (sublinksContainer && arrowIcon) {
+          sublinksContainer.classList.toggle('hidden');
+          arrowIcon.classList.toggle('rotate-180'); // Rotate arrow
+        }
+      });
+    });
+
+    // Optional: Close menu if a link inside the overlay is clicked (for single-page navigation)
+    mobileNavOverlay.addEventListener('click', (event) => {
+      if (event.target.tagName === 'A' && event.target.closest('#mobile-nav-overlay')) {
+        // You might want to add a small delay here if the link triggers a route change
+        // setTimeout(closeMobileNav, 100); 
+        closeMobileNav();
+      }
+    });
+
+    // Optional: Close menu if clicking outside the white card (but within the overlay)
+    mobileNavOverlay.addEventListener('click', (event) => {
+      if (event.target === mobileNavOverlay) { // Only if clicked directly on the overlay background
+        closeMobileNav();
+      }
+    });
+  });
+</script>

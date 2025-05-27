@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon/components";
+
+const GeneralData = Astro.props.GeneralData
+---
+
+
+<section class="section !pt-0 bg-base-50">
+    <div class="container grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+        <div class="flex flex-col items-center p-8 bg-white rounded-md contact-icon-card">
+            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 mb-3">
+            <Icon name="phone" class="text-xl text-white " /></div>
+            <span class="mb-5 text-xl font-medium text-primary-500">Phone Number</span>
+            <a class="text-black text-center font-medium" href={`tel:${GeneralData.phoneNumber}`}>{GeneralData.phoneNumber}</a>
+        </div>   
+        <div class="flex flex-col items-center p-8 bg-white rounded-md contact-icon-card">
+            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 mb-3">
+            <Icon name="location" class="text-xl text-white " /></div>
+            <span class="mb-5 text-xl font-medium text-primary-500">Address</span>
+            <a class="text-black text-center font-medium" href="#">{GeneralData.address}</a>
+        </div>   
+        <div class="flex flex-col items-center p-8 bg-white rounded-md contact-icon-card">
+            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 mb-3">
+            <Icon name="icon-mail" class="text-xl text-white " /></div>
+            <span class="mb-5 text-xl font-medium text-primary-500">Email Address</span>
+            <a class="text-black text-center font-medium" href={`mailto:${GeneralData.Email}`}>{GeneralData.Email}</a>
+        </div>  
