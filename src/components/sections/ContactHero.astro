@@ -1,124 +1,296 @@
-<main class="flex gap-16 justify-center items-start px-16 py-14 mx-auto my-0 max-w-none bg-white w-full max-md:flex-col max-md:gap-10 max-md:px-8 max-md:py-10 max-md:w-full max-md:max-w-[991px] max-sm:gap-8 max-sm:px-4 max-sm:py-6 max-sm:max-w-screen-sm">
-  <section class="flex flex-col gap-8 items-start w-[45%] max-md:w-full">
-    <header class="flex flex-col gap-4 items-start self-stretch">
-      <h1 class="text-5xl font-medium leading-[60px] text-neutral-800 max-md:text-4xl max-md:leading-[56px] max-sm:text-3xl max-sm:leading-10">
-        Emergency Contact
-      </h1>
-      <p class="self-stretch text-lg leading-7 opacity-75 text-neutral-800 max-sm:text-base max-sm:leading-6">
-        For mental health emergencies, please call 911 or visit your nearest emergency room.
-      </p>
-    </header>
+---
+const { isInsurancePage = false } = Astro.props;
+---
 
-    <article class="flex gap-2.5 items-start self-stretch p-6 bg-white rounded-xl shadow-lg max-sm:p-5">
-      <div class="flex flex-col gap-4 items-start flex-[1_0_0]">
-        <h2 class="self-stretch text-xl font-bold text-neutral-800 max-sm:text-lg">
-          General Support
-        </h2>
-        <div class="flex flex-col gap-3 items-start self-stretch">
-          <div class="flex gap-2 items-center self-stretch">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 20C3.45 20 2.97917 19.8042 2.5875 19.4125C2.19583 19.0208 2 18.55 2 18V6C2 5.45 2.19583 4.97917 2.5875 4.5875C2.97917 4.19583 3.45 4 4 4H20C20.55 4 21.0208 4.19583 21.4125 4.5875C21.8042 4.97917 22 5.45 22 6V18C22 18.55 21.8042 19.0208 21.4125 19.4125C21.0208 19.8042 20.55 20 20 20H4ZM12 12.825C12.0833 12.825 12.1708 12.8125 12.2625 12.7875C12.3542 12.7625 12.4417 12.725 12.525 12.675L19.6 8.25C19.7333 8.16667 19.8333 8.0625 19.9 7.9375C19.9667 7.8125 20 7.675 20 7.525C20 7.19167 19.8583 6.94167 19.575 6.775C19.2917 6.60833 19 6.61667 18.7 6.8L12 11L5.3 6.8C5 6.61667 4.70833 6.6125 4.425 6.7875C4.14167 6.9625 4 7.20833 4 7.525C4 7.69167 4.03333 7.8375 4.1 7.9625C4.16667 8.0875 4.26667 8.18333 4.4 8.25L11.475 12.675C11.5583 12.725 11.6458 12.7625 11.7375 12.7875C11.8292 12.8125 11.9167 12.825 12 12.825Z" fill="#543783"/>
-            </svg>
-            <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
-              Email: support@clearpath.com
-            </p>
-          </div>
-          <div class="flex gap-2 items-center self-stretch">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19.95 21C17.8667 21 15.8083 20.5458 13.775 19.6375C11.7417 18.7292 9.89167 17.4417 8.225 15.775C6.55833 14.1083 5.27083 12.2583 4.3625 10.225C3.45417 8.19167 3 6.13333 3 4.05C3 3.75 3.1 3.5 3.3 3.3C3.5 3.1 3.75 3 4.05 3H8.1C8.33333 3 8.54167 3.07917 8.725 3.2375C8.90833 3.39583 9.01667 3.58333 9.05 3.8L9.7 7.3C9.73333 7.56667 9.725 7.79167 9.675 7.975C9.625 8.15833 9.53333 8.31667 9.4 8.45L6.975 10.9C7.30833 11.5167 7.70417 12.1125 8.1625 12.6875C8.62083 13.2625 9.125 13.8167 9.675 14.35C10.1917 14.8667 10.7333 15.3458 11.3 15.7875C11.8667 16.2292 12.4667 16.6333 13.1 17L15.45 14.65C15.6 14.5 15.7958 14.3875 16.0375 14.3125C16.2792 14.2375 16.5167 14.2167 16.75 14.25L20.2 14.95C20.4333 15.0167 20.625 15.1375 20.775 15.3125C20.925 15.4875 21 15.6833 21 15.9V19.95C21 20.25 20.9 20.5 20.7 20.7C20.5 20.9 20.25 21 19.95 21Z" fill="#543783"/>
-            </svg>
-            <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
-              Phone: (800) XXX-XXXX
-            </p>
-          </div>
-        </div>
-      </div>
-    </article>
+{isInsurancePage ? (
+  <main class="flex justify-center items-center px-16 py-28 bg-white w-full max-md:px-10 max-md:py-16 max-md:w-full max-md:h-auto max-sm:px-5 max-sm:py-10">
+    <div class="flex justify-between w-full max-w-[1320px] max-md:flex-col max-md:gap-10 max-md:w-full max-md:h-auto max-sm:gap-8">
+      <!-- Left Section -->
+      <section class="flex flex-col gap-8 items-start w-[48%] max-md:w-full">
+        <!-- Header -->
+        <header class="flex flex-col gap-4 items-start self-stretch">
+          <h1 class="flex flex-col justify-center self-stretch text-5xl font-medium leading-[72px] max-md:h-auto max-md:text-4xl max-md:leading-[56px] max-sm:text-3xl max-sm:leading-10">
+            <span class="text-neutral-800">Insurance</span>
+            <span class="text-indigo-500">Verification</span>
+            <span class="text-neutral-800">at ClearPath</span>
+          </h1>
+        </header>
 
-    <article class="flex flex-col gap-3 items-start self-stretch">
-      <h2 class="self-stretch text-xl font-bold text-neutral-800 max-sm:text-lg">
-        Business Hours
-      </h2>
-      <div class="flex flex-col gap-3 items-start self-stretch">
-        <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
-          Monday - Friday: 9:00 AM - 5:00 PM
+        <!-- Main Description -->
+        <p class="self-stretch text-lg leading-9 opacity-75 text-neutral-800 max-sm:text-base max-sm:leading-7">
+          Starting your recovery journey can seem daunting, especially when considering the financial aspects. At ClearPath, we're committed to removing barriers to treatment by working with most major insurance providers. Our dedicated team will verify your insurance benefits and explain your coverage options for addiction and mental health treatment. We believe everyone deserves access to quality care without financial stress.
         </p>
-        <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
-          Saturday - Sunday: Closed
-        </p>
-      </div>
-    </article>
-  </section>
 
-  <section class="flex shrink-0 w-[45%] max-md:w-full">
-    <div class="relative shrink-0 rounded-xl bg-gray-50 p-6 w-full">
-      <form class="flex flex-col gap-6 items-start w-full">
-        <div class="flex items-start w-full">
-          <h2 class="inline-block px-4 py-1 text-sm font-medium text-white bg-purple-900 rounded-full">
-            Send Us a Message
-          </h2>
-        </div>
+        <!-- Insurance Providers Card -->
+        <article class="flex gap-2.5 items-start self-stretch p-6 bg-white rounded-3xl shadow-2xl max-sm:p-5">
+          <div class="flex flex-col gap-4 items-start flex-1">
+            <h2 class="gap-4 self-stretch text-base font-bold leading-6 text-neutral-800">
+              We Accept Many Major Insurance Plans Including:
+            </h2>
 
-        <div class="flex flex-col gap-4 items-start self-stretch w-full">
-          <div class="flex flex-col gap-1 items-start self-stretch w-full">
-            <label class="flex items-center text-xs text-neutral-600">
-              Full Name<span class="text-xs text-red-600 ml-1">*</span>
-            </label>
-            <input type="text"
-                  placeholder="Enter the full name"
-                  required
-                  class="w-full p-3 text-sm border border-gray-300 rounded-lg bg-white"
-                  aria-required="true"/>
-          </div>
+            <!-- First Row of Providers -->
+            <div class="flex gap-4 items-start self-stretch max-sm:flex-col max-sm:gap-3">
+              <div class="flex gap-2 items-center flex-1 max-sm:flex-none max-sm:w-full">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="check-icon" aria-hidden="true">
+                  <path d="M7.06732 9.19967L5.63398 7.76634C5.51176 7.64412 5.35621 7.58301 5.16732 7.58301C4.97843 7.58301 4.82287 7.64412 4.70065 7.76634C4.57843 7.88856 4.51732 8.04412 4.51732 8.23301C4.51732 8.4219 4.57843 8.57745 4.70065 8.69967L6.60065 10.5997C6.73398 10.733 6.88954 10.7997 7.06732 10.7997C7.2451 10.7997 7.40065 10.733 7.53398 10.5997L11.3007 6.83301C11.4229 6.71079 11.484 6.55523 11.484 6.36634C11.484 6.17745 11.4229 6.0219 11.3007 5.89967C11.1784 5.77745 11.0229 5.71634 10.834 5.71634C10.6451 5.71634 10.4895 5.77745 10.3673 5.89967L7.06732 9.19967ZM8.00065 14.6663C7.07843 14.6663 6.21176 14.4913 5.40065 14.1413C4.58954 13.7913 3.88398 13.3163 3.28398 12.7163C2.68398 12.1163 2.20898 11.4108 1.85898 10.5997C1.50898 9.78856 1.33398 8.9219 1.33398 7.99967C1.33398 7.07745 1.50898 6.21079 1.85898 5.39967C2.20898 4.58856 2.68398 3.88301 3.28398 3.28301C3.88398 2.68301 4.58954 2.20801 5.40065 1.85801C6.21176 1.50801 7.07843 1.33301 8.00065 1.33301C8.92287 1.33301 9.78954 1.50801 10.6007 1.85801C11.4118 2.20801 12.1173 2.68301 13.2173 3.28301C13.8173 3.88301 14.2923 4.58856 14.6423 5.39967C14.9923 6.21079 15.1673 7.07745 15.1673 7.99967C15.1673 8.9219 14.9923 9.78856 14.6423 10.5997C14.2923 11.4108 13.8173 12.1163 13.2173 12.7163C12.6173 13.3163 11.9118 13.7913 11.1007 14.1413C10.2895 14.4913 9.42287 14.6663 8.50065 14.6663Z" fill="#543783"/>
+                </svg>
+                <span class="text-base leading-6 text-neutral-800">Blue Cross Blue Shield</span>
+              </div>
+              <div class="flex gap-2 items-center flex-1 max-sm:flex-none max-sm:w-full">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="check-icon" aria-hidden="true">
+                  <path d="M7.56732 9.19967L6.13398 7.76634C6.01176 7.64412 5.85621 7.58301 5.66732 7.58301C5.47843 7.58301 5.32287 7.64412 5.20065 7.76634C5.07843 7.88856 5.01732 8.04412 5.01732 8.23301C5.01732 8.4219 5.07843 8.57745 5.20065 8.69967L7.10065 10.5997C7.23398 10.733 7.38954 10.7997 7.56732 10.7997C7.7451 10.7997 7.90065 10.733 8.03398 10.5997L11.8007 6.83301C11.9229 6.71079 11.984 6.55523 11.984 6.36634C11.984 6.17745 11.9229 6.0219 11.8007 5.89967C11.6784 5.77745 11.5229 5.71634 11.334 5.71634C11.1451 5.71634 10.9895 5.77745 10.8673 5.89967L7.56732 9.19967ZM8.50065 14.6663C7.57843 14.6663 6.71176 14.4913 5.90065 14.1413C5.08954 13.7913 4.38398 13.3163 3.78398 12.7163C3.18398 12.1163 2.70898 11.4108 2.35898 10.5997C2.00898 9.78856 1.83398 8.9219 1.83398 7.99967C1.83398 7.07745 2.00898 6.21079 2.35898 5.39967C2.70898 4.58856 3.18398 3.88301 3.78398 3.28301C4.38398 2.68301 5.08954 2.20801 5.90065 1.85801C6.71176 1.50801 7.57843 1.33301 8.50065 1.33301C9.42287 1.33301 10.2895 1.50801 11.1007 1.85801C11.9118 2.20801 12.6173 2.68301 13.2173 3.28301C13.8173 3.88301 14.2923 4.58856 14.6423 5.39967C14.9923 6.21079 15.1673 7.07745 15.1673 7.99967C15.1673 8.9219 14.9923 9.78856 14.6423 10.5997C14.2923 11.4108 13.8173 12.1163 13.2173 12.7163C12.6173 13.3163 11.9118 13.7913 11.1007 14.1413C10.2895 14.4913 9.42287 14.6663 8.50065 14.6663Z" fill="#543783"/>
+                </svg>
+                <span class="text-base leading-6 text-neutral-800">Aetna</span>
+              </div>
+            </div>
 
-          <div class="flex flex-col gap-1 items-start self-stretch w-full">
-            <label class="flex items-center text-xs text-neutral-600">
-              Email Address<span class="text-xs text-red-600 ml-1">*</span>
-            </label>
-            <input type="email"
-                  placeholder="Enter the email address"
-                  required
-                  class="w-full p-3 text-sm border border-gray-300 rounded-lg bg-white"
-                  aria-required="true"/>
-          </div>
+            <!-- Second Row of Providers -->
+            <div class="flex gap-4 items-start self-stretch max-sm:flex-col max-sm:gap-3">
+              <div class="flex gap-2 items-center flex-1 max-sm:flex-none max-sm:w-full">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="check-icon" aria-hidden="true">
+                  <path d="M7.06732 9.19967L5.63398 7.76634C5.51176 7.64412 5.35621 7.58301 5.16732 7.58301C4.97843 7.58301 4.82287 7.64412 4.70065 7.76634C4.57843 7.88856 4.51732 8.04412 4.51732 8.23301C4.51732 8.4219 4.57843 8.57745 4.70065 8.69967L6.60065 10.5997C6.73398 10.733 6.88954 10.7997 7.06732 10.7997C7.2451 10.7997 7.40065 10.733 7.53398 10.5997L11.3007 6.83301C11.4229 6.71079 11.484 6.55523 11.484 6.36634C11.484 6.17745 11.4229 6.0219 11.3007 5.89967C11.1784 5.77745 11.0229 5.71634 10.834 5.71634C10.6451 5.71634 10.4895 5.77745 10.3673 5.89967L7.06732 9.19967ZM8.00065 14.6663C7.07843 14.6663 6.21176 14.4913 5.40065 14.1413C4.58954 13.7913 3.88398 13.3163 3.28398 12.7163C2.68398 12.1163 2.20898 11.4108 1.85898 10.5997C1.50898 9.78856 1.33398 8.9219 1.33398 7.99967C1.33398 7.07745 1.50898 6.21079 1.85898 5.39967C2.20898 4.58856 2.68398 3.88301 3.28398 3.28301C3.88398 2.68301 4.58954 2.20801 5.40065 1.85801C6.21176 1.50801 7.07843 1.33301 8.00065 1.33301C8.92287 1.33301 9.78954 1.50801 10.6007 1.85801C11.4118 2.20801 12.1173 2.68301 13.2173 3.28301C13.8173 3.88301 14.2923 4.58856 14.6423 5.39967C14.9923 6.21079 15.1673 7.07745 15.1673 7.99967C15.1673 8.9219 14.9923 9.78856 14.6423 10.5997C14.2923 11.4108 13.8173 12.1163 13.2173 12.7163C12.6173 13.3163 11.9118 13.7913 11.1007 14.1413C10.2895 14.4913 9.42287 14.6663 8.50065 14.6663Z" fill="#543783"/>
+                </svg>
+                <span class="text-base leading-6 text-neutral-800">Cigna</span>
+              </div>
+              <div class="flex gap-2 items-center flex-1 max-sm:flex-none max-sm:w-full">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="check-icon" aria-hidden="true">
+                  <path d="M7.56732 9.19967L6.13398 7.76634C6.01176 7.64412 5.85621 7.58301 5.66732 7.58301C5.47843 7.58301 5.32287 7.64412 5.20065 7.76634C5.07843 7.88856 5.01732 8.04412 5.01732 8.23301C5.01732 8.4219 5.07843 8.57745 5.20065 8.69967L7.10065 10.5997C7.23398 10.733 7.38954 10.7997 7.56732 10.7997C7.7451 10.7997 7.90065 10.733 8.03398 10.5997L11.8007 6.83301C11.9229 6.71079 11.984 6.55523 11.984 6.36634C11.984 6.17745 11.9229 6.0219 11.8007 5.89967C11.6784 5.77745 11.5229 5.71634 11.334 5.71634C11.1451 5.71634 10.9895 5.77745 10.8673 5.89967L7.56732 9.19967ZM8.50065 14.6663C7.57843 14.6663 6.71176 14.4913 5.90065 14.1413C5.08954 13.7913 4.38398 13.3163 3.78398 12.7163C3.18398 12.1163 2.70898 11.4108 2.35898 10.5997C2.00898 9.78856 1.83398 8.9219 1.83398 7.99967C1.83398 7.07745 2.00898 6.21079 2.35898 5.39967C2.70898 4.58856 3.18398 3.88301 3.78398 3.28301C4.38398 2.68301 5.08954 2.20801 5.90065 1.85801C6.71176 1.50801 7.57843 1.33301 8.50065 1.33301C9.42287 1.33301 10.2895 1.50801 11.1007 1.85801C11.9118 2.20801 12.6173 2.68301 13.2173 3.28301C13.8173 3.88301 14.2923 4.58856 14.6423 5.39967C14.9923 6.21079 15.1673 7.07745 15.1673 7.99967C15.1673 8.9219 14.9923 9.78856 14.6423 10.5997C14.2923 11.4108 13.8173 12.1163 13.2173 12.7163C12.6173 13.3163 11.9118 13.7913 11.1007 14.1413C10.2895 14.4913 9.42287 14.6663 8.50065 14.6663Z" fill="#543783"/>
+                </svg>
+                <span class="text-base leading-6 text-neutral-800">UnitedHealthcare</span>
+              </div>
+            </div>
 
-          <div class="flex flex-col gap-1 items-start self-stretch w-full">
-            <label class="flex items-center text-xs text-neutral-600">
-              Phone<span class="text-xs text-red-600 ml-1">*</span>
-            </label>
-            <input type="tel"
-                  placeholder="Enter your phone number"
-                  required
-                  class="w-full p-3 text-sm border border-gray-300 rounded-lg bg-white"
-                  aria-required="true"/>
-          </div>
-
-          <div class="flex flex-col gap-1 items-start self-stretch w-full">
-            <label class="text-xs text-neutral-600" for="subject">Subject</label>
-            <div class="relative self-stretch w-full">
-              <select id="subject"
-                    class="w-full p-3 text-sm border border-gray-300 rounded-lg bg-white appearance-none">
-                <option value="" disabled selected>Select a subject</option>
-              </select>
-              <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 7L0 0L14 0L7 7Z" fill="#666666"/>
-              </svg>
+            <!-- Third Row of Providers -->
+            <div class="flex gap-4 items-start self-stretch max-sm:flex-col max-sm:gap-3">
+              <div class="flex gap-2 items-center flex-1 max-sm:flex-none max-sm:w-full">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="check-icon" aria-hidden="true">
+                  <path d="M7.06732 9.19967L5.63398 7.76634C5.51176 7.64412 5.35621 7.58301 5.16732 7.58301C4.97843 7.58301 4.82287 7.64412 4.70065 7.76634C4.57843 7.88856 4.51732 8.04412 4.51732 8.23301C4.51732 8.4219 4.57843 8.57745 4.70065 8.69967L6.60065 10.5997C6.73398 10.733 6.88954 10.7997 7.06732 10.7997C7.2451 10.7997 7.40065 10.733 7.53398 10.5997L11.3007 6.83301C11.4229 6.71079 11.484 6.55523 11.484 6.36634C11.484 6.17745 11.4229 6.0219 11.3007 5.89967C11.1784 5.77745 11.0229 5.71634 10.834 5.71634C10.6451 5.71634 10.4895 5.77745 10.3673 5.89967L7.06732 9.19967ZM8.00065 14.6663C7.07843 14.6663 6.21176 14.4913 5.40065 14.1413C4.58954 13.7913 3.88398 13.3163 3.28398 12.7163C2.68398 12.1163 2.20898 11.4108 1.85898 10.5997C1.50898 9.78856 1.33398 8.9219 1.33398 7.99967C1.33398 7.07745 1.50898 6.21079 1.85898 5.39967C2.20898 4.58856 2.68398 3.88301 3.28398 3.28301C3.88398 2.68301 4.58954 2.20801 5.40065 1.85801C6.21176 1.50801 7.07843 1.33301 8.00065 1.33301C8.92287 1.33301 9.78954 1.50801 10.6007 1.85801C11.4118 2.20801 12.1173 2.68301 13.2173 3.28301C13.8173 3.88301 14.2923 4.58856 14.6423 5.39967C14.9923 6.21079 15.1673 7.07745 15.1673 7.99967C15.1673 8.9219 14.9923 9.78856 14.6423 10.5997C14.2923 11.4108 13.8173 12.1163 13.2173 12.7163C12.6173 13.3163 11.9118 13.7913 11.1007 14.1413C10.2895 14.4913 9.42287 14.6663 8.50065 14.6663Z" fill="#543783"/>
+                </svg>
+                <span class="text-base leading-6 text-neutral-800">Humana</span>
+              </div>
+              <div class="flex gap-2 items-center flex-1 max-sm:flex-none max-sm:w-full">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="check-icon" aria-hidden="true">
+                  <path d="M7.56732 9.19967L6.13398 7.76634C6.01176 7.64412 5.85621 7.58301 5.66732 7.58301C5.47843 7.58301 5.32287 7.64412 5.20065 7.76634C5.07843 7.88856 5.01732 8.04412 5.01732 8.23301C5.01732 8.4219 5.07843 8.57745 5.20065 8.69967L7.10065 10.5997C7.23398 10.733 7.38954 10.7997 7.56732 10.7997C7.7451 10.7997 7.90065 10.733 8.03398 10.5997L11.8007 6.83301C11.9229 6.71079 11.984 6.55523 11.984 6.36634C11.984 6.17745 11.9229 6.0219 11.8007 5.89967C11.6784 5.77745 11.5229 5.71634 11.334 5.71634C11.1451 5.71634 10.9895 5.77745 10.8673 5.89967L7.56732 9.19967ZM8.50065 14.6663C7.57843 14.6663 6.71176 14.4913 5.90065 14.1413C5.08954 13.7913 4.38398 13.3163 3.78398 12.7163C3.18398 12.1163 2.70898 11.4108 2.35898 10.5997C2.00898 9.78856 1.83398 8.9219 1.83398 7.99967C1.83398 7.07745 2.00898 6.21079 2.35898 5.39967C2.70898 4.58856 3.18398 3.88301 3.78398 3.28301C4.38398 2.68301 5.08954 2.20801 5.90065 1.85801C6.71176 1.50801 7.57843 1.33301 8.50065 1.33301C9.42287 1.33301 10.2895 1.50801 11.1007 1.85801C11.9118 2.20801 12.6173 2.68301 13.2173 3.28301C13.8173 3.88301 14.2923 4.58856 14.6423 5.39967C14.9923 6.21079 15.1673 7.07745 15.1673 7.99967C15.1673 8.9219 14.9923 9.78856 14.6423 10.5997C14.2923 11.4108 13.8173 12.1163 13.2173 12.7163C12.6173 13.3163 11.9118 13.7913 11.1007 14.1413C10.2895 14.4913 9.42287 14.6663 8.50065 14.6663Z" fill="#543783"/>
+                </svg>
+                <span class="text-base leading-6 text-neutral-800">And many more</span>
+              </div>
             </div>
           </div>
+        </article>
 
-          <div class="flex flex-col gap-1 items-start self-stretch w-full">
-            <label class="text-xs text-neutral-600" for="message">Message</label>
-            <textarea id="message"
-                    placeholder="Write here..."
-                    class="w-full h-24 p-3 text-sm border border-gray-300 rounded-lg bg-white resize-none"></textarea>
+        <!-- Bottom Description -->
+        <p class="self-stretch text-lg leading-9 opacity-75 text-neutral-800 max-sm:text-base max-sm:leading-7">
+          Don't see your provider listed? Contact us to discuss other options. We're here to help you find a path to recovery that works for your situation.
+        </p>
+      </section>
+
+      <!-- Right Section - Form -->
+      <section class="w-[48%] max-md:w-full">
+        <div class="relative rounded-3xl w-full">
+          <!-- Form Container -->
+          <div class="flex flex-col gap-8 items-start w-full p-6 bg-gradient-to-r from-[#F3EFEC] to-[#F6F2EE] rounded-3xl shadow-lg max-md:pb-10 max-sm:gap-6">
+            <!-- Form Header -->
+            <header class="flex flex-col gap-6 items-start w-full">
+              <div class="px-10 py-1.5 text-base leading-6 text-white bg-purple-900 rounded-[50px]">
+                Verify Your Insurance Benefits
+              </div>
+              <p class="self-stretch text-lg leading-7 opacity-75 text-neutral-800 max-sm:text-base max-sm:leading-6">
+                Complete the form below, and our admissions team will contact you promptly with your coverage details.
+              </p>
+            </header>
+
+            <!-- Form -->
+            <form class="flex flex-col gap-5 items-start self-stretch w-full">
+              <!-- Full Name Field -->
+              <div class="flex flex-col gap-2 items-start self-stretch w-full">
+                <label class="flex items-center">
+                  <span class="text-xs text-neutral-600">Full Name</span>
+                  <span class="text-xs text-red-600 text-opacity-70 ml-1" aria-label="required">*</span>
+                </label>
+                <input type="text" placeholder="Enter the full name" class="flex py-3 px-4 rounded-lg border border-solid border-neutral-300 bg-white h-[48px] text-base w-full" required>
+              </div>
+
+              <!-- Email Field -->
+              <div class="flex flex-col gap-2 items-start self-stretch w-full">
+                <label class="flex items-center">
+                  <span class="text-xs text-neutral-600">Email Address</span>
+                  <span class="text-xs text-red-600 text-opacity-70 ml-1" aria-label="required">*</span>
+                </label>
+                <input type="email" placeholder="Enter the email address" class="flex py-3 px-4 rounded-lg border border-solid border-neutral-300 bg-white h-[48px] text-base w-full" required>
+              </div>
+
+              <!-- Insurance Provider Field -->
+              <div class="flex flex-col gap-2 items-start self-stretch w-full">
+                <label class="flex items-center">
+                  <span class="text-xs text-neutral-600">Insurance Provider</span>
+                  <span class="text-xs text-red-600 text-opacity-70 ml-1" aria-label="required">*</span>
+                </label>
+                <div class="relative self-stretch rounded-lg border border-solid border-neutral-300 bg-white h-[48px] w-full">
+                  <select class="absolute top-0 left-0 w-full h-full px-4 py-3 text-base bg-transparent border-none outline-none appearance-none" required>
+                    <option value="" disabled selected>Select your provider</option>
+                    <option value="blue-cross">Blue Cross Blue Shield</option>
+                    <option value="aetna">Aetna</option>
+                    <option value="cigna">Cigna</option>
+                    <option value="united">UnitedHealthcare</option>
+                    <option value="humana">Humana</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute right-4 top-3 pointer-events-none" aria-hidden="true">
+                    <path d="M12.2848 14.475L8.65977 10.85C8.60977 10.8 8.57227 10.7458 8.54727 10.6875C8.52227 10.6292 8.50977 10.5667 8.50977 10.5C8.50977 10.3667 8.5556 10.25 8.64727 10.15C8.73893 10.05 8.85977 10 9.00977 10H16.6098C16.7598 10 16.8806 10.05 16.9723 10.15C17.0639 10.25 17.1098 10.3667 17.1098 10.5C17.1098 10.5333 17.0598 10.65 16.9598 10.85L13.3348 14.475C13.2514 14.5583 13.1681 14.6167 13.0848 14.65C13.0014 14.6833 12.9098 14.7 12.8098 14.7C12.7098 14.7 12.6181 14.6833 12.5348 14.65C12.4514 14.6167 12.3681 14.5583 12.2848 14.475Z" fill="#565554"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Policy/Member ID Field -->
+              <div class="flex flex-col gap-2 items-start self-stretch w-full">
+                <label class="text-xs text-neutral-600">Policy/Member ID (if available)</label>
+                <input type="text" placeholder="Enter the Policy/Member ID" class="flex py-3 px-4 rounded-lg border border-solid border-neutral-300 bg-white h-[48px] text-base w-full">
+              </div>
+
+              <!-- Additional Information Field -->
+              <div class="flex flex-col gap-2 items-start self-stretch w-full">
+                <label class="text-xs text-neutral-600">Additional Information</label>
+                <textarea placeholder="Write here..." class="flex pt-3 px-4 pb-3 rounded-lg border border-solid border-neutral-300 bg-white h-[120px] text-base w-full resize-none"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="flex justify-center items-center self-stretch px-5 py-3 bg-indigo-500 h-[48px] rounded-[50px] text-base font-semibold leading-6 text-white hover:bg-indigo-600 transition-colors w-full mt-2">
+                Verify Insurance
+              </button>
+
+              <!-- Privacy Notice -->
+              <p class="text-xs text-neutral-600 w-full text-center mt-1">
+                Your information is confidential and protected by HIPAA regulations. We respect your privacy and will only use this information to verify your insurance benefits.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+) : (
+  <main class="flex gap-16 justify-center items-start px-16 py-14 mx-auto my-0 max-w-none bg-white w-full max-md:flex-col max-md:gap-10 max-md:px-8 max-md:py-10 max-md:w-full max-md:max-w-[991px] max-sm:gap-8 max-sm:px-4 max-sm:py-6 max-sm:max-w-screen-sm">
+    <section class="flex flex-col gap-8 items-start w-[45%] max-md:w-full">
+      <header class="flex flex-col gap-4 items-start self-stretch">
+        <h1 class="text-5xl font-medium leading-[60px] text-neutral-800 max-md:text-4xl max-md:leading-[56px] max-sm:text-3xl max-sm:leading-10">
+          Emergency Contact
+        </h1>
+        <p class="self-stretch text-lg leading-7 opacity-75 text-neutral-800 max-sm:text-base max-sm:leading-6">
+          For mental health emergencies, please call 911 or visit your nearest emergency room.
+        </p>
+      </header>
+
+      <article class="flex gap-2.5 items-start self-stretch p-6 bg-white rounded-xl shadow-lg max-sm:p-5">
+        <div class="flex flex-col gap-4 items-start flex-[1_0_0]">
+          <h2 class="self-stretch text-xl font-bold text-neutral-800 max-sm:text-lg">
+            General Support
+          </h2>
+          <div class="flex flex-col gap-3 items-start self-stretch">
+            <div class="flex gap-2 items-center self-stretch">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 20C3.45 20 2.97917 19.8042 2.5875 19.4125C2.19583 19.0208 2 18.55 2 18V6C2 5.45 2.19583 4.97917 2.5875 4.5875C2.97917 4.19583 3.45 4 4 4H20C20.55 4 21.0208 4.19583 21.4125 4.5875C21.8042 4.97917 22 5.45 22 6V18C22 18.55 21.8042 19.0208 21.4125 19.4125C21.0208 19.8042 20.55 20 20 20H4ZM12 12.825C12.0833 12.825 12.1708 12.8125 12.2625 12.7875C12.3542 12.7625 12.4417 12.725 12.525 12.675L19.6 8.25C19.7333 8.16667 19.8333 8.0625 19.9 7.9375C19.9667 7.8125 20 7.675 20 7.525C20 7.19167 19.8583 6.94167 19.575 6.775C19.2917 6.60833 19 6.61667 18.7 6.8L12 11L5.3 6.8C5 6.61667 4.70833 6.6125 4.425 6.7875C4.14167 6.9625 4 7.20833 4 7.525C4 7.69167 4.03333 7.8375 4.1 7.9625C4.16667 8.0875 4.26667 8.18333 4.4 8.25L11.475 12.675C11.5583 12.725 11.6458 12.7625 11.7375 12.7875C11.8292 12.8125 11.9167 12.825 12 12.825Z" fill="#543783"/>
+              </svg>
+              <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
+                Email: support@clearpath.com
+              </p>
+            </div>
+            <div class="flex gap-2 items-center self-stretch">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.95 21C17.8667 21 15.8083 20.5458 13.775 19.6375C11.7417 18.7292 9.89167 17.4417 8.225 15.775C6.55833 14.1083 5.27083 12.2583 4.3625 10.225C3.45417 8.19167 3 6.13333 3 4.05C3 3.75 3.1 3.5 3.3 3.3C3.5 3.1 3.75 3 4.05 3H8.1C8.33333 3 8.54167 3.07917 8.725 3.2375C8.90833 3.39583 9.01667 3.58333 9.05 3.8L9.7 7.3C9.73333 7.56667 9.725 7.79167 9.675 7.975C9.625 8.15833 9.53333 8.31667 9.4 8.45L6.975 10.9C7.30833 11.5167 7.70417 12.1125 8.1625 12.6875C8.62083 13.2625 9.125 13.8167 9.675 14.35C10.1917 14.8667 10.7333 15.3458 11.3 15.7875C11.8667 16.2292 12.4667 16.6333 13.1 17L15.45 14.65C15.6 14.5 15.7958 14.3875 16.0375 14.3125C16.2792 14.2375 16.5167 14.2167 16.75 14.25L20.2 14.95C20.4333 15.0167 20.625 15.1375 20.775 15.3125C20.925 15.4875 21 15.6833 21 15.9V19.95C21 20.25 20.9 20.5 20.7 20.7C20.5 20.9 20.25 21 19.95 21Z" fill="#543783"/>
+              </svg>
+              <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
+                Phone: (800) XXX-XXXX
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="flex flex-col gap-3 items-start self-stretch">
+        <h2 class="self-stretch text-xl font-bold text-neutral-800 max-sm:text-lg">
+          Business Hours
+        </h2>
+        <div class="flex flex-col gap-3 items-start self-stretch">
+          <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
+            Monday - Friday: 9:00 AM - 5:00 PM
+          </p>
+          <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
+            Saturday - Sunday: Closed
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="flex shrink-0 w-[45%] max-md:w-full">
+      <div class="relative shrink-0 rounded-xl bg-gradient-to-r from-[#F3EFEC] to-[#F6F2EE] p-6 w-full shadow-lg">
+        <form class="flex flex-col gap-6 items-start w-full">
+          <div class="flex items-start w-full">
+            <h2 class="inline-block px-4 py-1.5 text-sm font-medium text-white bg-purple-900 rounded-full">
+              Send Us a Message
+            </h2>
           </div>
 
-          <button type="submit"
-                class="w-full py-3 px-5 bg-blue-600 rounded-full text-white font-medium text-center transition-colors hover:bg-blue-700">
-            Send
-          </button>
-        </div>
-      </form>
-    </div>
-  </section>
-</main>
+          <div class="flex flex-col gap-5 items-start self-stretch w-full">
+            <div class="flex flex-col gap-1 items-start self-stretch w-full">
+              <label class="flex items-center text-xs text-neutral-600">
+                Full Name<span class="text-xs text-red-600 ml-1">*</span>
+              </label>
+              <input type="text"
+                    placeholder="Enter the full name"
+                    required
+                    class="w-full p-3 text-sm border border-neutral-300 rounded-lg bg-white"
+                    aria-required="true"/>
+            </div>
+
+            <div class="flex flex-col gap-1 items-start self-stretch w-full">
+              <label class="flex items-center text-xs text-neutral-600">
+                Email Address<span class="text-xs text-red-600 ml-1">*</span>
+              </label>
+              <input type="email"
+                    placeholder="Enter the email address"
+                    required
+                    class="w-full p-3 text-sm border border-neutral-300 rounded-lg bg-white"
+                    aria-required="true"/>
+            </div>
+
+            <div class="flex flex-col gap-1 items-start self-stretch w-full">
+              <label class="flex items-center text-xs text-neutral-600">
+                Phone<span class="text-xs text-red-600 ml-1">*</span>
+              </label>
+              <input type="tel"
+                    placeholder="Enter your phone number"
+                    required
+                    class="w-full p-3 text-sm border border-neutral-300 rounded-lg bg-white"
+                    aria-required="true"/>
+            </div>
+
+            <div class="flex flex-col gap-1 items-start self-stretch w-full">
+              <label class="text-xs text-neutral-600" for="subject">Subject</label>
+              <div class="relative self-stretch w-full">
+                <select id="subject"
+                      class="w-full p-3 text-sm border border-neutral-300 rounded-lg bg-white appearance-none">
+                  <option value="" disabled selected>Select a subject</option>
+                </select>
+                <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 7L0 0L14 0L7 7Z" fill="#666666"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1 items-start self-stretch w-full">
+              <label class="text-xs text-neutral-600" for="message">Message</label>
+              <textarea id="message"
+                      placeholder="Write here..."
+                      class="w-full h-24 p-3 text-sm border border-neutral-300 rounded-lg bg-white resize-none"></textarea>
+            </div>
+
+            <button type="submit"
+                  class="w-full py-3 px-5 bg-blue-600 rounded-full text-white font-medium text-center transition-colors hover:bg-blue-700 mt-2">
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+)}

@@ -11,14 +11,20 @@ import { fetchProgramData } from '../utils/dataMapping.ts';
 import DisorderGrid from "../components/sections/DisorderGrid.astro";
 import CTA from "../components/CTA.astro";
 import HeroProgram from "../components/sections/HeroProgram.astro";
-import TreatmentHero from '../components/sections/TreatmentHero.astro';
-import Treatment2 from '../components/sections/Treatment2.astro';
+import Insurancehero from '../components/sections/Insurancehero.astro';
+import ContactHero from '../components/sections/ContactHero.astro';
+import Insurance2 from '../components/sections/Insurance2.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+import TreatmentGrid from '../components/sections/TreatmentGrid.astro';
+
 ---
 
 <MainLayout title="About" description="Alcohol and Drug Rehab in Boca Raton, Florida">
     <HeroProgram Content={ProgramData.hero} GeneralData={GeneralData} />
-    <TreatmentHero />
-    <Treatment2 />
-    <DisorderGrid  Content={ProgramData.disorders} />
-	<CTA Content={ProgramData.cta}/>
+    <ContactHero isInsurancePage={true}/>
+    <Insurance2/>
+    <Testimonials Content={ProgramData.testimonials} />
+    <TreatmentGrid />
+
+    <Insurancehero />
 </MainLayout>
