@@ -375,7 +375,7 @@ export async function fetchAdmissions(): Promise<Admissions> {
 
 export async function fetchSubProgramData(sub_page): Promise<Program> {
   const type = sub_page; 
-  const [programData] = await getCollection("treatments", (item) => item.id === type);
+  const [programData] = await getCollection("programs", (item) => item.id === type);
 
   return {
     data: {
@@ -1251,6 +1251,82 @@ export async function fetchTreatmentData(): Promise<Treatment> {
 
   return {
     data: {
+      hero: {
+        heading: treatment.data.hero.heading,
+        text: treatment.data.hero.text,
+        buttonText: treatment.data.hero.buttonText,
+        phoneQuestionText: treatment.data.hero.phoneQuestionText,
+        treatmentsLabel: treatment.data.hero.treatmentsLabel,
+        callButtonText: treatment.data.hero.callButtonText,
+        navItems: treatment.data.hero.navItems.map((item: any) => ({
+          text: item.text,
+          url: item.url,
+          hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+        })),
+      },
+      treatmentHero: {
+        heading: treatment.data.treatmentHero.heading,
+        tagline: treatment.data.treatmentHero.tagline,
+        title: treatment.data.treatmentHero.title,
+        subtitle: treatment.data.treatmentHero.subtitle,
+        description: treatment.data.treatmentHero.description,
+        approaches: treatment.data.treatmentHero.approaches.map((approach: any) => ({
+          id: approach.id,
+          title: approach.title,
+          description: approach.description,
+        })),
+      },
+      treatment2: {
+        heading: treatment.data.treatment2.heading,
+        headingHighlight: treatment.data.treatment2.headingHighlight,
+        description: treatment.data.treatment2.description,
+        symptoms: treatment.data.treatment2.symptoms.map((symptom: any) => ({
+          icon: symptom.icon,
+          text: symptom.text,
+        })),
+        buttonText: treatment.data.treatment2.buttonText,
+        phoneText: treatment.data.treatment2.phoneText,
+        phoneNumber: treatment.data.treatment2.phoneNumber,
+        image: treatment.data.treatment2.image,
+      },
+      disorders: {
+        heading: treatment.data.disorders.heading,
+        headingTwo_Part_1: treatment.data.disorders.headingTwo_Part_1,
+        headingTwo_Part_2: treatment.data.disorders.headingTwo_Part_2,
+        headingTwo_Part_3: treatment.data.disorders.headingTwo_Part_3,
+        disorders: treatment.data.disorders.disorders.map((disorder: any) => ({
+          link: disorder.link,
+          title: disorder.title,
+          image: disorder.image,
+        })),
+      },
+      cta: {
+        heading: treatment.data.cta.heading,
+        text: treatment.data.cta.text,
+        buttonText: treatment.data.cta.buttonText,
+        image: treatment.data.cta.image,
+        altText: treatment.data.cta.altText,
+        phoneText: treatment.data.cta.phoneText,
+        phoneNumber: treatment.data.cta.phoneNumber,
+      },
+    },
+  };
+}
+
+export async function fetchSubTreatmentData(sub_page): Promise<Treatment> {
+  const type = sub_page; 
+  const [treatment] = await getCollection("treatments", (item) => item.id === type);
+
+  return {
+   data: {
       hero: {
         heading: treatment.data.hero.heading,
         text: treatment.data.hero.text,

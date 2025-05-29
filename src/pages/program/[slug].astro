@@ -19,7 +19,7 @@ import ProgramTMS from "../../components/sections/programTMS.astro";
 import Program12 from "../../components/sections/Program12.astro";
 
 export async function getStaticPaths() {
-    const treatments = import.meta.glob('../../content/treatments/*.json', { eager: true });
+    const treatments = import.meta.glob('../../content/programs/*.json', { eager: true });
     const paths = Object.keys(treatments).map((file) => {
         const slug = file.split('/').pop().replace('.json', '');
         return { params: { slug } };
