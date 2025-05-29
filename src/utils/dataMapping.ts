@@ -139,6 +139,14 @@ export async function fetchContactData(): Promise<Contact> {
           text: item.text,
           url: item.url,
           hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink) => ({
+            text: sublink.text, 
+            link: sublink.link,
+          })),
         })),
       },
       
@@ -382,7 +390,14 @@ export async function fetchProgramData(): Promise<Program> {
         navItems: programData.data.hero.navItems.map((item: any) => ({
           text: item.text,
           url: item.url,
-          hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
         })),
       },
       about: {
@@ -740,6 +755,14 @@ export async function fetchBlogPageData(): Promise<BlogPage> {
           text: item.text,
           url: item.url,
           hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
         })),
       },
        disorders: {
@@ -782,6 +805,14 @@ export async function fetchInsuranceData(): Promise<Insurance> {
           text: item.text,
           url: item.url,
           hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
         })),
       },
       contactHero: {
@@ -870,6 +901,14 @@ export async function fetchLocationData(): Promise<Location> {
           text: item.text,
           url: item.url,
           hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
         })),
       },
       locationHero: {
@@ -921,6 +960,23 @@ export async function fetchTreatmentData(): Promise<Treatment> {
       hero: {
         heading: treatment.data.hero.heading,
         text: treatment.data.hero.text,
+        buttonText: treatment.data.hero.buttonText,
+        phoneQuestionText: treatment.data.hero.phoneQuestionText,
+        treatmentsLabel: treatment.data.hero.treatmentsLabel,
+        callButtonText: treatment.data.hero.callButtonText,
+        navItems: treatment.data.hero.navItems.map((item: any) => ({
+          text: item.text,
+          url: item.url,
+          hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+        })),
       },
       disorders: {
         heading: treatment.data.disorders.heading,

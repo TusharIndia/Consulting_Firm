@@ -260,7 +260,15 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
           
           # Testimonials Section
@@ -474,9 +482,15 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
-
 
           - label: "About"
             name: "about"
@@ -982,9 +996,17 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
-              
+
           - label: "Disorders"
             name: "disorders"
             widget: "object"
@@ -1030,7 +1052,15 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
           
           - label: "Contact Hero"
@@ -1047,7 +1077,15 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
           
           - label: "Insurance Providers Section"
@@ -1143,7 +1181,15 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
           
           - label: "Location Hero"
@@ -1196,6 +1242,22 @@ collections:
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
+              - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
+              - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
+                ] }
 
           - label: "Disorders"
             name: "disorders"

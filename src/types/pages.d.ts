@@ -75,6 +75,14 @@ export interface Contact {
         text: string;
         url: string;
         hasDropdown: boolean;
+        sublinks?: {
+          text: string;
+          link: string;
+        }[];
+        sublinks2?: {
+          text: string;
+          link: string;
+        }[];
       }[];
     };
     
@@ -298,7 +306,14 @@ export interface Program {
       navItems: {
         text: string;
         url: string;
-        hasDropdown: boolean;
+        sublinks?: {
+          text: string;
+          link: string;
+        }[];
+        sublinks2?: {
+          text: string;
+          link: string;
+        }[];
       }[];
     };
     about: {
@@ -627,6 +642,14 @@ export interface BlogPage {
         text: string;
         url: string;
         hasDropdown: boolean;
+        sublinks?: {
+          text: string;
+          link: string;
+        }[];
+        sublinks2?: {
+          text: string;
+          link: string;
+        }[];
       }[];
     };
      disorders: {
@@ -665,6 +688,14 @@ export interface Insurance {
         text: string;
         url: string;
         hasDropdown: boolean;
+        sublinks?: {
+          text: string;
+          link: string;
+        }[];
+        sublinks2?: {
+          text: string;
+          link: string;
+        }[];
       }[];
     };
     contactHero: {
@@ -746,6 +777,14 @@ export interface Location {
         text: string;
         url: string;
         hasDropdown: boolean;
+        sublinks?: {
+          text: string;
+          link: string;
+        }[];
+        sublinks2?: {
+          text: string;
+          link: string;
+        }[];
       }[];
     };
     locationHero: {
@@ -790,6 +829,23 @@ export interface Treatment {
     hero: {
       heading: string;
       text: string;
+      buttonText: string;
+      phoneQuestionText: string;
+      treatmentsLabel: string;
+      callButtonText: string;
+      navItems: {
+        text: string;
+        url: string;
+        hasDropdown: boolean;
+        sublinks?: {
+          text: string;
+          link: string;
+        }[];
+        sublinks2?: {
+          text: string;
+          link: string;
+        }[];
+      }[];
     };
     disorders: {
       heading: string;

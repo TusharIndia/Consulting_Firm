@@ -1,7 +1,102 @@
 {
   "hero": {
-    "heading": "Effective Treatments for Mental Health Disorders",
-    "text": "Our evidence-based treatment approaches focus on helping you overcome mental health challenges and improve your quality of life."
+    "heading": "Transformative Mental Health Treatment at Clear Path",
+    "text": "Innovative approaches to mental health and wellness",
+    "buttonText": "Get Started",
+    "phoneQuestionText": "Have a question?",
+    "treatmentsLabel": "Treatments",
+    "callButtonText": "Call",
+    "navItems": [
+      {
+        "text": "Treatments",
+        "url": "#",
+        "hasDropdown": true,
+        "sublinks": [
+          {
+            "text": "Medication Management",
+            "link": "/medication-management"
+          },
+          {
+            "text": "Transcranial Magnetic Stimulation (TMS)",
+            "link": "/tms"
+          },
+          {
+            "text": "Spravato® (Esketamine) ",
+            "link": "/spravato"
+          },
+          {
+            "text": "Psychotherapy",
+            "link": "/psychotherapy"
+          }
+        ],
+        "sublinks2": [
+          {
+            "text": "Depression",
+            "link": "/depression"
+          },
+          {
+            "text": "Anxiety",
+            "link": "/anxiety"
+          },
+          {
+            "text": "ADHD",
+            "link": "/adhd"
+          },
+          {
+            "text": "PTSD",
+            "link": "/ptsd"
+          },
+          {
+            "text": "BiPolar",
+            "link": "/bipolar"
+          },
+          {
+            "text": "Stress",
+            "link": "/stress"
+          },
+          {
+            "text": "OCD",
+            "link": "/ocd"
+          },
+          {
+            "text": "Addiction",
+            "link": "/addiction"
+          },
+          {
+            "text": "and more",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "text": "Locations",
+        "url": "/location",
+        "hasDropdown": false,
+        "sublinks": [],
+        "sublinks2": []
+      },
+      {
+        "text": "Pricing",
+        "url": "/pricing",
+        "hasDropdown": false,
+        "sublinks": [],
+        "sublinks2": []
+      },
+      {
+        "text": "Resources",
+        "url": "/program",
+        "hasDropdown": false,
+        "sublinks": [],
+        "sublinks2": []
+      },
+      {
+        "text": "Get Started",
+        "url": "/contact",
+        "hasDropdown": false,
+        "sublinks": [],
+        "sublinks2": []
+      }
+    ]
   },
   "disorders": {
     "heading": "OUR INSIGHTS",
@@ -26,7 +121,7 @@
       },
       {
         "link": "/ptsd",
-        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
+        "title": "Effective Strategies for Managing PTSD",
         "image": "/imgs/PTSD_Article.png"
       }
     ]

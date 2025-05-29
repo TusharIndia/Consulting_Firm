@@ -14,9 +14,50 @@ const { heading, text, buttonText, phoneQuestionText, treatmentsLabel, callButto
 
         <ul class="flex flex-wrap gap-10 items-center self-stretch my-auto text-white min-w-60 max-md:max-w-full">
           {navItems.map((item) => (
-            <li class="flex gap-1 items-center self-stretch my-auto whitespace-nowrap">
-              <a href={item.url} class="self-stretch my-auto text-white">{item.text}</a>
-              {item.hasDropdown && <img src="/imgs/dropdown_arrow.svg" alt="Dropdown arrow" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square">}
+            <li class="group relative self-stretch my-auto whitespace-nowrap">
+              <a href={item.url} class="text-white self-stretch my-auto flex items-center">
+                {item.text}
+                {item.sublinks && item.sublinks.length > 0 && (
+                  <img
+                    src="/imgs/dropdown_arrow.svg"
+                    alt="Dropdown arrow"
+                    class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square ml-1"
+                  />
+                )}
+              </a>
+              {item.sublinks && item.sublinks.length > 0 && (
+                <div class="absolute left-0 top-full hidden group-hover:block z-10 pt-2">
+                  <section class="flex gap-2.5 p-6 mx-auto my-0 bg-white rounded-xl shadow-2xl max-w-[686px] max-md:p-5 max-sm:flex-col max-sm:p-4">
+                    <article class="flex flex-col flex-1 gap-5">
+                      <h2 class="text-lg font-medium text-neutral-800">
+                        By Treatment Offering
+                      </h2>
+                      <ul class="flex flex-col gap-3">
+                        {item.sublinks.map((sublink) => (
+                          <li class="text-sm text-blue-900">
+                            <a href={sublink.link}>{sublink.text}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+
+                    <div class="mx-5 my-0 w-px bg-neutral-800 bg-opacity-10 max-sm:mx-0 max-sm:my-5 max-sm:w-full max-sm:h-px"></div>
+
+                    <article class="flex flex-col flex-1 gap-5">
+                      <h2 class="text-lg font-medium text-neutral-800">
+                        By what your experiencing
+                      </h2>
+                      <ul class="flex flex-col gap-3">
+                        {item.sublinks2 && item.sublinks2.map((sublink) => (
+                          <li class="text-sm text-blue-900">
+                            <a href={sublink.link}>{sublink.text}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+                  </section>
+                </div>
+              )}
             </li>
           ))}
         </ul>

@@ -112,6 +112,18 @@ const contactCollection = {
           text: z.string(),
           url: z.string(),
           hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
         })
       ),
     }),
@@ -304,7 +316,18 @@ const programCollection = {
         z.object({
           text: z.string(),
           url: z.string(),
-          hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
         })
       ),
     }),
@@ -633,6 +656,18 @@ const blogpageCollection = {
           text: z.string(),
           url: z.string(),
           hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
         })
       ),
     }),
@@ -671,6 +706,18 @@ const insuranceCollection = {
           text: z.string(),
           url: z.string(),
           hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
         })
       ),
     }),
@@ -763,6 +810,18 @@ const locationCollection = {
           text: z.string(),
           url: z.string(),
           hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
         })
       ),
     }),
@@ -809,6 +868,29 @@ const treatmentCollection = {
     hero: z.object({
       heading: z.string(),
       text: z.string(),
+      buttonText: z.string(),
+      phoneQuestionText: z.string(),
+      treatmentsLabel: z.string(),
+      callButtonText: z.string(),
+      navItems: z.array(
+        z.object({
+          text: z.string(),
+          url: z.string(),
+          hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+        })
+      ),
     }),
     disorders: z.object({
       heading: z.string(),
