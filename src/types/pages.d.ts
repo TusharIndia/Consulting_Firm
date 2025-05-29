@@ -847,6 +847,31 @@ export interface Treatment {
         }[];
       }[];
     };
+    treatmentHero: {
+      heading: string;
+      tagline: string;
+      title: string;
+      subtitle: string;
+      description: string;
+      approaches: {
+        id: string;
+        title: string;
+        description: string;
+      }[];
+    };
+    treatment2: {
+      heading: string;
+      headingHighlight: string;
+      description: string;
+      symptoms: {
+        icon: string;
+        text: string;
+      }[];
+      buttonText: string;
+      phoneText: string;
+      phoneNumber: string;
+      image: string;
+    };
     disorders: {
       heading: string;
       headingTwo_Part_1: string;
@@ -857,6 +882,56 @@ export interface Treatment {
         title: string;
         image: string;
       }[];
+    };
+    cta: {
+      heading: string;
+      text: string;
+      buttonText: string;
+      image: string;
+      altText: string;
+      phoneText: string;
+      phoneNumber: string;
+    };
+  };
+}
+
+export interface Pricing {
+  data: {
+    hero: {
+      heading: string;
+      text: string;
+      buttonText: string;
+      phoneQuestionText: string;
+      treatmentsLabel: string;
+      callButtonText: string;
+      navItems: {
+        text: string;
+        url: string;
+        sublinks?: {
+          text: string;
+          link: string;
+        }[];
+        sublinks2?: {
+          text: string;
+          link: string;
+        }[];
+      }[];
+    };
+    disorders: {
+      heading: string;
+      headingTwo_Part_1: string;
+      headingTwo_Part_2: string;
+      headingTwo_Part_3: string;
+      disorders: {
+        link: string;
+        title: string;
+        image: string;
+      }[];
+    };
+    cta: {
+      heading: string;
+      text: string;
+      buttonText: string;
     };
   };
 }

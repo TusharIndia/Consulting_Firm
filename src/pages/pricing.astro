@@ -1,5 +1,5 @@
 ---
-import { fetchGeneralData } from '../utils/dataMapping.ts';
+import { fetchGeneralData, fetchPricingData } from '../utils/dataMapping.ts';
 import MainLayout from "../layouts/MainLayout.astro"
 import Hero from '../components/layout/Hero.astro';
 import BlogSection from '../components/sections/BlogSection.astro';
@@ -7,6 +7,7 @@ import SingleBlog from '../components/sections/SingleBlog.astro';
 const GeneralData = await fetchGeneralData();
 const Data = { heading: "Blog", text: "Providing personalized care for substance use and mental health to help individuals achieve lasting recovery."}
 const { data: ProgramData } = await fetchProgramData();
+const { data: PricingData } = await fetchPricingData();
 import { fetchProgramData } from '../utils/dataMapping.ts';
 import DisorderGrid from "../components/sections/DisorderGrid.astro";
 import CTA from "../components/CTA.astro";
@@ -16,9 +17,9 @@ import Pricing2 from '../components/sections/Pricing2.astro';
 ---
 
 <MainLayout>
-    <HeroProgram Content={ProgramData.hero} GeneralData={GeneralData} />
+    <HeroProgram Content={PricingData.hero} GeneralData={GeneralData} />
     <PricingHero />
     <Pricing2/>
-    <DisorderGrid  Content={ProgramData.disorders} />
-	<CTA Content={ProgramData.cta}/>
+    <DisorderGrid  Content={PricingData.disorders} />
+	<CTA Content={PricingData.cta}/>
 </MainLayout>

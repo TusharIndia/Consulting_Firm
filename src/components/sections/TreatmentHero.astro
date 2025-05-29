@@ -1,5 +1,21 @@
 ---
 // TreatmentHero component
+interface Props {
+    Content: {
+        heading: string;
+        tagline: string;
+        title: string;
+        subtitle: string;
+        description: string;
+        approaches: {
+            id: string;
+            title: string;
+            description: string;
+        }[];
+    };
+}
+
+const { Content } = Astro.props;
 ---
 
 <section class="flex gap-11 items-start px-16 py-14 mx-auto w-full bg-white max-w-[1440px] max-md:flex-col max-md:gap-10 max-md:p-10 max-md:max-w-[991px] max-sm:gap-8 max-sm:p-5 max-sm:max-w-screen-sm">
@@ -59,7 +75,7 @@
                         font-size="16"
                         letter-spacing="0em"
                     >
-                        <tspan x="120" y="102.318">Our Approach</tspan>
+                        <tspan x="120" y="102.318">{Content.heading}</tspan>
                     </text>
                     <text
                         fill="#222222"
@@ -70,8 +86,8 @@
                         font-weight="500"
                         letter-spacing="0em"
                     >
-                        <tspan x="80" y="356">Our Treatment</tspan>
-                        <tspan x="80" y="428">Approach</tspan>
+                        <tspan x="80" y="356">{Content.tagline}</tspan>
+                        <tspan x="80" y="428">{Content.title}</tspan>
                     </text>
                     <text
                         opacity="0.75"
@@ -82,151 +98,61 @@
                         font-size="18"
                         letter-spacing="0em"
                     >
-                        <tspan x="80" y="493.545">We utilize multiple evidence-based treatments</tspan>
-                        <tspan x="80" y="527.545">for depression:</tspan>
+                        <tspan x="80" y="493.545">{Content.subtitle}</tspan>
+                        <tspan x="80" y="527.545">{Content.description}</tspan>
                     </text>
                 </g>
             </svg>
         </div>
-
-        
     </div>
 
     <div class="flex flex-col gap-10 pt-12 w-[626px] max-md:w-full">
-        <article class="flex flex-col gap-6 max-sm:gap-4">
-            <header class="flex gap-3 items-center max-sm:flex-col max-sm:gap-4 max-sm:items-start">
-                <div class="treatment-icon-container">
-                    <svg
-                        width="56"
-                        height="56"
-                        viewBox="0 0 56 56"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="treatment-icon"
-                        style="width: 56px; height: 56px; flex-shrink: 0"
-                    >
-                        <defs>
-                            <clipPath id="clip0_469_333">
-                                <rect width="56" height="56" fill="white"></rect>
-                            </clipPath>
-                        </defs>
-                        <g clip-path="url(#clip0_469_333)">
-                            <path
-                                d="M56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56C43.464 56 56 43.464 56 28Z"
-                                fill="#222222"
-                            ></path>
-                            <text
-                                fill="white"
-                                xml:space="preserve"
-                                style="white-space: pre"
-                                font-family="Inter"
-                                font-size="22.4"
-                                font-weight="bold"
-                                letter-spacing="0em"
-                            >
-                                <tspan x="15.7098" y="36.1457">01</tspan>
-                            </text>
-                        </g>
-                    </svg>
-                </div>
-                <h2 class="text-3xl font-bold leading-10 text-neutral-800 max-md:text-3xl max-md:leading-9 max-sm:text-2xl max-sm:leading-8 font-poppins">
-                    Medication Management
-                </h2>
-            </header>
-            <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5 font-inter">
-                Antidepressant medications, Regular monitoring and adjustments, Side effect management and Combination therapy when needed
-            </p>
-        </article>
-
-        <article class="flex flex-col gap-6 max-sm:gap-4">
-            <header class="flex gap-3 items-center max-sm:flex-col max-sm:gap-4 max-sm:items-start">
-                <div class="treatment-icon-container">
-                    <svg
-                        width="56"
-                        height="56"
-                        viewBox="0 0 56 56"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="treatment-icon"
-                        style="width: 56px; height: 56px; flex-shrink: 0"
-                    >
-                        <defs>
-                            <clipPath id="clip0_469_341">
-                                <rect width="56" height="56" fill="white"></rect>
-                            </clipPath>
-                        </defs>
-                        <g clip-path="url(#clip0_469_341)">
-                            <path
-                                d="M56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56C43.464 56 56 43.464 56 28Z"
-                                fill="#222222"
-                            ></path>
-                            <text
-                                fill="white"
-                                xml:space="preserve"
-                                style="white-space: pre"
-                                font-family="Inter"
-                                font-size="22.4"
-                                font-weight="bold"
-                                letter-spacing="0em"
-                            >
-                                <tspan x="13.6348" y="36.1457">02</tspan>
-                            </text>
-                        </g>
-                    </svg>
-                </div>
-                <h2 class="text-3xl font-bold leading-10 text-neutral-800 max-md:text-3xl max-md:leading-9 max-sm:text-2xl max-sm:leading-8 font-poppins">
-                    Transcranial Magnetic Stimulation (TMS)
-                </h2>
-            </header>
-            <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5 font-inter">
-                FDA-approved non-invasive treatment, Particularly effective for treatment-resistant depression, No anesthesia required and Minimal side effects
-            </p>
-        </article>
-
-        <article class="flex flex-col gap-6 max-sm:gap-4">
-            <header class="flex gap-3 items-center max-sm:flex-col max-sm:gap-4 max-sm:items-start">
-                <div class="treatment-icon-container">
-                    <svg
-                        width="56"
-                        height="56"
-                        viewBox="0 0 56 56"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="treatment-icon"
-                        style="width: 56px; height: 56px; flex-shrink: 0"
-                    >
-                        <defs>
-                            <clipPath id="clip0_469_349">
-                                <rect width="56" height="56" fill="white"></rect>
-                            </clipPath>
-                        </defs>
-                        <g clip-path="url(#clip0_469_349)">
-                            <path
-                                d="M56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56C43.464 56 56 43.464 56 28Z"
-                                fill="#222222"
-                            ></path>
-                            <text
-                                fill="white"
-                                xml:space="preserve"
-                                style="white-space: pre"
-                                font-family="Inter"
-                                font-size="22.4"
-                                font-weight="bold"
-                                letter-spacing="0em"
-                            >
-                                <tspan x="13.8066" y="36.1457">03</tspan>
-                            </text>
-                        </g>
-                    </svg>
-                </div>
-                <h2 class="text-3xl font-bold leading-10 text-neutral-800 max-md:text-3xl max-md:leading-9 max-sm:text-2xl max-sm:leading-8 font-poppins">
-                    Spravato (Esketamine)
-                </h2>
-            </header>
-            <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5 font-inter">
-                Fast-acting nasal spray, Monitored administration, Effective for treatment-resistant cases and Covered by many insurance plans
-            </p>
-        </article>
+        {Content.approaches.map((approach) => (
+            <article class="flex flex-col gap-6 max-sm:gap-4">
+                <header class="flex gap-3 items-center max-sm:flex-col max-sm:gap-4 max-sm:items-start">
+                    <div class="treatment-icon-container">
+                        <svg
+                            width="56"
+                            height="56"
+                            viewBox="0 0 56 56"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="treatment-icon"
+                            style="width: 56px; height: 56px; flex-shrink: 0"
+                        >
+                            <defs>
+                                <clipPath id={`clip0_469_${333 + parseInt(approach.id) * 8}`}>
+                                    <rect width="56" height="56" fill="white"></rect>
+                                </clipPath>
+                            </defs>
+                            <g clip-path={`url(#clip0_469_${333 + parseInt(approach.id) * 8})`}>
+                                <path
+                                    d="M56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56C43.464 56 56 43.464 56 28Z"
+                                    fill="#222222"
+                                ></path>
+                                <text
+                                    fill="white"
+                                    xml:space="preserve"
+                                    style="white-space: pre"
+                                    font-family="Inter"
+                                    font-size="22.4"
+                                    font-weight="bold"
+                                    letter-spacing="0em"
+                                >
+                                    <tspan x="15.7098" y="36.1457">{approach.id}</tspan>
+                                </text>
+                            </g>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold leading-10 text-neutral-800 max-md:text-3xl max-md:leading-9 max-sm:text-2xl max-sm:leading-8 font-poppins">
+                        {approach.title}
+                    </h2>
+                </header>
+                <p class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5 font-inter">
+                    {approach.description}
+                </p>
+            </article>
+        ))}
     </div>
 </section>
 

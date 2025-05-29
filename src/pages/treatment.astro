@@ -1,13 +1,11 @@
 ---
-import { fetchGeneralData } from '../utils/dataMapping.ts';
+import { fetchGeneralData, fetchTreatmentData } from '../utils/dataMapping.ts';
 import MainLayout from "../layouts/MainLayout.astro"
 import Hero from '../components/layout/Hero.astro';
 import BlogSection from '../components/sections/BlogSection.astro';
 import SingleBlog from '../components/sections/SingleBlog.astro';
 const GeneralData = await fetchGeneralData();
-const Data = { heading: "Blog", text: "Providing personalized care for substance use and mental health to help individuals achieve lasting recovery."}
-const { data: ProgramData } = await fetchProgramData();
-import { fetchProgramData } from '../utils/dataMapping.ts';
+const { data: TreatmentData } = await fetchTreatmentData();
 import DisorderGrid from "../components/sections/DisorderGrid.astro";
 import CTA from "../components/CTA.astro";
 import HeroProgram from "../components/sections/HeroProgram.astro";
@@ -15,10 +13,10 @@ import TreatmentHero from '../components/sections/TreatmentHero.astro';
 import Treatment2 from '../components/sections/Treatment2.astro';
 ---
 
-<MainLayout title="About" description="Alcohol and Drug Rehab in Boca Raton, Florida">
-    <HeroProgram Content={ProgramData.hero} GeneralData={GeneralData} />
-    <TreatmentHero />
-    <Treatment2 />
-    <DisorderGrid  Content={ProgramData.disorders} />
-	<CTA Content={ProgramData.cta}/>
+<MainLayout title="Treatment" description="Mental Health Treatment at Clear Path">
+    <HeroProgram Content={TreatmentData.hero} GeneralData={GeneralData} />
+    <TreatmentHero Content={TreatmentData.treatmentHero} />
+    <Treatment2 Content={TreatmentData.treatment2} />
+    <DisorderGrid Content={TreatmentData.disorders} />
+	<CTA Content={TreatmentData.cta}/>
 </MainLayout>

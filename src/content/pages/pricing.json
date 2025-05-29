@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "heading": "Transparent Pricing for Mental Health Treatment",
+    "text": "We believe in clarity and affordability for mental health services. Discover our pricing options and payment plans.",
+    "buttonText": "Get Started",
+    "phoneQuestionText": "Have a question?",
+    "treatmentsLabel": "Treatments",
+    "callButtonText": "Call",
+    "navItems": [
+      {
+        "text": "Treatments",
+        "url": "#",
+        "sublinks": [
+          {
+            "text": "Medication Management",
+            "link": "/medication-management"
+          },
+          {
+            "text": "Transcranial Magnetic Stimulation (TMS)",
+            "link": "/tms"
+          },
+          {
+            "text": "Spravato® (Esketamine) ",
+            "link": "/spravato"
+          },
+          {
+            "text": "Psychotherapy",
+            "link": "/psychotherapy"
+          }
+        ],
+        "sublinks2": [
+          {
+            "text": "Depression",
+            "link": "/depression"
+          },
+          {
+            "text": "Anxiety",
+            "link": "/anxiety"
+          },
+          {
+            "text": "ADHD",
+            "link": "/adhd"
+          },
+          {
+            "text": "PTSD",
+            "link": "/ptsd"
+          },
+          {
+            "text": "BiPolar",
+            "link": "/bipolar"
+          },
+          {
+            "text": "Stress",
+            "link": "/stress"
+          },
+          {
+            "text": "OCD",
+            "link": "/ocd"
+          },
+          {
+            "text": "Addiction",
+            "link": "/addiction"
+          },
+          {
+            "text": "and more",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "text": "Locations",
+        "url": "/location",
+        "sublinks": [],
+        "sublinks2": []
+      },
+      {
+        "text": "Pricing",
+        "url": "/pricing",
+        "sublinks": [],
+        "sublinks2": []
+      },
+      {
+        "text": "Resources",
+        "url": "/program",
+        "sublinks": [],
+        "sublinks2": []
+      },
+      {
+        "text": "Get Started",
+        "url": "/contact",
+        "sublinks": [],
+        "sublinks2": []
+      }
+    ]
+  },
+  "disorders": {
+    "heading": "OUR INSIGHTS",
+    "headingTwo_Part_1": "Expert guidance for your ",
+    "headingTwo_Part_2": "mental health ",
+    "headingTwo_Part_3": "journey",
+    "disorders": [
+      {
+        "link": "/depression",
+        "title": "Effective Strategies for Managing Depression",
+        "image": "/imgs/Depression_Article.png"
+      },
+      {
+        "link": "/anxiety",
+        "title": "Effective Strategies for Managing Anxiety",
+        "image": "/imgs/Anxiety_Article.png"
+      },
+      {
+        "link": "/adhd",
+        "title": "Effective Strategies for Managing ADHD",
+        "image": "/imgs/ADHD_Article.png"
+      },
+      {
+        "link": "/ptsd",
+        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
+        "image": "/imgs/PTSD_Article.png"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Start Your Journey To Recovery Today",
+    "text": "At Clear Path, we're ready to help you take the first step towards better mental health. Our compassionate team is available to answer your questions about our pricing options and insurance coverage. Contact us today to learn more about our programs or start the admission process.",
+    "buttonText": "Call Us Now!"
+  }
+}
