@@ -17,7 +17,7 @@ const {
 const GeneralData = Astro.props.GeneralData;
 ---
 
-<div class="max-md:hidden">
+<div class="max-[820px]:hidden">
   <section
     class="rounded-none mx-auto mb-10 max-w-[1320px] relative"
   >
@@ -163,7 +163,7 @@ const GeneralData = Astro.props.GeneralData;
   </section>
 </div>
 
-<div class="md:hidden">
+<div class="min-[821px]:hidden">
   <header class="relative flex items-center justify-between p-4 bg-transparent z-20">
     <img
       src={logo}
@@ -182,43 +182,45 @@ const GeneralData = Astro.props.GeneralData;
     style={`background-image: url(${backgroundImage}); background-size: cover; background-position: center;`}
   >
     <div class="bg-white rounded-xl p-6 mb-6 max-w-4xl">
-      <h1 class="text-3xl font-bold leading-tight mb-4">
+      <h1 class="text-2xl sm:text-3xl font-bold leading-tight mb-4">
         {textBox2_Part_1}
-        <span class="text-blue-200">{textBox2_Part_2}</span>
+        <span class="text-blue-700">{textBox2_Part_2}</span>
         {textBox2_Part_3}
       </h1>
     </div>
     {textBox3 && (
-      <div class="bg-white rounded-xl p-6 mb-8 max-w-md">
-        <p class="text-lg leading-relaxed">
+      <div class="bg-blue-900 bg-opacity-50 backdrop-blur-sm border border-white border-opacity-50 rounded-xl p-6 mb-8 max-w-md">
+        <p class="text-base sm:text-lg leading-relaxed text-white">
           {textBox3}
         </p>
       </div>
     )}
-    <a
-      href="#"
-      class="w-full inline-block px-8 py-4 text-lg font-semibold rounded-full bg-amber-300 text-neutral-800 hover:bg-amber-400 transition-colors shadow-lg"
-    >
-      {buttonOne}
-    </a>
-    {telephoneNumber && (
+    <div class="w-full max-w-xs flex flex-col gap-4">
       <a
-        href={`tel:${telephoneNumber}`}
-        class="w-full flex flex-col flex-1 shrink justify-center items-center px-5 py-4 mt-4 text-white bg-purple-900 rounded-[50px] transition-colors shadow-md"
+        href="#"
+        class="w-full inline-block px-8 py-4 text-base sm:text-lg font-semibold rounded-full bg-amber-300 text-neutral-800 hover:bg-amber-400 transition-colors shadow-lg"
       >
-        <div class="flex flex-col items-center">
-          <span class="text-xs">{buttonTwo}</span>
-          <span class="text-xs font-semibold leading-6">{buttonText}</span>
-        </div>
+        {buttonOne}
       </a>
-    )}
+      {telephoneNumber && (
+        <a
+          href={`tel:${telephoneNumber}`}
+          class="w-full flex flex-col justify-center items-center px-5 py-4 text-white bg-purple-900 rounded-full transition-colors shadow-md hover:bg-purple-800"
+        >
+          <div class="flex flex-col items-center">
+            <span class="text-xs">{buttonTwo}</span>
+            <span class="text-sm font-semibold leading-6">{buttonText}</span>
+          </div>
+        </a>
+      )}
+    </div>
   </section>
 
   <nav
     id="mobile-nav-overlay"
-    class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center h-screen"
+    class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex justify-center items-start pt-4 h-screen overflow-y-auto"
   >
-    <div class="bg-white shadow-2xl p-6 w-full max-w-md mx-auto relative max-h-[90vh] overflow-y-auto">
+    <div class="bg-white shadow-2xl p-6 w-full max-w-sm mx-auto relative max-h-[90vh] overflow-y-auto rounded-xl">
       <button id="close-menu-button" class="absolute top-4 right-4 p-2 text-gray-600 hover:text-gray-900">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -227,7 +229,7 @@ const GeneralData = Astro.props.GeneralData;
 
       <ul class="flex flex-col gap-4 mt-8">
         {heroLinks.map((link) => (
-          <li class="relative">
+          <li class="relative border-b border-gray-100 pb-2">
             {link.sublinks && link.sublinks.length > 0 ? (
               <>
                 <button
@@ -278,7 +280,7 @@ const GeneralData = Astro.props.GeneralData;
       <div class="mt-8">
         <a
           href={`tel:${telephoneNumber}`}
-          class="block w-full text-center px-5 py-3 text-lg font-semibold bg-purple-900 text-white rounded-[50px] hover:bg-purple-800 transition-colors shadow-md"
+          class="block w-full text-center px-5 py-3 text-lg font-semibold bg-purple-900 text-white rounded-full hover:bg-purple-800 transition-colors shadow-md"
         >
           {buttonText}
         </a>
@@ -329,18 +331,16 @@ const GeneralData = Astro.props.GeneralData;
       });
     });
 
-    // Optional: Close menu if a link inside the overlay is clicked (for single-page navigation)
+    // Close menu if a link inside the overlay is clicked
     mobileNavOverlay.addEventListener('click', (event) => {
       if (event.target.tagName === 'A' && event.target.closest('#mobile-nav-overlay')) {
-        // You might want to add a small delay here if the link triggers a route change
-        // setTimeout(closeMobileNav, 100); 
         closeMobileNav();
       }
     });
 
-    // Optional: Close menu if clicking outside the white card (but within the overlay)
+    // Close menu if clicking outside the white card
     mobileNavOverlay.addEventListener('click', (event) => {
-      if (event.target === mobileNavOverlay) { // Only if clicked directly on the overlay background
+      if (event.target === mobileNavOverlay) {
         closeMobileNav();
       }
     });

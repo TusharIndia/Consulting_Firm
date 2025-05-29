@@ -30,3 +30,10 @@ const { data: HomeData } = await fetchHomeData();
 	<DisorderGrid  Content={HomeData.disorders} />
 	<CTA Content={HomeData.cta}/>
 </MainLayout>
+
+<style is:global>
+  /* Override the background color globally */
+  body {
+    background-color: #ffffff !important;
+  }
+</style>

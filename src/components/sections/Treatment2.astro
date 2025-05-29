@@ -19,33 +19,33 @@ interface Props {
 const { Content } = Astro.props;
 ---
 
-<section class="flex overflow-hidden flex-col px-16 pt-10 pb-10 bg-white max-md:px-5 max-md:py-24">
-    <header class="self-center text-5xl font-medium leading-none text-center text-neutral-800 max-md:max-w-full max-md:text-4xl">
-        <h1 class="text-5xl">
+<section class="flex overflow-hidden flex-col px-4 sm:px-8 md:px-16 pt-10 pb-10 bg-white max-md:py-16 mx-auto max-w-7xl">
+    <header class="self-center text-4xl md:text-5xl font-medium leading-none text-center text-neutral-800 max-w-full">
+        <h1 class="md:text-5xl">
             {Content.heading}
             <span class="text-[#5E81E9]">{Content.headingHighlight}</span>
         </h1>
     </header>
 
-    <div class="px-8 py-10 mt-16 bg-[#5E81E9] rounded-3xl max-md:px-5 max-md:mt-10 max-md:max-w-full">
-        <div class="flex gap-5 max-md:flex-col">
-            <div class="w-[57%] max-md:ml-0 max-md:w-full">
-                <div class="self-stretch my-10 w-full max-md:mt-10 max-md:max-w-full">
-                    <div class="grid grid-cols-2 gap-7 w-full text-2xl text-white max-md:grid-cols-1">
+    <div class="px-4 sm:px-6 md:px-8 py-8 md:py-10 mt-10 md:mt-16 bg-[#5E81E9] rounded-3xl max-w-full">
+        <div class="flex gap-5 flex-col md:flex-row">
+            <div class="w-full md:w-[57%]">
+                <div class="self-stretch my-6 md:my-10 w-full max-w-full">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-7 w-full text-xl md:text-2xl text-white">
                         {Content.symptoms.map(symptom => (
                             <div class="flex gap-3 items-center">
-                                <img src={symptom.icon} class="object-contain shrink-0 w-10 aspect-square" alt={`${symptom.text} icon`} />
+                                <img src={symptom.icon} class="object-contain shrink-0 w-8 md:w-10 aspect-square" alt={`${symptom.text} icon`} />
                                 <span>{symptom.text}</span>
                             </div>
                         ))}
                     </div>
 
-                    <div class="flex flex-wrap gap-3 mt-12 max-w-full w-[552px] max-md:mt-10">
-                        <button class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800 hover:bg-amber-400 transition-colors">
+                    <div class="flex flex-col sm:flex-row gap-3 mt-8 md:mt-12 max-w-full w-full md:w-[552px]">
+                        <button class="flex flex-col shrink justify-center items-center px-4 md:px-5 py-3 md:py-4 text-base md:text-lg font-semibold leading-none bg-amber-300 w-full sm:basis-0 sm:flex-1 rounded-[50px] text-neutral-800 hover:bg-amber-400 transition-colors">
                             <span>{Content.buttonText}</span>
                         </button>
 
-                        <button class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 min-w-60 rounded-[50px] hover:bg-purple-800 transition-colors">
+                        <button class="flex flex-col shrink justify-center items-center px-4 md:px-5 py-3 md:py-4 mt-3 sm:mt-0 text-white bg-purple-900 w-full sm:basis-0 sm:flex-1 rounded-[50px] hover:bg-purple-800 transition-colors">
                             <div class="flex flex-col items-center">
                                 <div class="text-xs">{Content.phoneText}</div>
                                 <div class="text-xs font-semibold leading-6">{Content.phoneNumber}</div>
@@ -55,8 +55,8 @@ const { Content } = Astro.props;
                 </div>
             </div>
 
-            <div class="ml-5 w-[43%] max-md:ml-0 max-md:w-full">
-                <img src={Content.image} class="object-contain grow w-full rounded-none aspect-[1.22] max-md:mt-10 max-md:max-w-full" alt="Treatment illustration" />
+            <div class="w-full md:w-[43%] mt-4 md:mt-0">
+                <img src={Content.image} class="object-contain mx-auto md:mx-0 w-full max-w-md md:max-w-full rounded-none aspect-[1.22]" alt="Treatment illustration" />
             </div>
         </div>
     </div>
