@@ -18,22 +18,22 @@ interface Props {
 const { Content } = Astro.props;
 ---
 
-<section class="mx-auto my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl relative">
+<section class="mx-auto my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl relative px-4 sm:px-5 md:px-6 lg:px-0">
     <div class="rounded-none">
-        <div class="flex gap-5 max-md:flex-col">
-            <article class="w-6/12 max-md:ml-0 max-md:w-full">
-            <div class="self-stretch my-auto w-full max-md:mt-10 max-md:max-w-full">
-                <h2 class="w-full text-5xl font-medium leading-[72px] text-neutral-800 max-md:max-w-full max-md:text-4xl max-md:leading-[64px]">
+        <div class="flex gap-5 max-md:flex-col max-[820px]:flex-col">
+            <article class="w-6/12 max-md:ml-0 max-md:w-full max-[820px]:ml-0 max-[820px]:w-full">
+            <div class="self-stretch my-auto w-full max-md:mt-10 max-md:max-w-full max-[820px]:mt-10 max-[820px]:max-w-full">
+                <h2 class="w-full text-5xl font-medium leading-[72px] text-neutral-800 max-md:max-w-full max-md:text-4xl max-md:leading-[64px] max-[820px]:text-4xl max-[820px]:leading-[64px] max-[820px]:max-w-full">
                 {Content.heading}
                 <span class="text-[#5E81E9]">
                     {Content.headingColored}
                 </span>
                 {Content.headingEnd}
                 </h2>
-                <p class="mt-8 text-lg leading-9 text-neutral-800 max-md:max-w-full">
+                <p class="mt-8 text-lg leading-9 text-neutral-800 max-md:max-w-full max-[820px]:max-w-full">
                 {Content.description}
                 </p>
-                <div class="flex flex-wrap gap-3 mt-8 max-w-full w-[552px]">
+                <div class="flex flex-wrap gap-3 mt-8 max-w-full w-[552px] max-[820px]:w-full">
                 <a href="#" class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
                     {Content.primaryButtonText}
                 </a>
@@ -50,20 +50,20 @@ const { Content } = Astro.props;
                 </div>
             </div>
             </article>
-            <article class="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-            <div class="flex flex-col grow justify-center p-8 w-full text-white bg-indigo-500 rounded-3xl max-md:px-5 max-md:mt-10 max-md:max-w-full">
-                <div class="max-md:max-w-full">
-                <h3 class="text-xs uppercase max-md:max-w-full">
+            <article class="ml-5 w-6/12 max-md:ml-0 max-md:w-full max-[820px]:ml-0 max-[820px]:w-full">
+            <div class="flex flex-col grow justify-center p-8 w-full text-white bg-indigo-500 rounded-3xl max-md:px-5 max-md:mt-10 max-md:max-w-full max-[820px]:px-5 max-[820px]:mt-10 max-[820px]:max-w-full">
+                <div class="max-md:max-w-full max-[820px]:max-w-full">
+                <h3 class="text-xs uppercase max-md:max-w-full max-[820px]:max-w-full text-white">
                     {Content.listHeading}
                 </h3>
-                <ul class="mt-6 w-full text-lg leading-9 max-md:max-w-full">
+                <ul class="mt-6 w-full text-lg leading-9 max-md:max-w-full max-[820px]:max-w-full text-white">
                     {Content.listItems.map((item) => (
-                      <li class="mt-5 first:mt-0 max-md:max-w-full">
+                      <li class="mt-5 first:mt-0 max-md:max-w-full max-[820px]:max-w-full text-white">
                         {item}
                       </li>
                     ))}
                 </ul>
-                <p class="mt-6 text-base leading-9 max-md:max-w-full">
+                <p class="mt-6 text-base leading-9 max-md:max-w-full max-[820px]:max-w-full text-white">
                     {Content.listDescription}
                 </p>
                 </div>
@@ -72,3 +72,12 @@ const { Content } = Astro.props;
         </div>
     </div>
 </section>
+
+<style>
+@media (min-width: 768px) and (max-width: 820px) {
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+</style>

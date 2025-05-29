@@ -133,18 +133,17 @@ const getIconSVG = (iconName: string) => {
 ---
 
 <section
-    class="mx-auto my-20 max-w-[1320px] max-md:my-10 max-md:rounded-3xl relative"
+    class="mx-auto my-20 max-w-[1320px] max-md:my-10 max-md:rounded-3xl relative px-4 sm:px-5 md:px-6 lg:px-0"
 >
-    <div class="relative px-20 pt-20 pb-16 w-full rounded-[24px] bg-gradient-to-l from-[#F6F2EE] to-[#F3EFEC] max-md:p-10 max-sm:p-5 max-sm:rounded-[24px]">
+    <div class="relative px-20 pt-20 pb-16 w-full rounded-[24px] bg-gradient-to-l from-[#F6F2EE] to-[#F3EFEC] max-lg:px-12 max-md:p-10 max-sm:p-5 max-sm:rounded-[24px]">
         <!-- Background Wave SVG -->
-        <div class="absolute w-full h-full top-0 left-0 overflow-hidden">
+        <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded-[24px]">
             <svg
-                width="1320"
-                height="261"
                 viewBox="0 0 1320 261"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="absolute top-[80px]"
+                class="absolute top-[80px] w-full h-auto max-w-none"
+                preserveAspectRatio="xMidYMid slice"
             >
                 <path
                     d="M-29 159.359C4 128.359 105.5 73.3593 167 103.359C225.389 131.842 318.785 141.851 362.533 96.4732C391.024 66.9222 361.543 17.1347 320.893 22.8408C283.379 28.1068 249.542 59.3098 253.5 149.859C259.9 296.259 1031.5 218.026 1354.5 211.359"
@@ -155,14 +154,14 @@ const getIconSVG = (iconName: string) => {
         </div>
 
         <!-- Header Section -->
-        <header class="relative mb-16 z-[1] flex flex-wrap justify-between">
+        <header class="relative mb-16 z-[1] flex flex-wrap justify-between max-lg:mb-12">
             <h1
-                class="mb-10 text-5xl font-medium leading-[72px] text-neutral-800 w-[706px] max-md:mb-8 max-md:w-full max-md:text-5xl max-md:leading-[60px] max-sm:text-3xl max-sm:leading-10"
+                class="mb-10 text-5xl font-medium leading-[72px] text-neutral-800 w-[706px] max-lg:w-[60%] max-md:mb-8 max-md:w-full max-md:text-4xl max-md:leading-[50px] max-sm:text-3xl max-sm:leading-10"
             >
                 {Content.heading}
             </h1>
             <p
-                class="text-lg leading-9 opacity-75 text-neutral-800 w-[358px] max-md:static max-md:mb-10 max-md:w-full max-md:text-base max-md:leading-7 max-sm:text-sm max-sm:leading-6"
+                class="text-lg leading-9 opacity-75 text-neutral-800 w-[358px] max-lg:w-[35%] max-md:static max-md:mb-10 max-md:w-full max-md:text-base max-md:leading-7 max-sm:text-sm max-sm:leading-6"
             >
                 {Content.description}
             </p>
@@ -170,29 +169,29 @@ const getIconSVG = (iconName: string) => {
 
         <!-- Hero Image Section -->
         <figure
-            class="relative mb-12 h-[596px] w-[1160px] max-md:w-full max-md:h-[400px] max-sm:h-[300px]"
+            class="relative mb-12 h-[596px] w-full max-w-[1160px] max-lg:h-[450px] max-md:h-[400px] max-sm:h-[300px] max-sm:mb-8"
         >
             <div
-                class="box-border flex absolute top-0 left-0 items-center pt-4 pb-64 pl-4 bg-white rounded-3xl h-[596px] pr-[503px] w-[1160px] max-md:p-4 max-md:w-full max-md:h-[400px] max-sm:h-[300px]"
+                class="box-border flex absolute top-0 left-0 items-center pt-4 pb-64 pl-4 bg-white rounded-3xl h-full w-full max-md:p-4"
             >
                 <div
-                    class="rounded-3xl shadow-2xl bg-white bg-opacity-0 h-[330px] w-[641px]"
+                    class="rounded-3xl shadow-2xl bg-white bg-opacity-0 h-[330px] w-[641px] max-lg:w-[60%] max-md:hidden"
                 >
                 </div>
             </div>
             <img
                 src={Content.featuredImage}
                 alt="TMS Treatment Process"
-                class="absolute rounded-3xl h-[543px] left-[27px] top-[26px] w-[1105px] max-md:top-4 max-md:left-4 max-md:h-[calc(100%_-_32px)] max-md:w-[calc(100%_-_32px)]"
+                class="absolute rounded-3xl object-cover h-[calc(100%_-_52px)] w-[calc(100%_-_54px)] left-[27px] top-[26px] max-md:top-4 max-md:left-4 max-md:h-[calc(100%_-_32px)] max-md:w-[calc(100%_-_32px)]"
             />
         </figure>
 
         <!-- Treatment Process Cards -->
-        <section class="grid grid-cols-2 gap-6 w-[1160px] max-md:grid-cols-1 max-md:gap-5 max-md:w-full">
+        <section class="grid grid-cols-2 gap-6 w-full max-w-[1160px] max-lg:gap-4 max-md:grid-cols-1 max-md:gap-5">
             {Content.treatments.map((treatment) => (
-                <article class="flex gap-2.5 items-start p-6 bg-white rounded-3xl shadow-2xl flex-[1_0_0] max-sm:p-5">
-                    <div class="flex flex-col gap-4 items-start flex-[1_0_0]">
-                        <header class="flex flex-col gap-4 items-start self-stretch">
+                <article class="flex gap-2.5 items-start p-6 bg-white rounded-3xl shadow-2xl flex-[1_0_0] max-lg:p-5 max-sm:p-4">
+                    <div class="flex flex-col gap-4 items-start flex-[1_0_0] max-lg:gap-3">
+                        <header class="flex flex-col gap-4 items-start self-stretch max-lg:gap-3">
                             <div class="flex items-center self-stretch h-10 rounded-[100px]">
                                 <Fragment set:html={getIconSVG(treatment.icon)} />
                             </div>
@@ -200,7 +199,7 @@ const getIconSVG = (iconName: string) => {
                                 {treatment.title}
                             </h2>
                         </header>
-                        <p class="self-stretch text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
+                        <p class="self-stretch text-base leading-6 text-neutral-800 max-lg:text-[15px] max-sm:text-sm max-sm:leading-5">
                             {treatment.description}
                         </p>
                     </div>
@@ -209,3 +208,40 @@ const getIconSVG = (iconName: string) => {
         </section>
     </div>
 </section>
+
+<style>
+@media (width >= 768px) and (width <= 820px) {
+    section .relative {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    header h1 {
+        width: 100%;
+        margin-bottom: 16px;
+        font-size: 32px;
+        line-height: 42px;
+    }
+    
+    header p {
+        width: 100%;
+    }
+    
+    figure {
+        height: 380px;
+    }
+}
+
+@media (max-width: 767px) {
+    section {
+        margin-left: 16px;
+        margin-right: 16px;
+        width: calc(100% - 32px);
+    }
+    
+    .absolute.top-\[80px\] {
+        top: 0;
+        height: 100%;
+    }
+}
+</style>

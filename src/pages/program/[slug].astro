@@ -33,32 +33,34 @@ const { data: ProgramData } = await fetchSubProgramData(sub_type);
 ---
 
 <MainLayout title="Program">
-    <!-- Hero Section -->
-    <HeroProgram Content={ProgramData.hero}  GeneralData={GeneralData} />
+    <div class="px-5 md:px-6 lg:px-0">
+        <!-- Hero Section -->
+        <HeroProgram Content={ProgramData.hero}  GeneralData={GeneralData} />
 
-    <!-- About Section -->
-    <ProgramAbout Content={ProgramData.about} />
+        <!-- About Section -->
+        <ProgramAbout Content={ProgramData.about} />
 
-    <!-- Video Section -->
-    <Video Content={ProgramData.video} />
+        <!-- Video Section -->
+        <Video Content={ProgramData.video} />
 
-    <!-- Treatment Grid - Now passing Content prop -->
-    <TreatmentGrid Content={ProgramData.treatmentGrid} />
+        <!-- Treatment Grid - Now passing Content prop -->
+        <TreatmentGrid Content={ProgramData.treatmentGrid} />
 
-    <!-- First WhyChoose with content from CMS -->
-    <WhyChoose content={ProgramData.whyChoose} />
-    
-    <ProgramTMS Content={ProgramData.programTMS} />
-    <Testimonials Content={ProgramData.testimonials} />
-    <Program12 Content={ProgramData.program12} />
-    
-    <!-- Second WhyChoose with custom content from CMS -->
-    <WhyChoose content={ProgramData.secondWhyChoose} />
-    
-    <WhoNeeds Content={ProgramData.whoNeeds} />
-    <FAQ Content={ProgramData.faq} />
-    <DisorderGrid Content={ProgramData.disorders} />
-    <CTA Content={ProgramData.cta}/>
+        <!-- First WhyChoose with content from CMS -->
+        <WhyChoose content={ProgramData.whyChoose} />
+        
+        <ProgramTMS Content={ProgramData.programTMS} />
+        <Testimonials Content={ProgramData.testimonials} />
+        <Program12 Content={ProgramData.program12} />
+        
+        <!-- Second WhyChoose with custom content from CMS -->
+        <WhyChoose content={ProgramData.secondWhyChoose} />
+        
+        <WhoNeeds Content={ProgramData.whoNeeds} />
+        <FAQ Content={ProgramData.faq} />
+        <DisorderGrid Content={ProgramData.disorders} />
+        <CTA Content={ProgramData.cta}/>
+    </div>
 </MainLayout>
 
 

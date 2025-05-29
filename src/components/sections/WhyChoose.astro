@@ -36,41 +36,41 @@ const lastPart = content.title.includes("Magnetic") && content.title.indexOf("Ma
   : "";
 ---
 
-<section class="mx-auto my-12 max-w-[1280px] px-4 md:px-8">
-    <div class="box-border flex flex-col gap-6 items-start w-full">
-        <header class="w-full mb-2">
-            <h2 class="text-3xl sm:text-3xl md:text-4xl font-semibold leading-tight text-left max-w-[900px] mx-auto">
+<section class="mx-auto my-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="box-border flex flex-col gap-8 items-start w-full">
+        <header class="w-full mb-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-center w-full">
                 <span class="text-neutral-800">{firstPart}</span>
                 <span class="text-[#556BF4]">{tmsText}</span>
                 {lastPart && <span class="text-neutral-800">{lastPart}</span>}
             </h2>
         </header>
 
-        <article class="text-base leading-7 text-neutral-700 opacity-90 mb-6 max-w-[900px] mx-auto">
-            <p class="text-left">
+        <article class="text-base sm:text-lg leading-relaxed text-neutral-700 opacity-90 mb-8 w-full max-w-4xl mx-auto">
+            <p class="text-center sm:text-left">
                 {content.content.paragraph1}
             </p>
             <br />
             {content.content.paragraph2 && (
-              <p class="text-left">
+              <p class="text-center sm:text-left">
                   {content.content.paragraph2}
               </p>
             )}
         </article>
 
-        <div class="flex gap-4 items-center justify-center w-full max-w-[550px] mx-auto mb-8 max-sm:flex-col">
-            <button class="flex flex-col gap-2.5 justify-center items-center px-6 py-4 bg-amber-300 cursor-pointer rounded-[50px] min-w-[180px] flex-1 max-sm:w-full">
+        <div class="flex gap-6 items-center justify-center w-full max-w-[600px] mx-auto mb-10 max-sm:flex-col">
+            <button class="flex flex-col gap-2.5 justify-center items-center px-8 py-4 bg-amber-300 cursor-pointer rounded-[50px] min-w-[200px] flex-1 max-sm:w-full hover:bg-amber-400 transition-colors">
                 <span class="text-base font-semibold text-neutral-800">
                     Get Started
                 </span>
             </button>
 
-            <button class="flex flex-col gap-2.5 justify-center items-center px-6 py-3 bg-[#562987] cursor-pointer rounded-[50px] min-w-[180px] flex-1 max-sm:w-full">
+            <button class="flex flex-col gap-2.5 justify-center items-center px-8 py-4 bg-[#562987] cursor-pointer rounded-[50px] min-w-[200px] flex-1 max-sm:w-full hover:bg-[#4a2373] transition-colors">
                 <div class="flex flex-col items-center">
-                    <span class="text-xs text-white">
+                    <span class="text-sm text-white">
                         Have a question?
                     </span>
-                    <span class="text-xs font-bold text-white">
+                    <span class="text-sm font-bold text-white">
                         Call (123) 456-7890
                     </span>
                 </div>
@@ -78,7 +78,7 @@ const lastPart = content.title.includes("Magnetic") && content.title.indexOf("Ma
         </div>
     </div>
     
-    <div class="w-full max-w-[950px] mx-auto mt-4">
+    <div class="w-full max-w-5xl mx-auto mt-8">
         <figure class="w-full overflow-hidden rounded-2xl shadow-md border-8 border-white bg-white p-1">
             <img
                 src={content.imageUrl}

@@ -3,28 +3,28 @@ const { headingOne, textOne, headingTwo, textTwo, images } = Astro.props.Content
 
 ---
 
-<section class="mx-auto my-20 max-w-[1320px] max-md:my-10 max-md:rounded-3xl relative">
+<section class="mx-auto my-20 max-w-[1320px] max-md:my-10 max-md:rounded-3xl relative px-4 sm:px-5 md:px-6 lg:px-0">
     <div class="rounded-none">
-        <div class="flex gap-5 max-md:flex-col">
-            <article class="w-[56%] max-md:ml-0 max-md:w-full">
+        <div class="flex gap-5 max-md:flex-col max-[820px]:flex-col">
+            <article class="w-[56%] max-md:ml-0 max-md:w-full max-[820px]:ml-0 max-[820px]:w-full">
             <img
                 src={images.imageOne}
                 alt="Clear Path TMS Treatment"
-                class="object-contain self-stretch my-auto w-full rounded-3xl aspect-[1.35] max-md:mt-10 max-md:max-w-full"
+                class="object-contain self-stretch my-auto w-full rounded-3xl aspect-[1.35] max-md:mt-10 max-[820px]:mt-10 max-md:max-w-full max-[820px]:max-w-full"
             />
             </article>
-            <article class="ml-5 w-[44%] max-md:ml-0 max-md:w-full">
-            <div class="w-full max-md:mt-10 max-md:max-w-full">
-                <h2 class="w-full text-5xl font-medium leading-[72px] text-neutral-800 max-md:max-w-full max-md:text-4xl max-md:leading-[64px]">
+            <article class="ml-5 w-[44%] max-md:ml-0 max-md:w-full max-[820px]:ml-0 max-[820px]:w-full">
+            <div class="w-full max-md:mt-10 max-md:max-w-full max-[820px]:mt-10 max-[820px]:max-w-full">
+                <h2 class="w-full text-5xl font-medium leading-[72px] text-neutral-800 max-md:max-w-full max-md:text-4xl max-md:leading-[64px] max-[820px]:max-w-full max-[820px]:text-4xl max-[820px]:leading-[64px]">
                 {headingOne}
                 <span class="text-[#5E81E9]">
                     {headingTwo}
                 </span>
                 </h2>
-                <p class="mt-8 text-lg leading-9 text-neutral-800 max-md:max-w-full">
+                <p class="mt-8 text-lg leading-9 text-neutral-800 max-md:max-w-full max-[820px]:max-w-full">
                 {textOne}
                 </p>
-                <div class="flex flex-wrap gap-3 mt-8 w-full max-md:max-w-full">
+                <div class="flex flex-wrap gap-3 mt-8 w-full max-md:max-w-full max-[820px]:max-w-full">
                 <a href="#get-started" class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
                     Get Started
                 </a>
@@ -44,3 +44,26 @@ const { headingOne, textOne, headingTwo, textTwo, images } = Astro.props.Content
         </div>
     </div>
 </section>
+
+<style>
+@media (min-width: 768px) and (max-width: 820px) {
+  section {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  section {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: calc(100% - 32px);
+  }
+}
+</style>

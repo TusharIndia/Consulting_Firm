@@ -16,9 +16,9 @@ interface Props {
 const { Content } = Astro.props;
 ---
 
-<section class="relative mx-auto my-0 max-w-none rounded-3xl h-[1468px] w-[1320px] max-md:px-5 max-md:py-10 max-md:w-full max-md:max-w-screen-md max-md:h-auto max-sm:px-4 max-sm:py-5 max-sm:max-w-screen-sm bg-[#f8f5f1]">
+<section class="relative mx-auto my-0 max-w-none rounded-3xl h-[1468px] w-[1320px] max-md:px-5 max-md:py-10 max-md:w-full max-md:max-w-screen-md max-md:h-auto max-sm:px-4 max-sm:py-5 max-sm:max-w-screen-sm max-[820px]:px-6 max-[820px]:py-12 max-[820px]:h-auto max-[820px]:w-full bg-[#f8f5f1]">
   <!-- Decorative Wave SVG -->
-  <div class="absolute left-[-29px] top-[92px] w-[1384px] h-[216px]">
+  <div class="absolute left-[-29px] top-[92px] w-[1384px] h-[216px] max-[820px]:w-full max-[820px]:left-0 max-[820px]:scale-90 max-[820px]:overflow-hidden">
     <svg
       width="1320"
       height="261"
@@ -38,35 +38,35 @@ const { Content } = Astro.props;
 
   <!-- Header Section -->
   <header>
-    <span class="absolute top-20 left-20 px-10 pt-1.5 pb-2 text-base leading-6 text-white bg-purple-900 rounded-[50px] max-md:static max-md:mb-5 max-md:w-fit">
+    <span class="absolute top-20 left-20 px-10 pt-1.5 pb-2 text-base leading-6 text-white bg-purple-900 rounded-[50px] max-md:static max-md:mb-5 max-md:w-fit max-[820px]:static max-[820px]:mb-5 max-[820px]:w-fit">
       {Content.badgeText}
     </span>
 
-    <div class="absolute left-20 h-[216px] top-[172px] w-[1160px] max-md:static max-md:mb-10 max-md:w-full max-md:h-auto">
-      <h1 class="absolute top-0 left-0 text-5xl font-medium h-[216px] leading-[72px] text-neutral-800 w-[706px] max-md:static max-md:mb-5 max-md:w-full max-md:h-auto max-md:text-4xl max-md:leading-10 max-sm:text-3xl max-sm:leading-9">
+    <div class="absolute left-20 h-[216px] top-[172px] w-[1160px] max-md:static max-md:mb-10 max-md:w-full max-md:h-auto max-[820px]:static max-[820px]:mb-10 max-[820px]:w-full max-[820px]:h-auto">
+      <h1 class="absolute top-0 left-0 text-5xl font-medium h-[216px] leading-[72px] text-neutral-800 w-[706px] max-md:static max-md:mb-5 max-md:w-full max-md:h-auto max-md:text-4xl max-md:leading-10 max-sm:text-3xl max-sm:leading-9 max-[820px]:static max-[820px]:mb-5 max-[820px]:w-full max-[820px]:h-auto max-[820px]:text-4xl max-[820px]:leading-[50px]">
         {Content.heading}
       </h1>
 
-      <p class="absolute text-lg leading-9 opacity-75 h-[170px] left-[756px] text-neutral-800 top-[23px] w-[404px] max-md:static max-md:w-full max-md:h-auto max-sm:text-base max-sm:leading-7">
+      <p class="absolute text-lg leading-9 opacity-75 h-[170px] left-[756px] text-neutral-800 top-[23px] w-[404px] max-md:static max-md:w-full max-md:h-auto max-sm:text-base max-sm:leading-7 max-[820px]:static max-[820px]:w-full max-[820px]:h-auto max-[820px]:mt-4">
         {Content.description}
       </p>
     </div>
   </header>
 
   <!-- Main Image Section -->
-  <figure class="absolute left-20 h-[596px] top-[444px] w-[1160px] max-md:static max-md:mb-10 max-md:w-full max-md:h-[400px] max-sm:h-[300px]">
-    <div class="relative h-[596px] w-[1160px] max-md:w-full max-md:h-[400px] max-sm:h-[300px]">
-      <div class="absolute top-4 left-4 rounded-3xl bg-opacity-0 h-[330px] w-[641px] max-md:h-[calc(100%_-_32px)] max-md:w-[calc(100%_-_32px)]"></div>
+  <figure class="absolute left-20 h-[596px] top-[444px] w-[1160px] max-md:static max-md:mb-10 max-md:w-full max-md:h-[400px] max-sm:h-[300px] max-[820px]:static max-[820px]:mb-10 max-[820px]:w-full max-[820px]:h-[450px]">
+    <div class="relative h-[596px] w-[1160px] max-md:w-full max-md:h-[400px] max-sm:h-[300px] max-[820px]:w-full max-[820px]:h-[450px]">
+      <div class="absolute top-4 left-4 rounded-3xl bg-opacity-0 h-[330px] w-[641px] max-md:h-[calc(100%_-_32px)] max-md:w-[calc(100%_-_32px)] max-[820px]:h-[calc(100%_-_32px)] max-[820px]:w-[calc(100%_-_32px)]"></div>
       <img
         src={Content.mainImage}
         alt={Content.mainImageAlt}
-        class="absolute left-7 rounded-3xl h-[543px] top-[26px] w-[1105px] object-cover border-[20px] border-white max-md:left-7 max-md:h-[calc(100%_-_56px)] max-md:top-[26px] max-md:w-[calc(100%_-_56px)]"
+        class="absolute left-7 rounded-3xl h-[543px] top-[26px] w-[1105px] object-cover border-[20px] border-white max-md:left-7 max-md:h-[calc(100%_-_56px)] max-md:top-[26px] max-md:w-[calc(100%_-_56px)] max-[820px]:left-7 max-[820px]:h-[calc(100%_-_56px)] max-[820px]:top-[26px] max-[820px]:w-[calc(100%_-_56px)]"
       />
     </div>
   </figure>
 
   <!-- Steps Section -->
-  <section class="flex absolute left-20 flex-col gap-8 items-start top-[1088px] w-[1160px] max-md:static max-md:w-full max-md:h-auto">
+  <section class="flex absolute left-20 flex-col gap-8 items-start top-[1088px] w-[1160px] max-md:static max-md:w-full max-md:h-auto max-[820px]:static max-[820px]:w-full max-[820px]:mt-8">
     {Content.steps.map((step, index) => {
       const isOddIndex = index % 2 === 0;
       const isLastRow = index >= Content.steps.length - 2;
@@ -75,18 +75,18 @@ const { Content } = Astro.props;
       return (
         <>
           {isOddIndex && (
-            <div class="flex gap-6 items-start w-full max-md:flex-col max-md:gap-6">
+            <div class="flex gap-6 items-start w-full max-md:flex-col max-md:gap-6 max-[820px]:flex-col max-[820px]:gap-5">
               <!-- Current Step -->
-              <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full">
+              <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full max-[820px]:w-full">
                 <div class="flex justify-between items-center w-full pb-2">
-                  <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start">
+                  <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start max-[820px]:w-full">
                     <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
                       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="20" cy="20" r="20" fill="#222222"/>
                         <text fill="white" font-family="Inter" font-size="16" font-weight="bold" x="50%" y="50%" text-anchor="middle" dy="0.35em">{step.stepNumber}</text>
                       </svg>
                     </div>
-                    <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
+                    <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7 max-[820px]:text-xl max-[820px]:leading-8">
                       {step.title}
                     </h2>
                   </div>
@@ -101,16 +101,16 @@ const { Content } = Astro.props;
 
               <!-- Next Step (if exists) -->
               {Content.steps[index + 1] && (
-                <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full">
+                <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full max-[820px]:w-full">
                   <div class="flex justify-between items-center w-full pb-2">
-                    <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start">
+                    <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start max-[820px]:w-full">
                       <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="20" cy="20" r="20" fill="#222222"/>
                           <text fill="white" font-family="Inter" font-size="16" font-weight="bold" x="50%" y="50%" text-anchor="middle" dy="0.35em">{Content.steps[index + 1].stepNumber}</text>
                         </svg>
                       </div>
-                      <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
+                      <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7 max-[820px]:text-xl max-[820px]:leading-8">
                         {Content.steps[index + 1].title}
                       </h2>
                     </div>
@@ -126,7 +126,7 @@ const { Content } = Astro.props;
 
               <!-- Empty column for last odd step -->
               {shouldShowEmptyColumn && (
-                <div class="flex-1 w-[560px] max-md:hidden"></div>
+                <div class="flex-1 w-[560px] max-md:hidden max-[820px]:hidden"></div>
               )}
             </div>
           )}
@@ -135,3 +135,37 @@ const { Content } = Astro.props;
     })}
   </section>
 </section>
+
+<style>
+@media (min-width: 768px) and (max-width: 820px) {
+  section {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+  }
+  
+  .absolute.left-20 {
+    left: 40px;
+  }
+  
+  .absolute.left-20.h-\[216px\] {
+    width: calc(100% - 80px);
+  }
+  
+  .absolute.left-20.h-\[596px\] {
+    width: calc(100% - 80px);
+  }
+  
+  .absolute.left-20.flex {
+    width: calc(100% - 80px);
+  }
+}
+
+@media (max-width: 767px) {
+  section {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: calc(100% - 32px);
+  }
+}
+</style>
