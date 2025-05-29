@@ -10,57 +10,56 @@
       {
         "text": "Treatments",
         "url": "#",
-        "hasDropdown": true,
         "sublinks": [
           {
             "text": "Medication Management",
-            "link": "/medication-management"
+            "link": "/program/tms"
           },
           {
             "text": "Transcranial Magnetic Stimulation (TMS)",
-            "link": "/tms"
+            "link": "/program/tms"
           },
           {
             "text": "Spravato® (Esketamine) ",
-            "link": "/spravato"
+            "link": "/program/tms"
           },
           {
             "text": "Psychotherapy",
-            "link": "/psychotherapy"
+            "link": "/program/tms"
           }
         ],
         "sublinks2": [
           {
             "text": "Depression",
-            "link": "/depression"
+            "link": "/treatment/depression"
           },
           {
             "text": "Anxiety",
-            "link": "/anxiety"
+            "link": "/treatment/depression"
           },
           {
             "text": "ADHD",
-            "link": "/adhd"
+            "link": "/treatment/depression"
           },
           {
             "text": "PTSD",
-            "link": "/ptsd"
+            "link": "/treatment/depression"
           },
           {
             "text": "BiPolar",
-            "link": "/bipolar"
+            "link": "/treatment/depression"
           },
           {
             "text": "Stress",
-            "link": "/stress"
+            "link": "/treatment/depression"
           },
           {
             "text": "OCD",
-            "link": "/ocd"
+            "link": "/treatment/depression"
           },
           {
             "text": "Addiction",
-            "link": "/addiction"
+            "link": "/treatment/depression"
           },
           {
             "text": "and more",
@@ -71,28 +70,24 @@
       {
         "text": "Locations",
         "url": "/location",
-        "hasDropdown": false,
         "sublinks": [],
         "sublinks2": []
       },
       {
         "text": "Pricing",
         "url": "/pricing",
-        "hasDropdown": false,
         "sublinks": [],
         "sublinks2": []
       },
       {
         "text": "Resources",
         "url": "/program",
-        "hasDropdown": false,
         "sublinks": [],
         "sublinks2": []
       },
       {
         "text": "Get Started",
         "url": "/contact",
-        "hasDropdown": false,
         "sublinks": [],
         "sublinks2": []
       }

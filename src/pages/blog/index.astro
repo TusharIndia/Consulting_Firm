@@ -5,7 +5,7 @@ import Hero from '../../components/layout/Hero.astro';
 import BlogSection from '../../components/sections/BlogSection.astro';
 import BlogHero from '../../components/sections/BlogHero.astro';
 import HeroProgram from "../../components/sections/HeroProgram.astro";
-import { fetchProgramData, fetchBlogPageData } from '../../utils/dataMapping.ts';
+import {  fetchBlogPageData } from '../../utils/dataMapping.ts';
 
 const { data: BlogPageData } = await fetchBlogPageData();
 const GeneralData = await fetchGeneralData();

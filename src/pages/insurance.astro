@@ -6,8 +6,6 @@ import BlogSection from '../components/sections/BlogSection.astro';
 import SingleBlog from '../components/sections/SingleBlog.astro';
 const GeneralData = await fetchGeneralData();
 const Data = { heading: "Blog", text: "Providing personalized care for substance use and mental health to help individuals achieve lasting recovery."}
-const { data: ProgramData } = await fetchProgramData();
-import { fetchProgramData } from '../utils/dataMapping.ts';
 import DisorderGrid from "../components/sections/DisorderGrid.astro";
 import CTA from "../components/CTA.astro";
 import HeroProgram from "../components/sections/HeroProgram.astro";
@@ -25,6 +23,6 @@ const {data:InsuranceData} = await fetchInsuranceData();
     <ContactHero isInsurancePage={true} insuranceData={InsuranceData.contactHero} />
     <Insurance2 insuranceData={InsuranceData.insuranceProviders} />
     <Testimonials Content={InsuranceData.testimonials} />
-    <TreatmentGrid />
+    <TreatmentGrid Content={InsuranceData.treatmentGrid}  />
     <Insurancehero Content={InsuranceData.insuranceVerification} />
 </MainLayout>

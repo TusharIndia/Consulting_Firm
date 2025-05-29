@@ -7,4 +7,23 @@ export interface General {
   phoneNumber: string;
   phoneNumber2?: string;
   email: string;
+  footer: {
+    description: string;
+    navColumn1: {
+      links: {
+        text: string;
+        url: string;
+      }[];
+    };
+    navColumn2: {
+      links: {
+        text: string;
+        url: string;
+      }[];
+    };
+    emailPlaceholder: string;
+    signUpButtonText: string;
+    copyrightText: string;
+    backToTopText: string;
+  };
 }

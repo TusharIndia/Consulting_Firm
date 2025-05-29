@@ -1,10 +1,44 @@
 {
-  "companyName": "Brand North",
-  "logo": "/branding/brand-north-logo-dark.svg",
-  "city": "Boca Raton",
-  "state": "Florida",
-  "address": "5455 N Federal Hwy Suite L Boca Raton, Florida 33487",
-  "phoneNumber": "555-555-5555",
-  "phoneNumber2": "555-555-5555",
-  "Email" : "hello@placeholder.com"
+  "companyName": "ClearPath Mental Health",
+  "logo": "/imgs/clearpath_logo.png",
+  "city": "Your City",
+  "state": "Your State",
+  "address": "Your Address",
+  "phoneNumber": "123-456-7890",
+  "Email": "info@clearpathmentalhealth.com",
+  "footer": {
+    "description": "We are mental health experienced therapists that are passionate about our goal on empowering you mentally with our wellness journey.",
+    "navColumn1": {
+      "links": [
+        {
+          "text": "Home",
+          "url": "/"
+        },
+        {
+          "text": "About Us",
+          "url": "/about"
+        },
+        {
+          "text": "Treatments",
+          "url": "/treatments"
+        }
+      ]
+    },
+    "navColumn2": {
+      "links": [
+        {
+          "text": "Pricing",
+          "url": "/pricing"
+        },
+        {
+          "text": "Locations",
+          "url": "/locations"
+        }
+      ]
+    },
+    "emailPlaceholder": "email@gmail.com",
+    "signUpButtonText": "Sign Up",
+    "copyrightText": "Copyright © ClearPath",
+    "backToTopText": "Back to Top"
+  }
 }

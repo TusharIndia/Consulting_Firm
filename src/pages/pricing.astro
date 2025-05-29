@@ -6,9 +6,7 @@ import BlogSection from '../components/sections/BlogSection.astro';
 import SingleBlog from '../components/sections/SingleBlog.astro';
 const GeneralData = await fetchGeneralData();
 const Data = { heading: "Blog", text: "Providing personalized care for substance use and mental health to help individuals achieve lasting recovery."}
-const { data: ProgramData } = await fetchProgramData();
 const { data: PricingData } = await fetchPricingData();
-import { fetchProgramData } from '../utils/dataMapping.ts';
 import DisorderGrid from "../components/sections/DisorderGrid.astro";
 import CTA from "../components/CTA.astro";
 import HeroProgram from "../components/sections/HeroProgram.astro";

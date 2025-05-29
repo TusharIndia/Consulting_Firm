@@ -13,53 +13,53 @@
         "sublinks": [
           {
             "text": "Medication Management",
-            "link": "/medication-management"
+            "link": "/program/tms"
           },
           {
             "text": "Transcranial Magnetic Stimulation (TMS)",
-            "link": "/tms"
+            "link": "/program/tms"
           },
           {
             "text": "Spravato® (Esketamine) ",
-            "link": "/spravato"
+            "link": "/program/tms"
           },
           {
             "text": "Psychotherapy",
-            "link": "/psychotherapy"
+            "link": "/program/tms"
           }
         ],
         "sublinks2": [
           {
             "text": "Depression",
-            "link": "/depression"
+            "link": "/treatment/depression"
           },
           {
             "text": "Anxiety",
-            "link": "/anxiety"
+            "link": "/treatment/depression"
           },
           {
             "text": "ADHD",
-            "link": "/adhd"
+            "link": "/treatment/depression"
           },
           {
             "text": "PTSD",
-            "link": "/ptsd"
+            "link": "/treatment/depression"
           },
           {
             "text": "BiPolar",
-            "link": "/bipolar"
+            "link": "/treatment/depression"
           },
           {
             "text": "Stress",
-            "link": "/stress"
+            "link": "/treatment/depression"
           },
           {
             "text": "OCD",
-            "link": "/ocd"
+            "link": "/treatment/depression"
           },
           {
             "text": "Addiction",
-            "link": "/addiction"
+            "link": "/treatment/depression"
           },
           {
             "text": "and more",
@@ -308,10 +308,14 @@
       }
     ]
   },
-  "cta": {
-    "heading": "Start Your Journey To Recovery Today",
-    "text": "Are you or a loved one struggling with addiction? Discover Health Group is here to help you take the first step towards a healthier, happier life. Our compassionate team is ready to support you through every stage of your recovery journey. Contact us today to learn more about our programs, schedule a visit, or start the admissions process. Your path to recovery begins here.",
-    "buttonText": "Call Us Now!"
+"cta": {
+    "heading": "Ready to Start Your Journey to Better Mental Health?",
+    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans designed for your unique needs.",
+    "buttonText": "Schedule a Consultation",
+    "image": "/imgs/mental_health_support.png",
+    "altText": "Mental health professional supporting a patient",
+    "phoneText": "Have a question?",
+    "phoneNumber": "(123) 456-7890"
   },
   "whoNeeds": {
     "heading": "Who Needs",

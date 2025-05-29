@@ -6,60 +6,60 @@
     "phoneQuestionText": "Questions about insurance?",
     "treatmentsLabel": "Insurance",
     "callButtonText": "Call Now",
-    "navItems": [
+   "navItems": [
       {
         "text": "Treatments",
         "url": "#",
         "sublinks": [
           {
             "text": "Medication Management",
-            "link": "/medication-management"
+            "link": "/program/tms"
           },
           {
             "text": "Transcranial Magnetic Stimulation (TMS)",
-            "link": "/tms"
+            "link": "/program/tms"
           },
           {
             "text": "Spravato® (Esketamine) ",
-            "link": "/spravato"
+            "link": "/program/tms"
           },
           {
             "text": "Psychotherapy",
-            "link": "/psychotherapy"
+            "link": "/program/tms"
           }
         ],
         "sublinks2": [
           {
             "text": "Depression",
-            "link": "/depression"
+            "link": "/treatment/depression"
           },
           {
             "text": "Anxiety",
-            "link": "/anxiety"
+            "link": "/treatment/depression"
           },
           {
             "text": "ADHD",
-            "link": "/adhd"
+            "link": "/treatment/depression"
           },
           {
             "text": "PTSD",
-            "link": "/ptsd"
+            "link": "/treatment/depression"
           },
           {
             "text": "BiPolar",
-            "link": "/bipolar"
+            "link": "/treatment/depression"
           },
           {
             "text": "Stress",
-            "link": "/stress"
+            "link": "/treatment/depression"
           },
           {
             "text": "OCD",
-            "link": "/ocd"
+            "link": "/treatment/depression"
           },
           {
             "text": "Addiction",
-            "link": "/addiction"
+            "link": "/treatment/depression"
           },
           {
             "text": "and more",
@@ -208,6 +208,35 @@
         "text": "We advocate for maximum coverage on your behalf"
       }
     ],
+    
+  "treatmentGrid": {
+    "heading": "What is the Treatment Process During Transcranial Magnetic Stimulation at Clear Path?",
+    "subheading": "Treatment Process",
+    "description": "The TMS treatment process at Clear Path is designed to be simple, effective, and tailored to each individual's needs. We stand apart by ensuring patients receive direct, in-person care from experienced psychiatrists and healthcare professionals.",
+    "featuredImage": "/imgs/tms_treatment_process.png",
+    "treatments": [
+      {
+        "icon": "calendar",
+        "title": "Booking and Initial Assessment",
+        "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if TMS is the right treatment option for their needs."
+      },
+      {
+        "icon": "personalized",
+        "title": "Personalized Treatment Path",
+        "description": "Following the assessment, a customized TMS treatment plan is created, tailored to the individual's condition and goals. This plan ensures that each session targets the specific areas of the brain associated with their symptoms."
+      },
+      {
+        "icon": "treatment",
+        "title": "TMS Treatment Sessions",
+        "description": "TMS sessions are conducted in a comfortable, outpatient setting. Each session typically lasts 20 to 40 minutes and involves placing a magnetic coil on the scalp to deliver targeted magnetic pulses to stimulate brain activity."
+      },
+      {
+        "icon": "monitoring",
+        "title": "Ongoing Monitoring and Support",
+        "description": "Patients will attend regular sessions over several weeks, with progress monitored closely by the Clear Path team. Adjustments are made as needed to optimize results and ensure the best possible outcomes."
+      }
+    ]
+  },
     "cta": {
       "heading": "Need Immediate Assistance?",
       "subheading": "Our admissions team is available 24/7 to help you verify your insurance benefits right now.",
