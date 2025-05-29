@@ -25,6 +25,8 @@ collections:
     label: "Treatments"
     folder: "src/content/treatments"
     create: true
+    format: "json"  # Add this line
+    extension: "json"
     slug: "{{filename}}"
     fields:
       - label: "Hero"
@@ -122,6 +124,8 @@ collections:
     label: "Programs"
     folder: "src/content/programs"
     create: true
+    format: "json"  # Add this line
+    extension: "json"
     slug: "{{filename}}"
     fields:
       - label: "Hero"
@@ -976,7 +980,7 @@ collections:
                   - { label: "Link", name: "link", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Image", name: "image", widget: "image" }
-                  
+
           - label: "Call to Action"
             name: "cta"
             widget: "object"
