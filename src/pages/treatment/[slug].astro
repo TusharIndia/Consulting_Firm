@@ -1,0 +1,36 @@
+---
+import { fetchGeneralData, fetchTreatmentData , fetchSubTreatmentData} from '../../utils/dataMapping.ts';
+import MainLayout from "../../layouts/MainLayout.astro"
+import Hero from '../../components/layout/Hero.astro';
+import BlogSection from '../../components/sections/BlogSection.astro';
+import SingleBlog from '../../components/sections/SingleBlog.astro';
+const GeneralData = await fetchGeneralData();
+
+import DisorderGrid from "../../components/sections/DisorderGrid.astro";
+import CTA from "../../components/CTA.astro";
+import HeroProgram from "../../components/sections/HeroProgram.astro";
+import TreatmentHero from '../../components/sections/TreatmentHero.astro';
+import Treatment2 from '../../components/sections/Treatment2.astro';
+
+
+export async function getStaticPaths() {
+    const treatments = import.meta.glob('../../content/treatments/*.json', { eager: true });
+    const paths = Object.keys(treatments).map((file) => {
+        const slug = file.split('/').pop().replace('.json', '');
+        return { params: { slug } };
+    });
+    return paths;
+}
+
+const sub_type = Astro.params.slug;
+
+const { data: TreatmentData } = await fetchSubTreatmentData(sub_type);
+---
+
+<MainLayout title="Treatment" description="Mental Health Treatment at Clear Path">
+    <HeroProgram Content={TreatmentData.hero} GeneralData={GeneralData} />
+    <TreatmentHero Content={TreatmentData.treatmentHero} />
+    <Treatment2 Content={TreatmentData.treatment2} />
+    <DisorderGrid Content={TreatmentData.disorders} />
+	<CTA Content={TreatmentData.cta}/>
+</MainLayout>

@@ -18,8 +18,8 @@ import Pricing2 from '../components/sections/Pricing2.astro';
 
 <MainLayout>
     <HeroProgram Content={PricingData.hero} GeneralData={GeneralData} />
-    <PricingHero />
-    <Pricing2/>
+    <PricingHero Content={PricingData.pricingHero} />
+    <Pricing2 Content={PricingData.paymentOptions}/>
     <DisorderGrid  Content={PricingData.disorders} />
 	<CTA Content={PricingData.cta}/>
 </MainLayout>

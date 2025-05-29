@@ -494,7 +494,7 @@ export interface Program {
         title: string;
       }[];
     };
-    programTMS: {
+     programTMS: {
       mainHeading: string;
       coloredHeading: string;
       description: string;
@@ -1004,6 +1004,13 @@ export interface Pricing {
         title: string;
         features: string[];
       };
+    };
+    paymentOptions: {
+      heading: string;
+      options: string[];
+      contactText: string;
+      image: string;
+      imageAlt: string;
     };
     disorders: {
       heading: string;

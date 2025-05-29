@@ -1,5 +1,7 @@
 import { defineCollection, z } from "astro:content";
 
+
+
 const blogCollection = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -484,24 +486,6 @@ const programCollection = {
         stepNumber: z.string(),
         title: z.string(),
       })),
-    }),
-    programTMS: z.object({
-      mainHeading: z.string(),
-      coloredHeading: z.string(),
-      description: z.string(),
-      primaryButtonText: z.string(),
-      phoneQuestion: z.string(),
-      phoneNumber: z.string(),
-      image: z.string(),
-      imageAlt: z.string(),
-      conditions: z.array(
-        z.array(
-          z.object({
-            title: z.string(),
-            icon: z.string(),
-          })
-        )
-      ),
     }),
   }),
 };
@@ -1044,6 +1028,34 @@ const pricingCollection = {
         })
       ),
     }),
+    pricingHero: z.object({
+      heading: z.string(),
+      subheading: z.string(),
+      initialConsultation: z.object({
+        title: z.string(),
+        features: z.array(z.string()),
+      }),
+      followUpVisits: z.object({
+        title: z.string(),
+        features: z.array(z.string()),
+      }),
+      specializedTreatmentsHeading: z.string(),
+      tmsTherapy: z.object({
+        title: z.string(),
+        features: z.array(z.string()),
+      }),
+      spravatoTreatment: z.object({
+        title: z.string(),
+        features: z.array(z.string()),
+      }),
+    }),
+    paymentOptions: z.object({
+      heading: z.string(),
+      options: z.array(z.string()),
+      contactText: z.string(),
+      image: z.string(),
+      imageAlt: z.string(),
+    }),
     disorders: z.object({
       heading: z.string(),
       headingTwo_Part_1: z.string(),
@@ -1069,6 +1081,7 @@ const pricingCollection = {
 };
 
 export const collections = {
+
   blog: blogCollection,
   general: generalCollection,
   about: aboutCollection,

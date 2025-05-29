@@ -134,6 +134,19 @@
       ]
     }
   },
+  "paymentOptions": {
+    "heading": "Payment Options",
+    "options": [
+      "Major insurance plans",
+      "Credit cards",
+      "Flexible spending accounts (FSA)",
+      "Health savings accounts (HSA)",
+      "Payment plans for qualifying patients"
+    ],
+    "contactText": "Contact Us to discuss pricing and payment options.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/TEMP/e24e8a9be7665ae989aefb1ee1a1e41d69c09150?placeholderIfAbsent=true",
+    "imageAlt": "Person with arms raised in a field"
+  },
   "disorders": {
     "heading": "OUR INSIGHTS",
     "headingTwo_Part_1": "Expert guidance for your ",
