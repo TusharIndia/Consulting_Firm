@@ -24,8 +24,8 @@ const { footer, logo, companyName } = Data;
               alt={`${companyName} Logo`}
               class="object-contain max-w-full aspect-[4.55] w-[159px]"
             />
-            <p class="mt-2.5 max-md:max-w-full text-white">
-              {footer.description}
+            <p class="mt-2.5 max-md:max-w-full text-white" set:html={footer.description}>
+              
             </p>
           </div>
           <nav class="flex flex-col items-start">
