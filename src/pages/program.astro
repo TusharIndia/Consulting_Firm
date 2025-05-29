@@ -2,9 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { fetchGeneralData, fetchProgramData } from '../utils/dataMapping.ts';
 
-
-
-
 import AdmissionNextStep from "../components/AdmissionNextStep.astro";
 import Team from "../components/Team.astro";
 import FAQ from "../components/sections/FAQ.astro";
@@ -16,55 +13,42 @@ import SingleReview from "../components/sections/SingleReview.astro";
 import WhyChoose from "../components/sections/WhyChoose.astro";
 import WhoNeeds from "../components/sections/WhoNeeds.astro";
 import Testimonials from "../components/sections/Testimonials.astro";
-import TreatmentWithFAQ from "../components/sections/TreatmentWithFAQ.astro";
 import DisorderGrid from "../components/sections/DisorderGrid.astro";
 import CTA from "../components/CTA.astro";
-import ProgramTMS
- from "../components/sections/programTMS.astro";
+import ProgramTMS from "../components/sections/programTMS.astro";
+
 const GeneralData = await fetchGeneralData();
 const { data: ProgramData } = await fetchProgramData();
 import Program12 from "../components/sections/Program12.astro";
-
-// Define custom content for the second WhyChoose component
-const secondWhyChooseProps = {
-  title: "What Are the Benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path?",
-  content: {
-    paragraph1: "The benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path include a personalized, non-invasive approach to treating mental health conditions. This innovative therapy targets specific areas of the brain to help regulate mood and reduce symptoms of disorders such as depression, anxiety, PTSD, and OCD. TMS is particularly beneficial for individuals who have not found success with traditional treatments, offering a safe and effective alternative without the need for medication.",
-    paragraph2: "With care provided by experienced professionals, Clear Path ensures that each TMS treatment plan is tailored to the individual's needs. Regular monitoring and adjustments during the treatment process enhance effectiveness, while the in-person approach fosters a compassionate and supportive environment. By utilizing evidence-based therapies like TMS, Clear Path empowers patients to achieve lasting mental well-being and improved quality of life."
-  },
-  imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/85f72decdde4b87ca08a6d87e41f72dfb29382ed?placeholderIfAbsent=true&apiKey=5b970d64f0984f98a4f82adfd6ad6953",
-  imageAlt: "TMS therapy benefits illustration at Clear Path"
-};
 ---
 
 <MainLayout title="Program">
     <!-- Hero Section -->
-
     <HeroProgram Content={ProgramData.hero}  GeneralData={GeneralData} />
 
     <!-- About Section -->
-
     <ProgramAbout Content={ProgramData.about} />
 
     <!-- Video Section -->
-
     <Video Content={ProgramData.video} />
 
-    <!-- Treatment Grid -->
-    <TreatmentGrid />
+    <!-- Treatment Grid - Now passing Content prop -->
+    <TreatmentGrid Content={ProgramData.treatmentGrid} />
 
-    <!-- First WhyChoose with default content -->
-    <WhyChoose />
-    <TreatmentWithFAQ />
+    <!-- First WhyChoose with content from CMS -->
+    <WhyChoose content={ProgramData.whyChoose} />
+    
     <ProgramTMS />
     <Testimonials Content={ProgramData.testimonials} />
-    <Program12/>
-    <!-- Second WhyChoose with custom content -->
-    <WhyChoose {...secondWhyChooseProps} />
-    <WhoNeeds />
+    <Program12 Content={ProgramData.program12} />
+    
+    <!-- Second WhyChoose with custom content from CMS -->
+    <WhyChoose content={ProgramData.secondWhyChoose} />
+    
+    <WhoNeeds Content={ProgramData.whoNeeds} />
     <FAQ Content={ProgramData.faq} />
-    <DisorderGrid  Content={ProgramData.disorders} />
-	<CTA Content={ProgramData.cta}/>
+    <DisorderGrid Content={ProgramData.disorders} />
+    <CTA Content={ProgramData.cta}/>
 </MainLayout>
 
 

@@ -363,11 +363,10 @@ export async function fetchProgramData(): Promise<Program> {
       },
       video: {
         heading: programData.data.video.heading,
+        headingColored: programData.data.video.headingColored,
         description: programData.data.video.description,
-        video: {
-          img: programData.data.video.video.img,
-          videoSrc: programData.data.video.video.videoSrc,
-        },
+        image: programData.data.video.image,
+        imageAlt: programData.data.video.imageAlt,
       },
       team: {
         heading: programData.data.team.heading,
@@ -478,7 +477,60 @@ export async function fetchProgramData(): Promise<Program> {
           image: card.image,
         })),
       },
-    },
+      treatmentGrid: {
+        heading: programData.data.treatmentGrid.heading,
+        subheading: programData.data.treatmentGrid.subheading,
+        description: programData.data.treatmentGrid.description,
+        featuredImage: programData.data.treatmentGrid.featuredImage,
+        treatments: programData.data.treatmentGrid.treatments.map((treatment: any) => ({
+          icon: treatment.icon,
+          title: treatment.title,
+          description: treatment.description,
+        })),
+      },
+      whyChoose: {
+        title: programData.data.whyChoose.title,
+        content: {
+          paragraph1: programData.data.whyChoose.content.paragraph1,
+          paragraph2: programData.data.whyChoose.content.paragraph2,
+        },
+        imageUrl: programData.data.whyChoose.imageUrl,
+        imageAlt: programData.data.whyChoose.imageAlt,
+      },
+      secondWhyChoose: {
+        title: programData.data.secondWhyChoose.title,
+        content: {
+          paragraph1: programData.data.secondWhyChoose.content.paragraph1,
+          paragraph2: programData.data.secondWhyChoose.content.paragraph2,
+        },
+        imageUrl: programData.data.secondWhyChoose.imageUrl,
+        imageAlt: programData.data.secondWhyChoose.imageAlt,
+      },
+      whoNeeds: {
+        heading: programData.data.whoNeeds.heading,
+        headingColored: programData.data.whoNeeds.headingColored,
+        headingEnd: programData.data.whoNeeds.headingEnd,
+        description: programData.data.whoNeeds.description,
+        listHeading: programData.data.whoNeeds.listHeading,
+        listItems: programData.data.whoNeeds.listItems,
+        listDescription: programData.data.whoNeeds.listDescription,
+        primaryButtonText: programData.data.whoNeeds.primaryButtonText,
+        phoneQuestion: programData.data.whoNeeds.phoneQuestion,
+        phoneNumber: programData.data.whoNeeds.phoneNumber,
+        phoneButtonText: programData.data.whoNeeds.phoneButtonText,
+      },
+      program12: {
+        badgeText: programData.data.program12.badgeText,
+        heading: programData.data.program12.heading,
+        description: programData.data.program12.description,
+        mainImage: programData.data.program12.mainImage,
+        mainImageAlt: programData.data.program12.mainImageAlt,
+        steps: programData.data.program12.steps.map((step: any) => ({
+          stepNumber: step.stepNumber,
+          title: step.title,
+        })),
+      },
+    }
   };
 }
 

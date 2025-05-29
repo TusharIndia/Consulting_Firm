@@ -284,14 +284,7 @@ const programCollection = {
         imageTwo: z.string(),
       }),
     }),
-    video: z.object({
-      heading: z.string(),
-      description: z.string(),
-      video: z.object({
-        img: z.string(),
-        videoSrc: z.string(),
-      }),
-    }),
+    
     team: z.object({
       heading: z.string(),
       description: z.string(),
@@ -373,6 +366,66 @@ const programCollection = {
         title: z.string(),
         buttonText: z.string(),
         image: z.string(),
+      })),
+    }),
+    video: z.object({
+      heading: z.string(),
+      headingColored: z.string(),
+      description: z.string(),
+      image: z.string(),
+      imageAlt: z.string(),
+    }),
+    treatmentGrid: z.object({
+      heading: z.string(),
+      subheading: z.string(),
+      description: z.string(),
+      featuredImage: z.string(),
+      treatments: z.array(z.object({
+        icon: z.string(),
+        title: z.string(),
+        description: z.string(),
+      })),
+    }),
+    whyChoose: z.object({
+      title: z.string(),
+      content: z.object({
+        paragraph1: z.string(),
+        paragraph2: z.string().optional(),
+      }),
+      imageUrl: z.string(),
+      imageAlt: z.string(),
+    }),
+    secondWhyChoose: z.object({
+      title: z.string(),
+      content: z.object({
+        paragraph1: z.string(),
+        paragraph2: z.string().optional(),
+      }),
+      imageUrl: z.string(),
+      imageAlt: z.string(),
+    }),
+    whoNeeds: z.object({
+      heading: z.string(),
+      headingColored: z.string(),
+      headingEnd: z.string(),
+      description: z.string(),
+      listHeading: z.string(),
+      listItems: z.array(z.string()),
+      listDescription: z.string(),
+      primaryButtonText: z.string(),
+      phoneQuestion: z.string(),
+      phoneNumber: z.string(),
+      phoneButtonText: z.string(),
+    }),
+    program12: z.object({
+      badgeText: z.string(),
+      heading: z.string(),
+      description: z.string(),
+      mainImage: z.string(),
+      mainImageAlt: z.string(),
+      steps: z.array(z.object({
+        stepNumber: z.string(),
+        title: z.string(),
       })),
     }),
   }),

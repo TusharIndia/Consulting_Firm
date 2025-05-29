@@ -446,25 +446,7 @@ collections:
                   - { label: "Image One", name: "imageOne", widget: "image" }
                   - { label: "Image Two", name: "imageTwo", widget: "image" }
           
-          - label: "Video"
-            name: "video"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
-              - label: "Video"
-                name: "video"
-                widget: "object"
-                collapsed: true
-                fields:
-                  - { label: "Video Image", name: "img", widget: "image" }
-                  - label: "Video Source"
-                    name: "videoSrc"
-                    widget: "file"
-                    media_library:
-                      config:
-                        multiple: true
+          
 
           - label: "Team"
             name: "team"
@@ -914,3 +896,56 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Details", name: "details", widget: "text" }
+          - label: "Who Needs"
+            name: "whoNeeds"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Heading Colored", name: "headingColored", widget: "string" }
+              - { label: "Heading End", name: "headingEnd", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "List Heading", name: "listHeading", widget: "string" }
+              - { label: "List Items", name: "listItems", widget: "list", field: { widget: "string" } }
+              - { label: "List Description", name: "listDescription", widget: "text" }
+              - { label: "Primary Button Text", name: "primaryButtonText", widget: "string" }
+              - { label: "Phone Question", name: "phoneQuestion", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+              - { label: "Phone Button Text", name: "phoneButtonText", widget: "string" }
+
+          - label: "Program TMS"
+            name: "programTMS"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Heading Colored", name: "headingColored", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Primary Button Text", name: "primaryButtonText", widget: "string" }
+              - { label: "Phone Question", name: "phoneQuestion", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+              - { label: "Phone Button Text", name: "phoneButtonText", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              - label: "Conditions"
+                name: "conditions"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+          - label: "Program12"
+            name: "program12"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Badge Text", name: "badgeText", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Main Image", name: "mainImage", widget: "image" }
+              - { label: "Main Image Alt Text", name: "mainImageAlt", widget: "string" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Step Number", name: "stepNumber", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
