@@ -19,11 +19,11 @@ const { footer, logo, companyName } = Data;
           class="flex flex-wrap gap-5 justify-between items-start w-full text-white max-w-[1081px] max-md:max-w-full"
         >
           <div class="leading-6 max-md:max-w-full">
-            <img
+            <a href="/"><img
               src={logo}
               alt={`${companyName} Logo`}
               class="object-contain max-w-full aspect-[4.55] w-[159px]"
-            />
+            /></a>
             <p class="mt-2.5 max-md:max-w-full text-white" set:html={footer.description}>
               
             </p>
