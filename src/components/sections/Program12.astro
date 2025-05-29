@@ -1,5 +1,19 @@
 ---
-// Program12 Component - Steps to Choose a TMS Program
+interface Props {
+  Content: {
+    badgeText: string;
+    heading: string;
+    description: string;
+    mainImage: string;
+    mainImageAlt: string;
+    steps: {
+      stepNumber: string;
+      title: string;
+    }[];
+  };
+}
+
+const { Content } = Astro.props;
 ---
 
 <section class="relative mx-auto my-0 max-w-none rounded-3xl h-[1468px] w-[1320px] max-md:px-5 max-md:py-10 max-md:w-full max-md:max-w-screen-md max-md:h-auto max-sm:px-4 max-sm:py-5 max-sm:max-w-screen-sm bg-[#f8f5f1]">
@@ -25,19 +39,16 @@
   <!-- Header Section -->
   <header>
     <span class="absolute top-20 left-20 px-10 pt-1.5 pb-2 text-base leading-6 text-white bg-purple-900 rounded-[50px] max-md:static max-md:mb-5 max-md:w-fit">
-      Steps to Choose a TMS Program
+      {Content.badgeText}
     </span>
 
     <div class="absolute left-20 h-[216px] top-[172px] w-[1160px] max-md:static max-md:mb-10 max-md:w-full max-md:h-auto">
       <h1 class="absolute top-0 left-0 text-5xl font-medium h-[216px] leading-[72px] text-neutral-800 w-[706px] max-md:static max-md:mb-5 max-md:w-full max-md:h-auto max-md:text-4xl max-md:leading-10 max-sm:text-3xl max-sm:leading-9">
-        How to Choose a<br/> Transcranial Magnetic Stimulation Program?
+        {Content.heading}
       </h1>
 
       <p class="absolute text-lg leading-9 opacity-75 h-[170px] left-[756px] text-neutral-800 top-[23px] w-[404px] max-md:static max-md:w-full max-md:h-auto max-sm:text-base max-sm:leading-7">
-        Choosing the right TMS program is important to ensure you receive
-        effective care tailored to your specific needs. A systematic approach can
-        help you identify the program that best aligns with your mental health
-        goals.
+        {Content.description}
       </p>
     </div>
   </header>
@@ -47,8 +58,8 @@
     <div class="relative h-[596px] w-[1160px] max-md:w-full max-md:h-[400px] max-sm:h-[300px]">
       <div class="absolute top-4 left-4 rounded-3xl bg-opacity-0 h-[330px] w-[641px] max-md:h-[calc(100%_-_32px)] max-md:w-[calc(100%_-_32px)]"></div>
       <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/63808be3d640581560a2fa82a50a6f4c5a412ace?placeholderIfAbsent=true"
-        alt="Woman relaxing in a comfortable chair with plants in background"
+        src={Content.mainImage}
+        alt={Content.mainImageAlt}
         class="absolute left-7 rounded-3xl h-[543px] top-[26px] w-[1105px] object-cover border-[20px] border-white max-md:left-7 max-md:h-[calc(100%_-_56px)] max-md:top-[26px] max-md:w-[calc(100%_-_56px)]"
       />
     </div>
@@ -56,180 +67,71 @@
 
   <!-- Steps Section -->
   <section class="flex absolute left-20 flex-col gap-8 items-start top-[1088px] w-[1160px] max-md:static max-md:w-full max-md:h-auto">
-    <!-- Row 1 -->
-    <div class="flex gap-6 items-start w-full max-md:flex-col max-md:gap-6">
-      <!-- Step 1 -->
-      <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full">
-        <div class="flex justify-between items-center w-full pb-2">
-          <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start">
-            <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" fill="#222222"/>
-                <text fill="white" font-family="Inter" font-size="16" font-weight="bold" x="11.0781" y="25.8182">01</text>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
-              Understand Your Health Needs
-            </h2>
-          </div>
-          <button aria-label="Expand details about understanding your health needs" class="w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.47888 7.88263L3.89813 6.46338L12.1326 14.6979L20.3671 6.46338L21.7864 7.88263L12.1326 17.5364L2.47888 7.88263Z" fill="#222222"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="w-full h-px bg-neutral-800 opacity-50"></div>
-      </article>
-
-      <!-- Step 2 -->
-      <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full">
-        <div class="flex justify-between items-center w-full pb-2">
-          <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start">
-            <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" fill="#222222"/>
-                <text fill="white" font-family="Inter" font-size="16" font-weight="bold" x="9.45312" y="25.8182">02</text>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
-              Consult with Healthcare Professionals
-            </h2>
-          </div>
-          <button aria-label="Expand details about consulting with healthcare professionals" class="w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.47888 7.88263L3.89813 6.46338L12.1326 14.6979L20.3671 6.46338L21.7864 7.88263L12.1326 17.5364L2.47888 7.88263Z" fill="#222222"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="w-full h-px bg-neutral-800 opacity-50"></div>
-      </article>
-    </div>
-
-    <!-- Row 2 -->
-    <div class="flex gap-6 items-start w-full max-md:flex-col max-md:gap-6">
-      <!-- Step 3 -->
-      <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full">
-        <div class="flex justify-between items-center w-full pb-2">
-          <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start">
-            <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" fill="#222222"/>
-                <text fill="white" font-family="Inter" font-size="16" font-weight="bold" x="9.21875" y="25.8182">03</text>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
-              Research Available Programs
-            </h2>
-          </div>
-          <button aria-label="Expand details about researching available programs" class="w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.47888 7.88263L3.89813 6.46338L12.1326 14.6979L20.3671 6.46338L21.7864 7.88263L12.1326 17.5364L2.47888 7.88263Z" fill="#222222"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="w-full h-px bg-neutral-800 opacity-50"></div>
-      </article>
-
-      <!-- Step 4 -->
-      <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full">
-        <div class="flex justify-between items-center w-full pb-2">
-          <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start">
-            <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" fill="#222222"/>
-                <text fill="white" font-family="Inter" font-size="16" font-weight="bold" x="9.07031" y="25.8182">04</text>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
-              Verify Program Credentials
-            </h2>
-          </div>
-          <button aria-label="Expand details about verifying program credentials" class="w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.47888 7.88263L3.89813 6.46338L12.1326 14.6979L20.3671 6.46338L21.7864 7.88263L12.1326 17.5364L2.47888 7.88263Z" fill="#222222"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="w-full h-px bg-neutral-800 opacity-50"></div>
-      </article>
-    </div>
-
-    <!-- Row 3 -->
-    <div class="flex gap-6 items-start w-full max-md:flex-col max-md:gap-6">
-      <!-- Step 5 -->
-      <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full">
-        <div class="flex justify-between items-center w-full pb-2">
-          <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start">
-            <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" fill="#222222"/>
-                <text fill="white" font-family="Inter" font-size="16" font-weight="bold" x="9.33594" y="25.8182">05</text>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
-              Assess the Treatment Plan
-            </h2>
-          </div>
-          <button aria-label="Expand details about assessing the treatment plan" class="w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.47888 7.88263L3.89813 6.46338L12.1326 14.6979L20.3671 6.46338L21.7864 7.88263L12.1326 17.5364L2.47888 7.88263Z" fill="#222222"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="w-full h-px bg-neutral-800 opacity-50"></div>
-      </article>
-
-      <!-- Step 6 -->
-      <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full">
-        <div class="flex justify-between items-center w-full pb-2">
-          <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start">
-            <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" fill="#222222"/>
-                <text fill="white" font-family="Inter" font-size="16" font-weight="bold" x="9.21094" y="25.8182">06</text>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
-              Evaluate Accessibility
-            </h2>
-          </div>
-          <button aria-label="Expand details about evaluating accessibility" class="w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.47888 7.88263L3.89813 6.46338L12.1326 14.6979L20.3671 6.46338L21.7864 7.88263L12.1326 17.5364L2.47888 7.88263Z" fill="#222222"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="w-full h-px bg-neutral-800 opacity-50"></div>
-      </article>
-    </div>
-
-    <!-- Row 4 -->
-    <div class="flex gap-6 items-start w-full max-md:flex-col max-md:gap-6">
-      <!-- Step 7 -->
-      <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full">
-        <div class="flex justify-between items-center w-full pb-2">
-          <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start">
-            <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" fill="#222222"/>
-                <text fill="white" font-family="Inter" font-size="16" font-weight="bold" x="10.3906" y="25.8182">07</text>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
-              Check Financial and Insurance Coverage
-            </h2>
-          </div>
-          <button aria-label="Expand details about checking financial and insurance coverage" class="w-6 h-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.47888 7.88263L3.89813 6.46338L12.1326 14.6979L20.3671 6.46338L21.7864 7.88263L12.1326 17.5364L2.47888 7.88263Z" fill="#222222"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="w-full h-px bg-neutral-800 opacity-50"></div>
-      </article>
+    {Content.steps.map((step, index) => {
+      const isOddIndex = index % 2 === 0;
+      const isLastRow = index >= Content.steps.length - 2;
+      const shouldShowEmptyColumn = isLastRow && Content.steps.length % 2 !== 0 && index === Content.steps.length - 1;
       
-      <!-- Empty column to maintain grid structure -->
-      <div class="flex-1 w-[560px] max-md:hidden"></div>
-    </div>
+      return (
+        <>
+          {isOddIndex && (
+            <div class="flex gap-6 items-start w-full max-md:flex-col max-md:gap-6">
+              <!-- Current Step -->
+              <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full">
+                <div class="flex justify-between items-center w-full pb-2">
+                  <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start">
+                    <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#222222"/>
+                        <text fill="white" font-family="Inter" font-size="16" font-weight="bold" x="50%" y="50%" text-anchor="middle" dy="0.35em">{step.stepNumber}</text>
+                      </svg>
+                    </div>
+                    <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
+                      {step.title}
+                    </h2>
+                  </div>
+                  <button aria-label={`Expand details about ${step.title.toLowerCase()}`} class="w-6 h-6">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.47888 7.88263L3.89813 6.46338L12.1326 14.6979L20.3671 6.46338L21.7864 7.88263L12.1326 17.5364L2.47888 7.88263Z" fill="#222222"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="w-full h-px bg-neutral-800 opacity-50"></div>
+              </article>
+
+              <!-- Next Step (if exists) -->
+              {Content.steps[index + 1] && (
+                <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full">
+                  <div class="flex justify-between items-center w-full pb-2">
+                    <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start">
+                      <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="20" cy="20" r="20" fill="#222222"/>
+                          <text fill="white" font-family="Inter" font-size="16" font-weight="bold" x="50%" y="50%" text-anchor="middle" dy="0.35em">{Content.steps[index + 1].stepNumber}</text>
+                        </svg>
+                      </div>
+                      <h2 class="text-2xl font-medium leading-8 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
+                        {Content.steps[index + 1].title}
+                      </h2>
+                    </div>
+                    <button aria-label={`Expand details about ${Content.steps[index + 1].title.toLowerCase()}`} class="w-6 h-6">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.47888 7.88263L3.89813 6.46338L12.1326 14.6979L20.3671 6.46338L21.7864 7.88263L12.1326 17.5364L2.47888 7.88263Z" fill="#222222"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="w-full h-px bg-neutral-800 opacity-50"></div>
+                </article>
+              )}
+
+              <!-- Empty column for last odd step -->
+              {shouldShowEmptyColumn && (
+                <div class="flex-1 w-[560px] max-md:hidden"></div>
+              )}
+            </div>
+          )}
+        </>
+      );
+    })}
   </section>
 </section>

@@ -1,26 +1,38 @@
 ---
-// Define props with default values for original content
-const {
-  title = "Why Choose Transcranial Magnetic Stimulation (TMS)?",
-  content = {
+// Define the interface for the content object
+interface WhyChooseContent {
+  title: string;
+  content: {
+    paragraph1: string;
+    paragraph2?: string;
+  };
+  imageUrl: string;
+  imageAlt: string;
+}
+
+// Define default content
+const defaultContent: WhyChooseContent = {
+  title: "Why Choose Transcranial Magnetic Stimulation (TMS)?",
+  content: {
     paragraph1: "TMS offers a transformative option for individuals seeking relief from symptoms of depression and other mental health conditions. Unlike medications, which can have side effects or may not work for everyone, TMS directly stimulates the brain to encourage natural healing and improved functionality. This non-invasive treatment is well-tolerated, requires no anesthesia, and involves no downtime, making it a convenient and accessible solution for busy individuals.",
     paragraph2: "For those with dual diagnoses or treatment-resistant conditions, TMS complements other therapies to create a comprehensive and effective pathway to recovery. By focusing on targeted areas of the brain, TMS fosters emotional stability, enhances daily functioning, and helps individuals regain control of their mental health."
   },
-  imageUrl = "/imgs/why_choose_us.png",
-  imageAlt = "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office"
-} = Astro.props;
+  imageUrl: "/imgs/why_choose_us.png",
+  imageAlt: "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office"
+};
 
-// Get the first part of the title (before "Magnetic")
-const firstPart = title.includes("Magnetic") 
-  ? title.substring(0, title.indexOf("Magnetic")).trim() 
-  : title;
+// Accept content prop with default value
+const { content = defaultContent } = Astro.props;
 
-// Get the TMS part
+// Get the title components
+const firstPart = content.title.includes("Magnetic") 
+  ? content.title.substring(0, content.title.indexOf("Magnetic")).trim() 
+  : content.title;
+
 const tmsText = "Magnetic Stimulation (TMS)";
 
-// Get the last part (if any)
-const lastPart = title.includes("Magnetic") && title.indexOf("Magnetic") + tmsText.length < title.length 
-  ? title.substring(title.indexOf("Magnetic") + tmsText.length).trim()
+const lastPart = content.title.includes("Magnetic") && content.title.indexOf("Magnetic") + tmsText.length < content.title.length 
+  ? content.title.substring(content.title.indexOf("Magnetic") + tmsText.length).trim()
   : "";
 ---
 
@@ -36,12 +48,14 @@ const lastPart = title.includes("Magnetic") && title.indexOf("Magnetic") + tmsTe
 
         <article class="text-base leading-7 text-neutral-700 opacity-90 mb-6 max-w-[900px] mx-auto">
             <p class="text-left">
-                {content.paragraph1}
+                {content.content.paragraph1}
             </p>
             <br />
-            <p class="text-left">
-                {content.paragraph2 || ''}
-            </p>
+            {content.content.paragraph2 && (
+              <p class="text-left">
+                  {content.content.paragraph2}
+              </p>
+            )}
         </article>
 
         <div class="flex gap-4 items-center justify-center w-full max-w-[550px] mx-auto mb-8 max-sm:flex-col">
@@ -67,8 +81,8 @@ const lastPart = title.includes("Magnetic") && title.indexOf("Magnetic") + tmsTe
     <div class="w-full max-w-[950px] mx-auto mt-4">
         <figure class="w-full overflow-hidden rounded-2xl shadow-md border-8 border-white bg-white p-1">
             <img
-                src={imageUrl}
-                alt={imageAlt}
+                src={content.imageUrl}
+                alt={content.imageAlt}
                 class="w-full h-auto object-cover aspect-[16/9] rounded-lg"
             />
         </figure>

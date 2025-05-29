@@ -326,14 +326,7 @@ export interface Program {
         imageTwo: string;
       };
     };
-    video: {
-      heading: string;
-      description: string;
-      video: {
-        img: string;
-        videoSrc: string;
-      };
-    };
+    
     team: {
       heading: string;
       description: string;
@@ -439,6 +432,66 @@ export interface Program {
         position: string;
         text: string;
         image: string;
+      }[];
+    };
+    video: {
+      heading: string;
+      headingColored: string;
+      description: string;
+      image: string;
+      imageAlt: string;
+    };
+    treatmentGrid: {
+      heading: string;
+      subheading: string;
+      description: string;
+      featuredImage: string;
+      treatments: {
+        icon: string;
+        title: string;
+        description: string;
+      }[];
+    };
+    whyChoose: {
+      title: string;
+      content: {
+        paragraph1: string;
+        paragraph2: string;
+      };
+      imageUrl: string;
+      imageAlt: string;
+    };
+    secondWhyChoose: {
+      title: string;
+      content: {
+        paragraph1: string;
+        paragraph2: string;
+      };
+      imageUrl: string;
+      imageAlt: string;
+    };
+    whoNeeds: {
+      heading: string;
+      headingColored: string;
+      headingEnd: string;
+      description: string;
+      listHeading: string;
+      listItems: string[];
+      listDescription: string;
+      primaryButtonText: string;
+      phoneQuestion: string;
+      phoneNumber: string;
+      phoneButtonText: string;
+    };
+    program12: {
+      badgeText: string;
+      heading: string;
+      description: string;
+      mainImage: string;
+      mainImageAlt: string;
+      steps: {
+        stepNumber: string;
+        title: string;
       }[];
     };
   }; 

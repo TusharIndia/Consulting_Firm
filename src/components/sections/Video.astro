@@ -1,33 +1,28 @@
 ---
 import VideoModal from "../VideoModal.astro"
 
-const { heading, description, video } = Astro.props.Content;
-
+const { Content } = Astro.props;
+const { heading, headingColored, description, image, imageAlt } = Content;
 ---
 
 <section class="mx-auto my-20 max-w-[1320px] max-md:my-10 max-md:rounded-3xl relative">
     <div class="flex flex-col rounded-none">
         <h2 class="z-10 self-center -mt-4 text-5xl font-medium text-center leading-[72px] text-neutral-800 w-[897px] max-md:max-w-full max-md:text-4xl max-md:leading-[64px]">
-            What is Transcranial Magnetic
-            <span style="color: rgba(94, 129, 233, 1)">Stimulation (TMS)?</span>
+            {heading}
+            <span style="color: rgba(94, 129, 233, 1)">{headingColored}</span>
         </h2>
 
         <article class="p-7 mt-12 w-full bg-indigo-500 rounded-3xl max-md:px-5 max-md:mt-10 max-md:max-w-full">
             <div class="flex gap-5 max-md:flex-col">
             <div class="w-3/5 max-md:ml-0 max-md:w-full">
                 <p class="self-stretch my-auto text-2xl leading-10 text-white max-md:mt-10 max-md:max-w-full">
-                Transcranial Magnetic Stimulation (TMS) is a groundbreaking treatment
-                designed to improve mental well-being and provide relief for
-                individuals struggling with depression and other mental health
-                conditions. At Clear Path, our TMS program offers a personalized,
-                non-invasive approach to care, making it a safe and effective solution
-                for those seeking innovative treatment options.
+                {description}
                 </p>
             </div>
             <div class="ml-5 w-2/5 max-md:ml-0 max-md:w-full">
                 <img
-                src="/imgs/tms_program.png"
-                alt="Transcranial Magnetic Stimulation treatment illustration"
+                src={image}
+                alt={imageAlt}
                 class="object-contain grow w-full rounded-none aspect-[1.47] max-md:mt-10 max-md:max-w-full"
                 />
             </div>
