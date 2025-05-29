@@ -485,6 +485,24 @@ const programCollection = {
         title: z.string(),
       })),
     }),
+    programTMS: z.object({
+      mainHeading: z.string(),
+      coloredHeading: z.string(),
+      description: z.string(),
+      primaryButtonText: z.string(),
+      phoneQuestion: z.string(),
+      phoneNumber: z.string(),
+      image: z.string(),
+      imageAlt: z.string(),
+      conditions: z.array(
+        z.array(
+          z.object({
+            title: z.string(),
+            icon: z.string(),
+          })
+        )
+      ),
+    }),
   }),
 };
 

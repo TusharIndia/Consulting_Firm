@@ -579,6 +579,22 @@ export async function fetchProgramData(): Promise<Program> {
           title: step.title,
         })),
       },
+      programTMS: {
+        mainHeading: programData.data.programTMS.mainHeading,
+        coloredHeading: programData.data.programTMS.coloredHeading,
+        description: programData.data.programTMS.description,
+        primaryButtonText: programData.data.programTMS.primaryButtonText,
+        phoneQuestion: programData.data.programTMS.phoneQuestion,
+        phoneNumber: programData.data.programTMS.phoneNumber,
+        image: programData.data.programTMS.image,
+        imageAlt: programData.data.programTMS.imageAlt,
+        conditions: programData.data.programTMS.conditions.map((row: any) => 
+          row.map((condition: any) => ({
+            title: condition.title,
+            icon: condition.icon
+          }))
+        ),
+      },
     }
   };
 }

@@ -494,6 +494,20 @@ export interface Program {
         title: string;
       }[];
     };
+    programTMS: {
+      mainHeading: string;
+      coloredHeading: string;
+      description: string;
+      primaryButtonText: string;
+      phoneQuestion: string;
+      phoneNumber: string;
+      image: string;
+      imageAlt: string;
+      conditions: Array<Array<{
+        title: string;
+        icon: string;
+      }>>;
+    };
   }; 
 }
 

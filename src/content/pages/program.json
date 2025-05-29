@@ -429,5 +429,47 @@
         "title": "Check Financial and Insurance Coverage"
       }
     ]
+  },
+  "programTMS": {
+    "mainHeading": "What Conditions are ",
+    "coloredHeading": "Treated During TMS?",
+    "description": "The conditions treated with Transcranial Magnetic Stimulation (TMS) at Clear Path include a wide range of mental health disorders. Each condition is addressed using evidence-based therapies and innovative TMS technology, ensuring holistic care for individuals seeking to improve their mental well-being.",
+    "primaryButtonText": "Get Started",
+    "phoneQuestion": "Have a question?",
+    "phoneNumber": "Call (123) 456-7890",
+    "image": "https://cdn.builder.io/api/v1/image/assets/TEMP/5ae4c8a0b7e18f561c9fbce4f7a0f6a1f625971a?placeholderIfAbsent=true&apiKey=8e58a67a091d4e78afb9bd86f140fa49",
+    "imageAlt": "TMS Treatment Illustration",
+    "conditions": [
+      [
+        {
+          "title": "Depression",
+          "icon": "/imgs/program/Depression.svg"
+        },
+        {
+          "title": "Stress and Insomnia",
+          "icon": "/imgs/program/Stress and Insomnia.svg"
+        }
+      ],
+      [
+        {
+          "title": "Anxiety Disorders",
+          "icon": "/imgs/program/Anxiety Disorders.svg"
+        },
+        {
+          "title": "Post-Traumatic Stress Disorder (PTSD)",
+          "icon": "/imgs/program/Post-Traumatic Stress Disorder (PTSD).svg"
+        }
+      ],
+      [
+        {
+          "title": "Obsessive-Compulsive Disorder (OCD)",
+          "icon": "/imgs/program/Obsessive-Compulsive Disorder (OCD).svg"
+        },
+        {
+          "title": "Bipolar Disorder",
+          "icon": "/imgs/program/Bipolar Disorder.svg"
+        }
+      ]
+    ]
   }
 }
