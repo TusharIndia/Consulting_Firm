@@ -93,6 +93,47 @@
       }
     ]
   },
+  "pricingHero": {
+    "heading": "Pricing Information",
+    "subheading": "Clear Path is committed to providing transparent pricing information and flexible payment options for our mental health services.",
+    "initialConsultation": {
+      "title": "Initial Consultation",
+      "features": [
+        "Comprehensive evaluation",
+        "Treatment planning",
+        "Insurance copay applies",
+        "Self-pay options available"
+      ]
+    },
+    "followUpVisits": {
+      "title": "Follow-up Visits",
+      "features": [
+        "20-minute medication management",
+        "Regular monitoring",
+        "Insurance copay applies",
+        "Affordable self-pay rates"
+      ]
+    },
+    "specializedTreatmentsHeading": "Specialized Treatments",
+    "tmsTherapy": {
+      "title": "TMS Therapy",
+      "features": [
+        "Coverage verification required",
+        "Payment plans available",
+        "Insurance preauthorization",
+        "Self-pay packages offered"
+      ]
+    },
+    "spravatoTreatment": {
+      "title": "Spravato Treatment",
+      "features": [
+        "Insurance coverage verification",
+        "Monitored administration",
+        "Payment plans available",
+        "Assistance programs"
+      ]
+    }
+  },
   "disorders": {
     "heading": "OUR INSIGHTS",
     "headingTwo_Part_1": "Expert guidance for your ",
@@ -121,5 +162,13 @@
       }
     ]
   },
- 
+  "cta": {
+    "heading": "Ready to Start Your Journey to Better Mental Health?",
+    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
+    "buttonText": "Get Started",
+    "image": "/imgs/mental_health_support.png",
+    "altText": "Mental health support",
+    "phoneText": "Have a question?",
+    "phoneNumber": "(123) 456-7890"
+  }
 }

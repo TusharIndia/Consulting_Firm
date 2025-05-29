@@ -970,6 +970,27 @@ export interface Pricing {
         }[];
       }[];
     };
+    pricingHero: {
+      heading: string;
+      subheading: string;
+      initialConsultation: {
+        title: string;
+        features: string[];
+      };
+      followUpVisits: {
+        title: string;
+        features: string[];
+      };
+      specializedTreatmentsHeading: string;
+      tmsTherapy: {
+        title: string;
+        features: string[];
+      };
+      spravatoTreatment: {
+        title: string;
+        features: string[];
+      };
+    };
     disorders: {
       heading: string;
       headingTwo_Part_1: string;
@@ -981,6 +1002,14 @@ export interface Pricing {
         image: string;
       }[];
     };
- 
+    cta: {
+      heading: string;
+      text: string;
+      buttonText: string;
+      image: string;
+      altText: string;
+      phoneText: string;
+      phoneNumber: string;
+    };
   };
 }

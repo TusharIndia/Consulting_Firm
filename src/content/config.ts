@@ -1037,6 +1037,15 @@ const pricingCollection = {
         image: z.string(),
       })),
     }),
+    cta: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
+      image: z.string(),
+      altText: z.string(),
+      phoneText: z.string(),
+      phoneNumber: z.string(),
+    }),
   
   }),
 };

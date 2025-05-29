@@ -13,7 +13,8 @@ import type {
   Treatmentarchive,
   Insurance,
   Location,
-  Treatment
+  Treatment,
+  Pricing
 } from "../types/pages";
 
 export async function fetchBlogData(): Promise<Blog[]> {
@@ -1117,6 +1118,15 @@ export async function fetchPricingData(): Promise<Pricing> {
           title: disorder.title,
           image: disorder.image,
         })),
+      },
+      cta: {
+        heading: pricing.data.cta.heading,
+        text: pricing.data.cta.text,
+        buttonText: pricing.data.cta.buttonText,
+        image: pricing.data.cta.image,
+        altText: pricing.data.cta.altText,
+        phoneText: pricing.data.cta.phoneText,
+        phoneNumber: pricing.data.cta.phoneNumber,
       },
      
     },
