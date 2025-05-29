@@ -928,10 +928,6 @@ export interface Pricing {
         image: string;
       }[];
     };
-    cta: {
-      heading: string;
-      text: string;
-      buttonText: string;
-    };
+ 
   };
 }
