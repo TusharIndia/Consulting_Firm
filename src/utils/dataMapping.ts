@@ -1145,6 +1145,13 @@ export async function fetchPricingData(): Promise<Pricing> {
           features: pricing.data.pricingHero.spravatoTreatment.features,
         },
       },
+      paymentOptions: {
+        heading: pricing.data.paymentOptions.heading,
+        options: pricing.data.paymentOptions.options,
+        contactText: pricing.data.paymentOptions.contactText,
+        image: pricing.data.paymentOptions.image,
+        imageAlt: pricing.data.paymentOptions.imageAlt,
+      },
       disorders: {
         heading: pricing.data.disorders.heading,
         headingTwo_Part_1: pricing.data.disorders.headingTwo_Part_1,

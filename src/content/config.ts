@@ -1047,6 +1047,13 @@ const pricingCollection = {
         features: z.array(z.string()),
       }),
     }),
+    paymentOptions: z.object({
+      heading: z.string(),
+      options: z.array(z.string()),
+      contactText: z.string(),
+      image: z.string(),
+      imageAlt: z.string(),
+    }),
     disorders: z.object({
       heading: z.string(),
       headingTwo_Part_1: z.string(),
