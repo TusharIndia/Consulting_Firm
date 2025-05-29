@@ -373,6 +373,231 @@ export async function fetchAdmissions(): Promise<Admissions> {
   };
 }
 
+export async function fetchSubProgramData(sub_page): Promise<Program> {
+  const type = sub_page; 
+  const [programData] = await getCollection("treatments", (item) => item.id === type);
+
+  return {
+    data: {
+      hero: {
+        heading: programData.data.hero.heading,
+        text: programData.data.hero.text,
+        buttonText: programData.data.hero.buttonText,
+        phoneQuestionText: programData.data.hero.phoneQuestionText,
+        treatmentsLabel: programData.data.hero.treatmentsLabel,
+        callButtonText: programData.data.hero.callButtonText,
+        navItems: programData.data.hero.navItems.map((item: any) => ({
+          text: item.text,
+          url: item.url,
+          sublinks: item.sublinks?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+        })),
+      },
+      about: {
+        headingOne: programData.data.about.headingOne,
+        headingTwo: programData.data.about.headingTwo,
+        textOne: programData.data.about.textOne,
+        textTwo: programData.data.about.textTwo,
+        images: {
+          imageOne: programData.data.about.images.imageOne,
+          imageTwo: programData.data.about.images.imageTwo,
+        },
+      },
+      video: {
+        heading: programData.data.video.heading,
+        headingColored: programData.data.video.headingColored,
+        description: programData.data.video.description,
+        image: programData.data.video.image,
+        imageAlt: programData.data.video.imageAlt,
+      },
+      team: {
+        heading: programData.data.team.heading,
+        description: programData.data.team.description,
+        team: programData.data.team.team.map((member: any) => ({
+          name: member.name,
+          designation: member.designation,
+          image: member.image,
+        })),
+      },
+      nextSteps: {
+        heading: programData.data.nextSteps.heading,
+        description: programData.data.nextSteps.description,
+        nextSteps: programData.data.nextSteps.nextSteps.map((step: any) => ({
+          title: step.title,
+          linkOne: step.linkOne,
+          linkOneUrl: step.linkOneUrl,
+          linkTwo: step.linkTwo,
+          linkTwoUrl: step.linkTwoUrl,
+        })),
+      },
+      singleReview: {
+        heading: programData.data.singleReview.heading,
+        description: programData.data.singleReview.description,
+        buttonText: programData.data.singleReview.buttonText,
+        cardDetail: programData.data.singleReview.cardDetail,
+        cardTitle: programData.data.singleReview.cardTitle,
+      },
+      pdf: {
+        heading: programData.data.pdf.heading,
+        description: programData.data.pdf.description,
+        pdf: {
+          link: programData.data.pdf.pdf.link,
+          linkUrl: programData.data.pdf.pdf.linkUrl,
+        },
+      },
+      howWeTreat: {
+        heading: programData.data.howWeTreat.heading,
+        description: programData.data.howWeTreat.description,
+        process: programData.data.howWeTreat.process.map((process: any) => ({
+          title: process.title,
+          details: process.details,
+        })),
+      },
+      residentialRehab: {
+        img: programData.data.residentialRehab.img,
+        heading: programData.data.residentialRehab.heading,
+        description: programData.data.residentialRehab.description,
+        cardTitle: programData.data.residentialRehab.cardTitle,
+        process: programData.data.residentialRehab.process.map(
+          (process: any) => ({
+            title: process.title,
+            details: process.details,
+          })
+        ),
+      },
+      therapies: {
+        heading: programData.data.therapies.heading,
+        description: programData.data.therapies.description,
+        therapies: programData.data.therapies.therapies.map((therapy: any) => ({
+          title: therapy.title,
+          details: therapy.details,
+        })),
+      },
+      amenities: {
+        img: programData.data.amenities.img,
+        heading: programData.data.amenities.heading,
+        description: programData.data.amenities.description,
+      },
+      cta: {
+        heading: programData.data.cta.heading,
+        text: programData.data.cta.text,
+        buttonText: programData.data.cta.buttonText,
+      },
+      disorders: {
+        heading: programData.data.disorders.heading,
+        headingTwo_Part_1: programData.data.disorders.headingTwo_Part_1,
+        headingTwo_Part_2: programData.data.disorders.headingTwo_Part_2,
+        headingTwo_Part_3: programData.data.disorders.headingTwo_Part_3,
+        disorders: programData.data.disorders.disorders.map((disorder) => ({
+          link: disorder.link,
+          title: disorder.title,
+          image: disorder.image,
+        })),
+      },
+      testimonials: {
+        list: programData.data.testimonials.list.map((testimonial) => ({
+          name: testimonial.name,
+          position: testimonial.position,
+          text: testimonial.text,
+          image: testimonial.image,
+        })),
+      },
+      faq: {
+        heading: programData.data.faq.heading,
+        faq: programData.data.faq.faq.map((item: any) => ({
+          title: item.title,
+          details: item.details,
+        })),
+      },
+      otherTreatments: {
+        heading: programData.data.otherTreatments.heading,
+        buttonText: programData.data.otherTreatments.buttonText,
+        buttonUrl: programData.data.otherTreatments.buttonUrl,
+        cards: programData.data.otherTreatments.cards.map((card: any) => ({
+          title: card.title,
+          buttonText: card.buttonText,
+          image: card.image,
+        })),
+      },
+      treatmentGrid: {
+        heading: programData.data.treatmentGrid.heading,
+        subheading: programData.data.treatmentGrid.subheading,
+        description: programData.data.treatmentGrid.description,
+        featuredImage: programData.data.treatmentGrid.featuredImage,
+        treatments: programData.data.treatmentGrid.treatments.map((treatment: any) => ({
+          icon: treatment.icon,
+          title: treatment.title,
+          description: treatment.description,
+        })),
+      },
+      whyChoose: {
+        title: programData.data.whyChoose.title,
+        content: {
+          paragraph1: programData.data.whyChoose.content.paragraph1,
+          paragraph2: programData.data.whyChoose.content.paragraph2,
+        },
+        imageUrl: programData.data.whyChoose.imageUrl,
+        imageAlt: programData.data.whyChoose.imageAlt,
+      },
+      secondWhyChoose: {
+        title: programData.data.secondWhyChoose.title,
+        content: {
+          paragraph1: programData.data.secondWhyChoose.content.paragraph1,
+          paragraph2: programData.data.secondWhyChoose.content.paragraph2,
+        },
+        imageUrl: programData.data.secondWhyChoose.imageUrl,
+        imageAlt: programData.data.secondWhyChoose.imageAlt,
+      },
+      whoNeeds: {
+        heading: programData.data.whoNeeds.heading,
+        headingColored: programData.data.whoNeeds.headingColored,
+        headingEnd: programData.data.whoNeeds.headingEnd,
+        description: programData.data.whoNeeds.description,
+        listHeading: programData.data.whoNeeds.listHeading,
+        listItems: programData.data.whoNeeds.listItems,
+        listDescription: programData.data.whoNeeds.listDescription,
+        primaryButtonText: programData.data.whoNeeds.primaryButtonText,
+        phoneQuestion: programData.data.whoNeeds.phoneQuestion,
+        phoneNumber: programData.data.whoNeeds.phoneNumber,
+        phoneButtonText: programData.data.whoNeeds.phoneButtonText,
+      },
+      program12: {
+        badgeText: programData.data.program12.badgeText,
+        heading: programData.data.program12.heading,
+        description: programData.data.program12.description,
+        mainImage: programData.data.program12.mainImage,
+        mainImageAlt: programData.data.program12.mainImageAlt,
+        steps: programData.data.program12.steps.map((step: any) => ({
+          stepNumber: step.stepNumber,
+          title: step.title,
+        })),
+      },
+      programTMS: {
+        mainHeading: programData.data.programTMS.mainHeading,
+        coloredHeading: programData.data.programTMS.coloredHeading,
+        description: programData.data.programTMS.description,
+        primaryButtonText: programData.data.programTMS.primaryButtonText,
+        phoneQuestion: programData.data.programTMS.phoneQuestion,
+        phoneNumber: programData.data.programTMS.phoneNumber,
+        image: programData.data.programTMS.image,
+        imageAlt: programData.data.programTMS.imageAlt,
+        conditions: programData.data.programTMS.conditions.map((row: any) => 
+          row.map((condition: any) => ({
+            title: condition.title,
+            icon: condition.icon
+          }))
+        ),
+      },
+    }
+  };
+}
+
 export async function fetchProgramData(): Promise<Program> {
   const [programData] = await getCollection(
     "pages",
