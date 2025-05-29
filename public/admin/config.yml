@@ -1376,6 +1376,7 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
                   { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
                     { label: "Text", name: "text", widget: "string" },
                     { label: "Link", name: "link", widget: "string" }
@@ -1385,6 +1386,60 @@ collections:
                     { label: "Link", name: "link", widget: "string" }
                   ]}
                 ] }
+
+          - label: "Pricing Hero"
+            name: "pricingHero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "text" }
+              
+              - label: "Initial Consultation"
+                name: "initialConsultation"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Features"
+                    name: "features"
+                    widget: "list"
+                    field: { label: "Feature", name: "feature", widget: "string" }
+              
+              - label: "Follow-up Visits"
+                name: "followUpVisits"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Features"
+                    name: "features"
+                    widget: "list"
+                    field: { label: "Feature", name: "feature", widget: "string" }
+              
+              - { label: "Specialized Treatments Heading", name: "specializedTreatmentsHeading", widget: "string" }
+              
+              - label: "TMS Therapy"
+                name: "tmsTherapy"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Features"
+                    name: "features"
+                    widget: "list"
+                    field: { label: "Feature", name: "feature", widget: "string" }
+              
+              - label: "Spravato Treatment"
+                name: "spravatoTreatment"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Features"
+                    name: "features"
+                    widget: "list"
+                    field: { label: "Feature", name: "feature", widget: "string" }
 
           - label: "Disorders"
             name: "disorders"
@@ -1415,7 +1470,7 @@ collections:
               - { label: "Phone Question Text", name: "phoneText", widget: "string" }
               - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
-        
-          
-    
+
+
+
 

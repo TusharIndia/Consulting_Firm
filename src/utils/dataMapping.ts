@@ -1124,6 +1124,27 @@ export async function fetchPricingData(): Promise<Pricing> {
           })),
         })),
       },
+      pricingHero: {
+        heading: pricing.data.pricingHero.heading,
+        subheading: pricing.data.pricingHero.subheading,
+        initialConsultation: {
+          title: pricing.data.pricingHero.initialConsultation.title,
+          features: pricing.data.pricingHero.initialConsultation.features,
+        },
+        followUpVisits: {
+          title: pricing.data.pricingHero.followUpVisits.title,
+          features: pricing.data.pricingHero.followUpVisits.features,
+        },
+        specializedTreatmentsHeading: pricing.data.pricingHero.specializedTreatmentsHeading,
+        tmsTherapy: {
+          title: pricing.data.pricingHero.tmsTherapy.title,
+          features: pricing.data.pricingHero.tmsTherapy.features,
+        },
+        spravatoTreatment: {
+          title: pricing.data.pricingHero.spravatoTreatment.title,
+          features: pricing.data.pricingHero.spravatoTreatment.features,
+        },
+      },
       disorders: {
         heading: pricing.data.disorders.heading,
         headingTwo_Part_1: pricing.data.disorders.headingTwo_Part_1,

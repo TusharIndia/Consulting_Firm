@@ -485,24 +485,6 @@ const programCollection = {
         title: z.string(),
       })),
     }),
-    programTMS: z.object({
-      mainHeading: z.string(),
-      coloredHeading: z.string(),
-      description: z.string(),
-      primaryButtonText: z.string(),
-      phoneQuestion: z.string(),
-      phoneNumber: z.string(),
-      image: z.string(),
-      imageAlt: z.string(),
-      conditions: z.array(
-        z.array(
-          z.object({
-            title: z.string(),
-            icon: z.string(),
-          })
-        )
-      ),
-    }),
   }),
 };
 
@@ -1043,6 +1025,27 @@ const pricingCollection = {
           ).optional(),
         })
       ),
+    }),
+    pricingHero: z.object({
+      heading: z.string(),
+      subheading: z.string(),
+      initialConsultation: z.object({
+        title: z.string(),
+        features: z.array(z.string()),
+      }),
+      followUpVisits: z.object({
+        title: z.string(),
+        features: z.array(z.string()),
+      }),
+      specializedTreatmentsHeading: z.string(),
+      tmsTherapy: z.object({
+        title: z.string(),
+        features: z.array(z.string()),
+      }),
+      spravatoTreatment: z.object({
+        title: z.string(),
+        features: z.array(z.string()),
+      }),
     }),
     disorders: z.object({
       heading: z.string(),
