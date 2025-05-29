@@ -958,49 +958,25 @@ collections:
                   ]}
                 ] }
 
+      
+          
           - label: "Disorders"
             name: "disorders"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Heading Colored", name: "headingColored", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Primary Button Text", name: "primaryButtonText", widget: "string" }
-              - { label: "Phone Question", name: "phoneQuestion", widget: "string" }
-              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
-              - { label: "Phone Button Text", name: "phoneButtonText", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
-              - label: "Conditions"
-                name: "conditions"
-                widget: "list"
-                fields:
-                  - { label: "Icon", name: "icon", widget: "string" }
-                  - { label: "Title", name: "title", widget: "string" }
-          - label: "Program12"
-            name: "program12"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Badge Text", name: "badgeText", widget: "string" }
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Main Image", name: "mainImage", widget: "image" }
-              - { label: "Main Image Alt Text", name: "mainImageAlt", widget: "string" }
-              - label: "Steps"
-                name: "steps"
-                widget: "list"
-                fields:
-                  - { label: "Step Number", name: "stepNumber", widget: "string" }
-                  - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Heading Two Part 1", name: "headingTwo_Part_1", widget: "string" }
+              - { label: "Heading Two Part 2", name: "headingTwo_Part_2", widget: "string" }
+              - { label: "Heading Two Part 3", name: "headingTwo_Part_3", widget: "string" }
               - label: "Disorders List"
                 name: "disorders"
                 widget: "list"
                 fields:
-                  - { label: "Icon", name: "iconName", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  
           - label: "Call to Action"
             name: "cta"
             widget: "object"
@@ -1371,7 +1347,6 @@ collections:
               - { label: "Image Alt Text", name: "altText", widget: "string" }
               - { label: "Phone Question Text", name: "phoneText", widget: "string" }
               - { label: "Phone Number", name: "phoneNumber", widget: "string" }
-
 
 
 
