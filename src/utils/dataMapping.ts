@@ -1134,11 +1134,7 @@ export async function fetchPricingData(): Promise<Pricing> {
           image: disorder.image,
         })),
       },
-      cta: {
-        heading: pricing.data.cta.heading,
-        text: pricing.data.cta.text,
-        buttonText: pricing.data.cta.buttonText,
-      },
+     
     },
   };
 }

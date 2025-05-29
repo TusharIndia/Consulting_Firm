@@ -1055,11 +1055,7 @@ const pricingCollection = {
         image: z.string(),
       })),
     }),
-    cta: z.object({
-      heading: z.string(),
-      text: z.string(),
-      buttonText: z.string(),
-    }),
+  
   }),
 };
 
