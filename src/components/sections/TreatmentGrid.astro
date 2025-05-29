@@ -159,12 +159,12 @@ const getIconSVG = (iconName: string) => {
             <h1
                 class="mb-10 text-5xl font-medium leading-[72px] text-neutral-800 w-[706px] max-md:mb-8 max-md:w-full max-md:text-5xl max-md:leading-[60px] max-sm:text-3xl max-sm:leading-10"
             >
-                {Content.heading}
+                {Content?.heading}
             </h1>
             <p
                 class="text-lg leading-9 opacity-75 text-neutral-800 w-[358px] max-md:static max-md:mb-10 max-md:w-full max-md:text-base max-md:leading-7 max-sm:text-sm max-sm:leading-6"
             >
-                {Content.description}
+                {Content?.description}
             </p>
         </header>
 
@@ -181,7 +181,7 @@ const getIconSVG = (iconName: string) => {
                 </div>
             </div>
             <img
-                src={Content.featuredImage}
+                src={Content?.featuredImage}
                 alt="TMS Treatment Process"
                 class="absolute rounded-3xl h-[543px] left-[27px] top-[26px] w-[1105px] max-md:top-4 max-md:left-4 max-md:h-[calc(100%_-_32px)] max-md:w-[calc(100%_-_32px)]"
             />
@@ -189,7 +189,7 @@ const getIconSVG = (iconName: string) => {
 
         <!-- Treatment Process Cards -->
         <section class="grid grid-cols-2 gap-6 w-[1160px] max-md:grid-cols-1 max-md:gap-5 max-md:w-full">
-            {Content.treatments.map((treatment) => (
+            {Content?.treatments.map((treatment) => (
                 <article class="flex gap-2.5 items-start p-6 bg-white rounded-3xl shadow-2xl flex-[1_0_0] max-sm:p-5">
                     <div class="flex flex-col gap-4 items-start flex-[1_0_0]">
                         <header class="flex flex-col gap-4 items-start self-stretch">
