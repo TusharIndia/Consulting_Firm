@@ -28,7 +28,6 @@ export async function getStaticPaths() {
 }
 
 const sub_type = Astro.params.slug;
-console.log("Sub Type:", sub_type);
 const GeneralData = await fetchGeneralData();
 const { data: ProgramData } = await fetchSubProgramData(sub_type);
 ---
