@@ -20,6 +20,296 @@ collections:
       - { label: "Tags", name: "tags", widget: "list", field: { widget: "string", name: "tag" } }
       - { label: "Reading Time", name: "readingTime", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  
+  - name: "treatments"
+    label: "Treatments"
+    folder: "src/content/treatments"
+    create: true
+    slug: "{{filename}}"
+    fields:
+      - label: "Hero"
+        name: "hero"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Text", name: "text", widget: "string" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
+          - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
+          - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+          - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
+              { label: "Text", name: "text", widget: "string" },
+              { label: "URL", name: "url", widget: "string" },
+              { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
+              { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                { label: "Text", name: "text", widget: "string" },
+                { label: "Link", name: "link", widget: "string" }
+              ]},
+              { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                { label: "Text", name: "text", widget: "string" },
+                { label: "Link", name: "link", widget: "string" }
+              ]}
+            ] }
+      
+      - label: "Treatment Hero"
+        name: "treatmentHero"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - label: "Approaches"
+            name: "approaches"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+      
+      - label: "Treatment Secondary"
+        name: "treatment2"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Heading Highlight", name: "headingHighlight", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - label: "Symptoms"
+            name: "symptoms"
+            widget: "list"
+            fields:
+              - { label: "Icon", name: "icon", widget: "image" }
+              - { label: "Text", name: "text", widget: "string" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Phone Text", name: "phoneText", widget: "string" }
+          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+      
+      - label: "Disorders"
+        name: "disorders"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Heading Two Part 1", name: "headingTwo_Part_1", widget: "string" }
+          - { label: "Heading Two Part 2", name: "headingTwo_Part_2", widget: "string" }
+          - { label: "Heading Two Part 3", name: "headingTwo_Part_3", widget: "string" }
+          - label: "Disorders List"
+            name: "disorders"
+            widget: "list"
+            fields:
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+      - label: "CTA"
+        name: "cta"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Text", name: "text", widget: "text" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image Alt Text", name: "altText", widget: "string" }
+          - { label: "Phone Text", name: "phoneText", widget: "string" }
+          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+
+  - name: "programs"
+    label: "Programs"
+    folder: "src/content/programs"
+    create: true
+    slug: "{{filename}}"
+    fields:
+      - label: "Hero"
+        name: "hero"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Text", name: "text", widget: "string" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
+          - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
+          - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+          - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
+              { label: "Text", name: "text", widget: "string" },
+              { label: "URL", name: "url", widget: "string" },
+              { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                { label: "Text", name: "text", widget: "string" },
+                { label: "Link", name: "link", widget: "string" }
+              ]},
+              { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                { label: "Text", name: "text", widget: "string" },
+                { label: "Link", name: "link", widget: "string" }
+              ]}
+            ] }
+      - label: "About"
+        name: "about"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading One", name: "headingOne", widget: "string" }
+          - { label: "Heading Two", name: "headingTwo", widget: "string" }
+          - { label: "Text One", name: "textOne", widget: "text" }
+          - { label: "Text Two", name: "textTwo", widget: "text" }
+          - label: "Images"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Image One", name: "imageOne", widget: "image" }
+              - { label: "Image Two", name: "imageTwo", widget: "image" }
+      - label: "Video"
+        name: "video"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Heading Colored", name: "headingColored", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+      - label: "Who Needs"
+        name: "whoNeeds"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Heading Colored", name: "headingColored", widget: "string" }
+          - { label: "Heading End", name: "headingEnd", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "List Heading", name: "listHeading", widget: "string" }
+          - { label: "List Items", name: "listItems", widget: "list", field: { widget: "string" } }
+          - { label: "List Description", name: "listDescription", widget: "text" }
+          - { label: "Primary Button Text", name: "primaryButtonText", widget: "string" }
+          - { label: "Phone Question", name: "phoneQuestion", widget: "string" }
+          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+          - { label: "Phone Button Text", name: "phoneButtonText", widget: "string" }
+      - label: "Treatment Grid"
+        name: "treatmentGrid"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subheading", name: "subheading", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Featured Image", name: "featuredImage", widget: "image" }
+          - label: "Treatments"
+            name: "treatments"
+            widget: "list"
+            fields:
+              - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+      - label: "Why Choose"
+        name: "whyChoose"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+          - { label: "Image URL", name: "imageUrl", widget: "image" }
+          - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - label: "Second Why Choose"
+        name: "secondWhyChoose"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+          - { label: "Image URL", name: "imageUrl", widget: "image" }
+          - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - label: "Program Steps"
+        name: "program12"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Badge Text", name: "badgeText", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Main Image", name: "mainImage", widget: "image" }
+          - { label: "Main Image Alt Text", name: "mainImageAlt", widget: "string" }
+          - label: "Steps"
+            name: "steps"
+            widget: "list"
+            fields:
+              - { label: "Step Number", name: "stepNumber", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+      - label: "Program TMS"
+        name: "programTMS"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Main Heading", name: "mainHeading", widget: "string" }
+          - { label: "Colored Heading", name: "coloredHeading", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Primary Button Text", name: "primaryButtonText", widget: "string" }
+          - { label: "Phone Question", name: "phoneQuestion", widget: "string" }
+          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image Alt", name: "imageAlt", widget: "string" }
+          - label: "Conditions"
+            name: "conditions"
+            widget: "list"
+            fields:
+              - label: "Condition Group"
+                name: "group"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "image" }
+      - label: "Testimonials"
+        name: "testimonials"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Testimonials List"
+            name: "list"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Position", name: "position", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+      - label: "FAQ"
+        name: "faq"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - label: "FAQ List"
+            name: "faq"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Details", name: "details", widget: "text" }
+      - label: "CTA"
+        name: "cta"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Text", name: "text", widget: "text" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image Alt Text", name: "altText", widget: "string" }
+          - { label: "Phone Text", name: "phoneText", widget: "string" }
+          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+
+
 
   - label: "General Settings"
     name: "general-settings"
@@ -463,194 +753,7 @@ collections:
                   - { label: "Logo", name: "logo", widget: "image" }
 
 
-      # Program Page Configuration
-      - label: "Program Page"
-        name: "program"
-        file: "src/content/pages/program.json"
-        fields:
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Text", name: "text", widget: "string" }
-              - { label: "Button Text", name: "buttonText", widget: "string" }
-              - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
-              - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
-              - { label: "Call Button Text", name: "callButtonText", widget: "string" }
-              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
-                  { label: "Text", name: "text", widget: "string" },
-                  { label: "URL", name: "url", widget: "string" },
-                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string" },
-                    { label: "Link", name: "link", widget: "string" }
-                  ]},
-                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string" },
-                    { label: "Link", name: "link", widget: "string" }
-                  ]}
-                ] }
-
-          - label: "About"
-            name: "about"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading One", name: "headingOne", widget: "string" }
-              - { label: "Heading Two", name: "headingTwo", widget: "string" }
-              - { label: "Text One", name: "textOne", widget: "text" }
-              - { label: "Text Two", name: "textTwo", widget: "text" }
-              - label: "Images"
-                name: "images"
-                widget: "object"
-                fields:
-                  - { label: "Image One", name: "imageOne", widget: "image" }
-                  - { label: "Image Two", name: "imageTwo", widget: "image" }
-          
-          
-
-          - label: "Team"
-            name: "team"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Team Members"
-                name: "team"
-                widget: "list"
-                fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Designation", name: "designation", widget: "string" }
-                  - { label: "Image", name: "image", widget: "image" }
-
-          - label: "Next Steps"
-            name: "nextSteps"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Steps"
-                name: "nextSteps"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Link One", name: "linkOne", widget: "string" }
-                  - { label: "Link One URL", name: "linkOneUrl", widget: "string" }
-                  - { label: "Link Two", name: "linkTwo", widget: "string" }
-                  - { label: "Link Two URL", name: "linkTwoUrl", widget: "string" }
-
-          - label: "Single Review"
-            name: "singleReview"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Button Text", name: "buttonText", widget: "string" }
-              - { label: "Card Detail", name: "cardDetail", widget: "text" }
-              - { label: "Card Title", name: "cardTitle", widget: "string" }
-
-          - label: "PDF"
-            name: "pdf"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "PDF"
-                name: "pdf"
-                widget: "object"
-                collapsed: true
-                fields:
-                  - { label: "Link Text", name: "link", widget: "string" }
-                  - { label: "Link URL", name: "linkUrl", widget: "string" }
-
-          - label: "How We Treat"
-            name: "howWeTreat"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Process"
-                name: "process"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Details", name: "details", widget: "text" }
-
-          - label: "Residential Rehab"
-            name: "residentialRehab"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Image", name: "img", widget: "image" }
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Card Title", name: "cardTitle", widget: "string" }
-              - label: "Process"
-                name: "process"
-                widget: "list"
-                fields:
-                  - { label: "Substance Type", name: "title", widget: "string" }
-                  - { label: "Process Details", name: "details", widget: "text" }
-
-          - label: "Therapies"
-            name: "therapies"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Therapies List"
-                name: "therapies"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Details", name: "details", widget: "text" }
-
-          - label: "Amenities"
-            name: "amenities"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Image", name: "img", widget: "image" }
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-
-          - label: "FAQ"
-            name: "faq"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - label: "FAQ List"
-                name: "faq"
-                widget: "list"
-                fields:
-                  - { label: "Question", name: "title", widget: "string" }
-                  - { label: "Answer", name: "details", widget: "text" }
-
-          - label: "Other Treatments"
-            name: "otherTreatments"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Button Text", name: "buttonText", widget: "string" }
-              - { label: "Button URL", name: "buttonUrl", widget: "string" }
-              - label: "Cards"
-                name: "cards"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Button Text", name: "buttonText", widget: "string" }
-                  - { label: "Image", name: "image", widget: "image" }
-
-
+      
       # Program Archive Page Configuration
       - label: "Program Archive Page"
         name: "programArchive"
@@ -1152,6 +1255,22 @@ collections:
                   - { label: "Position", name: "position", widget: "string" }
                   - { label: "Testimonial Text", name: "text", widget: "text" }
                   - { label: "Person Image", name: "image", widget: "image" }
+          - label: "Treatment Grid"
+            name: "treatmentGrid"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Featured Image", name: "featuredImage", widget: "image" }
+              - label: "Treatments"
+                name: "treatments"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
           
           - label: "Call to Action"
             name: "cta"
@@ -1290,72 +1409,8 @@ collections:
                   ]}
                 ] }
 
-          - label: "Treatment Hero"
-            name: "treatmentHero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Tagline", name: "tagline", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
-              - label: "Treatment Approaches"
-                name: "approaches"
-                widget: "list"
-                fields:
-                  - { label: "ID", name: "id", widget: "string" }
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
-
-          - label: "Treatment2"
-            name: "treatment2"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Heading Highlight", name: "headingHighlight", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Symptoms"
-                name: "symptoms"
-                widget: "list"
-                fields:
-                  - { label: "Icon", name: "icon", widget: "image" }
-                  - { label: "Text", name: "text", widget: "string" }
-              - { label: "Button Text", name: "buttonText", widget: "string" }
-              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
-              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-
-          - label: "Disorders"
-            name: "disorders"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Heading Two Part 1", name: "headingTwo_Part_1", widget: "string" }
-              - { label: "Heading Two Part 2", name: "headingTwo_Part_2", widget: "string" }
-              - { label: "Heading Two Part 3", name: "headingTwo_Part_3", widget: "string" }
-              - label: "Disorders List"
-                name: "disorders"
-                widget: "list"
-                fields:
-                  - { label: "Link", name: "link", widget: "string" }
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Image", name: "image", widget: "image" }
-
-          - label: "Call to Action"
-            name: "cta"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Text", name: "text", widget: "text" }
-              - { label: "Button Text", name: "buttonText", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Image Alt Text", name: "altText", widget: "string" }
-              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
-              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+       
+         
 
       # Pricing Page Configuration
       - label: "Pricing Page"

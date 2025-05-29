@@ -1,7 +1,6 @@
 ---
 import {
   fetchGeneralData,
-  fetchProgramData,
   fetchBlogPageData,
 } from "../../utils/dataMapping.ts";
 import MainLayout from "../../layouts/MainLayout.astro";
@@ -29,7 +28,6 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 
 const GeneralData = await fetchGeneralData();
-const { data: ProgramData } = await fetchProgramData();
 const { data: BlogPageData } = await fetchBlogPageData();
 
 // Format the date for display

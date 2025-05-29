@@ -4,6 +4,7 @@ const currentYear = new Date().getFullYear();
 import { fetchGeneralData } from "../../utils/dataMapping.ts";
 
 const Data = await fetchGeneralData();
+const { footer, logo, companyName } = Data;
 ---
 
 <footer
@@ -19,27 +20,23 @@ const Data = await fetchGeneralData();
         >
           <div class="leading-6 max-md:max-w-full">
             <img
-              src="/imgs/clearpath_logo.png"
-              alt="ClearPath Logo"
+              src={logo}
+              alt={`${companyName} Logo`}
               class="object-contain max-w-full aspect-[4.55] w-[159px]"
             />
             <p class="mt-2.5 max-md:max-w-full text-white">
-              We are mental health experienced therapists that are passionate
-              about our
-              <br />
-              goal on empowering you mentally with our wellness journey.
+              {footer.description}
             </p>
           </div>
           <nav class="flex flex-col items-start">
-            <a href="#" class="hover:underline">Home</a>
-            <a href="#" class="mt-2.5 hover:underline">About Us</a>
-            <a href="#" class="self-stretch mt-2.5 hover:underline"
-              >Treatments</a
-            >
+            {footer.navColumn1.links.map((link) => (
+              <a href={link.url} class="hover:underline">{link.text}</a>
+            ))}
           </nav>
           <nav class="flex flex-col whitespace-nowrap">
-            <a href="#" class="self-start hover:underline">Pricing</a>
-            <a href="#" class="mt-2.5 hover:underline">Locations</a>
+            {footer.navColumn2.links.map((link) => (
+              <a href={link.url} class="hover:underline">{link.text}</a>
+            ))}
           </nav>
         </div>
         <div
@@ -48,22 +45,22 @@ const Data = await fetchGeneralData();
           <form class="flex flex-wrap gap-4 w-1/2 max-md:w-full">
             <input
               type="email"
-              placeholder="email@gmail.com"
+              placeholder={footer.emailPlaceholder}
               class="overflow-hidden grow shrink-0 px-4 py-3.5 text-black whitespace-nowrap rounded-lg basis-0 bg-stone-100 w-fit max-md:pr-5 max-md:max-w-full"
             />
             <button
               type="submit"
               class="overflow-hidden p-4 font-semibold leading-snug text-center text-white bg-[#5E81E9] rounded-lg hover:bg-indigo-600 transition-colors"
             >
-              Sign Up
+              {footer.signUpButtonText}
             </button>
           </form>
           <div class="flex flex-wrap gap-10 mt-5 text-white max-md:max-w-full">
-            <p class="my-auto text-white opacity-50">Copyright © ClearPath {currentYear}</p>
+            <p class="my-auto text-white opacity-50">{footer.copyrightText.replace('{year}', currentYear.toString())} {currentYear}</p>
             <button id="back-to-top"
               class="px-6 py-2 text-base text-white rounded-[12px] border border-solid border-[rgba(255,255,255,0.53)] bg-[linear-gradient(96deg,rgba(93,131,196,0.5)_0%,rgba(93,131,196,0.1)_100%)] cursor-pointer"
             >
-              Back to Top
+              {footer.backToTopText}
             </button>
           </div>
         </div>

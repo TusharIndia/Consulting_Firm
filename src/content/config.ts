@@ -25,6 +25,29 @@ const generalCollection = defineCollection({
     phoneNumber: z.string(),
     phoneNumber2: z.string().optional(),
     Email: z.string().email(),
+    footer: z.object({
+      description: z.string(),
+      navColumn1: z.object({
+        links: z.array(
+          z.object({
+            text: z.string(),
+            url: z.string(),
+          })
+        ),
+      }),
+      navColumn2: z.object({
+        links: z.array(
+          z.object({
+            text: z.string(),
+            url: z.string(),
+          })
+        ),
+      }),
+      emailPlaceholder: z.string(),
+      signUpButtonText: z.string(),
+      copyrightText: z.string(),
+      backToTopText: z.string(),
+    }),
   }),
 });
 
@@ -837,6 +860,17 @@ const insuranceCollection = {
           image: z.string(),
         })
       ),
+    }),
+     treatmentGrid: z.object({
+      heading: z.string(),
+      subheading: z.string(),
+      description: z.string(),
+      featuredImage: z.string(),
+      treatments: z.array(z.object({
+        icon: z.string(),
+        title: z.string(),
+        description: z.string(),
+      })),
     }),
     cta: z.object({
       heading: z.string(),

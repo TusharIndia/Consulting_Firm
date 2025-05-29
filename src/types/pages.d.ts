@@ -414,6 +414,10 @@ export interface Program {
       heading: string;
       text: string;
       buttonText: string;
+      image: string;
+      altText: string;
+      phoneText: string;
+      phoneNumber: string;
     };
     disorders: {
       heading: string;
@@ -508,6 +512,7 @@ export interface Program {
         icon: string;
       }>>;
     };
+      
   }; 
 }
 
@@ -800,6 +805,17 @@ export interface Insurance {
         position: string;
         text: string;
         image: string;
+      }[];
+    };
+    treatmentGrid: {
+      heading: string;
+      subheading: string;
+      description: string;
+      featuredImage: string;
+      treatments: {
+        icon: string;
+        title: string;
+        description: string;
       }[];
     };
     cta: {
