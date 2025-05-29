@@ -139,6 +139,14 @@ export async function fetchContactData(): Promise<Contact> {
           text: item.text,
           url: item.url,
           hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink) => ({
+            text: sublink.text, 
+            link: sublink.link,
+          })),
         })),
       },
       
@@ -382,7 +390,14 @@ export async function fetchProgramData(): Promise<Program> {
         navItems: programData.data.hero.navItems.map((item: any) => ({
           text: item.text,
           url: item.url,
-          hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
         })),
       },
       about: {
@@ -792,6 +807,14 @@ export async function fetchBlogPageData(): Promise<BlogPage> {
           text: item.text,
           url: item.url,
           hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
         })),
       },
        disorders: {
@@ -834,6 +857,14 @@ export async function fetchInsuranceData(): Promise<Insurance> {
           text: item.text,
           url: item.url,
           hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
         })),
       },
       contactHero: {
@@ -922,6 +953,14 @@ export async function fetchLocationData(): Promise<Location> {
           text: item.text,
           url: item.url,
           hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
         })),
       },
       locationHero: {
@@ -973,6 +1012,48 @@ export async function fetchTreatmentData(): Promise<Treatment> {
       hero: {
         heading: treatment.data.hero.heading,
         text: treatment.data.hero.text,
+        buttonText: treatment.data.hero.buttonText,
+        phoneQuestionText: treatment.data.hero.phoneQuestionText,
+        treatmentsLabel: treatment.data.hero.treatmentsLabel,
+        callButtonText: treatment.data.hero.callButtonText,
+        navItems: treatment.data.hero.navItems.map((item: any) => ({
+          text: item.text,
+          url: item.url,
+          hasDropdown: item.hasDropdown,
+          sublinks: item.sublinks?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+        })),
+      },
+      treatmentHero: {
+        heading: treatment.data.treatmentHero.heading,
+        tagline: treatment.data.treatmentHero.tagline,
+        title: treatment.data.treatmentHero.title,
+        subtitle: treatment.data.treatmentHero.subtitle,
+        description: treatment.data.treatmentHero.description,
+        approaches: treatment.data.treatmentHero.approaches.map((approach: any) => ({
+          id: approach.id,
+          title: approach.title,
+          description: approach.description,
+        })),
+      },
+      treatment2: {
+        heading: treatment.data.treatment2.heading,
+        headingHighlight: treatment.data.treatment2.headingHighlight,
+        description: treatment.data.treatment2.description,
+        symptoms: treatment.data.treatment2.symptoms.map((symptom: any) => ({
+          icon: symptom.icon,
+          text: symptom.text,
+        })),
+        buttonText: treatment.data.treatment2.buttonText,
+        phoneText: treatment.data.treatment2.phoneText,
+        phoneNumber: treatment.data.treatment2.phoneNumber,
+        image: treatment.data.treatment2.image,
       },
       disorders: {
         heading: treatment.data.disorders.heading,
@@ -984,6 +1065,63 @@ export async function fetchTreatmentData(): Promise<Treatment> {
           title: disorder.title,
           image: disorder.image,
         })),
+      },
+      cta: {
+        heading: treatment.data.cta.heading,
+        text: treatment.data.cta.text,
+        buttonText: treatment.data.cta.buttonText,
+        image: treatment.data.cta.image,
+        altText: treatment.data.cta.altText,
+        phoneText: treatment.data.cta.phoneText,
+        phoneNumber: treatment.data.cta.phoneNumber,
+      },
+    },
+  };
+}
+
+export async function fetchPricingData(): Promise<Pricing> {
+  const [pricing] = await getCollection(
+    "pages",
+    (page) => page.id === "pricing"
+  );
+
+  return {
+    data: {
+      hero: {
+        heading: pricing.data.hero.heading,
+        text: pricing.data.hero.text,
+        buttonText: pricing.data.hero.buttonText,
+        phoneQuestionText: pricing.data.hero.phoneQuestionText,
+        treatmentsLabel: pricing.data.hero.treatmentsLabel,
+        callButtonText: pricing.data.hero.callButtonText,
+        navItems: pricing.data.hero.navItems.map((item: any) => ({
+          text: item.text,
+          url: item.url,
+          sublinks: item.sublinks?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+          sublinks2: item.sublinks2?.map((sublink: any) => ({
+            text: sublink.text,
+            link: sublink.link,
+          })),
+        })),
+      },
+      disorders: {
+        heading: pricing.data.disorders.heading,
+        headingTwo_Part_1: pricing.data.disorders.headingTwo_Part_1,
+        headingTwo_Part_2: pricing.data.disorders.headingTwo_Part_2,
+        headingTwo_Part_3: pricing.data.disorders.headingTwo_Part_3,
+        disorders: pricing.data.disorders.disorders.map((disorder: any) => ({
+          link: disorder.link,
+          title: disorder.title,
+          image: disorder.image,
+        })),
+      },
+      cta: {
+        heading: pricing.data.cta.heading,
+        text: pricing.data.cta.text,
+        buttonText: pricing.data.cta.buttonText,
       },
     },
   };

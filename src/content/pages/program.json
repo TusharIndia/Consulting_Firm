@@ -10,27 +10,86 @@
       {
         "text": "Treatments",
         "url": "#",
-        "hasDropdown": true
+        "sublinks": [
+          {
+            "text": "Medication Management",
+            "link": "/medication-management"
+          },
+          {
+            "text": "Transcranial Magnetic Stimulation (TMS)",
+            "link": "/tms"
+          },
+          {
+            "text": "Spravato® (Esketamine) ",
+            "link": "/spravato"
+          },
+          {
+            "text": "Psychotherapy",
+            "link": "/psychotherapy"
+          }
+        ],
+        "sublinks2": [
+          {
+            "text": "Depression",
+            "link": "/depression"
+          },
+          {
+            "text": "Anxiety",
+            "link": "/anxiety"
+          },
+          {
+            "text": "ADHD",
+            "link": "/adhd"
+          },
+          {
+            "text": "PTSD",
+            "link": "/ptsd"
+          },
+          {
+            "text": "BiPolar",
+            "link": "/bipolar"
+          },
+          {
+            "text": "Stress",
+            "link": "/stress"
+          },
+          {
+            "text": "OCD",
+            "link": "/ocd"
+          },
+          {
+            "text": "Addiction",
+            "link": "/addiction"
+          },
+          {
+            "text": "and more",
+            "link": ""
+          }
+        ]
       },
       {
         "text": "Locations",
         "url": "/location",
-        "hasDropdown": false
+        "sublinks": [],
+        "sublinks2": []
       },
       {
         "text": "Pricing",
         "url": "/pricing",
-        "hasDropdown": false
+        "sublinks": [],
+        "sublinks2": []
       },
       {
         "text": "Resources",
         "url": "/program",
-        "hasDropdown": false
+        "sublinks": [],
+        "sublinks2": []
       },
       {
         "text": "Get Started",
         "url": "/contact",
-        "hasDropdown": false
+        "sublinks": [],
+        "sublinks2": []
       }
     ]
   },

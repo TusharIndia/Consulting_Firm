@@ -1,7 +1,7 @@
 {
   "hero": {
-    "heading": "Contact Clear Path",
-    "text": "Reach out to begin your journey to wellness",
+    "heading": "Transparent Pricing for Mental Health Treatment",
+    "text": "We believe in clarity and affordability for mental health services. Discover our pricing options and payment plans.",
     "buttonText": "Get Started",
     "phoneQuestionText": "Have a question?",
     "treatmentsLabel": "Treatments",
@@ -93,37 +93,37 @@
       }
     ]
   },
- 
-  "testimonials": {
-    "list": [
+  "disorders": {
+    "heading": "OUR INSIGHTS",
+    "headingTwo_Part_1": "Expert guidance for your ",
+    "headingTwo_Part_2": "mental health ",
+    "headingTwo_Part_3": "journey",
+    "disorders": [
       {
-        "name": "Veronica L.",
-        "position": "Client from United States",
-        "text": "Clearpath gave me the strength to overcome my anxiety. The compassionate therapists provided unwavering support, and I've found a renewed sense of purpose and tranquility in my life.",
-        "image": "/imgs/testimonial_1.png"
+        "link": "/depression",
+        "title": "Effective Strategies for Managing Depression",
+        "image": "/imgs/Depression_Article.png"
       },
       {
-        "name": "Pushpender Singh",
-        "position": "Client from Florida",
-        "text": "Clearpath helped me regain control of my life. The personalized treatment plan and the caring staff made all the difference. I am now on a path to recovery and happiness.",
-        "image": "/imgs/testimonial_1.png"
+        "link": "/anxiety",
+        "title": "Effective Strategies for Managing Anxiety",
+        "image": "/imgs/Anxiety_Article.png"
+      },
+      {
+        "link": "/adhd",
+        "title": "Effective Strategies for Managing ADHD",
+        "image": "/imgs/ADHD_Article.png"
+      },
+      {
+        "link": "/ptsd",
+        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
+        "image": "/imgs/PTSD_Article.png"
       }
     ]
   },
-  
-  "contactHero": {
-    
-    "address": "123 Recovery Way, Wellness City, FL 33101",
-    "email": "info@clearpathwellness.com",
-    "phone": "(800) 123-4567",
-    "formHeading": "Send Us a Message",
-    "emergencyHeading": "Emergency Contact",
-    "emergencyText": "For mental health emergencies, please call 911 or visit your nearest emergency room.",
-    "supportHeading": "General Support",
-    "businessHours": {
-      "heading": "Business Hours",
-      "hours": "Monday - Friday: 9:00 AM - 5:00 PM",
-      "weekend": "Saturday - Sunday: Closed"
-    }
+  "cta": {
+    "heading": "Start Your Journey To Recovery Today",
+    "text": "At Clear Path, we're ready to help you take the first step towards better mental health. Our compassionate team is available to answer your questions about our pricing options and insurance coverage. Contact us today to learn more about our programs or start the admission process.",
+    "buttonText": "Call Us Now!"
   }
 }

@@ -260,7 +260,15 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
           
           # Testimonials Section
@@ -474,9 +482,15 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
-
 
           - label: "About"
             name: "about"
@@ -983,9 +997,17 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
-              
+
           - label: "Disorders"
             name: "disorders"
             widget: "object"
@@ -1061,7 +1083,15 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
           
           - label: "Contact Hero"
@@ -1078,7 +1108,15 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
           
           - label: "Insurance Providers Section"
@@ -1174,7 +1212,15 @@ collections:
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
                 ] }
           
           - label: "Location Hero"
@@ -1227,6 +1273,59 @@ collections:
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
+              - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
+              - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
+                ] }
+
+          - label: "Treatment Hero"
+            name: "treatmentHero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - label: "Treatment Approaches"
+                name: "approaches"
+                widget: "list"
+                fields:
+                  - { label: "ID", name: "id", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+
+          - label: "Treatment2"
+            name: "treatment2"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Heading Highlight", name: "headingHighlight", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Symptoms"
+                name: "symptoms"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
 
           - label: "Disorders"
             name: "disorders"
@@ -1244,3 +1343,72 @@ collections:
                   - { label: "Link", name: "link", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Image", name: "image", widget: "image" }
+
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+
+      # Pricing Page Configuration
+      - label: "Pricing Page"
+        name: "pricing"
+        file: "src/content/pages/pricing.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
+              - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
+              - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
+                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]},
+                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
+                ] }
+
+          - label: "Disorders"
+            name: "disorders"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Heading Two Part 1", name: "headingTwo_Part_1", widget: "string" }
+              - { label: "Heading Two Part 2", name: "headingTwo_Part_2", widget: "string" }
+              - { label: "Heading Two Part 3", name: "headingTwo_Part_3", widget: "string" }
+              - label: "Disorders List"
+                name: "disorders"
+                widget: "list"
+                fields:
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+          
+          - label: "Call-to-Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+

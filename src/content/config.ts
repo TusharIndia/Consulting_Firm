@@ -112,6 +112,18 @@ const contactCollection = {
           text: z.string(),
           url: z.string(),
           hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
         })
       ),
     }),
@@ -304,7 +316,18 @@ const programCollection = {
         z.object({
           text: z.string(),
           url: z.string(),
-          hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
         })
       ),
     }),
@@ -686,6 +709,18 @@ const blogpageCollection = {
           text: z.string(),
           url: z.string(),
           hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
         })
       ),
     }),
@@ -724,6 +759,18 @@ const insuranceCollection = {
           text: z.string(),
           url: z.string(),
           hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
         })
       ),
     }),
@@ -816,6 +863,18 @@ const locationCollection = {
           text: z.string(),
           url: z.string(),
           hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
         })
       ),
     }),
@@ -862,6 +921,58 @@ const treatmentCollection = {
     hero: z.object({
       heading: z.string(),
       text: z.string(),
+      buttonText: z.string(),
+      phoneQuestionText: z.string(),
+      treatmentsLabel: z.string(),
+      callButtonText: z.string(),
+      navItems: z.array(
+        z.object({
+          text: z.string(),
+          url: z.string(),
+          hasDropdown: z.boolean().default(false),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+        })
+      ),
+    }),
+    treatmentHero: z.object({
+      heading: z.string(),
+      tagline: z.string(),
+      title: z.string(),
+      subtitle: z.string(),
+      description: z.string(),
+      approaches: z.array(
+        z.object({
+          id: z.string(),
+          title: z.string(),
+          description: z.string(),
+        })
+      ),
+    }),
+    treatment2: z.object({
+      heading: z.string(),
+      headingHighlight: z.string(),
+      description: z.string(),
+      symptoms: z.array(
+        z.object({
+          icon: z.string(),
+          text: z.string(),
+        })
+      ),
+      buttonText: z.string(),
+      phoneText: z.string(),
+      phoneNumber: z.string(),
+      image: z.string(),
     }),
     disorders: z.object({
       heading: z.string(),
@@ -873,6 +984,63 @@ const treatmentCollection = {
         title: z.string(),
         image: z.string(),
       })),
+    }),
+    cta: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
+      image: z.string(),
+      altText: z.string(),
+      phoneText: z.string(),
+      phoneNumber: z.string(),
+    }),
+  }),
+};
+
+const pricingCollection = {
+  type: "data",
+  schema: z.object({
+    hero: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
+      phoneQuestionText: z.string(),
+      treatmentsLabel: z.string(),
+      callButtonText: z.string(),
+      navItems: z.array(
+        z.object({
+          text: z.string(),
+          url: z.string(),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+        })
+      ),
+    }),
+    disorders: z.object({
+      heading: z.string(),
+      headingTwo_Part_1: z.string(),
+      headingTwo_Part_2: z.string(),
+      headingTwo_Part_3: z.string(),
+      disorders: z.array(z.object({
+        link: z.string(),
+        title: z.string(),
+        image: z.string(),
+      })),
+    }),
+    cta: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
     }),
   }),
 };
@@ -891,5 +1059,6 @@ export const collections = {
   blogpage: blogpageCollection,
   insurance: insuranceCollection,
   location: locationCollection,
-  treatment: treatmentCollection
+  treatment: treatmentCollection,
+  pricing: pricingCollection
 };
