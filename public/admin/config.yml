@@ -182,7 +182,7 @@ collections:
           - { label: "Heading End", name: "headingEnd", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "List Heading", name: "listHeading", widget: "string" }
-          - { label: "List Items", name: "listItems", widget: "list", field: { widget: "string" } }
+          - { label: "List Items", name: "listItems", widget: "list", field: { widget: "string" , name: "item"} }
           - { label: "List Description", name: "listDescription", widget: "text" }
           - { label: "Primary Button Text", name: "primaryButtonText", widget: "string" }
           - { label: "Phone Question", name: "phoneQuestion", widget: "string" }
@@ -1071,7 +1071,7 @@ collections:
               - { label: "Heading End", name: "headingEnd", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "List Heading", name: "listHeading", widget: "string" }
-              - { label: "List Items", name: "listItems", widget: "list", field: { widget: "string" } }
+              - { label: "List Items", name: "listItems", widget: "list", field: { widget: "string" , name: "item"} }
               - { label: "List Description", name: "listDescription", widget: "text" }
               - { label: "Primary Button Text", name: "primaryButtonText", widget: "string" }
               - { label: "Phone Question", name: "phoneQuestion", widget: "string" }
