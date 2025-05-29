@@ -1,12 +1,18 @@
 ---
-slug: "caffeine-addiction"
+author: Author Name
+slug: caffeine-addiction
 title: "Caffeine Addiction: Symptoms, Causes, Effects, Treatment and Prevention"
-description: "A comprehensive guide to understanding caffeine addiction, its symptoms, causes, effects, and how to treat and prevent it."
-featuredImg: "/imgs/caffeine-addiction.webp"
+description: A comprehensive guide to understanding caffeine addiction, its
+  symptoms, causes, effects, and how to treat and prevent it.
+featuredImg: /imgs/caffeine-addiction.webp
 date: 2024-01-15
-author: "Author Name"
-tags: ["caffeine", "addiction", "health", "treatment", "psychoactive"]
-readingTime: "10 minutes"
+tags:
+  - caffeine
+  - addiction
+  - health
+  - treatment
+  - psychoactive
+readingTime: 10 minutes
 ---
 
 ## Caffeine Addiction
@@ -35,7 +41,7 @@ Caffeine is a psychoactive stimulant found in various beverages and foods like c
 
 ## What is Caffeine Addiction?
 
-Caffeine addiction is characterized by an uncontrollable urge to consume caffeine despite its negative effects on health and daily functioning. According to a 2014 article, _"Caffeine Addiction? Caffeine for Youth? Time to Act!"_ by Budney and Emond, caffeine use disorder is a condition recognized for further study due to its significant impact on physical and mental health. Individuals with caffeine addiction find it challenging to reduce or stop their intake, often experiencing withdrawal symptoms such as headaches, irritability, and fatigue when they don’t consume it.
+Caffeine addiction is characterized by an uncontrollable urge to consume caffeine despite its negative effects on health and daily functioning. According to a 2014 article, _"Caffeine Addiction? Caffeine for Youth? Time to Act!"_ by Budney and Emond, caffeine use disorder is a condition recognized for further study due to its significant impact on physical and mental health. Individuals with caffeine addiction find it challenging to reduce or stop their intake, often experiencing withdrawal symptoms such as headaches, irritability, and fatigue when they don't consume it.
 
 ## Signs of Caffeine Addiction
 

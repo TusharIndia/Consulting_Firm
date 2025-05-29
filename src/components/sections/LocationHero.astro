@@ -1,28 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expansion Section</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <section class="box-border relative px-0 pt-16 pb-0 mx-auto my-0 w-full bg-white h-[1004px] max-w-[1440px] max-md:px-5 max-md:py-10 max-md:h-auto max-md:max-w-[991px] max-sm:px-4 max-sm:py-6 max-sm:max-w-screen-sm">
+---
+const { Content } = Astro.props;
+---
+
+<section class="box-border relative px-0 pt-16 pb-0 mx-auto my-0 w-full bg-white h-[1004px] max-w-[1440px] max-md:px-5 max-md:py-10 max-md:h-auto max-md:max-w-[991px] max-sm:px-4 max-sm:py-6 max-sm:max-w-screen-sm">
     <header class="flex flex-col items-center mb-20 text-center max-sm:mb-10">
       <h1 class="mb-7 text-5xl font-medium text-center leading-[72px] text-neutral-800 w-[566px] max-md:w-full max-md:text-4xl max-md:leading-[56px] max-sm:mb-4 max-sm:text-3xl max-sm:leading-10">
-        <span>Expanding to </span>
-        <span class="text-indigo-500">Serve You Better</span>
+        <span>{Content.header} </span>
+        <span class="text-indigo-500">{Content.subheaderHighlight}</span>
       </h1>
       <p class="text-lg leading-9 text-center opacity-75 text-neutral-800 w-[819px] max-md:w-full max-md:text-base max-md:leading-7 max-sm:text-sm max-sm:leading-6">
-        Clear Path is growing to reach more communities. We plan to open additional locations to make quality mental health care more accessible. Check back for updates on new locations.
+        {Content.description}
       </p>
     </header>
 
     <article class="box-border flex relative flex-col shrink-0 gap-6 p-12 mx-auto my-0 rounded-3xl h-[449px] w-[640px] max-md:p-8 max-md:w-full max-md:max-w-[600px] max-sm:p-6 max-sm:h-auto bg-[linear-gradient(270deg,#F6F2EE_0%,#F3EFEC_100%)]">
       <header>
         <h2 class="text-4xl font-medium text-neutral-800 max-md:text-3xl max-sm:text-2xl">
-          Encino, California
+          {Content.locationInfo.title}
         </h2>
       </header>
 
@@ -47,9 +41,9 @@
               </svg>
             </div>
             <div class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
-              <span>456 Park Avenue</span>
+              <span>{Content.locationInfo.addressLine1}</span>
               <br>
-              <span>Suite 200 New York, NY 10022</span>
+              <span>{Content.locationInfo.addressLine2}</span>
             </div>
           </div>
         </address>
@@ -72,8 +66,8 @@
               />
             </svg>
           </div>
-          <a href="mailto:encino@clearpath.com" class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
-            encino@clearpath.com
+          <a href={`mailto:${Content.locationInfo.email}`} class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
+            {Content.locationInfo.email}
           </a>
         </div>
 
@@ -95,8 +89,8 @@
               />
             </svg>
           </div>
-          <a href="tel:+11234567891" class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
-            (123) 456-7891
+          <a href={`tel:${Content.locationInfo.phone.replace(/[^\d+]/g, '')}`} class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
+            {Content.locationInfo.phone}
           </a>
         </div>
 
@@ -119,15 +113,13 @@
             </svg>
           </div>
           <time class="text-base leading-6 text-neutral-800 max-sm:text-sm max-sm:leading-5">
-            Mon-Fri: 9AM-5PM
+            {Content.locationInfo.hours}
           </time>
         </div>
       </div>
 
       <button class="gap-2.5 px-5 py-3.5 text-base font-bold leading-6 text-white bg-indigo-500 cursor-pointer h-[52px] rounded-[50px] max-sm:mt-2 hover:bg-indigo-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-        Schedule Appointment
+        {Content.locationInfo.buttonText}
       </button>
     </article>
   </section>
-</body>
-</html>

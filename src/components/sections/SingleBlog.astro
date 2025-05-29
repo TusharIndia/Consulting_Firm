@@ -1,80 +1,156 @@
-<article class="flex overflow-hidden flex-col items-start px-20 pb-32 bg-white max-md:px-5 max-md:py-24">
-  <div class="w-full max-w-[1160px] max-md:max-w-full">
-    <div class="flex overflow-hidden flex-col items-start px-4 pb-4 bg-white rounded-3xl max-md:pr-5 max-md:max-w-full">
-      <div class="flex shrink-0 max-w-full rounded-3xl bg-white bg-opacity-0 h-[185px] shadow-[0px_10px_40px_rgba(0,0,0,0.05)] w-[641px]">
-      </div>
-    </div>
+---
+// Accept the blog post as a prop
+const { post } = Astro.props;
+---
 
-    <main class="z-10 pl-7 mt-0 text-neutral-800 max-md:pl-5 max-md:max-w-full">
+<article class="flex overflow-hidden flex-col items-start px-20 pb-32 bg-white max-md:px-5 max-md:py-24">
+  <main class="z-10 pl-7 mt-20 text-neutral-800 max-md:pl-5 max-md:max-w-full">
+    <!-- Display the featured image from the blog post -->
+    {post.featuredImg && (
       <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/c48d0f1571b9058e32140413890490476803b5be?placeholderIfAbsent=true&apiKey=66085a5546694e9386206a1765324622"
-        alt="Anxiety Treatment"
+        src={post.featuredImg}
+        alt={post.title}
         class="object-contain mr-7 w-full rounded-3xl aspect-[1.82] max-w-[1105px] max-md:mr-2.5 max-md:max-w-full"
       />
+    )}
 
-      <p class="mt-7 text-lg leading-9 max-md:max-w-full">
-        Anxiety is a natural response to stress, but when it becomes overwhelming, it can significantly impact daily life. Understanding anxiety and its treatment options is crucial for effective management.
-      </p>
+    <!-- Blog title and description -->
+    <h1 class="mt-8 text-4xl font-bold">{post.title}</h1>
+    
+    <!-- Blog metadata -->
+    <div class="flex items-center mt-4 text-sm text-gray-600">
+      {post.date && <span class="mr-4">{new Date(post.date).toLocaleDateString()}</span>}
+      {post.readingTime && <span class="mr-4">• {post.readingTime}</span>}
+      {post.author && <span>• By {post.author}</span>}
+    </div>
 
-      <div class="mt-20 max-w-full w-[692px] max-md:mt-10">
-        <section class="w-full max-md:max-w-full">
-          <h2 class="text-2xl font-bold leading-none">Types of Anxiety Disorders</h2>
-          <ul class="mt-4 text-base leading-6 max-md:max-w-full">
-            <li>Generalized Anxiety Disorder (GAD)</li>
-            <li>Social Anxiety Disorder</li>
-            <li>Panic Disorder</li>
-            <li>Specific Phobias</li>
-          </ul>
-        </section>
+    <!-- Blog description/excerpt -->
+    <p class="mt-7 text-lg leading-9 max-md:max-w-full">
+      {post.description}
+    </p>
 
-        <section class="mt-6 w-full max-md:max-w-full">
-          <h2 class="text-3xl font-bold max-md:max-w-full">Professional Treatment Options</h2>
+    <!-- Blog content using slot -->
+    <div class="blog-content">
+      <slot />
+    </div>
 
-          <div class="mt-4 w-full max-md:max-w-full">
-            <h3 class="text-2xl font-bold leading-none">Medication Management</h3>
-            <p class="mt-3 text-base leading-loose max-md:max-w-full">
-              Medications can help manage anxiety symptoms. Our psychiatrists work with patients to:
-            </p>
-            <ul class="mt-4 text-base leading-6 max-md:max-w-full">
-              <li>Generalized Anxiety Disorder (GAD)</li>
-              <li>Social Anxiety Disorder</li>
-              <li>Panic Disorder</li>
-              <li>Specific Phobias</li>
-            </ul>
-          </div>
-
-          <div class="mt-4 w-full max-md:max-w-full">
-            <h3 class="text-2xl font-bold leading-none">Therapeutic Approaches</h3>
-            <p class="mt-4 text-base leading-7 max-md:max-w-full">
-              While Clear Path focuses on medication management, we often recommend combining medication with therapy for optimal results.
-            </p>
-          </div>
-        </section>
-
-        <section class="mt-6 w-full max-md:max-w-full">
-          <h2 class="text-3xl font-bold">Self-Help Strategies</h2>
-          <ul class="mt-4 text-base leading-6 max-md:max-w-full">
-            <li>Practice deep breathing exercises</li>
-            <li>Maintain a regular sleep schedule</li>
-            <li>Exercise regularly</li>
-            <li>Limit caffeine and alcohol</li>
-            <li>Keep a anxiety trigger journal</li>
-          </ul>
-        </section>
-
-        <section class="mt-6 w-full max-md:max-w-full">
-          <h2 class="text-3xl font-bold max-md:max-w-full">When to Seek Professional Help</h2>
-          <p class="mt-3 text-base leading-loose max-md:max-w-full">
-            Consider seeking professional help if anxiety:
-          </p>
-          <ul class="mt-4 text-base leading-6 max-md:max-w-full">
-            <li>Interferes with daily activities</li>
-            <li>Causes intense physical symptoms</li>
-            <li>Leads to avoiding situations</li>
-            <li>Persists despite self-help efforts</li>
-          </ul>
-        </section>
+    
+    <!-- Tags -->
+    {post.tags && post.tags.length > 0 && (
+      <div class="mt-10">
+        <h3 class="text-lg font-bold">Tags:</h3>
+        <div class="flex flex-wrap gap-2 mt-2">
+          {post.tags.map((tag) => (
+            <span class="px-3 py-1 text-sm bg-gray-100 rounded-full">{tag}</span>
+          ))}
+        </div>
       </div>
-    </main>
-  </div>
+    )}
+  </main>
 </article>
+
+
+<style>
+  .font-onest {
+  }
+
+  
+  .blog-content {
+    background: transparent;
+    line-height: 1.7;
+    font-size: 1.25rem; /* 20px */
+    margin: 0 auto;
+    color: #000000;
+    font-family: Onest, sans-serif;
+  }
+
+  /* Use :global() to make these styles apply to slotted content */
+  .blog-content :global(h1),
+  .blog-content :global(h2),
+  .blog-content :global(h3),
+  .blog-content :global(h4) {
+    color: #000000;
+    font-family: Onest, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  .blog-content :global(h1) {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: -1px;
+  }
+
+  .blog-content :global(h2) {
+    font-size: 32px;
+    margin-top: 3.5rem;
+    letter-spacing: -1.28px;
+  }
+
+  .blog-content :global(h3) {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .blog-content :global(h4) {
+    font-size: 24px;
+    line-height: 33.6px;
+    letter-spacing: -0.96px;
+    margin-bottom: 2.5rem;
+  }
+
+  .blog-content :global(p) {
+    color: #333333; /* Light black (dark gray) for paragraphs */
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    font-weight: 400;
+    font-family: Onest, sans-serif;
+  }
+  
+  .blog-content :global(li) {
+    color: #333333; /* Light black (dark gray) for list items */
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-weight: 400;
+    position: relative;
+    padding-left: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    font-family: Onest, sans-serif;
+  }
+
+  .blog-content :global(ul) {
+    list-style-type: none;
+    padding-left: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .blog-content :global(ul li::before) {
+    content: "•";
+    color: #C3FC68; /* Lime green bullet color */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    width: 1.5rem;
+    text-align: center;
+  }
+
+  .blog-content :global(ol) {
+    list-style-type: decimal;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .blog-content :global(ol li) {
+    padding-left: 0.5rem;
+  }
+
+  /* Rest of the styles remain unchanged */
+
+</style>

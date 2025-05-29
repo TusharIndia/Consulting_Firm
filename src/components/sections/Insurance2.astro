@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insurance Companies We Work With</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+---
+const { insuranceData } = Astro.props;
+---
+
     <section class="flex overflow-hidden flex-col px-16 pt-16 pb-9 bg-white max-md:px-5">
         <header class="flex flex-wrap gap-10 justify-between items-center max-md:max-w-full">
             <img
@@ -22,18 +17,16 @@
                         With
                     </h1>
                     <p class="mt-8 text-lg leading-9 text-neutral-800 max-md:max-w-full">
-                        ClearPath partners with numerous insurance providers to ensure you
-                        receive the coverage you deserve for your recovery journey. Our team
-                        will help you navigate your insurance benefits.
+                        {insuranceData.subheading}
                     </p>
                     <div class="flex flex-wrap gap-3 mt-8 w-full">
                         <button class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
-                            <span>Get Started</span>
+                            <span>{insuranceData.buttonText}</span>
                         </button>
                         <button class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 min-w-60 rounded-[50px]">
                             <div class="flex flex-col items-center">
-                                <span class="text-xs">Have a question?</span>
-                                <span class="text-xs font-semibold leading-6">Call (123) 456-7890</span>
+                                <span class="text-xs">{insuranceData.callText}</span>
+                                <span class="text-xs font-semibold leading-6">{insuranceData.phoneNumber}</span>
                             </div>
                         </button>
                     </div>
@@ -43,177 +36,60 @@
 
         <main>
             <div class="flex flex-wrap gap-6 mt-12 w-full max-md:mt-10 max-md:max-w-full">
-                <article class="flex flex-1 shrink gap-2.5 items-start p-6 h-full bg-white rounded-3xl basis-0 min-w-60 shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:px-5">
-                    <div class="flex-1 shrink w-full basis-0 min-w-60">
-                        <header class="w-full">
-                            <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
-                                <img
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e6dc01b6b652281c476ad8c31d39e70bba9efb3?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
-                                    alt="Blue Cross Blue Shield logo"
-                                    class="object-contain w-10 aspect-square"
-                                />
-                            </div>
-                            <h3 class="mt-4 text-base font-bold text-neutral-800">
-                                Blue Cross Blue Shield
-                            </h3>
-                        </header>
-                        <p class="mt-4 text-base leading-6 text-neutral-800">
-                            Coverage for mental health and substance abuse treatment
-                        </p>
-                    </div>
-                </article>
-
-                <article class="flex flex-1 shrink gap-2.5 items-start p-6 h-full bg-white rounded-3xl basis-0 min-w-60 shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:px-5">
-                    <div class="flex-1 shrink w-full basis-0 min-w-60">
-                        <header class="w-full">
-                            <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
-                                <img
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f621116f916091310ed95608e2ba5aab785ff73?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
-                                    alt="Aetna logo"
-                                    class="object-contain w-10 aspect-square"
-                                />
-                            </div>
-                            <h3 class="mt-4 text-base font-bold text-neutral-800">
-                                Aetna
-                            </h3>
-                        </header>
-                        <p class="mt-4 text-base leading-6 text-neutral-800">
-                            Comprehensive addiction treatment coverage options
-                        </p>
-                    </div>
-                </article>
-
-                <article class="flex flex-1 shrink gap-2.5 items-center p-6 my-auto bg-white rounded-3xl basis-0 min-w-60 shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:px-5">
-                    <div class="flex-1 shrink self-stretch my-auto w-full basis-0 min-w-60">
-                        <header class="w-full">
-                            <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
-                                <img
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/fa312405d3b348efb65494738dfb54ab5d7163be?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
-                                    alt="Cigna logo"
-                                    class="object-contain w-10 aspect-square"
-                                />
-                            </div>
-                            <h3 class="mt-4 text-base font-bold text-neutral-800">
-                                Cigna
-                            </h3>
-                        </header>
-                        <p class="mt-4 text-base leading-6 text-neutral-800">
-                            Behavioral health services and substance abuse treatment
-                        </p>
-                    </div>
-                </article>
-
-                <article class="flex flex-1 shrink gap-2.5 items-center p-6 my-auto bg-white rounded-3xl basis-0 min-w-60 shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:px-5">
-                    <div class="flex-1 shrink self-stretch my-auto w-full basis-0 min-w-60">
-                        <header class="w-full">
-                            <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
-                                <img
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e928467bdbb2cfbe5e71531740124722cde11a8?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
-                                    alt="United Healthcare logo"
-                                    class="object-contain w-10 aspect-square"
-                                />
-                            </div>
-                            <h3 class="mt-4 text-base font-bold text-neutral-800">
-                                United Healthcare
-                            </h3>
-                        </header>
-                        <p class="mt-4 text-base leading-6 text-neutral-800">
-                            Mental health and substance use disorder services
-                        </p>
-                    </div>
-                </article>
+                {insuranceData.providers.slice(0, 4).map((provider) => (
+                    <article class="flex flex-1 shrink gap-2.5 items-start p-6 h-full bg-white rounded-3xl basis-0 min-w-60 shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:px-5">
+                        <div class="flex-1 shrink w-full basis-0 min-w-60">
+                            <header class="w-full">
+                                <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
+                                    <img
+                                        src={provider.logo}
+                                        alt={`${provider.name} logo`}
+                                        class="object-contain w-10 aspect-square"
+                                    />
+                                </div>
+                                <h3 class="mt-4 text-base font-bold text-neutral-800">
+                                    {provider.name}
+                                </h3>
+                            </header>
+                            <p class="mt-4 text-base leading-6 text-neutral-800">
+                                {provider.description}
+                            </p>
+                        </div>
+                    </article>
+                ))}
             </div>
 
             <div class="flex flex-wrap gap-6 mt-6 w-full max-md:max-w-full">
-                <article class="flex flex-1 shrink gap-2.5 items-start p-6 h-full bg-white rounded-3xl basis-0 min-w-60 shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:px-5">
-                    <div class="flex-1 shrink w-full basis-0 min-w-60">
-                        <header class="w-full">
-                            <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
-                                <img
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/c851e31e484aefc25669c738f82db380e37319e9?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
-                                    alt="Humana logo"
-                                    class="object-contain w-10 aspect-square"
-                                />
-                            </div>
-                            <h3 class="mt-4 text-base font-bold text-neutral-800">
-                                Humana
-                            </h3>
-                        </header>
-                        <p class="mt-4 text-base leading-6 text-neutral-800">
-                            Behavioral health and substance abuse treatment benefits
-                        </p>
-                    </div>
-                </article>
-
-                <article class="flex flex-1 shrink gap-2.5 items-start p-6 h-full bg-white rounded-3xl basis-0 min-w-60 shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:px-5">
-                    <div class="flex-1 shrink w-full basis-0 min-w-60">
-                        <header class="w-full">
-                            <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
-                                <img
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/fb44a36610820f7e62c13822e6c9e380a1c7c7fe?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
-                                    alt="Anthem logo"
-                                    class="object-contain w-10 aspect-square"
-                                />
-                            </div>
-                            <h3 class="mt-4 text-base font-bold text-neutral-800">
-                                Anthem
-                            </h3>
-                        </header>
-                        <p class="mt-4 text-base leading-6 text-neutral-800">
-                            Behavioral health coverage for addiction treatment
-                        </p>
-                    </div>
-                </article>
-
-                <article class="flex flex-1 shrink gap-2.5 items-center p-6 my-auto bg-white rounded-3xl basis-0 min-w-60 shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:px-5">
-                    <div class="flex-1 shrink self-stretch my-auto w-full basis-0 min-w-60">
-                        <header class="w-full">
-                            <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
-                                <img
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/8ff8e4cbbce70b6b24a60f9a7f545554bba4218f?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
-                                    alt="Kaiser Permanente logo"
-                                    class="object-contain w-10 aspect-square"
-                                />
-                            </div>
-                            <h3 class="mt-4 text-base font-bold text-neutral-800">
-                                Kaiser Permanente
-                            </h3>
-                        </header>
-                        <p class="mt-4 text-base leading-6 text-neutral-800">
-                            Chemical dependency and mental health treatment
-                        </p>
-                    </div>
-                </article>
-
-                <article class="flex flex-1 shrink gap-2.5 items-center p-6 my-auto bg-white rounded-3xl basis-0 min-w-60 shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:px-5">
-                    <div class="flex-1 shrink self-stretch my-auto w-full basis-0 min-w-60">
-                        <header class="w-full">
-                            <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
-                                <img
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/95d11ada50f76b90d9751d516241f047f10f0eb3?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
-                                    alt="Other insurance providers"
-                                    class="object-contain w-10 aspect-square"
-                                />
-                            </div>
-                            <h3 class="mt-4 text-base font-bold text-neutral-800">
-                                Other Providers
-                            </h3>
-                        </header>
-                        <p class="mt-4 text-base leading-6 text-neutral-800">
-                            Contact us to verify coverage with your specific provider
-                        </p>
-                    </div>
-                </article>
+                {insuranceData.providers.slice(4).map((provider) => (
+                    <article class="flex flex-1 shrink gap-2.5 items-start p-6 h-full bg-white rounded-3xl basis-0 min-w-60 shadow-[0px_10px_40px_rgba(0,0,0,0.05)] max-md:px-5">
+                        <div class="flex-1 shrink w-full basis-0 min-w-60">
+                            <header class="w-full">
+                                <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
+                                    <img
+                                        src={provider.logo}
+                                        alt={`${provider.name} logo`}
+                                        class="object-contain w-10 aspect-square"
+                                    />
+                                </div>
+                                <h3 class="mt-4 text-base font-bold text-neutral-800">
+                                    {provider.name}
+                                </h3>
+                            </header>
+                            <p class="mt-4 text-base leading-6 text-neutral-800">
+                                {provider.description}
+                            </p>
+                        </div>
+                    </article>
+                ))}
             </div>
         </main>
 
         <footer class="flex flex-col self-center mt-16 max-w-full w-[648px] max-md:mt-10">
             <p class="text-lg leading-9 text-center text-neutral-800 max-md:max-w-full">
-                Don't see your insurance provider listed? We work with many more companies
-                and plans. Contact our team to verify your specific coverage.
+                {insuranceData.footerText}
             </p>
             <button class="flex flex-col justify-center items-center self-center px-5 py-3.5 mt-6 max-w-full text-base font-semibold text-white bg-indigo-500 min-h-[52px] rounded-[50px] w-[270px]">
-                <span>Check Your Coverage Now</span>
+                <span>{insuranceData.verifyButtonText}</span>
             </button>
         </footer>
     </section>

@@ -67,10 +67,40 @@ export interface Contact {
     hero: {
       heading: string;
       text: string;
+      buttonText: string;
+      phoneQuestionText: string;
+      treatmentsLabel: string;
+      callButtonText: string;
+      navItems: {
+        text: string;
+        url: string;
+        hasDropdown: boolean;
+      }[];
     };
-    contact: {
-      heading: string;
-      description: string;
+    
+    testimonials: {
+      list: {
+        name: string;
+        position: string;
+        text: string;
+        image: string;
+      }[];
+    };
+    
+    contactHero: {
+      
+      address: string;
+      email: string;
+      phone: string;
+      formHeading: string;
+      emergencyHeading: string;
+      emergencyText: string;
+      supportHeading: string;
+      businessHours: {
+        heading: string;
+        hours: string;
+        weekend: string;
+      };
     };
   };
 }
@@ -632,6 +662,197 @@ export interface Treatmentarchive {
       faq: {
         title: string;
         details: string;
+      }[];
+    };
+  };
+}
+
+export interface BlogPage {
+  data: {
+    hero: {
+      heading: string;
+      text: string;
+      buttonText: string;
+      phoneQuestionText: string;
+      treatmentsLabel: string;
+      callButtonText: string;
+      navItems: {
+        text: string;
+        url: string;
+        hasDropdown: boolean;
+      }[];
+    };
+     disorders: {
+      heading: string;
+      headingTwo_Part_1: string;
+      headingTwo_Part_2: string;
+      headingTwo_Part_3: string;
+      disorders: {
+        link: string;
+        title: string;
+        image: string;
+      }[];
+    };
+    cta: {
+      heading: string;
+      text: string;
+      buttonText: string;
+      image: string;
+      altText: string;
+      phoneText: string;
+      phoneNumber: string;
+    };
+  };
+}
+
+export interface Insurance {
+  data: {
+    hero: {
+      heading: string;
+      text: string;
+      buttonText: string;
+      phoneQuestionText: string;
+      treatmentsLabel: string;
+      callButtonText: string;
+      navItems: {
+        text: string;
+        url: string;
+        hasDropdown: boolean;
+      }[];
+    };
+    contactHero: {
+      title: {
+        line1: string;
+        line2: string;
+        line3: string;
+      };
+      description: string;
+      bottomDescription: string;
+      formTitle: string;
+      formSubtitle: string;
+      insuranceProviders: {
+        name: string;
+      }[];
+      privacyNotice: string;
+    };
+    insuranceProviders: {
+      heading: string;
+      subheading: string;
+      buttonText: string;
+      callText: string;
+      phoneNumber: string;
+      footerText: string;
+      verifyButtonText: string;
+      providers: {
+        name: string;
+        description: string;
+        logo: string;
+      }[];
+    };
+    testimonials: {
+      list: {
+        name: string;
+        position: string;
+        text: string;
+        image: string;
+      }[];
+    };
+    cta: {
+      heading: string;
+      text: string;
+      buttonText: string;
+      image: string;
+      altText: string;
+      phoneText: string;
+      phoneNumber: string;
+    };
+    insuranceVerification: {
+      title: {
+        line1: string;
+        line2: string;
+      };
+      description: string;
+      features: {
+        text: string;
+      }[];
+      cta: {
+        heading: string;
+        subheading: string;
+        buttonText: string;
+        callText: string;
+        phoneNumber: string;
+      };
+    };
+  };
+}
+
+export interface Location {
+  data: {
+    hero: {
+      heading: string;
+      text: string;
+      buttonText: string;
+      phoneQuestionText: string;
+      treatmentsLabel: string;
+      callButtonText: string;
+      navItems: {
+        text: string;
+        url: string;
+        hasDropdown: boolean;
+      }[];
+    };
+    locationHero: {
+      header: string;
+      subheaderHighlight: string;
+      description: string;
+      locationInfo: {
+        title: string;
+        addressLine1: string;
+        addressLine2: string;
+        email: string;
+        phone: string;
+        hours: string;
+        buttonText: string;
+      };
+    };
+    disorders: {
+      heading: string;
+      headingTwo_Part_1: string;
+      headingTwo_Part_2: string;
+      headingTwo_Part_3: string;
+      disorders: {
+        link: string;
+        title: string;
+        image: string;
+      }[];
+    };
+    cta: {
+      heading: string;
+      text: string;
+      buttonText: string;
+      image: string;
+      altText: string;
+      phoneText: string;
+      phoneNumber: string;
+    };
+  };
+}
+
+export interface Treatment {
+  data: {
+    hero: {
+      heading: string;
+      text: string;
+    };
+    disorders: {
+      heading: string;
+      headingTwo_Part_1: string;
+      headingTwo_Part_2: string;
+      headingTwo_Part_3: string;
+      disorders: {
+        link: string;
+        title: string;
+        image: string;
       }[];
     };
   };

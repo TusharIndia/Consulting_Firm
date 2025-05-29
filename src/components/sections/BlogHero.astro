@@ -1,22 +1,38 @@
+---
+import { fetchBlogData } from '../../utils/dataMapping.ts';
+
+// Fetch all blog posts and sort them by date (newest first)
+const blogPosts = await fetchBlogData();
+const sortedPosts = blogPosts.sort((a, b) => 
+  new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+// Format date function
+function formatDate(date: Date) {
+  const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' };
+  return new Date(date).toLocaleDateString('en-US', options);
+}
+---
+
 <section class="mx-auto px-6 py-14 max-w-[1320px] bg-white max-md:px-5 max-md:pt-24">
   <div class="grid gap-6 w-full grid-cols-3 max-md:grid-cols-1 max-md:gap-0">
-    {Array(9).fill(0).map((_, index) => (
+    {sortedPosts.map((post) => (
       <article class="article-card overflow-hidden relative bg-white rounded-3xl h-[410px] shadow-[0px_9px_36px_rgba(0,0,0,0.05)] max-sm:h-[300px] max-md:mt-7">
         <figure class="overflow-hidden relative m-6 rounded-2xl h-[366px] max-sm:h-64">
           <img 
-            src={`https://cdn.builder.io/api/v1/image/assets/TEMP/${index % 3 === 0 ? '83c10fcd1d8cb126445db7f7fc9c59e8257840d0' : index % 3 === 1 ? '6349064d15c45b0ec87bf3c883bca95deb3c0c52' : '17ab29189b746130d792dfb11c96aa27989a1a06'}?placeholderIfAbsent=true&apiKey=5b970d64f0984f98a4f82adfd6ad6953`} 
-            alt="Blog post image" 
+            src={post.data.featuredImg} 
+            alt={post.data.title} 
             class="object-cover absolute inset-0 size-full"
-          >
+          />
           <time class="absolute gap-2.5 left-4 top-4 px-6 py-1.5 text-base text-white bg-purple-900 rounded-[50px] max-md:px-5">
-            Jun 20, 2024
+            {formatDate(post.data.date)}
           </time>
         </figure>
         <div class="absolute bg-white rounded-bl-3xl h-[74px] right-[22px] top-[22px] w-[74px]"></div>
         <h2 class="absolute pt-3.5 pr-5 pb-3.5 pl-6 text-xl font-medium leading-8 bg-white rounded-tr-3xl bottom-[20px] left-[22px] text-neutral-800 max-w-[292px] max-md:text-lg max-md:leading-6">
-          Effective Strategies for Managing Anxiety
+          {post.data.title}
         </h2>
-        <a href="#" class="flex absolute justify-center items-center h-[58px] right-[22px] rounded-[90.127px] top-[22px] w-[58px]" aria-label="Read more about this blog post">
+        <a href={`/blog/${post.slug}`} class="flex absolute justify-center items-center h-[58px] right-[22px] rounded-[90.127px] top-[22px] w-[58px]" aria-label={`Read more about ${post.data.title}`}>
           <svg width="58" height="59" viewBox="0 0 58 59" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
             <g clip-path="url(#clip0_35_697)">
               <path d="M29.0637 58.3124C13.1355 58.3124 0.2229 58.3124 0.2229 58.3124V0.630859C0.2229 0.630859 13.1355 0.630859 29.0637 0.630859C44.9919 0.630859 57.9045 0.630859 57.9045 0.630859V58.3124C57.9045 58.3124 44.9919 58.3124 29.0637 58.3124Z" fill="#5E81E9"></path>

@@ -1,7 +1,5 @@
 ---
-import { fetchGeneralData, fetchHomeData } from '../utils/dataMapping.ts';
-
-
+import { fetchGeneralData, fetchContactData } from '../utils/dataMapping.ts';
 
 import Testimonials from "../components/sections/Testimonials.astro";
 
@@ -11,19 +9,21 @@ import MainLayout from "../layouts/MainLayout.astro";
 import ContactUs from "../components/sections/ContactUs.astro";
 import ContactCards from "../components/sections/ContactCards.astro";
 const GeneralData = await fetchGeneralData();
+const {data:ContactData} = await fetchContactData();
 
 import ContactHero from '../components/sections/ContactHero.astro';
-const { data: HomeData } = await fetchHomeData();
+import HeroProgram from '../components/sections/HeroProgram.astro';
 ---
 
 <MainLayout title="Contact Us">
 
     <!-- Form Section -->
+     <HeroProgram Content={ContactData.hero} GeneralData={GeneralData} />
 
-    <ContactHero/>
+    <ContactHero contactData={ContactData.contactHero} />
     <!-- Contact Box  -->
 
-	<Testimonials Content={HomeData.testimonials} />
+	<Testimonials Content={ContactData.testimonials} />
 
     <!-- Map -->
 

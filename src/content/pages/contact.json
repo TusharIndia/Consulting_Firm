@@ -1,10 +1,70 @@
 {
   "hero": {
-    "heading": "Contact Us",
-    "text": "Get help for yourself or a loved one today!"
+    "heading": "Contact Clear Path",
+    "text": "Reach out to begin your journey to wellness",
+    "buttonText": "Get Started",
+    "phoneQuestionText": "Have a question?",
+    "treatmentsLabel": "Treatments",
+    "callButtonText": "Call",
+    "navItems": [
+      {
+        "text": "Treatments",
+        "url": "#",
+        "hasDropdown": true
+      },
+      {
+        "text": "Locations",
+        "url": "#",
+        "hasDropdown": false
+      },
+      {
+        "text": "Pricing",
+        "url": "#",
+        "hasDropdown": false
+      },
+      {
+        "text": "Resources",
+        "url": "#",
+        "hasDropdown": false
+      },
+      {
+        "text": "Get Started",
+        "url": "#",
+        "hasDropdown": false
+      }
+    ]
   },
-  "contact": {
-    "heading": "Contact Us",
-    "description": "[Placeholder Company Name] is a dynamic and innovative organization dedicated to delivering top-notch products and services. We specialize in [industry/sector], offering solutions that drive growth and enhance the customer experience. Our commitment to excellence and a customer-centric approach sets us apart as a leader in the market. At [Placeholder Company Name], we believe in innovation, quality, and integrity, striving to meet and exceed our clients’ expectations every step of the way."
+ 
+  "testimonials": {
+    "list": [
+      {
+        "name": "Veronica L.",
+        "position": "Client from United States",
+        "text": "Clearpath gave me the strength to overcome my anxiety. The compassionate therapists provided unwavering support, and I've found a renewed sense of purpose and tranquility in my life.",
+        "image": "/imgs/testimonial_1.png"
+      },
+      {
+        "name": "Pushpender Singh",
+        "position": "Client from Florida",
+        "text": "Clearpath helped me regain control of my life. The personalized treatment plan and the caring staff made all the difference. I am now on a path to recovery and happiness.",
+        "image": "/imgs/testimonial_1.png"
+      }
+    ]
+  },
+  
+  "contactHero": {
+    
+    "address": "123 Recovery Way, Wellness City, FL 33101",
+    "email": "info@clearpathwellness.com",
+    "phone": "(800) 123-4567",
+    "formHeading": "Send Us a Message",
+    "emergencyHeading": "Emergency Contact",
+    "emergencyText": "For mental health emergencies, please call 911 or visit your nearest emergency room.",
+    "supportHeading": "General Support",
+    "businessHours": {
+      "heading": "Business Hours",
+      "hours": "Monday - Friday: 9:00 AM - 5:00 PM",
+      "weekend": "Saturday - Sunday: Closed"
+    }
   }
 }

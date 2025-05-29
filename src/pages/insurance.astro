@@ -1,5 +1,5 @@
 ---
-import { fetchGeneralData } from '../utils/dataMapping.ts';
+import { fetchGeneralData ,fetchInsuranceData } from '../utils/dataMapping.ts';
 import MainLayout from "../layouts/MainLayout.astro"
 import Hero from '../components/layout/Hero.astro';
 import BlogSection from '../components/sections/BlogSection.astro';
@@ -17,14 +17,14 @@ import Insurance2 from '../components/sections/Insurance2.astro';
 import Testimonials from '../components/sections/Testimonials.astro';
 import TreatmentGrid from '../components/sections/TreatmentGrid.astro';
 
+const {data:InsuranceData} = await fetchInsuranceData();
 ---
 
 <MainLayout title="About" description="Alcohol and Drug Rehab in Boca Raton, Florida">
-    <HeroProgram Content={ProgramData.hero} GeneralData={GeneralData} />
-    <ContactHero isInsurancePage={true}/>
-    <Insurance2/>
-    <Testimonials Content={ProgramData.testimonials} />
+    <HeroProgram Content={InsuranceData.hero} GeneralData={GeneralData} />
+    <ContactHero isInsurancePage={true} insuranceData={InsuranceData.contactHero} />
+    <Insurance2 insuranceData={InsuranceData.insuranceProviders} />
+    <Testimonials Content={InsuranceData.testimonials} />
     <TreatmentGrid />
-
-    <Insurancehero />
+    <Insurancehero Content={InsuranceData.insuranceVerification} />
 </MainLayout>
