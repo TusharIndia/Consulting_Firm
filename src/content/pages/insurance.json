@@ -208,7 +208,16 @@
         "text": "We advocate for maximum coverage on your behalf"
       }
     ],
-    
+
+    "cta": {
+      "heading": "Need Immediate Assistance?",
+      "subheading": "Our admissions team is available 24/7 to help you verify your insurance benefits right now.",
+      "buttonText": "Get Started",
+      "callText": "Have a question?",
+      "phoneNumber": "(123) 456-7890"
+    }
+  },
+      
   "treatmentGrid": {
     "heading": "What is the Treatment Process During Transcranial Magnetic Stimulation at Clear Path?",
     "subheading": "Treatment Process",
@@ -236,14 +245,6 @@
         "description": "Patients will attend regular sessions over several weeks, with progress monitored closely by the Clear Path team. Adjustments are made as needed to optimize results and ensure the best possible outcomes."
       }
     ]
-  },
-    "cta": {
-      "heading": "Need Immediate Assistance?",
-      "subheading": "Our admissions team is available 24/7 to help you verify your insurance benefits right now.",
-      "buttonText": "Get Started",
-      "callText": "Have a question?",
-      "phoneNumber": "(123) 456-7890"
-    }
   }
 }
 

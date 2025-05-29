@@ -1,13 +1,10 @@
 ---
 import { fetchGeneralData ,fetchInsuranceData } from '../utils/dataMapping.ts';
 import MainLayout from "../layouts/MainLayout.astro"
-import Hero from '../components/layout/Hero.astro';
-import BlogSection from '../components/sections/BlogSection.astro';
-import SingleBlog from '../components/sections/SingleBlog.astro';
+
 const GeneralData = await fetchGeneralData();
-const Data = { heading: "Blog", text: "Providing personalized care for substance use and mental health to help individuals achieve lasting recovery."}
-import DisorderGrid from "../components/sections/DisorderGrid.astro";
-import CTA from "../components/CTA.astro";
+// const Data = { heading: "Blog", text: "Providing personalized care for substance use and mental health to help individuals achieve lasting recovery."}
+
 import HeroProgram from "../components/sections/HeroProgram.astro";
 import Insurancehero from '../components/sections/Insurancehero.astro';
 import ContactHero from '../components/sections/ContactHero.astro';
@@ -19,10 +16,11 @@ const {data:InsuranceData} = await fetchInsuranceData();
 ---
 
 <MainLayout title="About" description="Alcohol and Drug Rehab in Boca Raton, Florida">
-    <HeroProgram Content={InsuranceData.hero} GeneralData={GeneralData} />
-    <ContactHero isInsurancePage={true} insuranceData={InsuranceData.contactHero} />
-    <Insurance2 insuranceData={InsuranceData.insuranceProviders} />
-    <Testimonials Content={InsuranceData.testimonials} />
-    <TreatmentGrid Content={InsuranceData.treatmentGrid}  />
-    <Insurancehero Content={InsuranceData.insuranceVerification} />
+    <HeroProgram Content={InsuranceData?.hero} GeneralData={GeneralData} />
+    <ContactHero isInsurancePage={true} insuranceData={InsuranceData?.contactHero} />
+    <Insurance2 insuranceData={InsuranceData?.insuranceProviders} />
+    <Testimonials Content={InsuranceData?.testimonials} />
+    <TreatmentGrid Content={InsuranceData?.treatmentGrid}  />
+    <Insurancehero Content={InsuranceData?.insuranceVerification} />
+    
 </MainLayout>

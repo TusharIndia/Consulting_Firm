@@ -1107,107 +1107,258 @@ export async function fetchBlogPageData(): Promise<BlogPage> {
 }
 
 export async function fetchInsuranceData(): Promise<Insurance> {
-  const [insurance] = await getCollection("pages", (page) => page.id === "insurance");
+  try {
+    const insurancePages = await getCollection("pages", (page) => page.id === "insurance");
+    
+    if (!insurancePages || insurancePages.length === 0) {
+      console.error("No insurance page found in content collection");
+      return {
+        data: {
+          hero: {
+            heading: "Insurance Verification",
+            text: "Default text",
+            buttonText: "Verify Insurance",
+            phoneQuestionText: "Questions about insurance?",
+            treatmentsLabel: "Insurance",
+            callButtonText: "Call Now",
+            navItems: []
+          },
+          contactHero: {
+            title: {
+              line1: "Insurance",
+              line2: "Verification",
+              line3: "at ClearPath"
+            },
+            description: "Default description",
+            bottomDescription: "",
+            formTitle: "",
+            formSubtitle: "",
+            insuranceProviders: [],
+            privacyNotice: ""
+          },
+          insuranceProviders: {
+            heading: "",
+            subheading: "",
+            buttonText: "",
+            callText: "",
+            phoneNumber: "",
+            footerText: "",
+            verifyButtonText: "",
+            providers: []
+          },
+          testimonials: {
+            list: []
+          },
+          treatmentGrid: {
+            heading: "",
+            subheading: "",
+            description: "",
+            featuredImage: "",
+            treatments: []
+          },
+          cta: {
+            heading: "",
+            text: "",
+            buttonText: "",
+            image: "",
+            altText: "",
+            phoneText: "",
+            phoneNumber: ""
+          },
+          insuranceVerification: {
+            title: {
+              line1: "",
+              line2: ""
+            },
+            description: "",
+            features: [],
+            cta: {
+              heading: "",
+              subheading: "",
+              buttonText: "",
+              callText: "",
+              phoneNumber: ""
+            }
+          }
+        }
+      };
+    }
 
-  return {
-    data: {
-      hero: {
-        heading: insurance.data.hero.heading,
-        text: insurance.data.hero.text,
-        buttonText: insurance.data.hero.buttonText,
-        phoneQuestionText: insurance.data.hero.phoneQuestionText,
-        treatmentsLabel: insurance.data.hero.treatmentsLabel,
-        callButtonText: insurance.data.hero.callButtonText,
-        navItems: insurance.data.hero.navItems.map((item) => ({
-          text: item.text,
-          url: item.url,
-          hasDropdown: item.hasDropdown,
-          sublinks: item.sublinks?.map((sublink) => ({
-            text: sublink.text,
-            link: sublink.link,
+    const insurance = insurancePages[0];
+
+    return {
+      data: {
+        hero: {
+          heading: insurance.data.hero.heading,
+          text: insurance.data.hero.text,
+          buttonText: insurance.data.hero.buttonText,
+          phoneQuestionText: insurance.data.hero.phoneQuestionText,
+          treatmentsLabel: insurance.data.hero.treatmentsLabel,
+          callButtonText: insurance.data.hero.callButtonText,
+          navItems: insurance.data.hero.navItems.map((item) => ({
+            text: item.text,
+            url: item.url,
+            hasDropdown: item.hasDropdown,
+            sublinks: item.sublinks?.map((sublink) => ({
+              text: sublink.text,
+              link: sublink.link,
+            })),
+            sublinks2: item.sublinks2?.map((sublink) => ({
+              text: sublink.text,
+              link: sublink.link,
+            })),
           })),
-          sublinks2: item.sublinks2?.map((sublink) => ({
-            text: sublink.text,
-            link: sublink.link,
+        },
+        contactHero: {
+          title: {
+            line1: insurance.data.contactHero.title.line1,
+            line2: insurance.data.contactHero.title.line2,
+            line3: insurance.data.contactHero.title.line3,
+          },
+          description: insurance.data.contactHero.description,
+          bottomDescription: insurance.data.contactHero.bottomDescription,
+          formTitle: insurance.data.contactHero.formTitle,
+          formSubtitle: insurance.data.contactHero.formSubtitle,
+          insuranceProviders: insurance.data.contactHero.insuranceProviders.map((provider) => ({
+            name: provider.name,
           })),
-        })),
-      },
-      contactHero: {
-        title: {
-          line1: insurance.data.contactHero.title.line1,
-          line2: insurance.data.contactHero.title.line2,
-          line3: insurance.data.contactHero.title.line3,
+          privacyNotice: insurance.data.contactHero.privacyNotice,
         },
-        description: insurance.data.contactHero.description,
-        bottomDescription: insurance.data.contactHero.bottomDescription,
-        formTitle: insurance.data.contactHero.formTitle,
-        formSubtitle: insurance.data.contactHero.formSubtitle,
-        insuranceProviders: insurance.data.contactHero.insuranceProviders.map((provider) => ({
-          name: provider.name,
-        })),
-        privacyNotice: insurance.data.contactHero.privacyNotice,
-      },
-      insuranceProviders: {
-        heading: insurance.data.insuranceProviders.heading,
-        subheading: insurance.data.insuranceProviders.subheading,
-        buttonText: insurance.data.insuranceProviders.buttonText,
-        callText: insurance.data.insuranceProviders.callText,
-        phoneNumber: insurance.data.insuranceProviders.phoneNumber,
-        footerText: insurance.data.insuranceProviders.footerText,
-        verifyButtonText: insurance.data.insuranceProviders.verifyButtonText,
-        providers: insurance.data.insuranceProviders.providers.map((provider) => ({
-          name: provider.name,
-          description: provider.description,
-          logo: provider.logo,
-        })),
-      },
-      testimonials: {
-        list: insurance.data.testimonials.list.map((testimonial) => ({
-          name: testimonial.name,
-          position: testimonial.position,
-          text: testimonial.text,
-          image: testimonial.image,
-        })),
-      },
-      treatmentGrid: {
-        heading: insurance.data.treatmentGrid.heading,
-        subheading: insurance.data.treatmentGrid.subheading,
-        description: insurance.data.treatmentGrid.description,
-        featuredImage: insurance.data.treatmentGrid.featuredImage,
-        treatments: insurance.data.treatmentGrid.treatments.map((treatment: any) => ({
-          icon: treatment.icon,
-          title: treatment.title,
-          description: treatment.description,
-        })),
-      },
-      cta: {
-        heading: insurance.data.cta.heading,
-        text: insurance.data.cta.text,
-        buttonText: insurance.data.cta.buttonText,
-        image: insurance.data.cta.image,
-        altText: insurance.data.cta.altText,
-        phoneText: insurance.data.cta.phoneText,
-        phoneNumber: insurance.data.cta.phoneNumber,
-      },
-      insuranceVerification: {
-        title: {
-          line1: insurance.data.insuranceVerification.title.line1,
-          line2: insurance.data.insuranceVerification.title.line2,
+        insuranceProviders: {
+          heading: insurance.data.insuranceProviders.heading,
+          subheading: insurance.data.insuranceProviders.subheading,
+          buttonText: insurance.data.insuranceProviders.buttonText,
+          callText: insurance.data.insuranceProviders.callText,
+          phoneNumber: insurance.data.insuranceProviders.phoneNumber,
+          footerText: insurance.data.insuranceProviders.footerText,
+          verifyButtonText: insurance.data.insuranceProviders.verifyButtonText,
+          providers: insurance.data.insuranceProviders.providers.map((provider) => ({
+            name: provider.name,
+            description: provider.description,
+            logo: provider.logo,
+          })),
         },
-        description: insurance.data.insuranceVerification.description,
-        features: insurance.data.insuranceVerification.features.map((feature) => ({
-          text: feature.text,
-        })),
+        testimonials: {
+          list: insurance.data.testimonials.list.map((testimonial) => ({
+            name: testimonial.name,
+            position: testimonial.position,
+            text: testimonial.text,
+            image: testimonial.image,
+          })),
+        },
+        treatmentGrid: {
+          heading: insurance.data.treatmentGrid.heading,
+          subheading: insurance.data.treatmentGrid.subheading,
+          description: insurance.data.treatmentGrid.description,
+          featuredImage: insurance.data.treatmentGrid.featuredImage,
+          treatments: insurance.data.treatmentGrid.treatments.map((treatment: any) => ({
+            icon: treatment.icon,
+            title: treatment.title,
+            description: treatment.description,
+          })),
+        },
         cta: {
-          heading: insurance.data.insuranceVerification.cta.heading,
-          subheading: insurance.data.insuranceVerification.cta.subheading,
-          buttonText: insurance.data.insuranceVerification.cta.buttonText,
-          callText: insurance.data.insuranceVerification.cta.callText,
-          phoneNumber: insurance.data.insuranceVerification.cta.phoneNumber,
+          heading: insurance.data.cta.heading,
+          text: insurance.data.cta.text,
+          buttonText: insurance.data.cta.buttonText,
+          image: insurance.data.cta.image,
+          altText: insurance.data.cta.altText,
+          phoneText: insurance.data.cta.phoneText,
+          phoneNumber: insurance.data.cta.phoneNumber,
+        },
+        insuranceVerification: {
+          title: {
+            line1: insurance.data.insuranceVerification.title.line1,
+            line2: insurance.data.insuranceVerification.title.line2,
+          },
+          description: insurance.data.insuranceVerification.description,
+          features: insurance.data.insuranceVerification.features.map((feature) => ({
+            text: feature.text,
+          })),
+          cta: {
+            heading: insurance.data.insuranceVerification.cta.heading,
+            subheading: insurance.data.insuranceVerification.cta.subheading,
+            buttonText: insurance.data.insuranceVerification.cta.buttonText,
+            callText: insurance.data.insuranceVerification.cta.callText,
+            phoneNumber: insurance.data.insuranceVerification.cta.phoneNumber,
+          },
         },
       },
-    },
-  };
+    };
+  } catch (error) {
+    console.error("Error fetching insurance data:", error);
+    // Return default structure with empty values to prevent undefined errors
+    return {
+      data: {
+        hero: {
+          heading: "Insurance Verification",
+          text: "Error loading content",
+          buttonText: "Contact Us",
+          phoneQuestionText: "Questions?",
+          treatmentsLabel: "Insurance",
+          callButtonText: "Call Now",
+          navItems: []
+        },
+        contactHero: {
+          title: {
+            line1: "Insurance",
+            line2: "Verification",
+            line3: ""
+          },
+          description: "",
+          bottomDescription: "",
+          formTitle: "",
+          formSubtitle: "",
+          insuranceProviders: [],
+          privacyNotice: ""
+        },
+        insuranceProviders: {
+          heading: "",
+          subheading: "",
+          buttonText: "",
+          callText: "",
+          phoneNumber: "",
+          footerText: "",
+          verifyButtonText: "",
+          providers: []
+        },
+        testimonials: {
+          list: []
+        },
+        treatmentGrid: {
+          heading: "",
+          subheading: "",
+          description: "",
+          featuredImage: "",
+          treatments: []
+        },
+        cta: {
+          heading: "",
+          text: "",
+          buttonText: "",
+          image: "",
+          altText: "",
+          phoneText: "",
+          phoneNumber: ""
+        },
+        insuranceVerification: {
+          title: {
+            line1: "",
+            line2: ""
+          },
+          description: "",
+          features: [],
+          cta: {
+            heading: "",
+            subheading: "",
+            buttonText: "",
+            callText: "",
+            phoneNumber: ""
+          }
+        }
+      }
+    };
+  }
 }
 
 export async function fetchLocationData(): Promise<Location> {
