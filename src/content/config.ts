@@ -144,11 +144,7 @@ const homeCollection = {
         description: z.string(),
       })),
     }),
-    cta: z.object({
-      heading: z.string(),
-      text: z.string(),
-      buttonText: z.string(),
-    }),
+   
     programs: z.object({
       heading: z.string(),
       text: z.string(),
@@ -188,6 +184,15 @@ const homeCollection = {
       insuranceOptions: z.array(z.object({
         logo: z.string(),
       })),
+    }),
+    cta: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
+      image: z.string(),
+      altText: z.string(),
+      phoneText: z.string(),
+      phoneNumber: z.string(),
     }),
   }),
 };

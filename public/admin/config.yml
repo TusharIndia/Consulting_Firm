@@ -283,6 +283,19 @@ collections:
                 fields:
                   - { label: "Feature", name: "feature", widget: "string" }
 
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+
           - label: "About"
             name: "about"
             widget: "object"
@@ -322,14 +335,6 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
 
-          - label: "CTA"
-            name: "cta"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Text", name: "text", widget: "text" }
-              - { label: "Button Text", name: "buttonText", widget: "string" }
 
           - label: "Programs"
             name: "programs"

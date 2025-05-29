@@ -1,7 +1,7 @@
 ---
 import Button from "./Button.astro";
 
-const { heading, text, buttonText } = Astro.props.Content;
+const { heading, text, buttonText, image, altText, phoneText, phoneNumber } = Astro.props.Content;
 ---
 
 <section
@@ -15,36 +15,35 @@ const { heading, text, buttonText } = Astro.props.Content;
         <h1
           class="text-5xl font-medium text-white leading-[72px] max-md:text-4xl max-md:leading-[56px] max-sm:text-3xl max-sm:leading-10"
         >
-          Ready to Start Your Journey to Better Mental Health?
+          {heading}
         </h1>
         <p class="text-lg leading-9 text-white text-opacity-80">
-          Take the first step towards healing. Our experienced team is here to
-          support you with personalized, evidence-based treatment plans.
+          {text}
         </p>
       </div>
       <div class="flex gap-3 items-center max-sm:flex-col max-sm:w-full">
         <button
           class="flex-1 px-5 py-4 text-lg font-semibold text-center bg-amber-300 cursor-pointer rounded-[50px] text-neutral-800 max-sm:w-full"
         >
-          Get Started
+          {buttonText}
         </button>
         <button
           class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 min-w-60 rounded-[50px]"
           aria-label="Call for questions"
         >
           <div class="flex flex-col items-center">
-            <span class="text-xs"> Have a question? </span>
+            <span class="text-xs"> {phoneText} </span>
             <span class="text-xs font-semibold leading-6">
-              Call (123) 456-7890
+              Call {phoneNumber}
             </span>
           </div>
         </button>
       </div>
     </div>
     <img
-      src="/imgs/mental_health_support.png"
+      src={image}
       class="rounded-3xl h-[407px] opacity-[0.9942] w-[548px] max-md:mt-8 max-md:w-full max-md:h-auto"
-      alt="Mental health support"
+      alt={altText}
     />
   </div>
 </section>

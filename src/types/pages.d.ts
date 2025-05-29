@@ -136,11 +136,7 @@ export interface Home {
         image: string;
       }[];
     };
-    cta: {
-      heading: string;
-      text: string;
-      buttonText: string;
-    };
+    
     programs: {
       heading: string;
       text: string;
@@ -195,6 +191,15 @@ export interface Home {
         logo: string;
         alt: string;
       }[];
+    };
+    cta: {
+      heading: string;
+      text: string;
+      buttonText: string;
+      image: string;
+      altText: string;
+      phoneText: string;
+      phoneNumber: string;
     };
   };
 }

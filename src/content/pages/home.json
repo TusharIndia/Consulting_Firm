@@ -151,11 +151,7 @@
       }
     ]
   },
-  "cta": {
-    "heading": "Start Your Journey To Recovery Today",
-    "text": "Are you or a loved one struggling with addiction? Discover Health Group is here to help you take the first step towards a healthier, happier life. Our compassionate team is ready to support you through every stage of your recovery journey. Contact us today to learn more about our programs, schedule a visit, or start the admissions process. Your path to recovery begins here.",
-    "buttonText": "Call Us Now!"
-  },
+  
   "programs": {
     "heading": "Conditions Treated",
     "text": "Clear Path focuses on addressing a wide range of mental health conditions through psychiatric care and medication management. The primary target conditions include:",
@@ -322,5 +318,14 @@
         "alt": "Cigna"
       }
     ]
+  },
+  "cta": {
+    "heading": "Ready to Start Your Journey to Better Mental Health?",
+    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
+    "buttonText": "Get Started",
+    "image": "/imgs/mental_health_support.png",
+    "altText": "Mental health support",
+    "phoneText": "Have a question?",
+    "phoneNumber": "(123) 456-7890"
   }
 }

@@ -200,11 +200,6 @@ export async function fetchHomeData(): Promise<Home> {
           image: therapy.image,
         })),
       },
-      cta: {
-        heading: home.data.cta.heading,
-        text: home.data.cta.text,
-        buttonText: home.data.cta.buttonText,
-      },
       programs: {
         heading: home.data.programs.heading,
         text: home.data.programs.text,
@@ -262,6 +257,15 @@ export async function fetchHomeData(): Promise<Home> {
             logo: option.logo,
           })
         ),
+      },
+      cta: {
+        heading: home.data.cta.heading,
+        text: home.data.cta.text,
+        buttonText: home.data.cta.buttonText,
+        image: home.data.cta.image,
+        altText: home.data.cta.altText,
+        phoneText: home.data.cta.phoneText,
+        phoneNumber: home.data.cta.phoneNumber,
       },
     },
   };
