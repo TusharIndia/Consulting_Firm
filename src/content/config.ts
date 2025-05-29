@@ -260,16 +260,24 @@ const programCollection = {
   type: "data",
   schema: z.object({
     hero: z.object({
-      location: z.string(),
       heading: z.string(),
-      logo: z.array(z.object({
-        iconName: z.string(),
-      })),
+      text: z.string(),
+      buttonText: z.string(),
+      phoneQuestionText: z.string(),
+      treatmentsLabel: z.string(),
+      callButtonText: z.string(),
+      navItems: z.array(
+        z.object({
+          text: z.string(),
+          url: z.string(),
+          hasDropdown: z.boolean().default(false),
+        })
+      ),
     }),
     about: z.object({
       headingOne: z.string(),
-      textOne: z.string(),
       headingTwo: z.string(),
+      textOne: z.string(),
       textTwo: z.string(),
       images: z.object({
         imageOne: z.string(),

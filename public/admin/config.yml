@@ -417,13 +417,18 @@ collections:
             widget: "object"
             collapsed: true
             fields:
-              - { label: "Location", name: "location", widget: "string" }
               - { label: "Heading", name: "heading", widget: "string" }
-              - label: "Logo"
-                name: "logo"
-                widget: "list"
-                fields:
-                  - { label: "Logo Icon", name: "iconName", widget: "image" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
+              - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
+              - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                ] }
+
 
           - label: "About"
             name: "about"
@@ -431,8 +436,8 @@ collections:
             collapsed: true
             fields:
               - { label: "Heading One", name: "headingOne", widget: "string" }
-              - { label: "Text One", name: "textOne", widget: "text" }
               - { label: "Heading Two", name: "headingTwo", widget: "string" }
+              - { label: "Text One", name: "textOne", widget: "text" }
               - { label: "Text Two", name: "textTwo", widget: "text" }
               - label: "Images"
                 name: "images"
@@ -440,7 +445,7 @@ collections:
                 fields:
                   - { label: "Image One", name: "imageOne", widget: "image" }
                   - { label: "Image Two", name: "imageTwo", widget: "image" }
-
+          
           - label: "Video"
             name: "video"
             widget: "object"

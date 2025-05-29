@@ -339,16 +339,22 @@ export async function fetchProgramData(): Promise<Program> {
   return {
     data: {
       hero: {
-        location: programData.data.hero.location,
         heading: programData.data.hero.heading,
-        logo: programData.data.hero.logo.map((logo: { iconName: string }) => ({
-          iconName: logo.iconName,
+        text: programData.data.hero.text,
+        buttonText: programData.data.hero.buttonText,
+        phoneQuestionText: programData.data.hero.phoneQuestionText,
+        treatmentsLabel: programData.data.hero.treatmentsLabel,
+        callButtonText: programData.data.hero.callButtonText,
+        navItems: programData.data.hero.navItems.map((item: any) => ({
+          text: item.text,
+          url: item.url,
+          hasDropdown: item.hasDropdown,
         })),
       },
       about: {
         headingOne: programData.data.about.headingOne,
-        textOne: programData.data.about.textOne,
         headingTwo: programData.data.about.headingTwo,
+        textOne: programData.data.about.textOne,
         textTwo: programData.data.about.textTwo,
         images: {
           imageOne: programData.data.about.images.imageOne,

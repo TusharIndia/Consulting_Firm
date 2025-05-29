@@ -8,7 +8,7 @@ const { headingOne, textOne, headingTwo, textTwo, images } = Astro.props.Content
         <div class="flex gap-5 max-md:flex-col">
             <article class="w-[56%] max-md:ml-0 max-md:w-full">
             <img
-                src="/imgs/program_about.png"
+                src={images.imageOne}
                 alt="Clear Path TMS Treatment"
                 class="object-contain self-stretch my-auto w-full rounded-3xl aspect-[1.35] max-md:mt-10 max-md:max-w-full"
             />
@@ -16,18 +16,13 @@ const { headingOne, textOne, headingTwo, textTwo, images } = Astro.props.Content
             <article class="ml-5 w-[44%] max-md:ml-0 max-md:w-full">
             <div class="w-full max-md:mt-10 max-md:max-w-full">
                 <h2 class="w-full text-5xl font-medium leading-[72px] text-neutral-800 max-md:max-w-full max-md:text-4xl max-md:leading-[64px]">
-                Clear Path TMS: Cutting-
+                {headingOne}
                 <span class="text-[#5E81E9]">
-                    Edge Care for Mental Well-Being
+                    {headingTwo}
                 </span>
                 </h2>
                 <p class="mt-8 text-lg leading-9 text-neutral-800 max-md:max-w-full">
-                Transcranial Magnetic Stimulation (TMS) is a groundbreaking treatment
-                designed to improve mental well-being and provide relief for
-                individuals struggling with depression and other mental health
-                conditions. At Clear Path, our TMS program offers a personalized,
-                non-invasive approach to care, making it a safe and effective solution
-                for those seeking innovative treatment options.
+                {textOne}
                 </p>
                 <div class="flex flex-wrap gap-3 mt-8 w-full max-md:max-w-full">
                 <a href="#get-started" class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">

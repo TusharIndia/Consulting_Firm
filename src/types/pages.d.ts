@@ -259,14 +259,22 @@ export interface Admissions {
 export interface Program {
   data: {
     hero: {
-      location: string;
       heading: string;
-      logo: { iconName: string }[];
+      text: string;
+      buttonText: string;
+      phoneQuestionText: string;
+      treatmentsLabel: string;
+      callButtonText: string;
+      navItems: {
+        text: string;
+        url: string;
+        hasDropdown: boolean;
+      }[];
     };
     about: {
       headingOne: string;
-      textOne: string;
       headingTwo: string;
+      textOne: string;
       textTwo: string;
       images: {
         imageOne: string;
