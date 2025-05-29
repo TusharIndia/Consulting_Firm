@@ -496,7 +496,7 @@ export interface Program {
     };
   }; 
 }
-
+// hola amigo
 export interface Programarchive {
   data: {
     hero: {
