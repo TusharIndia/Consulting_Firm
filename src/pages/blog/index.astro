@@ -1,17 +1,17 @@
 ---
-import { fetchBlogData } from '../../utils/dataMapping.ts';
+import { fetchGeneralData } from '../../utils/dataMapping.ts';
+import MainLayout from "../../layouts/MainLayout.astro"
+import Hero from '../../components/layout/Hero.astro';
+import BlogSection from '../../components/sections/BlogSection.astro';
+import BlogHero from '../../components/sections/BlogHero.astro';
+import HeroProgram from "../../components/sections/HeroProgram.astro";
+import { fetchProgramData, fetchBlogPageData } from '../../utils/dataMapping.ts';
 
-const posts = await fetchBlogData();
-
+const { data: BlogPageData } = await fetchBlogPageData();
+const GeneralData = await fetchGeneralData();
 ---
 
-<h1>Blog</h1>
-<p>Here is a list of all blog posts:</p>
-
-<ul>
-  {posts.map((post) => (
-    <li>
-      <a href={`/blog/{post.slug}`}>{post.data.title}</a> - {post.data.date.toLocaleDateString()}
-    </li>
-  ))}
-</ul>
+<MainLayout title="Blog" description="Insights, news, and resources for mental health and recovery.">
+    <HeroProgram Content={BlogPageData.hero} GeneralData={GeneralData} />
+    <BlogHero />
+</MainLayout>

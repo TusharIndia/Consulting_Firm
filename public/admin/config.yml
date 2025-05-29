@@ -253,15 +253,51 @@ collections:
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
+              - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
+              - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                ] }
           
-          # Contact Section
-          - label: "Contact"
-            name: "contact"
+          # Testimonials Section
+          - label: "Testimonials"
+            name: "testimonials"
             widget: "object"
             collapsed: true
             fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+              - label: "Testimonials List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Position", name: "position", widget: "string" }
+                  - { label: "Testimonial Text", name: "text", widget: "text" }
+                  - { label: "Person Image", name: "image", widget: "image" }
+                  
+          # Contact Hero Section
+          - label: "Contact Hero"
+            name: "contactHero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Email Address", name: "email", widget: "string" }
+              - { label: "Phone Number", name: "phone", widget: "string" }
+              - { label: "Address", name: "address", widget: "string" }
+              - { label: "Form Heading", name: "formHeading", widget: "string" }
+              - { label: "Emergency Heading", name: "emergencyHeading", widget: "string" }
+              - { label: "Emergency Text", name: "emergencyText", widget: "text" }
+              - { label: "Support Heading", name: "supportHeading", widget: "string" }
+              - label: "Business Hours"
+                name: "businessHours"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Hours (Weekdays)", name: "hours", widget: "string" }
+                  - { label: "Hours (Weekend)", name: "weekend", widget: "string" }
 
       # Home Page Configuration
       - label: "Home Page"
@@ -319,7 +355,7 @@ collections:
             fields:
               - { label: "Card Detail", name: "cardDetail", widget: "text" }
               - { label: "Card Title", name: "cardTitle", widget: "string" }
-
+          
           - label: "Therapies"
             name: "therapies"
             widget: "object"
@@ -335,7 +371,19 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
 
-
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Testimonials List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Position", name: "position", widget: "string" }
+                  - { label: "Testimonial Text", name: "text", widget: "text" }
+                  - { label: "Person Image", name: "image", widget: "image" }
           - label: "Programs"
             name: "programs"
             widget: "object"
@@ -914,3 +962,254 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Details", name: "details", widget: "text" }
+
+      # Blog Page Configuration
+      - label: "Blog Page"
+        name: "blog"
+        file: "src/content/pages/blog.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
+              - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
+              - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                ] }
+              
+          - label: "Disorders"
+            name: "disorders"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Disorders List"
+                name: "disorders"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "iconName", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+
+      # Insurance Page Configuration
+      - label: "Insurance Page"
+        name: "insurance"
+        file: "src/content/pages/insurance.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
+              - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
+              - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                ] }
+          
+          - label: "Contact Hero"
+            name: "contactHero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
+              - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
+              - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                ] }
+          
+          - label: "Insurance Providers Section"
+            name: "insuranceProviders"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "text" }
+              - { label: "Get Started Button Text", name: "buttonText", widget: "string" }
+              - { label: "Call Question Text", name: "callText", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+              - { label: "Footer Text", name: "footerText", widget: "text" }
+              - { label: "Verify Button Text", name: "verifyButtonText", widget: "string" }
+              - label: "Insurance Providers"
+                name: "providers"
+                widget: "list"
+                fields:
+                  - { label: "Provider Name", name: "name", widget: "string" }
+                  - { label: "Provider Description", name: "description", widget: "text" }
+                  - { label: "Provider Logo", name: "logo", widget: "image" }
+          
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Testimonials List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Position", name: "position", widget: "string" }
+                  - { label: "Testimonial Text", name: "text", widget: "text" }
+                  - { label: "Person Image", name: "image", widget: "image" }
+          
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+
+          - label: "Insurance Verification Section"
+            name: "insuranceVerification"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Line 1", name: "line1", widget: "string" }
+                  - { label: "Line 2", name: "line2", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Features"
+                name: "features"
+                widget: "list"
+                fields:
+                  - { label: "Feature Text", name: "text", widget: "string" }
+              - label: "Call to Action Section"
+                name: "cta"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Subheading", name: "subheading", widget: "text" }
+                  - { label: "Button Text", name: "buttonText", widget: "string" }
+                  - { label: "Call Text", name: "callText", widget: "string" }
+                  - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+
+      # Location Page Configuration
+      - label: "Location Page"
+        name: "location"
+        file: "src/content/pages/location.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
+              - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
+              - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false }
+                ] }
+          
+          - label: "Location Hero"
+            name: "locationHero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Subheader Highlight", name: "subheaderHighlight", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Location Information"
+                name: "locationInfo"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Address Line 1", name: "addressLine1", widget: "string" }
+                  - { label: "Address Line 2", name: "addressLine2", widget: "string" }
+                  - { label: "Email", name: "email", widget: "string" }
+                  - { label: "Phone", name: "phone", widget: "string" }
+                  - { label: "Hours", name: "hours", widget: "string" }
+                  - { label: "Button Text", name: "buttonText", widget: "string" }
+          
+          - label: "Disorders"
+            name: "disorders"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Heading Two Part 1", name: "headingTwo_Part_1", widget: "string" }
+              - { label: "Heading Two Part 2", name: "headingTwo_Part_2", widget: "string" }
+              - { label: "Heading Two Part 3", name: "headingTwo_Part_3", widget: "string" }
+              - label: "Disorders List"
+                name: "disorders"
+                widget: "list"
+                fields:
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+
+      # Treatment Page Configuration
+      - label: "Treatment Page"
+        name: "treatment"
+        file: "src/content/pages/treatment.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+
+          - label: "Disorders"
+            name: "disorders"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Heading Two Part 1", name: "headingTwo_Part_1", widget: "string" }
+              - { label: "Heading Two Part 2", name: "headingTwo_Part_2", widget: "string" }
+              - { label: "Heading Two Part 3", name: "headingTwo_Part_3", widget: "string" }
+              - label: "Disorders List"
+                name: "disorders"
+                widget: "list"
+                fields:
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }

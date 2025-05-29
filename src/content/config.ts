@@ -103,10 +103,44 @@ const contactCollection = {
     hero: z.object({
       heading: z.string(),
       text: z.string(),
+      buttonText: z.string(),
+      phoneQuestionText: z.string(),
+      treatmentsLabel: z.string(),
+      callButtonText: z.string(),
+      navItems: z.array(
+        z.object({
+          text: z.string(),
+          url: z.string(),
+          hasDropdown: z.boolean().default(false),
+        })
+      ),
     }),
-    contact: z.object({
-      heading: z.string(),
-      description: z.string(),
+    
+    testimonials: z.object({
+      list: z.array(
+        z.object({
+          name: z.string(),
+          position: z.string(),
+          text: z.string(),
+          image: z.string(),
+        })
+      ),
+    }),
+    
+    contactHero: z.object({
+     
+      address: z.string(),
+      email: z.string(),
+      phone: z.string(),
+      formHeading: z.string(),
+      emergencyHeading: z.string(),
+      emergencyText: z.string(),
+      supportHeading: z.string(),
+      businessHours: z.object({
+        heading: z.string(),
+        hours: z.string(),
+        weekend: z.string(),
+      }),
     }),
   }),
 };
@@ -584,6 +618,212 @@ const treatmentarchiveCollection = {
   }),
 };
 
+const blogpageCollection = {
+  type: "data",
+  schema: z.object({
+    hero: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
+      phoneQuestionText: z.string(),
+      treatmentsLabel: z.string(),
+      callButtonText: z.string(),
+      navItems: z.array(
+        z.object({
+          text: z.string(),
+          url: z.string(),
+          hasDropdown: z.boolean().default(false),
+        })
+      ),
+    }),
+    disorders: z.object({
+      heading: z.string(),
+      description: z.string(),
+      disorders: z.array(z.object({
+        iconName: z.string(),
+        title: z.string(),
+      })),
+    }),
+     cta: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
+      image: z.string(),
+      altText: z.string(),
+      phoneText: z.string(),
+      phoneNumber: z.string(),
+    }),
+  }),
+};
+
+const insuranceCollection = {
+  type: "data",
+  schema: z.object({
+    hero: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
+      phoneQuestionText: z.string(),
+      treatmentsLabel: z.string(),
+      callButtonText: z.string(),
+      navItems: z.array(
+        z.object({
+          text: z.string(),
+          url: z.string(),
+          hasDropdown: z.boolean().default(false),
+        })
+      ),
+    }),
+    contactHero: z.object({
+      title: z.object({
+        line1: z.string(),
+        line2: z.string(),
+        line3: z.string(),
+      }),
+      description: z.string(),
+      bottomDescription: z.string(),
+      formTitle: z.string(),
+      formSubtitle: z.string(),
+      insuranceProviders: z.array(
+        z.object({
+          name: z.string(),
+        })
+      ),
+      privacyNotice: z.string(),
+    }),
+    insuranceProviders: z.object({
+      heading: z.string(),
+      subheading: z.string(),
+      buttonText: z.string(),
+      callText: z.string(),
+      phoneNumber: z.string(),
+      footerText: z.string(),
+      verifyButtonText: z.string(),
+      providers: z.array(
+        z.object({
+          name: z.string(),
+          description: z.string(),
+          logo: z.string(),
+        })
+      ),
+    }),
+    insuranceVerification: z.object({
+      title: z.object({
+        line1: z.string(),
+        line2: z.string(),
+      }),
+      description: z.string(),
+      features: z.array(
+        z.object({
+          text: z.string(),
+        })
+      ),
+      cta: z.object({
+        heading: z.string(),
+        subheading: z.string(),
+        buttonText: z.string(),
+        callText: z.string(),
+        phoneNumber: z.string(),
+      }),
+    }),
+    testimonials: z.object({
+      list: z.array(
+        z.object({
+          name: z.string(),
+          position: z.string(),
+          text: z.string(),
+          image: z.string(),
+        })
+      ),
+    }),
+    cta: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
+      image: z.string(),
+      altText: z.string(),
+      phoneText: z.string(),
+      phoneNumber: z.string(),
+    }),
+  }),
+};
+
+const locationCollection = {
+  type: "data",
+  schema: z.object({
+    hero: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
+      phoneQuestionText: z.string(),
+      treatmentsLabel: z.string(),
+      callButtonText: z.string(),
+      navItems: z.array(
+        z.object({
+          text: z.string(),
+          url: z.string(),
+          hasDropdown: z.boolean().default(false),
+        })
+      ),
+    }),
+    locationHero: z.object({
+      header: z.string(),
+      subheaderHighlight: z.string(),
+      description: z.string(),
+      locationInfo: z.object({
+        title: z.string(),
+        addressLine1: z.string(),
+        addressLine2: z.string(),
+        email: z.string(),
+        phone: z.string(),
+        hours: z.string(),
+        buttonText: z.string(),
+      }),
+    }),
+    disorders: z.object({
+      heading: z.string(),
+      headingTwo_Part_1: z.string(),
+      headingTwo_Part_2: z.string(),
+      headingTwo_Part_3: z.string(),
+      disorders: z.array(z.object({
+        link: z.string(),
+        title: z.string(),
+        image: z.string(),
+      })),
+    }),
+    cta: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
+      image: z.string(),
+      altText: z.string(),
+      phoneText: z.string(),
+      phoneNumber: z.string(),
+    }),
+  }),
+};
+
+const treatmentCollection = {
+  type: "data",
+  schema: z.object({
+    hero: z.object({
+      heading: z.string(),
+      text: z.string(),
+    }),
+    disorders: z.object({
+      heading: z.string(),
+      headingTwo_Part_1: z.string(),
+      headingTwo_Part_2: z.string(),
+      headingTwo_Part_3: z.string(),
+      disorders: z.array(z.object({
+        link: z.string(),
+        title: z.string(),
+        image: z.string(),
+      })),
+    }),
+  }),
+};
+
 export const collections = {
   blog: blogCollection,
   general: generalCollection,
@@ -594,5 +834,9 @@ export const collections = {
   program: programCollection,
   programarchive: programarchiveCollection,
   team: teamCollection,
-  treatmentarchive: treatmentarchiveCollection
+  treatmentarchive: treatmentarchiveCollection,
+  blogpage: blogpageCollection,
+  insurance: insuranceCollection,
+  location: locationCollection,
+  treatment: treatmentCollection
 };

@@ -1,0 +1,76 @@
+{
+  
+  "hero": {
+    "heading": "Transformative Transcranial Magnetic Stimulation (TMS) at Clear Path",
+    "text": "Experience innovative treatment for depression, anxiety, and more with our non-invasive TMS therapy.",
+    "buttonText": "Get Started",
+    "phoneQuestionText": "Have a question?",
+    "treatmentsLabel": "Treatments",
+    "callButtonText": "Call",
+    "navItems": [
+      {
+        "text": "Treatments",
+        "url": "#",
+        "hasDropdown": true
+      },
+      {
+        "text": "Locations",
+        "url": "#",
+        "hasDropdown": false
+      },
+      {
+        "text": "Pricing",
+        "url": "#",
+        "hasDropdown": false
+      },
+      {
+        "text": "Resources",
+        "url": "#",
+        "hasDropdown": false
+      },
+      {
+        "text": "Get Started",
+        "url": "#",
+        "hasDropdown": false
+      }
+    ]}
+    ,
+    "disorders": {
+    "heading": "OUR INSIGHTS",
+    "headingTwo_Part_1": "Expert guidance for your ",
+    "headingTwo_Part_2": "mental health ",
+    "headingTwo_Part_3": "journey",
+    "disorders": [
+      {
+        "link": "/blog/addiction-definition",
+        "title": "Effective Strategies for Managing Depression",
+        "image": "/imgs/Depression_Article.png"
+      },
+      {
+        "link": "/anxiety",
+        "title": "Effective Strategies for Managing Anxiety",
+        "image": "/imgs/Anxiety_Article.png"
+      },
+      {
+        "link": "/adhd",
+        "title": "Effective Strategies for Managing ADHD",
+        "image": "/imgs/ADHD_Article.png"
+      },
+      {
+        "link": "/ptsd",
+        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
+        "image": "/imgs/PTSD_Article.png"
+      }
+    ]
+  }
+  ,
+  "cta": {
+    "heading": "Ready to Start Your Journey to Better Mental Health?",
+    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
+    "buttonText": "Get Started",
+    "image": "/imgs/mental_health_support.png",
+    "altText": "Mental health support",
+    "phoneText": "Have a question?",
+    "phoneNumber": "(123) 456-7890"
+  }
+}

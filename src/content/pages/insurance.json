@@ -1,0 +1,163 @@
+{
+  "hero": {
+    "heading": "Insurance Verification",
+    "text": "Learn about our insurance coverage options for addiction and mental health treatment",
+    "buttonText": "Verify Insurance",
+    "phoneQuestionText": "Questions about insurance?",
+    "treatmentsLabel": "Insurance",
+    "callButtonText": "Call Now",
+    "navItems": [
+      {
+        "text": "Treatments",
+        "url": "#",
+        "hasDropdown": true
+      },
+      {
+        "text": "Locations",
+        "url": "#",
+        "hasDropdown": false
+      },
+      {
+        "text": "Pricing",
+        "url": "#",
+        "hasDropdown": false
+      },
+      {
+        "text": "Resources",
+        "url": "#",
+        "hasDropdown": false
+      },
+      {
+        "text": "Get Started",
+        "url": "#",
+        "hasDropdown": false
+      }
+    ]
+  },
+  "contactHero": {
+    "title": {
+      "line1": "Insurance",
+      "line2": "Verification",
+      "line3": "at ClearPath"
+    },
+    "description": "Starting your recovery journey can seem daunting, especially when considering the financial aspects. At ClearPath, we're committed to removing barriers to treatment by working with most major insurance providers. Our dedicated team will verify your insurance benefits and explain your coverage options for addiction and mental health treatment. We believe everyone deserves access to quality care without financial stress.",
+    "bottomDescription": "Don't see your provider listed? Contact us to discuss other options. We're here to help you find a path to recovery that works for your situation.",
+    "formTitle": "Verify Your Insurance Benefits",
+    "formSubtitle": "Complete the form below, and our admissions team will contact you promptly with your coverage details.",
+    "insuranceProviders": [
+      { "name": "Blue Cross Blue Shield" },
+      { "name": "Aetna" },
+      { "name": "Cigna" },
+      { "name": "UnitedHealthcare" },
+      { "name": "Humana" },
+      { "name": "And many more" }
+    ],
+    "privacyNotice": "Your information is confidential and protected by HIPAA regulations. We respect your privacy and will only use this information to verify your insurance benefits."
+  },
+  "insuranceProviders": {
+    "heading": "Insurance Companies We Work With",
+    "subheading": "ClearPath partners with numerous insurance providers to ensure you receive the coverage you deserve for your recovery journey. Our team will help you navigate your insurance benefits.",
+    "buttonText": "Get Started",
+    "callText": "Have a question?",
+    "phoneNumber": "(123) 456-7890",
+    "footerText": "Don't see your insurance provider listed? We work with many more companies and plans. Contact our team to verify your specific coverage.",
+    "verifyButtonText": "Check Your Coverage Now",
+    "providers": [
+      {
+        "name": "Blue Cross Blue Shield",
+        "description": "Coverage for mental health and substance abuse treatment",
+        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/7e6dc01b6b652281c476ad8c31d39e70bba9efb3?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+      },
+      {
+        "name": "Aetna",
+        "description": "Comprehensive addiction treatment coverage options",
+        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/1f621116f916091310ed95608e2ba5aab785ff73?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+      },
+      {
+        "name": "Cigna",
+        "description": "Behavioral health services and substance abuse treatment",
+        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/fa312405d3b348efb65494738dfb54ab5d7163be?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+      },
+      {
+        "name": "United Healthcare",
+        "description": "Mental health and substance use disorder services",
+        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/0e928467bdbb2cfbe5e71531740124722cde11a8?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+      },
+      {
+        "name": "Humana",
+        "description": "Behavioral health and substance abuse treatment benefits",
+        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/c851e31e484aefc25669c738f82db380e37319e9?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+      },
+      {
+        "name": "Anthem",
+        "description": "Behavioral health coverage for addiction treatment",
+        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/fb44a36610820f7e62c13822e6c9e380a1c7c7fe?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+      },
+      {
+        "name": "Kaiser Permanente",
+        "description": "Chemical dependency and mental health treatment",
+        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/8ff8e4cbbce70b6b24a60f9a7f545554bba4218f?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+      },
+      {
+        "name": "Other Providers",
+        "description": "Contact us to verify coverage with your specific provider",
+        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/95d11ada50f76b90d9751d516241f047f10f0eb3?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+      }
+    ]
+  },
+  "testimonials": {
+    "list": [
+    {
+      "name": "Veronica L.",
+      "position": "Client from United States",
+      "text": "Clearpath gave me the strength to overcome my anxiety. The compassionate therapists provided unwavering support, and I've found a renewed sense of purpose andtranquility in my life.",
+      "image": "/imgs/testimonial_1.png"
+    },
+    {
+      "name": "Pushpender Singh",
+      "position": "Client from Florida",
+      "text": "Clearpath helped me regain control of my life. The personalized treatment plan and the caring staff made all the difference. I am now on a path to recovery and happiness.",
+      "image": "/imgs/testimonial_1.png"
+    }
+  ]},
+  "cta": {
+    "heading": "Begin Your Recovery Journey Today",
+    "text": "Our admissions team is available 24/7 to answer your questions and guide you through the insurance verification process.",
+    "buttonText": "Verify Insurance Now",
+    "image": "/cta-image.jpg",
+    "altText": "Person speaking with insurance representative",
+    "phoneText": "Call us anytime",
+    "phoneNumber": "888-123-4567"
+  },
+  "insuranceVerification": {
+    "title": {
+      "line1": "Fast, Confidential &",
+      "line2": "No-Obligation"
+    },
+    "description": "Our insurance verification process is designed to be quick and straightforward. We understand that seeking treatment is a significant decision, and we're here to make at least one part of that process easier.",
+    "features": [
+      {
+        "text": "Most verifications are completed within 24 hours"
+      },
+      {
+        "text": "Your information is completely confidential and protected"
+      },
+      {
+        "text": "No obligation to proceed with treatment after verification"
+      },
+      {
+        "text": "We advocate for maximum coverage on your behalf"
+      }
+    ],
+    "cta": {
+      "heading": "Need Immediate Assistance?",
+      "subheading": "Our admissions team is available 24/7 to help you verify your insurance benefits right now.",
+      "buttonText": "Get Started",
+      "callText": "Have a question?",
+      "phoneNumber": "(123) 456-7890"
+    }
+  }
+}
+
+
+

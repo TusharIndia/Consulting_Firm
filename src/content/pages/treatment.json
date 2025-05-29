@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "heading": "Effective Treatments for Mental Health Disorders",
+    "text": "Our evidence-based treatment approaches focus on helping you overcome mental health challenges and improve your quality of life."
+  },
+  "disorders": {
+    "heading": "OUR INSIGHTS",
+    "headingTwo_Part_1": "Expert guidance for your ",
+    "headingTwo_Part_2": "mental health ",
+    "headingTwo_Part_3": "journey",
+    "disorders": [
+      {
+        "link": "/depression",
+        "title": "Effective Strategies for Managing Depression",
+        "image": "/imgs/Depression_Article.png"
+      },
+      {
+        "link": "/anxiety",
+        "title": "Effective Strategies for Managing Anxiety",
+        "image": "/imgs/Anxiety_Article.png"
+      },
+      {
+        "link": "/adhd",
+        "title": "Effective Strategies for Managing ADHD",
+        "image": "/imgs/ADHD_Article.png"
+      },
+      {
+        "link": "/ptsd",
+        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
+        "image": "/imgs/PTSD_Article.png"
+      }
+    ]
+  }
+}

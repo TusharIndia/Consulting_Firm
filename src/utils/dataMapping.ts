@@ -3,6 +3,7 @@ import type { Blog } from "../types/blog";
 import type { General } from "../types/general";
 import type {
   About,
+  BlogPage,
   Contact,
   Home,
   Admissions,
@@ -10,6 +11,9 @@ import type {
   Programarchive,
   Team,
   Treatmentarchive,
+  Insurance,
+  Location,
+  Treatment
 } from "../types/pages";
 
 export async function fetchBlogData(): Promise<Blog[]> {
@@ -127,10 +131,40 @@ export async function fetchContactData(): Promise<Contact> {
       hero: {
         heading: contact.data.hero.heading,
         text: contact.data.hero.text,
+        buttonText: contact.data.hero.buttonText,
+        phoneQuestionText: contact.data.hero.phoneQuestionText,
+        treatmentsLabel: contact.data.hero.treatmentsLabel,
+        callButtonText: contact.data.hero.callButtonText,
+        navItems: contact.data.hero.navItems.map((item) => ({
+          text: item.text,
+          url: item.url,
+          hasDropdown: item.hasDropdown,
+        })),
       },
-      contact: {
-        heading: contact.data.contact.heading,
-        description: contact.data.contact.description,
+      
+      testimonials: {
+        list: contact.data.testimonials.list.map((testimonial) => ({
+          name: testimonial.name,
+          position: testimonial.position,
+          text: testimonial.text,
+          image: testimonial.image,
+        })),
+      },
+      
+      contactHero: {
+    
+        address: contact.data.contactHero.address,
+        email: contact.data.contactHero.email,
+        phone: contact.data.contactHero.phone,
+        formHeading: contact.data.contactHero.formHeading,
+        emergencyHeading: contact.data.contactHero.emergencyHeading,
+        emergencyText: contact.data.contactHero.emergencyText,
+        supportHeading: contact.data.contactHero.supportHeading,
+        businessHours: {
+          heading: contact.data.contactHero.businessHours.heading,
+          hours: contact.data.contactHero.businessHours.hours,
+          weekend: contact.data.contactHero.businessHours.weekend,
+        },
       },
     },
   };
@@ -684,6 +718,219 @@ export async function fetchTreatmentarchive(): Promise<Treatmentarchive> {
         faq: treatmentArchive.data.faq.faq.map((question) => ({
           title: question.title,
           details: question.details,
+        })),
+      },
+    },
+  };
+}
+
+export async function fetchBlogPageData(): Promise<BlogPage> {
+  const [blogPage] = await getCollection("pages", (page) => page.id === "blog");
+
+  return {
+    data: {
+      hero: {
+        heading: blogPage.data.hero.heading,
+        text: blogPage.data.hero.text,
+        buttonText: blogPage.data.hero.buttonText,
+        phoneQuestionText: blogPage.data.hero.phoneQuestionText,
+        treatmentsLabel: blogPage.data.hero.treatmentsLabel,
+        callButtonText: blogPage.data.hero.callButtonText,
+        navItems: blogPage.data.hero.navItems.map((item) => ({
+          text: item.text,
+          url: item.url,
+          hasDropdown: item.hasDropdown,
+        })),
+      },
+       disorders: {
+        heading: blogPage.data.disorders.heading,
+        headingTwo_Part_1: blogPage.data.disorders.headingTwo_Part_1,
+        headingTwo_Part_2: blogPage.data.disorders.headingTwo_Part_2,
+        headingTwo_Part_3: blogPage.data.disorders.headingTwo_Part_3,
+        disorders: blogPage.data.disorders.disorders.map((disorder) => ({
+          link: disorder.link,
+          title: disorder.title,
+          image: disorder.image,
+        })),
+      },
+      cta: {
+        heading: blogPage.data.cta.heading,
+        text: blogPage.data.cta.text,
+        buttonText: blogPage.data.cta.buttonText,
+        image: blogPage.data.cta.image,
+        altText: blogPage.data.cta.altText,
+        phoneText: blogPage.data.cta.phoneText,
+        phoneNumber: blogPage.data.cta.phoneNumber,
+      },
+    },
+  };
+}
+
+export async function fetchInsuranceData(): Promise<Insurance> {
+  const [insurance] = await getCollection("pages", (page) => page.id === "insurance");
+
+  return {
+    data: {
+      hero: {
+        heading: insurance.data.hero.heading,
+        text: insurance.data.hero.text,
+        buttonText: insurance.data.hero.buttonText,
+        phoneQuestionText: insurance.data.hero.phoneQuestionText,
+        treatmentsLabel: insurance.data.hero.treatmentsLabel,
+        callButtonText: insurance.data.hero.callButtonText,
+        navItems: insurance.data.hero.navItems.map((item) => ({
+          text: item.text,
+          url: item.url,
+          hasDropdown: item.hasDropdown,
+        })),
+      },
+      contactHero: {
+        title: {
+          line1: insurance.data.contactHero.title.line1,
+          line2: insurance.data.contactHero.title.line2,
+          line3: insurance.data.contactHero.title.line3,
+        },
+        description: insurance.data.contactHero.description,
+        bottomDescription: insurance.data.contactHero.bottomDescription,
+        formTitle: insurance.data.contactHero.formTitle,
+        formSubtitle: insurance.data.contactHero.formSubtitle,
+        insuranceProviders: insurance.data.contactHero.insuranceProviders.map((provider) => ({
+          name: provider.name,
+        })),
+        privacyNotice: insurance.data.contactHero.privacyNotice,
+      },
+      insuranceProviders: {
+        heading: insurance.data.insuranceProviders.heading,
+        subheading: insurance.data.insuranceProviders.subheading,
+        buttonText: insurance.data.insuranceProviders.buttonText,
+        callText: insurance.data.insuranceProviders.callText,
+        phoneNumber: insurance.data.insuranceProviders.phoneNumber,
+        footerText: insurance.data.insuranceProviders.footerText,
+        verifyButtonText: insurance.data.insuranceProviders.verifyButtonText,
+        providers: insurance.data.insuranceProviders.providers.map((provider) => ({
+          name: provider.name,
+          description: provider.description,
+          logo: provider.logo,
+        })),
+      },
+      testimonials: {
+        list: insurance.data.testimonials.list.map((testimonial) => ({
+          name: testimonial.name,
+          position: testimonial.position,
+          text: testimonial.text,
+          image: testimonial.image,
+        })),
+      },
+      cta: {
+        heading: insurance.data.cta.heading,
+        text: insurance.data.cta.text,
+        buttonText: insurance.data.cta.buttonText,
+        image: insurance.data.cta.image,
+        altText: insurance.data.cta.altText,
+        phoneText: insurance.data.cta.phoneText,
+        phoneNumber: insurance.data.cta.phoneNumber,
+      },
+      insuranceVerification: {
+        title: {
+          line1: insurance.data.insuranceVerification.title.line1,
+          line2: insurance.data.insuranceVerification.title.line2,
+        },
+        description: insurance.data.insuranceVerification.description,
+        features: insurance.data.insuranceVerification.features.map((feature) => ({
+          text: feature.text,
+        })),
+        cta: {
+          heading: insurance.data.insuranceVerification.cta.heading,
+          subheading: insurance.data.insuranceVerification.cta.subheading,
+          buttonText: insurance.data.insuranceVerification.cta.buttonText,
+          callText: insurance.data.insuranceVerification.cta.callText,
+          phoneNumber: insurance.data.insuranceVerification.cta.phoneNumber,
+        },
+      },
+    },
+  };
+}
+
+export async function fetchLocationData(): Promise<Location> {
+  const [locationData] = await getCollection(
+    "pages",
+    (page) => page.id === "location"
+  );
+
+  return {
+    data: {
+      hero: {
+        heading: locationData.data.hero.heading,
+        text: locationData.data.hero.text,
+        buttonText: locationData.data.hero.buttonText,
+        phoneQuestionText: locationData.data.hero.phoneQuestionText,
+        treatmentsLabel: locationData.data.hero.treatmentsLabel,
+        callButtonText: locationData.data.hero.callButtonText,
+        navItems: locationData.data.hero.navItems.map((item: any) => ({
+          text: item.text,
+          url: item.url,
+          hasDropdown: item.hasDropdown,
+        })),
+      },
+      locationHero: {
+        header: locationData.data.locationHero.header,
+        subheaderHighlight: locationData.data.locationHero.subheaderHighlight,
+        description: locationData.data.locationHero.description,
+        locationInfo: {
+          title: locationData.data.locationHero.locationInfo.title,
+          addressLine1: locationData.data.locationHero.locationInfo.addressLine1,
+          addressLine2: locationData.data.locationHero.locationInfo.addressLine2,
+          email: locationData.data.locationHero.locationInfo.email,
+          phone: locationData.data.locationHero.locationInfo.phone,
+          hours: locationData.data.locationHero.locationInfo.hours,
+          buttonText: locationData.data.locationHero.locationInfo.buttonText,
+        },
+      },
+      disorders: {
+        heading: locationData.data.disorders.heading,
+        headingTwo_Part_1: locationData.data.disorders.headingTwo_Part_1,
+        headingTwo_Part_2: locationData.data.disorders.headingTwo_Part_2,
+        headingTwo_Part_3: locationData.data.disorders.headingTwo_Part_3,
+        disorders: locationData.data.disorders.disorders.map((disorder: any) => ({
+          link: disorder.link,
+          title: disorder.title,
+          image: disorder.image,
+        })),
+      },
+      cta: {
+        heading: locationData.data.cta.heading,
+        text: locationData.data.cta.text,
+        buttonText: locationData.data.cta.buttonText,
+        image: locationData.data.cta.image,
+        altText: locationData.data.cta.altText,
+        phoneText: locationData.data.cta.phoneText,
+        phoneNumber: locationData.data.cta.phoneNumber,
+      },
+    },
+  };
+}
+
+export async function fetchTreatmentData(): Promise<Treatment> {
+  const [treatment] = await getCollection(
+    "pages",
+    (page) => page.id === "treatment"
+  );
+
+  return {
+    data: {
+      hero: {
+        heading: treatment.data.hero.heading,
+        text: treatment.data.hero.text,
+      },
+      disorders: {
+        heading: treatment.data.disorders.heading,
+        headingTwo_Part_1: treatment.data.disorders.headingTwo_Part_1,
+        headingTwo_Part_2: treatment.data.disorders.headingTwo_Part_2,
+        headingTwo_Part_3: treatment.data.disorders.headingTwo_Part_3,
+        disorders: treatment.data.disorders.disorders.map((disorder: any) => ({
+          link: disorder.link,
+          title: disorder.title,
+          image: disorder.image,
         })),
       },
     },
