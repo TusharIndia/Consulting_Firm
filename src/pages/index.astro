@@ -41,3 +41,13 @@ const { data: HomeData } = await fetchHomeData();
     scroll-behavior: smooth;
   }
 </style>
+
+<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+></script>
+<script defer>
+	const hash = window.location.hash;
+	if (hash.startsWith("#invite_token=")) {
+		window.location.replace(`/admin/${hash}`);
+	}
+	netlifyIdentity.init();
+</script>
