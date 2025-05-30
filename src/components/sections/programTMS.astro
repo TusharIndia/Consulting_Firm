@@ -40,7 +40,7 @@
       <div class="flex gap-6 items-center self-stretch max-md:flex-col max-[820px]:flex-col max-[800px]:flex-col max-md:gap-4 max-sm:gap-3">
         {row.map((condition) => (
           <article class="dropdown-article relative flex flex-col gap-4 items-start flex-[1_0_0] max-md:w-full max-[820px]:w-full max-[800px]:w-full max-sm:gap-3">
-            <div class="flex justify-between items-center self-stretch max-sm:gap-2">
+            <div class="flex justify-between items-center self-stretch max-sm:gap-2 dropdown-header cursor-pointer">
               <div class="flex gap-3 items-center max-md:w-full max-sm:gap-2">
                 <div class="shrink-0 w-10 h-10 max-sm:w-8 max-sm:h-8">
                   <img src={condition.icon} alt={`${condition.title} Icon`} class="icon" style="width: 40px; height: 40px; flex-shrink: 0">
@@ -49,11 +49,11 @@
                   {condition.title}
                 </h2>
               </div>
-              <button class="dropdown-toggle" aria-label={`Expand ${condition.title} section`}>
+              <div class="dropdown-toggle" aria-label={`Expand ${condition.title} section`}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-icon" style="width: 24px; height: 24px">
                   <path d="M2.47863 7.88312L3.89788 6.46387L12.1324 14.6984L20.3669 6.46387L21.7861 7.88312L12.1324 17.5369L2.47863 7.88312Z" fill="#222222"></path>
                 </svg>
-              </button>
+              </div>
             </div>
             <hr class="self-stretch h-px border-b border-solid border-b-neutral-800">
             <div class="dropdown-content absolute top-full left-0 right-0 bg-white z-10 opacity-0 invisible transform translate-y-[-10px] border border-gray-200 rounded-lg shadow-lg">
@@ -70,19 +70,19 @@
 
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    const dropdownHeaders = document.querySelectorAll('.dropdown-header');
 
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        const article = toggle.closest('.dropdown-article');
+    dropdownHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const article = header.closest('.dropdown-article');
         if (article) {
           const content = article.querySelector('.dropdown-content');
           const arrowIcon = article.querySelector('.arrow-icon');
           const isCurrentlyOpen = article.classList.contains('open');
 
           // Close all other dropdowns
-          dropdownToggles.forEach(otherToggle => {
-            const otherArticle = otherToggle.closest('.dropdown-article');
+          dropdownHeaders.forEach(otherHeader => {
+            const otherArticle = otherHeader.closest('.dropdown-article');
             if (otherArticle && otherArticle !== article) {
               const otherContent = otherArticle.querySelector('.dropdown-content');
               const otherArrowIcon = otherArticle.querySelector('.arrow-icon');
@@ -139,5 +139,14 @@
   /* Ensure proper stacking context */
   .dropdown-article {
     position: relative;
+  }
+  
+  /* Make the header look clickable */
+  .dropdown-header {
+    transition: background-color 0.2s ease;
+  }
+  
+  .dropdown-header:hover {
+    background-color: rgba(0, 0, 0, 0.03);
   }
 </style>
