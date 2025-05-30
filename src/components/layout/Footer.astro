@@ -70,6 +70,7 @@ const { footer, logo, companyName } = Data;
 </footer>
 <script defer>
 document.addEventListener("DOMContentLoaded", () => {
+  // Back to top button functionality
   const backToTopButton = document.getElementById("back-to-top");
   if (backToTopButton) {
     backToTopButton.addEventListener("click", (event) => {
@@ -77,5 +78,27 @@ document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
+  
+  // Handle hash navigation
+  const handleHashNavigation = () => {
+    // Get the hash from the URL (remove the leading '#' if present)
+    const hash = window.location.hash.replace(/^#\/?/, '');
+    
+    if (hash) {
+      // Give the page a moment to fully render before scrolling
+      setTimeout(() => {
+        const targetElement = document.getElementById(hash);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+  
+  // Handle hash navigation on page load
+  handleHashNavigation();
+  
+  // Also handle hash changes without page reload
+  window.addEventListener('hashchange', handleHashNavigation);
 });
 </script>
