@@ -210,6 +210,7 @@
   },
   "faq": {
     "heading": "Frequently Asked Questions",
+    "subheading": "Find answers to common questions about our services and support",
     "faq": [
       {
         "title": " What is Medication-Assisted Treatment?",
@@ -448,31 +449,37 @@
       [
         {
           "title": "Depression",
-          "icon": "/imgs/program/Depression.svg"
+          "icon": "/imgs/program/Depression.svg",
+          "description": "TMS is particularly effective for individuals with treatment-resistant depression, providing a non-invasive alternative to medication."
         },
         {
           "title": "Stress and Insomnia",
-          "icon": "/imgs/program/Stress and Insomnia.svg"
+          "icon": "/imgs/program/Stress and Insomnia.svg",
+          "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if TMS is the right treatment option for their needs."
         }
       ],
       [
         {
           "title": "Anxiety Disorders",
-          "icon": "/imgs/program/Anxiety Disorders.svg"
+          "icon": "/imgs/program/Anxiety Disorders.svg",
+          "description": "TMS can help alleviate symptoms of anxiety disorders, providing relief for those who have not responded well to traditional treatments."
         },
         {
           "title": "Post-Traumatic Stress Disorder (PTSD)",
-          "icon": "/imgs/program/Post-Traumatic Stress Disorder (PTSD).svg"
+          "icon": "/imgs/program/Post-Traumatic Stress Disorder (PTSD).svg",
+          "description": "TMS is used to treat PTSD by targeting brain areas involved in emotional regulation, helping to reduce intrusive thoughts and hyperarousal symptoms."
         }
       ],
       [
         {
           "title": "Obsessive-Compulsive Disorder (OCD)",
-          "icon": "/imgs/program/Obsessive-Compulsive Disorder (OCD).svg"
+          "icon": "/imgs/program/Obsessive-Compulsive Disorder (OCD).svg",
+          "description": "TMS can be effective in reducing the severity of OCD symptoms, particularly for those who have not found relief through other therapies."
         },
         {
           "title": "Bipolar Disorder",
-          "icon": "/imgs/program/Bipolar Disorder.svg"
+          "icon": "/imgs/program/Bipolar Disorder.svg",
+          "description": "TMS is used as an adjunctive treatment for bipolar disorder, helping to stabilize mood and reduce depressive episodes."
         }
       ]
     ]

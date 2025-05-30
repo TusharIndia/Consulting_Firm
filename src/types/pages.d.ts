@@ -54,6 +54,7 @@ export interface About {
     };
     faq: {
       heading: string;
+      subheading: string;
       faq: {
         title: string;
         details: string;
@@ -216,6 +217,7 @@ export interface Home {
     };
     faq: {
       heading: string;
+      subheading: string;
       faq: {
         title: string;
         details: string;
@@ -286,6 +288,7 @@ export interface Admissions {
     };
     faq: {
       heading: string;
+      subheading: string;
       faq: {
         title: string;
         details: string;
@@ -395,6 +398,7 @@ export interface Program {
     };
     faq: {
       heading: string;
+      subheading: string;
       faq: {
         title: string;
         details: string;
@@ -510,6 +514,7 @@ export interface Program {
       conditions: Array<Array<{
         title: string;
         icon: string;
+        description: string;
       }>>;
     };
       
@@ -581,6 +586,7 @@ export interface Programarchive {
     };
     faq: {
       heading: string;
+      subheading: string;
       faq: Array<{
         title: string;
         details: string;
@@ -612,6 +618,7 @@ export interface Team {
     };
     faq: {
       heading: string;
+      subheading: string;
       faq: Array<{
         title: string;
         details: string;
@@ -693,6 +700,7 @@ export interface Treatmentarchive {
     };
     faq: {
       heading: string;
+      subheading: string;
       faq: {
         title: string;
         details: string;

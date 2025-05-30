@@ -131,6 +131,7 @@ export async function fetchAboutData(): Promise<About> {
       },
       faq: {
         heading: about.data.faq.heading,
+        subheading: about.data.faq.subheading,
         faq: about.data.faq.faq.map((q) => ({
           title: q.title,
           details: q.details,
@@ -305,6 +306,7 @@ export async function fetchHomeData(): Promise<Home> {
       },
       faq: {
         heading: home.data.faq.heading,
+        subheading: home.data.faq.subheading,
         faq: home.data.faq.faq.map((faq) => ({
           title: faq.title,
           details: faq.details,
@@ -383,6 +385,7 @@ export async function fetchAdmissions(): Promise<Admissions> {
       },
       faq: {
         heading: admissions.data.faq.heading,
+        subheading: admissions.data.faq.subheading,
         faq: admissions.data.faq.faq.map((faqItem) => ({
           title: faqItem.title,
           details: faqItem.details,
@@ -533,6 +536,7 @@ export async function fetchSubProgramData(sub_page): Promise<Program> {
       },
       faq: {
         heading: programData.data.faq.heading,
+        subheading: programData.data.faq.subheading,
         faq: programData.data.faq.faq.map((item: any) => ({
           title: item.title,
           details: item.details,
@@ -613,7 +617,8 @@ export async function fetchSubProgramData(sub_page): Promise<Program> {
         conditions: programData.data.programTMS.conditions.map((row: any) => 
           row.map((condition: any) => ({
             title: condition.title,
-            icon: condition.icon
+            icon: condition.icon,
+            description: condition.description
           }))
         ),
       },
@@ -919,6 +924,7 @@ export async function fetchProgramarchiveData(): Promise<Programarchive> {
       },
       faq: {
         heading: programData.data.faq.heading,
+        subheading: programData.data.faq.subheading,
         faq: programData.data.faq.faq.map((item: any) => ({
           title: item.title,
           details: item.details,
@@ -957,6 +963,7 @@ export async function fetchTeamData(): Promise<Team> {
       },
       faq: {
         heading: team.data.faq.heading,
+        subheading: team.data.faq.subheading,
         faq: team.data.faq.faq.map((item) => ({
           title: item.title,
           details: item.details,
@@ -1047,6 +1054,7 @@ export async function fetchTreatmentarchive(): Promise<Treatmentarchive> {
       },
       faq: {
         heading: treatmentArchive.data.faq.heading,
+        subheading: treatmentArchive.data.faq.subheading,
         faq: treatmentArchive.data.faq.faq.map((question) => ({
           title: question.title,
           details: question.details,

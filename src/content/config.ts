@@ -112,6 +112,7 @@ const aboutCollection = defineCollection({
     }),
     faq: z.object({
       heading: z.string(),
+      subheading: z.string(),
       faq: z.array(
         z.object({
           title: z.string(),
@@ -244,6 +245,7 @@ const homeCollection = {
     }),
     faq: z.object({
       heading: z.string(),
+      subheading: z.string(),
       faq: z.array(z.object({
         title: z.string(),
         details: z.string(),
@@ -317,6 +319,7 @@ const admissionsCollection = defineCollection({
     }),
     faq: z.object({
       heading: z.string(),
+      subheading: z.string(),
       faq: z.array(
         z.object({
           title: z.string(),
@@ -435,6 +438,7 @@ const programCollection = {
     }),
     faq: z.object({
       heading: z.string(),
+      subheading: z.string(),
       faq: z.array(z.object({
         title: z.string(),
         details: z.string(),
@@ -583,6 +587,7 @@ export const programarchiveCollection = {
     }),
     faq: z.object({
       heading: z.string(),
+      subheading: z.string(),
       faq: z.array(
         z.object({
           title: z.string(),
@@ -619,6 +624,7 @@ export const teamCollection = {
     }),
     faq: z.object({
       heading: z.string(),
+      subheading: z.string(),
       faq: z.array(
         z.object({
           title: z.string(),
@@ -709,6 +715,7 @@ const treatmentarchiveCollection = {
     }),
     faq: z.object({
       heading: z.string(),
+      subheading: z.string(),
       faq: z.array(
         z.object({
           title: z.string(),

@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.qodo/
+Disallow: /.vscode/
+Disallow: /.astro/
+
+# Prevent crawling of potential sensitive or development areas
+Disallow: /config/
+
+# Allow Google to crawl images
+User-agent: Googlebot-Image
+Allow: /public/
+Allow: /imgs/
+
+# Allow main content areas explicitly
+Allow: /blog/
+Allow: /treatment/
+Allow: /about/
+Allow: /program/
+
+# Sitemap locations
+Sitemap: https://clearpath-25.netlify.app/sitemap-index.xml

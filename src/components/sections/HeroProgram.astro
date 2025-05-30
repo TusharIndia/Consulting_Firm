@@ -1,18 +1,27 @@
 ---
 import Button from "../Button.astro";
 import Form from "../Form.astro";
-import { Icon } from "astro-icon/components";
+
 const GeneralData = Astro.props.GeneralData;
-const { heading, text, buttonText, phoneQuestionText, treatmentsLabel, callButtonText, navItems , hideButton =false} = Astro.props.Content;
+const { heading, text, buttonText, phoneQuestionText, treatmentsLabel, callButtonText, navItems , hideButton = false } = Astro.props.Content;
 ---
 
 <section class="mx-auto my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl relative">
   <div class="rounded-none">
     <section class="flex flex-col px-20 pt-3 pb-20 w-full bg-purple-900 rounded-3xl max-md:px-5 max-md:max-w-full">
       <nav class="flex flex-wrap gap-10 justify-between items-center w-full text-base max-md:max-w-full">
-        <img src="/imgs/hero_logo.png" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[4.67] w-[159px]">
+        <a href="/">
+          <img src="/imgs/hero_logo.png" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[4.67] w-[159px]">
+        </a>
+        <div class="md:hidden">
+          <button id="hamburgerButton" aria-label="Open menu" aria-expanded="false" class="text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
 
-        <ul class="flex flex-wrap gap-10 items-center self-stretch my-auto text-white min-w-60 max-md:max-w-full">
+        <ul class="hidden md:flex flex-wrap gap-10 items-center self-stretch my-auto text-white min-w-60">
           {navItems.map((item) => (
             <li class="group relative self-stretch my-auto whitespace-nowrap">
               <a href={item.url} class="text-white self-stretch my-auto flex items-center">
@@ -62,10 +71,45 @@ const { heading, text, buttonText, phoneQuestionText, treatmentsLabel, callButto
           ))}
         </ul>
 
-        <a href={`tel:${GeneralData.phoneNumber}`} class="flex flex-col justify-center self-stretch px-5 py-2 my-auto text-blue-900 bg-white min-h-10 rounded-[50px]">
+        <a href={`tel:${GeneralData.phoneNumber}`} class="hidden lg:flex flex-col justify-center self-stretch px-5 py-2 my-auto text-blue-900 bg-white min-h-10 rounded-[50px]">
           <span class="gap-1 self-stretch">{callButtonText} {GeneralData.phoneNumber}</span>
         </a>
       </nav>
+
+      <div id="mobileNav" class="fixed inset-0 z-50 bg-white text-purple-900 p-6 hidden flex-col md:hidden">
+        <div class="flex justify-between items-center mb-8">
+          <img src="/imgs/hero_logo.png" alt="Company Logo Mobile" class="object-contain shrink-0 h-10">
+          <button id="closeMobileNavButton" aria-label="Close menu" class="focus:outline-none">
+            <svg class="w-8 h-8 text-purple-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="flex flex-col items-start gap-4 text-xl overflow-y-auto flex-grow">
+          {navItems.map((item) => (
+            <li class="w-full">
+              <a href={item.url} class="hover:text-amber-500 py-2 block font-medium">{item.text}</a>
+              {/* Display sublinks directly if they exist */}
+              {(item.sublinks && item.sublinks.length > 0 || item.sublinks2 && item.sublinks2.length > 0) && (
+                <ul class="pl-4 mt-1 space-y-1 text-lg">
+                  {item.sublinks && item.sublinks.map((sublink) => (
+                    <li><a href={sublink.link} class="hover:text-amber-500 py-1 block text-gray-700">{sublink.text}</a></li>
+                  ))}
+                  {item.sublinks2 && item.sublinks2.map((sublink) => (
+                    <li><a href={sublink.link} class="hover:text-amber-500 py-1 block text-gray-700">{sublink.text}</a></li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+          <li class="mt-auto pt-6 w-full"> {/* Pushes to bottom */}
+            <a href={`tel:${GeneralData.phoneNumber}`} class="block w-full text-center px-6 py-3.5 text-lg font-semibold text-white bg-purple-800 rounded-[50px] hover:bg-purple-700">
+              {callButtonText} {GeneralData.phoneNumber}
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <section class="flex flex-col items-center self-center mt-20 max-w-full w-[566px] max-md:mt-10">
         <span class="px-9 py-1.5 w-40 max-w-full text-base text-blue-900 whitespace-nowrap bg-white rounded-[50px] max-md:px-5">
@@ -79,19 +123,72 @@ const { heading, text, buttonText, phoneQuestionText, treatmentsLabel, callButto
           {text}
         </p>
 
-        {hideButton ==false &&<div class="flex flex-wrap gap-3 self-stretch mt-3 w-full max-md:max-w-full">
-          <a href="/contact" class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
-            <span>{buttonText}</span>
-          </a>
+        {hideButton == false && (
+          <div class="flex flex-wrap gap-3 self-stretch mt-3 w-full max-md:max-w-full">
+            <a href="/contact" class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
+              <span>{buttonText}</span>
+            </a>
 
-          <a href={`tel:${GeneralData.phoneNumber}`} class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-blue-900 bg-white basis-0 min-w-60 rounded-[50px]">
-            <div class="flex flex-col items-center">
-              <span class="text-xs">{phoneQuestionText}</span>
-              <span class="text-xs font-semibold leading-6">{callButtonText} {GeneralData.phoneNumber}</span>
-            </div>
-          </a>
-        </div>}
+            <a href={`tel:${GeneralData.phoneNumber}`} class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-blue-900 bg-white basis-0 min-w-60 rounded-[50px]">
+              <div class="flex flex-col items-center">
+                <span class="text-xs">{phoneQuestionText}</span>
+                <span class="text-xs font-semibold leading-6">{callButtonText} {GeneralData.phoneNumber}</span>
+              </div>
+            </a>
+          </div>
+        )}
       </section>
     </section>
   </div>
 </section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerButton = document.getElementById('hamburgerButton');
+    const mobileNav = document.getElementById('mobileNav');
+    const closeMobileNavButton = document.getElementById('closeMobileNavButton');
+
+    function toggleMobileNav(show) {
+      if (mobileNav && hamburgerButton) {
+        if (show) {
+          mobileNav.classList.remove('hidden');
+          mobileNav.classList.add('flex'); // Use 'flex' as it's a flex container
+          document.body.style.overflow = 'hidden'; // Prevent body scroll
+          hamburgerButton.setAttribute('aria-expanded', 'true');
+        } else {
+          mobileNav.classList.add('hidden');
+          mobileNav.classList.remove('flex');
+          document.body.style.overflow = ''; // Restore body scroll
+          hamburgerButton.setAttribute('aria-expanded', 'false');
+        }
+      }
+    }
+
+    if (hamburgerButton) {
+      hamburgerButton.addEventListener('click', () => {
+        console.log('Hamburger button clicked');
+        const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true';
+        toggleMobileNav(!isExpanded);
+      });
+    }
+
+    if (closeMobileNavButton) {
+      closeMobileNavButton.addEventListener('click', () => {
+        toggleMobileNav(false);
+      });
+    }
+
+    // Close mobile nav when a link inside it is clicked
+    if (mobileNav) {
+      const mobileNavLinks = mobileNav.querySelectorAll('a');
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          // Check if the nav is actually open before trying to close
+          if (!mobileNav.classList.contains('hidden')) {
+            toggleMobileNav(false);
+          }
+        });
+      });
+    }
+  });
+</script>

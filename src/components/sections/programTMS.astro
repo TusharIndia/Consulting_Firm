@@ -34,13 +34,12 @@
   </div>
 </section>
 
-
 <div class="flex justify-center items-center px-16 py-9 mx-auto w-full max-w-[1400px] bg-white max-md:px-10 max-md:py-6 max-lg:px-12 max-xl:px-14 max-[820px]:px-8 max-[800px]:px-8 max-sm:px-5 max-sm:py-4 max-sm:max-w-screen-sm">
   <section class="flex flex-col shrink-0 gap-6 items-start w-full max-w-[1320px] mx-auto max-md:w-full max-[820px]:w-full max-[800px]:w-full">
-    {Astro.props.Content.conditions.map((row, rowIndex) => (
+    {Astro.props.Content.conditions.map((row) => (
       <div class="flex gap-6 items-center self-stretch max-md:flex-col max-[820px]:flex-col max-[800px]:flex-col max-md:gap-4 max-sm:gap-3">
         {row.map((condition) => (
-          <article class="flex flex-col gap-4 items-start flex-[1_0_0] max-md:w-full max-[820px]:w-full max-[800px]:w-full max-sm:gap-3">
+          <article class="dropdown-article flex flex-col gap-4 items-start flex-[1_0_0] max-md:w-full max-[820px]:w-full max-[800px]:w-full max-sm:gap-3">
             <div class="flex justify-between items-center self-stretch max-sm:gap-2">
               <div class="flex gap-3 items-center max-md:w-full max-sm:gap-2">
                 <div class="shrink-0 w-10 h-10 max-sm:w-8 max-sm:h-8">
@@ -50,16 +49,74 @@
                   {condition.title}
                 </h2>
               </div>
-              <button aria-label={`Expand ${condition.title} section`}>
+              <button class="dropdown-toggle" aria-label={`Expand ${condition.title} section`}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-icon" style="width: 24px; height: 24px">
                   <path d="M2.47863 7.88312L3.89788 6.46387L12.1324 14.6984L20.3669 6.46387L21.7861 7.88312L12.1324 17.5369L2.47863 7.88312Z" fill="#222222"></path>
                 </svg>
               </button>
             </div>
             <hr class="self-stretch h-px border-b border-solid border-b-neutral-800">
+            <div class="dropdown-content hidden">
+              <p class="text-base leading-7 text-neutral-700 mt-2">
+                {condition.description} 
+              </p>
+            </div>
           </article>
         ))}
       </div>
     ))}
   </section>
 </div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const article = toggle.closest('.dropdown-article');
+        if (article) {
+          const content = article.querySelector('.dropdown-content');
+          const arrowIcon = article.querySelector('.arrow-icon');
+
+          if (content) {
+            content.classList.toggle('hidden');
+            article.classList.toggle('open'); // Add/remove 'open' class on the article itself
+
+            // Rotate the arrow icon
+            if (arrowIcon) {
+              arrowIcon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+              arrowIcon.style.transition = 'transform 0.3s ease-in-out'; // Smooth transition
+            }
+          }
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Basic styles for the dropdown content */
+  .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth transition for height */
+  }
+
+  .dropdown-content.hidden {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .dropdown-article.open .dropdown-content {
+    max-height: 500px; /* Adjust this value as needed to accommodate your content */
+    padding-top: 1rem; /* Example padding */
+    padding-bottom: 1rem; /* Example padding */
+  }
+
+  /* Optional: Rotate arrow when open */
+  .dropdown-article.open .arrow-icon {
+    transform: rotate(180deg);
+  }
+</style>
