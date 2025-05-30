@@ -78,7 +78,7 @@ const { Content } = Astro.props;
           {isOddIndex && (
             <div class="flex gap-6 items-start w-full max-md:flex-col max-md:gap-6 max-[820px]:flex-col max-[820px]:gap-5">
               <!-- Current Step -->
-              <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full max-[820px]:w-full step-article overflow-hidden" data-step-id={index}>
+              <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full max-[820px]:w-full step-article relative overflow-visible" data-step-id={index}>
                 <div class="flex justify-between items-center w-full pb-2">
                   <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start max-[820px]:w-full">
                     <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
@@ -98,14 +98,14 @@ const { Content } = Astro.props;
                   </button>
                 </div>
                 <div class="w-full h-px bg-neutral-800 opacity-50"></div>
-                <div class="step-description hidden w-full pt-2 pb-4 text-base leading-7 opacity-80 transition-all duration-300">
-                  <p class="description-text">{step.description}</p>
+                <div class="step-description absolute top-full left-0 right-0 bg-[#f8f5f1] z-10 opacity-0 invisible transform translate-y-[-10px] border border-gray-200 rounded-lg shadow-lg mt-2">
+                  <p class="description-text p-4 text-base leading-7 opacity-80">{step.description}</p>
                 </div>
               </article>
 
               <!-- Next Step (if exists) -->
               {Content.steps[index + 1] && (
-                <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full max-[820px]:w-full step-article overflow-hidden" data-step-id={index + 1}>
+                <article class="flex flex-col gap-3 items-start flex-1 w-[560px] max-md:w-full max-[820px]:w-full step-article relative overflow-visible" data-step-id={index + 1}>
                   <div class="flex justify-between items-center w-full pb-2">
                     <div class="flex gap-4 items-center max-md:w-full max-sm:flex-col max-sm:gap-2 max-sm:items-start max-[820px]:w-full">
                       <div class="flex justify-center items-center flex-shrink-0 w-10 h-10">
@@ -125,8 +125,8 @@ const { Content } = Astro.props;
                     </button>
                   </div>
                   <div class="w-full h-px bg-neutral-800 opacity-50"></div>
-                  <div class="step-description hidden w-full pt-2 pb-4 text-base leading-7 opacity-80 transition-all duration-300">
-                    <p class="description-text">{Content.steps[index + 1].description}</p>
+                  <div class="step-description absolute top-full left-0 right-0 bg-[#f8f5f1] z-10 opacity-0 invisible transform translate-y-[-10px] border border-gray-200 rounded-lg shadow-lg mt-2">
+                    <p class="description-text p-4 text-base leading-7 opacity-80">{Content.steps[index + 1].description}</p>
                   </div>
                 </article>
               )}
@@ -191,26 +191,31 @@ const { Content } = Astro.props;
 }
 
 .step-description {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  word-wrap: break-word;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .step-description.active {
-  max-height: 250px;
   opacity: 1;
-  overflow-y: auto;
+  visibility: visible;
+  transform: translate(0);
 }
 
 .description-text {
-  padding-right: 10px;
+  word-wrap: break-word;
 }
 
 @media (max-width: 820px) {
+  .step-description {
+    position: relative !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-top: 0.5rem !important;
+    transform: none !important;
+  }
+  
   .step-description.active {
-    max-height: 300px;
+    transform: none !important;
   }
 }
 </style>
@@ -221,27 +226,6 @@ const { Content } = Astro.props;
     let activeStepId = null;
     const toggleButtons = document.querySelectorAll('.toggle-button');
     
-    function adjustSectionHeight() {
-      const mainSection = document.querySelector('section.relative.mx-auto');
-      if (mainSection) {
-        // Give a small delay to allow transitions to complete
-        setTimeout(() => {
-          const stepsSection = document.querySelector('section.flex.absolute');
-          if (stepsSection) {
-            const stepsBottom = stepsSection.getBoundingClientRect().bottom;
-            const mainSectionTop = mainSection.getBoundingClientRect().top;
-            const newHeight = stepsBottom - mainSectionTop + 100; // Add padding
-            
-            if (window.innerWidth >= 768) {
-              mainSection.style.height = `${newHeight}px`;
-            } else {
-              mainSection.style.height = 'auto';
-            }
-          }
-        }, 310);
-      }
-    }
-    
     toggleButtons.forEach(button => {
       button.addEventListener('click', () => {
         const stepId = button.getAttribute('data-step-id');
@@ -249,38 +233,32 @@ const { Content } = Astro.props;
         const stepDescription = stepArticle.querySelector('.step-description');
         const arrowIcon = button.querySelector('.arrow-icon');
         
-        // Close the currently open step if it's not the one being clicked
-        if (activeStepId !== null && activeStepId !== stepId) {
-          const activeArticle = document.querySelector(`.step-article[data-step-id="${activeStepId}"]`);
-          const activeDescription = activeArticle.querySelector('.step-description');
-          const activeArrow = activeArticle.querySelector('.arrow-icon');
-          
-          activeDescription.classList.remove('active');
-          activeDescription.classList.add('hidden');
-          activeArrow.classList.remove('rotate');
-        }
+        // Close all other dropdowns
+        toggleButtons.forEach(otherButton => {
+          const otherStepId = otherButton.getAttribute('data-step-id');
+          if (otherStepId !== stepId) {
+            const otherArticle = document.querySelector(`.step-article[data-step-id="${otherStepId}"]`);
+            const otherDescription = otherArticle.querySelector('.step-description');
+            const otherArrow = otherButton.querySelector('.arrow-icon');
+            
+            otherDescription.classList.remove('active');
+            otherArrow.classList.remove('rotate');
+          }
+        });
         
         // Toggle the clicked step
         if (activeStepId === stepId) {
           // If clicking the active step, close it
           stepDescription.classList.remove('active');
-          stepDescription.classList.add('hidden');
           arrowIcon.classList.remove('rotate');
           activeStepId = null;
         } else {
           // Otherwise, open the clicked step
           stepDescription.classList.add('active');
-          stepDescription.classList.remove('hidden');
           arrowIcon.classList.add('rotate');
           activeStepId = stepId;
         }
-        
-        // Adjust the section height to accommodate the open step
-        adjustSectionHeight();
       });
     });
-    
-    // Adjust on window resize too
-    window.addEventListener('resize', adjustSectionHeight);
   });
 </script>
