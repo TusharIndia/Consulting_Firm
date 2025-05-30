@@ -27,7 +27,7 @@ const { heading, text, buttonText, image, altText, phoneText, phoneNumber } = As
         >
           {buttonText}
         </a>
-        <button
+        <a href={`tel:${phoneNumber}`}
           class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 min-w-0 md:min-w-[180px] lg:min-w-60 rounded-[50px] max-[900px]:w-full"
           aria-label="Call for questions"
         >
@@ -37,7 +37,7 @@ const { heading, text, buttonText, image, altText, phoneText, phoneNumber } = As
               Call {phoneNumber}
             </span>
           </div>
-        </button>
+        </a>
       </div>
     </div>
     <img
