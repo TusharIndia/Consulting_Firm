@@ -39,10 +39,10 @@ const lastPart = content.title.includes("Magnetic") && content.title.indexOf("Ma
 <section class="mx-auto my-16 max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="box-border flex flex-col gap-8 items-start w-full">
         <header class="w-full mb-4">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-center w-full">
-                <span class="text-neutral-800">{firstPart}</span>
-                <span class="text-[#556BF4]">{tmsText}</span>
-                {lastPart && <span class="text-neutral-800">{lastPart}</span>}
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-center w-full leading-relaxed">
+            <span class="text-neutral-800">{firstPart}</span>
+            <span class="text-[#556BF4]">{tmsText}</span>
+            {lastPart && <span class="text-neutral-800">{lastPart}</span>}
             </h2>
         </header>
 
