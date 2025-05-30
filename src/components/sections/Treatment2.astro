@@ -41,11 +41,11 @@ const { Content } = Astro.props;
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-3 mt-8 md:mt-12 max-w-full w-full md:w-[552px]">
-                        <button class="flex flex-col shrink justify-center items-center px-4 md:px-5 py-3 md:py-4 text-base md:text-lg font-semibold leading-none bg-amber-300 w-full sm:basis-0 sm:flex-1 rounded-[50px] text-neutral-800 hover:bg-amber-400 transition-colors">
+                        <a href="/contact" class="flex flex-col shrink justify-center items-center px-4 md:px-5 py-3 md:py-4 text-base md:text-lg font-semibold leading-none bg-amber-300 w-full sm:basis-0 sm:flex-1 rounded-[50px] text-neutral-800 hover:bg-amber-400 transition-colors">
                             <span>{Content.buttonText}</span>
-                        </button>
+                        </a>
 
-                        <a href={`tel:${Content.phoneNumber}`} class="flex flex-col shrink justify-center items-center px-4 md:px-5 py-3 md:py-4 mt-3 sm:mt-0 text-white bg-purple-900 w-full sm:basis-0 sm:flex-1 rounded-[50px] hover:bg-purple-800 transition-colors">
+                        <a href={`tel:1234567890`} class="flex flex-col shrink justify-center items-center px-4 md:px-5 py-3 md:py-4 mt-3 sm:mt-0 text-white bg-purple-900 w-full sm:basis-0 sm:flex-1 rounded-[50px] hover:bg-purple-800 transition-colors">
                             <div class="flex flex-col items-center">
                                 <div class="text-xs">{Content.phoneText}</div>
                                 <div class="text-xs font-semibold leading-6">{Content.phoneNumber}</div>
