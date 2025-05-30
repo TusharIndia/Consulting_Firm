@@ -1,14 +1,14 @@
 ---
-const { 
-  backgroundImage, 
-  backgroundImageAlt, 
-  logo, 
-  buttonText, 
-  heroLinks, 
-  textBox1, 
-  textBox2_Part_1, 
-  textBox2_Part_2, 
-  textBox2_Part_3, 
+const {
+  backgroundImage,
+  backgroundImageAlt,
+  logo,
+  buttonText,
+  heroLinks,
+  textBox1,
+  textBox2_Part_1,
+  textBox2_Part_2,
+  textBox2_Part_3,
   textBox3,
   buttonOne,
   buttonTwo,
@@ -47,7 +47,7 @@ const GeneralData = Astro.props.GeneralData;
           >
             {heroLinks.map((link) => (
               <li class="group relative self-stretch my-auto whitespace-nowrap">
-                <a href={link.link} class="text-white self-stretch my-auto flex items-center">
+                <a href={link.link} class="text-white self-stretch my-auto flex items-center hover:text-amber-300 transition-colors duration-200">
                   {link.text}
                   {link.sublinks && link.sublinks.length > 0 && (
                     <img
@@ -67,7 +67,7 @@ const GeneralData = Astro.props.GeneralData;
                         <ul class="flex flex-col gap-3">
                           {link.sublinks.map((sublink) => (
                             <li class="text-sm text-blue-900">
-                              <a href={sublink.link}>{sublink.text}</a>
+                              <a href={sublink.link} class="hover:text-blue-700 transition-colors duration-200">{sublink.text}</a>
                             </li>
                           ))}
                         </ul>
@@ -82,7 +82,7 @@ const GeneralData = Astro.props.GeneralData;
                         <ul class="flex flex-col gap-3">
                           {link.sublinks2.map((sublink) => (
                             <li class="text-sm text-blue-900">
-                              <a href={sublink.link}>{sublink.text}</a>
+                              <a href={sublink.link} class="hover:text-blue-700 transition-colors duration-200">{sublink.text}</a>
                             </li>
                             ))}
                         </ul>
@@ -170,8 +170,8 @@ const GeneralData = Astro.props.GeneralData;
       alt="Clear Path logo"
       class="object-contain w-28"
     />
-    <button id="hamburger-menu-button" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
-      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <button id="hamburger-menu-button" aria-label="Open menu" aria-expanded="false" class="text-white focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
@@ -182,7 +182,7 @@ const GeneralData = Astro.props.GeneralData;
     style={`background-image: url(${backgroundImage}); background-size: cover; background-position: center;`}
   >
     <div class="bg-white rounded-xl p-6 mb-6 max-w-4xl">
-      <h1 class="text-2xl sm:text-3xl font-bold leading-tight mb-4">
+      <h1 class="text-2xl sm:text-3xl font-bold leading-tight mb-4 text-neutral-800">
         {textBox2_Part_1}
         <span class="text-blue-700">{textBox2_Part_2}</span>
         {textBox2_Part_3}
@@ -197,15 +197,15 @@ const GeneralData = Astro.props.GeneralData;
     )}
     <div class="w-full max-w-xs flex flex-col gap-4">
       <a
-        href="#"
-        class="w-full inline-block px-8 py-4 text-base sm:text-lg font-semibold rounded-full bg-amber-300 text-neutral-800 hover:bg-amber-400 transition-colors shadow-lg"
+        href="/contact"
+        class="w-full inline-block px-8 py-4 text-base sm:text-lg font-semibold rounded-full bg-amber-300 text-neutral-800 hover:bg-amber-400 transition-colors shadow-lg text-center"
       >
         {buttonOne}
       </a>
       {telephoneNumber && (
         <a
           href={`tel:${telephoneNumber}`}
-          class="w-full flex flex-col justify-center items-center px-5 py-4 text-white bg-purple-900 rounded-full transition-colors shadow-md hover:bg-purple-800"
+          class="w-full flex flex-col justify-center items-center px-5 py-4 text-white bg-purple-900 rounded-full transition-colors shadow-md hover:bg-purple-800 text-center"
         >
           <div class="flex flex-col items-center">
             <span class="text-xs">{buttonTwo}</span>
@@ -218,29 +218,25 @@ const GeneralData = Astro.props.GeneralData;
 
   <nav
     id="mobile-nav-overlay"
-    class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex justify-center items-start pt-4 h-screen overflow-y-auto"
+    class="fixed inset-0 z-50 bg-white text-purple-900 p-6 hidden flex-col"
   >
-    <div class="bg-white shadow-2xl p-6 w-full max-w-sm mx-auto relative max-h-[90vh] overflow-y-auto rounded-xl">
-      <button id="close-menu-button" class="absolute top-4 right-4 p-2 text-gray-600 hover:text-gray-900">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <div class="flex justify-between items-center mb-8">
+      <img src={logo} alt="Company Logo Mobile" class="object-contain shrink-0 h-10">
+      <button id="close-menu-button" aria-label="Close menu" class="focus:outline-none">
+        <svg class="w-8 h-8 text-purple-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
+    </div>
 
-      <ul class="flex flex-col gap-4 mt-8">
-        {heroLinks.map((link) => (
-          <li class="relative border-b border-gray-100 pb-2">
-            {link.sublinks && link.sublinks.length > 0 ? (
-              <>
-                <button
-                  class="mobile-nav-toggle flex justify-between items-center w-full text-lg font-medium text-neutral-800 py-2"
-                >
-                  {link.text}
-                  <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200 mobile-nav-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-                <div class="mobile-sublinks-container hidden pl-4 pt-2 border-l border-gray-200 mt-2">
+    <ul class="flex flex-col items-start gap-4 text-xl overflow-y-auto flex-grow">
+      {heroLinks.map((link) => (
+        <li class="w-full">
+          <a href={link.link} class="hover:text-amber-500 py-2 block font-medium">{link.text}</a>
+          {(link.sublinks && link.sublinks.length > 0 || link.sublinks2 && link.sublinks2.length > 0) && (
+            <div class="pl-4 mt-1 space-y-1 text-lg">
+              {link.sublinks && link.sublinks.length > 0 && (
+                <>
                   <h3 class="text-md font-semibold text-neutral-700 mb-2">By Treatment Offering</h3>
                   <ul class="flex flex-col gap-2">
                     {link.sublinks.map((sublink) => (
@@ -251,41 +247,36 @@ const GeneralData = Astro.props.GeneralData;
                       </li>
                     ))}
                   </ul>
-                  {link.sublinks2 && link.sublinks2.length > 0 && (
-                    <>
-                      <div class="my-3 h-px bg-gray-200"></div>
-                      <h3 class="text-md font-semibold text-neutral-700 mb-2">By what you're experiencing</h3>
-                      <ul class="flex flex-col gap-2">
-                        {link.sublinks2.map((sublink) => (
-                          <li>
-                            <a href={sublink.link} class="text-sm text-blue-700 hover:underline block py-1">
-                              {sublink.text}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
-                </div>
-              </>
-            ) : (
-              <a href={link.link} class="block text-lg font-medium text-neutral-800 py-2 hover:underline">
-                {link.text}
-              </a>
-            )}
-          </li>
-        ))}
-      </ul>
-
-      <div class="mt-8">
+                </>
+              )}
+              {link.sublinks2 && link.sublinks2.length > 0 && (
+                <>
+                  <div class="my-3 h-px bg-gray-200"></div>
+                  <h3 class="text-md font-semibold text-neutral-700 mb-2">By what you're experiencing</h3>
+                  <ul class="flex flex-col gap-2">
+                    {link.sublinks2.map((sublink) => (
+                      <li>
+                        <a href={sublink.link} class="text-sm text-blue-700 hover:underline block py-1">
+                          {sublink.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </div>
+          )}
+        </li>
+      ))}
+      <li class="mt-auto pt-6 w-full">
         <a
           href={`tel:${telephoneNumber}`}
           class="block w-full text-center px-5 py-3 text-lg font-semibold bg-purple-900 text-white rounded-full hover:bg-purple-800 transition-colors shadow-md"
         >
           {buttonText}
         </a>
-      </div>
-    </div>
+      </li>
+    </ul>
   </nav>
 </div>
 
@@ -294,55 +285,46 @@ const GeneralData = Astro.props.GeneralData;
     const hamburgerButton = document.getElementById('hamburger-menu-button');
     const closeButton = document.getElementById('close-menu-button');
     const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
-    const mobileNavToggles = document.querySelectorAll('.mobile-nav-toggle');
 
-    // Function to open the mobile navigation
-    function openMobileNav() {
-      mobileNavOverlay.classList.remove('hidden');
-      document.body.style.overflow = 'hidden'; // Prevent body scroll
-    }
-
-    // Function to close the mobile navigation
-    function closeMobileNav() {
-      mobileNavOverlay.classList.add('hidden');
-      document.body.style.overflow = ''; // Restore body scroll
-    }
-
-    // Event listener for hamburger button click
-    if (hamburgerButton) {
-      hamburgerButton.addEventListener('click', openMobileNav);
-    }
-
-    // Event listener for close button click
-    if (closeButton) {
-      closeButton.addEventListener('click', closeMobileNav);
-    }
-
-    // Event listeners for sublink toggles
-    mobileNavToggles.forEach(button => {
-      button.addEventListener('click', () => {
-        const sublinksContainer = button.nextElementSibling;
-        const arrowIcon = button.querySelector('.mobile-nav-arrow');
-
-        if (sublinksContainer && arrowIcon) {
-          sublinksContainer.classList.toggle('hidden');
-          arrowIcon.classList.toggle('rotate-180'); // Rotate arrow
+    function toggleMobileNav(show) {
+      if (mobileNavOverlay && hamburgerButton) {
+        if (show) {
+          mobileNavOverlay.classList.remove('hidden');
+          mobileNavOverlay.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+          hamburgerButton.setAttribute('aria-expanded', 'true');
+        } else {
+          mobileNavOverlay.classList.add('hidden');
+          mobileNavOverlay.classList.remove('flex');
+          document.body.style.overflow = '';
+          hamburgerButton.setAttribute('aria-expanded', 'false');
         }
+      }
+    }
+
+    if (hamburgerButton) {
+      hamburgerButton.addEventListener('click', () => {
+        const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true';
+        toggleMobileNav(!isExpanded);
       });
-    });
+    }
+
+    if (closeButton) {
+      closeButton.addEventListener('click', () => {
+        toggleMobileNav(false);
+      });
+    }
 
     // Close menu if a link inside the overlay is clicked
-    mobileNavOverlay.addEventListener('click', (event) => {
-      if (event.target.tagName === 'A' && event.target.closest('#mobile-nav-overlay')) {
-        closeMobileNav();
-      }
-    });
-
-    // Close menu if clicking outside the white card
-    mobileNavOverlay.addEventListener('click', (event) => {
-      if (event.target === mobileNavOverlay) {
-        closeMobileNav();
-      }
-    });
+    if (mobileNavOverlay) {
+      const mobileNavLinks = mobileNavOverlay.querySelectorAll('a');
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (!mobileNavOverlay.classList.contains('hidden')) {
+            toggleMobileNav(false);
+          }
+        });
+      });
+    }
   });
 </script>
