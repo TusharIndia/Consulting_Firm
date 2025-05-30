@@ -269,6 +269,7 @@ export async function fetchHomeData(): Promise<Home> {
         programs: home.data.programs.programs.map((program) => ({
           title: program.title,
           image: program.image,
+          link: program.link,
         })),
       },
       services: {
@@ -603,6 +604,7 @@ export async function fetchSubProgramData(sub_page): Promise<Program> {
         steps: programData.data.program12.steps.map((step: any) => ({
           stepNumber: step.stepNumber,
           title: step.title,
+          description: step.description,
         })),
       },
       programTMS: {

@@ -252,6 +252,7 @@ collections:
             fields:
               - { label: "Step Number", name: "stepNumber", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
       - label: "Program TMS"
         name: "programTMS"
         widget: "object"
@@ -702,8 +703,9 @@ collections:
                 widget: "list"
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
                   - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Link", name: "link", widget: "string" }
+
 
           - label: "Services"
             name: "services"

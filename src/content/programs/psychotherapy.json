@@ -408,31 +408,38 @@
     "steps": [
       {
         "stepNumber": "01",
-        "title": "Understand Your Health Needs"
+        "title": "Understand Your Health Needs",
+        "description": "Before selecting a TMS program, it's crucial to have a clear understanding of your mental health needs. This includes identifying any specific conditions you are dealing with, such as depression, anxiety, or PTSD, and considering how TMS might fit into your overall treatment plan."
       },
       {
-        "stepNumber": "02", 
-        "title": "Consult with Healthcare Professionals"
+        "stepNumber": "02",
+        "title": "Consult with Healthcare Professionals",
+        "description": "Engage with mental health professionals who can provide insights into your specific needs and help determine if TMS is a suitable option."
       },
       {
         "stepNumber": "03",
-        "title": "Research Available Programs"
+        "title": "Research Available Programs",
+        "description": "Look into different TMS programs offered by various clinics and providers. Consider factors such as location, treatment approach, and patient reviews."
       },
       {
         "stepNumber": "04",
-        "title": "Verify Program Credentials"
+        "title": "Verify Program Credentials",
+        "description": "Ensure that the TMS program is accredited and that the providers are qualified to deliver this specialized treatment."
       },
       {
         "stepNumber": "05",
-        "title": "Assess the Treatment Plan"
+        "title": "Assess the Treatment Plan",
+        "description": "Review the proposed treatment plan to ensure it aligns with your needs and expectations."
       },
       {
         "stepNumber": "06",
-        "title": "Evaluate Accessibility"
+        "title": "Evaluate Accessibility",
+        "description": "Consider the location of the TMS program and whether it is easily accessible for you."
       },
       {
         "stepNumber": "07",
-        "title": "Check Financial and Insurance Coverage"
+        "title": "Check Financial and Insurance Coverage",
+        "description": "Review your insurance plan to understand coverage options for TMS and inquire about any out-of-pocket costs."
       }
     ]
   },

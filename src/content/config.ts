@@ -222,8 +222,9 @@ const homeCollection = {
       text: z.string(),
       programs: z.array(z.object({
         title: z.string(),
-        description: z.string(),
+        
         image: z.string(),
+        link: z.string(),
       })),
     }),
     services: z.object({
@@ -512,6 +513,7 @@ const programCollection = {
       steps: z.array(z.object({
         stepNumber: z.string(),
         title: z.string(),
+        
       })),
     }),
   }),

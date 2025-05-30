@@ -182,6 +182,7 @@ export interface Home {
       programs: {
         title: string;
         image: string;
+        link: string; // Added link field
       }[];
     };
     services: {
@@ -500,6 +501,7 @@ export interface Program {
       steps: {
         stepNumber: string;
         title: string;
+        description: string;
       }[];
     };
      programTMS: {
