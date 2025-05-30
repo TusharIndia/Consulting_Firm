@@ -219,12 +219,26 @@ const { Content } = Astro.props;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    margin-top: 0.5rem !important;
+    margin-top: 0 !important;
     transform: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
   }
   
   .step-description.active {
+    height: auto !important;
+    opacity: 1;
+    padding: 0.5rem 0 !important;
+    margin-top: 0.5rem !important;
+    overflow: visible !important;
     transform: none !important;
+  }
+  
+  .description-text {
+    padding: 0 !important;
   }
 }
 </style>
