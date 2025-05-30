@@ -501,6 +501,7 @@ export interface Program {
       steps: {
         stepNumber: string;
         title: string;
+        description: string;
       }[];
     };
      programTMS: {

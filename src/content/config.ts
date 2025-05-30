@@ -513,6 +513,7 @@ const programCollection = {
       steps: z.array(z.object({
         stepNumber: z.string(),
         title: z.string(),
+        
       })),
     }),
   }),
