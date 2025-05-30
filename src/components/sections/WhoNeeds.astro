@@ -34,7 +34,7 @@ const { Content } = Astro.props;
                 {Content.description}
                 </p>
                 <div class="flex flex-wrap gap-3 mt-8 max-w-full w-[552px] max-[820px]:w-full">
-                <a href="#" class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
+                <a href="/contact" class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
                     {Content.primaryButtonText}
                 </a>
                 <a href={`tel:${Content.phoneNumber.replace(/[^0-9]/g, '')}`} class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 min-w-60 rounded-[50px]">

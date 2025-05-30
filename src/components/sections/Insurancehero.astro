@@ -72,18 +72,18 @@ const { Content } = Astro.props;
         </p>
 
         <div class="flex gap-3 items-center w-full max-md:flex-col max-md:gap-4 max-md:w-full max-midtablet:flex-col max-midtablet:gap-3 max-tablet:flex-col max-tablet:gap-3 max-[820px]:flex-col max-[820px]:gap-3 max-[820px]:w-full">
-          <button class="gap-2.5 px-8 py-4 text-lg font-medium leading-6 bg-amber-300 cursor-pointer flex-1 rounded-[50px] text-neutral-800 text-center max-md:w-full max-midtablet:px-6 max-midtablet:py-3 max-midtablet:text-base max-midtablet:w-full max-tablet:px-6 max-tablet:py-3 max-tablet:text-base max-tablet:w-full max-sm:px-5 max-sm:py-3.5 max-sm:text-base max-[820px]:px-6 max-[820px]:py-3 max-[820px]:text-base max-[820px]:w-full">
+          <a href = "/contact" class="gap-2.5 px-8 py-4 text-lg font-medium leading-6 bg-amber-300 cursor-pointer flex-1 rounded-[50px] text-neutral-800 text-center max-md:w-full max-midtablet:px-6 max-midtablet:py-3 max-midtablet:text-base max-midtablet:w-full max-tablet:px-6 max-tablet:py-3 max-tablet:text-base max-tablet:w-full max-sm:px-5 max-sm:py-3.5 max-sm:text-base max-[820px]:px-6 max-[820px]:py-3 max-[820px]:text-base max-[820px]:w-full">
             {Content.cta.buttonText}
-          </button>
+          </a>
 
-          <div class="flex flex-col items-center px-5 py-3.5 bg-purple-900 cursor-pointer flex-1 rounded-[50px] max-md:w-full max-midtablet:w-full max-tablet:w-full max-[820px]:w-full">
+          <a href={`tel:${Content.cta.phoneNumber}`} class="flex flex-col items-center px-5 py-3.5 bg-purple-900 cursor-pointer flex-1 rounded-[50px] max-md:w-full max-midtablet:w-full max-tablet:w-full max-[820px]:w-full">
             <span class="text-[11px] text-white max-midtablet:text-[10px] max-tablet:text-[10px] max-sm:text-[10px] max-[820px]:text-[10px]">
               {Content.cta.callText}
             </span>
             <span class="text-base font-medium text-white max-midtablet:text-sm max-tablet:text-sm max-sm:text-sm max-[820px]:text-sm">
               {Content.cta.phoneNumber}
             </span>
-          </div>
+          </a>
         </div>
       </div>
     </div>

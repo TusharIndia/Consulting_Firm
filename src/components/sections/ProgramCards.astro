@@ -43,7 +43,7 @@ const { heading, text, programs } = Astro.props.Content;
       return rows.map((row, rowIndex) => (
         <div class={`flex flex-wrap gap-6 items-center ${rowIndex === 0 ? 'mt-14' : 'mt-7'} text-2xl font-medium leading-loose whitespace-nowrap text-neutral-800`}>
           {row.map(program => (
-            <div class="flex-1 shrink self-stretch my-auto basis-0 min-w-60">
+            <a href={program.link || '#'} class="flex-1 shrink self-stretch my-auto basis-0 min-w-60 cursor-pointer">
               <div class="flex gap-10 justify-between items-center w-full">
                 <div class="flex gap-3 items-center self-stretch my-auto">
                   {program.image && (
@@ -58,16 +58,16 @@ const { heading, text, programs } = Astro.props.Content;
                     <div class="w-10 aspect-square"></div>
                   )}
                 </div>
-                <a href={program.link || '#'} class="cursor-pointer">
+                <div class="cursor-pointer">
                   <img
                     src="/imgs/expand_arrow.svg"
                     alt="Expand arrow"
                     class="object-contain shrink-0 self-stretch my-auto aspect-[5.13] w-[41px]"
                   />
-                </a>
+                </div>
               </div>
               <hr class="mt-4 w-full min-h-px border-black" />
-            </div>
+            </a>
           ))}
         </div>
       ));
