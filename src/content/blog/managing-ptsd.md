@@ -1,8 +1,8 @@
 ---
-slug: "tobacco-addiction"
-title: "Tobacco Addiction: Symptoms, Causes, Effects, Treatment and Prevention"
+slug: "managing-ptsd"
+title: "Managing PTSD: Symptoms, Causes, Effects, Treatment and Prevention"
 description: "A comprehensive guide to understanding tobacco addiction, including its symptoms, causes, effects, treatment options, and prevention strategies."
-featuredImg: "/imgs/tobacco-addiction.webp"
+featuredImg: "/imgs/PTSD_Article.png"
 date: 2024-01-15
 author: "Author Name"
 tags: ["tobacco", "addiction", "nicotine", "health", "treatment"]

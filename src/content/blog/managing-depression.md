@@ -1,8 +1,8 @@
 ---
-slug: "tobacco-addiction1"
-title: "Tobacco Addiction: Symptoms, Causes, Effects, Treatment and Prevention"
+slug: "managing-depression"
+title: "Managing Depression: Symptoms, Causes, Effects, Treatment and Prevention"
 description: "A comprehensive guide to understanding tobacco addiction, including its symptoms, causes, effects, treatment options, and prevention strategies."
-featuredImg: "/imgs/tobacco-addiction.webp"
+featuredImg: "/imgs/Depression_Article.png"
 date: 2024-01-15
 author: "Author Name"
 tags: ["tobacco", "addiction", "nicotine", "health", "treatment"]

@@ -1,10 +1,10 @@
 ---
 author: Author Name
-slug: caffeine-addiction
-title: "Caffeine Addiction: Symptoms, Causes, Effects, Treatment and Prevention"
+slug: managing-adhd
+title: "Managing-Adhd: Symptoms, Causes, Effects, Treatment and Prevention"
 description: A comprehensive guide to understanding caffeine addiction, its
   symptoms, causes, effects, and how to treat and prevent it.
-featuredImg: /imgs/caffeine-addiction.webp
+featuredImg: "/imgs/ADHD_Article.png"
 date: 2024-01-15
 tags:
   - caffeine

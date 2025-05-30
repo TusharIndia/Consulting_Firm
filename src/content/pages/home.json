@@ -17,9 +17,9 @@
         "text": "Treatments",
         "link": "#",
         "sublinks": [
-          {
+               {
             "text": "Medication Management",
-            "link": "/program/tms"
+            "link": "/program/medication_management"
           },
           {
             "text": "Transcranial Magnetic Stimulation (TMS)",
@@ -27,11 +27,11 @@
           },
           {
             "text": "Spravato® (Esketamine) ",
-            "link": "/program/tms"
+            "link": "/program/spravato"
           },
           {
             "text": "Psychotherapy",
-            "link": "/program/tms"
+            "link": "/program/psychotherapy"
           }
         ],
         "sublinks2": [
@@ -41,23 +41,23 @@
           },
           {
             "text": "Anxiety",
-            "link": "/treatment/depression"
+            "link": "/treatment/anxiety"
           },
           {
             "text": "ADHD",
-            "link": "/treatment/depression"
+            "link": "/treatment/adhd"
           },
           {
             "text": "PTSD",
-            "link": "/treatment/depression"
+            "link": "/treatment/ptsd"
           },
           {
             "text": "BiPolar",
-            "link": "/treatment/depression"
+            "link": "/treatment/bipolar"
           },
           {
             "text": "Stress",
-            "link": "/treatment/depression"
+            "link": "/treatment/stress"
           },
           {
             "text": "OCD",
@@ -65,11 +65,11 @@
           },
           {
             "text": "Addiction",
-            "link": "/addiction"
+            "link": "/treatment/addiction"
           },
           {
             "text": "and more",
-            "link": ""
+            "link": "/treatment/other"
           }
         ]
       },
@@ -253,22 +253,22 @@
     "headingTwo_Part_3": "journey",
     "disorders": [
       {
-        "link": "/blog/addiction-definition",
+        "link": "/blog/managing-depression",
         "title": "Effective Strategies for Managing Depression",
         "image": "/imgs/Depression_Article.png"
       },
       {
-        "link": "/anxiety",
+        "link": "/blog/managing-anxiety",
         "title": "Effective Strategies for Managing Anxiety",
         "image": "/imgs/Anxiety_Article.png"
       },
       {
-        "link": "/adhd",
+        "link": "/blog/managing-adhd",
         "title": "Effective Strategies for Managing ADHD",
         "image": "/imgs/ADHD_Article.png"
       },
       {
-        "link": "/ptsd",
+        "link": "/blog/managing-ptsd",
         "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
         "image": "/imgs/PTSD_Article.png"
       }

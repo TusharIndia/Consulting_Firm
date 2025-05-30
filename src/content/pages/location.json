@@ -107,29 +107,29 @@
       "buttonText": "Schedule Appointment"
     }
   },
-  "disorders": {
+   "disorders": {
     "heading": "OUR INSIGHTS",
     "headingTwo_Part_1": "Expert guidance for your ",
     "headingTwo_Part_2": "mental health ",
     "headingTwo_Part_3": "journey",
     "disorders": [
       {
-        "link": "/depression",
+        "link": "/blog/managing-depression",
         "title": "Effective Strategies for Managing Depression",
         "image": "/imgs/Depression_Article.png"
       },
       {
-        "link": "/anxiety",
+        "link": "/blog/managing-anxiety",
         "title": "Effective Strategies for Managing Anxiety",
         "image": "/imgs/Anxiety_Article.png"
       },
       {
-        "link": "/adhd",
+        "link": "/blog/managing-adhd",
         "title": "Effective Strategies for Managing ADHD",
         "image": "/imgs/ADHD_Article.png"
       },
       {
-        "link": "/ptsd",
+        "link": "/blog/managing-ptsd",
         "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
         "image": "/imgs/PTSD_Article.png"
       }

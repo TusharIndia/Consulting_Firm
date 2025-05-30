@@ -17,19 +17,19 @@ const { Content } = Astro.props;
 >
   <div class="relative w-full max-w-6xl">
     <section
-      class="flex relative gap-10 justify-between items-center p-8 bg-indigo-500 rounded-3xl w-full max-md:flex-col max-md:p-8 max-sm:p-6"
+      class="flex relative gap-10 justify-between items-center p-8 bg-indigo-500 rounded-3xl w-full max-[900px]:flex-col max-[900px]:p-8 max-sm:p-6"
     >
       <div
-        class="flex flex-col shrink-0 gap-6 items-start max-w-md max-md:items-center max-md:w-full max-md:text-center"
+        class="flex flex-col shrink-0 gap-6 items-start max-w-md max-[900px]:items-center max-[900px]:w-full max-[900px]:text-center"
       >
         <h2
-          class="text-4xl font-medium text-white leading-tight max-md:text-3xl"
+          class="text-4xl font-medium text-white leading-tight max-[900px]:text-3xl"
         >
           {Content.heading}
         </h2>
-        <ul class="flex flex-col gap-4 items-start w-full">
+        <ul class="flex flex-col gap-4 items-start w-full max-[900px]:justify-center">
           {Content.options.map((option) => (
-            <li class="flex gap-2 items-center">
+            <li class="flex gap-2 items-center max-[900px]:justify-center">
               <div class="flex-shrink-0">
                 <svg
                   width="16"
@@ -56,14 +56,14 @@ const { Content } = Astro.props;
       </div>
 
       <div
-        class="relative shrink-0 h-[397px] w-[485px] max-md:w-full max-md:h-[300px] max-md:max-w-[400px] max-sm:h-[250px]"
+        class="relative shrink-0 h-[397px] w-[485px] max-[900px]:w-full max-[900px]:h-[300px] max-[900px]:max-w-[400px] max-sm:h-[250px]"
       >
         <div
           class="inline-flex relative justify-end items-center pt-4 pr-0 pb-12 pl-4 bg-white rounded-3xl shadow-2xl size-full"
         >
           <img
             src={Content.image}
-            class="object-cover absolute left-4 shrink-0 rounded-3xl h-[361px] top-[18px] w-[453px] max-md:h-[calc(100%_-_36px)] max-md:w-[calc(100%_-_32px)] max-sm:h-[calc(100%_-_36px)] max-sm:w-[calc(100%_-_32px)]"
+            class="object-cover absolute left-4 shrink-0 rounded-3xl h-[361px] top-[18px] w-[453px] max-[900px]:h-[calc(100%_-_36px)] max-[900px]:w-[calc(100%_-_32px)] max-sm:h-[calc(100%_-_36px)] max-sm:w-[calc(100%_-_32px)]"
             alt={Content.imageAlt}
           />
         </div>

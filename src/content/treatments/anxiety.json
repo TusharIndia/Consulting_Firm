@@ -11,7 +11,7 @@
         "text": "Treatments",
         "url": "#",
         "hasDropdown": true,
-        "sublinks": [
+       "sublinks": [
                 {
             "text": "Medication Management",
             "link": "/program/medication_management"

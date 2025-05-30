@@ -1,8 +1,8 @@
 ---
-slug: "addiction-definition"
-title: "Addiction: Definition, Types, How It Works, Effectiveness"
+slug: "managing-anxiety"
+title: "Managing Anxiety: Definition, Types, How It Works, Effectiveness"
 description: "An in-depth exploration of addiction intervention for alcohol and drug abuse, covering the process, types, and effectiveness."
-featuredImg: "/imgs/addiction.webp"
+featuredImg: "/imgs/Anxiety_Article.png"
 date: 2024-01-01
 author: "Author Name"
 tags: ["addiction", "intervention", "substance use", "treatment"]
