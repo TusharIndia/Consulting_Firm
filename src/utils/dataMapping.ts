@@ -269,6 +269,7 @@ export async function fetchHomeData(): Promise<Home> {
         programs: home.data.programs.programs.map((program) => ({
           title: program.title,
           image: program.image,
+          link: program.link,
         })),
       },
       services: {

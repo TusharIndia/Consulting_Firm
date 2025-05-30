@@ -182,6 +182,7 @@ export interface Home {
       programs: {
         title: string;
         image: string;
+        link: string; // Added link field
       }[];
     };
     services: {

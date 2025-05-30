@@ -158,39 +158,48 @@
     "programs": [
       {
         "title": "Depression",
-        "image": "/imgs/depression_icon.svg"
+        "image": "/imgs/depression_icon.svg",
+        "link": "/treatment/depression"
       },
       {
         "title": "Anxiety",
-        "image": "/imgs/anxiety_icon.svg"
+        "image": "/imgs/anxiety_icon.svg",
+        "link": "/treatment/anxiety"
       },
       {
         "title": "ADHD",
-        "image": "/imgs/adhd_icon.svg"
+        "image": "/imgs/adhd_icon.svg",
+        "link": "/treatment/adhd"
       },
       {
         "title": "PTSD",
-        "image": "/imgs/ptsd_icon.svg"
+        "image": "/imgs/ptsd_icon.svg",
+        "link": "/treatment/ptsd"
       },
       {
         "title": "Bipolar Disorder",
-        "image": "/imgs/bipolar_icon.svg"
+        "image": "/imgs/bipolar_icon.svg",
+        "link": "/treatment/bipolar"
       },
       {
         "title": "OCD",
-        "image": "/imgs/ocd_icon.svg"
+        "image": "/imgs/ocd_icon.svg",
+        "link": "/treatment/ocd"
       },
       {
         "title": "OCD",
-        "image": "/imgs/ocd_icon2.svg"
+        "image": "/imgs/ocd_icon2.svg",
+        "link": "/treatment/ocd"
       },
       {
         "title": "Addiction",
-        "image": "/imgs/addiction_icon.svg"
+        "image": "/imgs/addiction_icon.svg",
+        "link": "/treatment/addiction"
       },
       {
         "title": "More",
-        "image": ""
+        "image": "",
+        "link": "/treatment/other"
       }
     ]
   },

@@ -58,11 +58,13 @@ const { heading, text, programs } = Astro.props.Content;
                     <div class="w-10 aspect-square"></div>
                   )}
                 </div>
-                <img
-                  src="/imgs/expand_arrow.svg"
-                  alt="Expand arrow"
-                  class="object-contain shrink-0 self-stretch my-auto aspect-[5.13] w-[41px]"
-                />
+                <a href={program.link || '#'} class="cursor-pointer">
+                  <img
+                    src="/imgs/expand_arrow.svg"
+                    alt="Expand arrow"
+                    class="object-contain shrink-0 self-stretch my-auto aspect-[5.13] w-[41px]"
+                  />
+                </a>
               </div>
               <hr class="mt-4 w-full min-h-px border-black" />
             </div>
