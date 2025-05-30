@@ -39,7 +39,7 @@
     {Astro.props.Content.conditions.map((row) => (
       <div class="flex gap-6 items-center self-stretch max-md:flex-col max-[820px]:flex-col max-[800px]:flex-col max-md:gap-4 max-sm:gap-3">
         {row.map((condition) => (
-          <article class="dropdown-article flex flex-col gap-4 items-start flex-[1_0_0] max-md:w-full max-[820px]:w-full max-[800px]:w-full max-sm:gap-3">
+          <article class="dropdown-article relative flex flex-col gap-4 items-start flex-[1_0_0] max-md:w-full max-[820px]:w-full max-[800px]:w-full max-sm:gap-3">
             <div class="flex justify-between items-center self-stretch max-sm:gap-2">
               <div class="flex gap-3 items-center max-md:w-full max-sm:gap-2">
                 <div class="shrink-0 w-10 h-10 max-sm:w-8 max-sm:h-8">
@@ -56,8 +56,8 @@
               </button>
             </div>
             <hr class="self-stretch h-px border-b border-solid border-b-neutral-800">
-            <div class="dropdown-content hidden">
-              <p class="text-base leading-7 text-neutral-700 mt-2">
+            <div class="dropdown-content absolute top-full left-0 right-0 bg-white z-10 opacity-0 invisible transform translate-y-[-10px] border border-gray-200 rounded-lg shadow-lg">
+              <p class="text-base leading-7 text-neutral-700 p-4">
                 {condition.description} 
               </p>
             </div>
@@ -78,15 +78,39 @@
         if (article) {
           const content = article.querySelector('.dropdown-content');
           const arrowIcon = article.querySelector('.arrow-icon');
+          const isCurrentlyOpen = article.classList.contains('open');
 
+          // Close all other dropdowns
+          dropdownToggles.forEach(otherToggle => {
+            const otherArticle = otherToggle.closest('.dropdown-article');
+            if (otherArticle && otherArticle !== article) {
+              const otherContent = otherArticle.querySelector('.dropdown-content');
+              const otherArrowIcon = otherArticle.querySelector('.arrow-icon');
+              
+              otherArticle.classList.remove('open');
+              if (otherContent) {
+                otherContent.classList.remove('visible');
+              }
+              if (otherArrowIcon) {
+                otherArrowIcon.style.transform = 'rotate(0deg)';
+              }
+            }
+          });
+
+          // Toggle current dropdown
           if (content) {
-            content.classList.toggle('hidden');
-            article.classList.toggle('open'); // Add/remove 'open' class on the article itself
+            if (isCurrentlyOpen) {
+              article.classList.remove('open');
+              content.classList.remove('visible');
+            } else {
+              article.classList.add('open');
+              content.classList.add('visible');
+            }
 
             // Rotate the arrow icon
             if (arrowIcon) {
-              arrowIcon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-              arrowIcon.style.transition = 'transform 0.3s ease-in-out'; // Smooth transition
+              arrowIcon.style.transform = article.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+              arrowIcon.style.transition = 'transform 0.3s ease-in-out';
             }
           }
         }
@@ -98,25 +122,22 @@
 <style>
   /* Basic styles for the dropdown content */
   .dropdown-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth transition for height */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
-  .dropdown-content.hidden {
-    max-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .dropdown-article.open .dropdown-content {
-    max-height: 500px; /* Adjust this value as needed to accommodate your content */
-    padding-top: 1rem; /* Example padding */
-    padding-bottom: 1rem; /* Example padding */
+  .dropdown-content.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0);
   }
 
   /* Optional: Rotate arrow when open */
   .dropdown-article.open .arrow-icon {
     transform: rotate(180deg);
+  }
+
+  /* Ensure proper stacking context */
+  .dropdown-article {
+    position: relative;
   }
 </style>
