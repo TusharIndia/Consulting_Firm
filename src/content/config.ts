@@ -214,6 +214,7 @@ const homeCollection = {
       list: z.array(z.object({
         title: z.string(),
         description: z.string(),
+        link: z.string().optional(), // Added link field with optional to maintain backward compatibility
       })),
     }),
    
@@ -430,6 +431,7 @@ const programCollection = {
       therapies: z.array(z.object({
         title: z.string(),
         details: z.string(),
+        link: z.string().optional(), // Added link field with optional to maintain backward compatibility
       })),
     }),
     amenities: z.object({

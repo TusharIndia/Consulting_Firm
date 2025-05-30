@@ -137,17 +137,20 @@
       {
         "title": "Medication Management",
         "description": "Ongoing evaluation and adjustment of psychiatric medications to manage mental health conditions.",
-        "image": "/imgs/medication_management.svg"
+        "image": "/imgs/medication_management.svg",
+        "link": "/program/medication_management"
       },
       {
         "title": "Transcranial Magnetic Stimulation (TMS)",
         "description": "A non-invasive procedure used to treat depression by stimulating nerve cells in the brain.",
-        "image": "/imgs/tms_icon.svg"
+        "image": "/imgs/tms_icon.svg",
+        "link": "/program/tms"
       },
       {
         "title": "Spravato (Esketamine) Infusions",
         "description": "A cutting-edge treatment for treatment-resistant depression, administered under medical supervision.",
-        "image": "/imgs/spravato_icon.svg"
+        "image": "/imgs/spravato_icon.svg",
+        "link": "/program/spravato"
       }
     ]
   },

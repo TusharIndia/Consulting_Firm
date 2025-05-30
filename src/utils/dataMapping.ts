@@ -261,6 +261,7 @@ export async function fetchHomeData(): Promise<Home> {
           title: therapy.title,
           description: therapy.description,
           image: therapy.image,
+          link: therapy.link || '#', // Add link with fallback
         })),
       },
       programs: {

@@ -173,6 +173,7 @@ export interface Home {
         title: string;
         description: string;
         image: string;
+        link: string; // Added link field
       }[];
     };
     
