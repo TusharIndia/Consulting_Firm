@@ -70,7 +70,6 @@ const { footer, logo, companyName } = Data;
 </footer>
 <script defer>
 document.addEventListener("DOMContentLoaded", () => {
-  // Back to top button functionality
   const backToTopButton = document.getElementById("back-to-top");
   if (backToTopButton) {
     backToTopButton.addEventListener("click", (event) => {
@@ -78,22 +77,5 @@ document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
-  
-  // Handle navigation links for smooth scrolling
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
 });
 </script>
