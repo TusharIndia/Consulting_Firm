@@ -27,7 +27,7 @@ const { image, heading, headingTwo_Part_1, headingTwo_Part_2, headingTwo_Part_3,
         <a href="/contact" class="flex flex-1 justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 rounded-[50px] text-neutral-800 w-full sm:w-auto md:min-w-0 md:flex-grow">
           <span>{buttonText}</span>
         </a>
-        <button
+        <a href={`tel:${buttonTwo_Part_2}`}
           class="flex-1 justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 rounded-[50px] w-full sm:w-auto md:min-w-0 md:flex-grow" 
           aria-label="Call for questions"
         >
@@ -39,7 +39,7 @@ const { image, heading, headingTwo_Part_1, headingTwo_Part_2, headingTwo_Part_3,
               {buttonTwo_Part_2}
             </span>
           </div>
-        </button>
+        </a>
       </div>
     </article>
   </div>
