@@ -151,6 +151,7 @@ export interface Home {
       headingTwo: string;
       textOne: string;
       buttonOne: string;
+      buttonOneLink: string;
       buttonTwo_Part_1: string;
       buttonTwo_Part_2: string;
       buttonTwo_Number: string;
@@ -170,8 +171,10 @@ export interface Home {
       headingTwo_Part_2: string;
       headingTwo_Part_3: string;
       buttonText: string;
+      buttonLink: string;
       buttonTwo_Part_1: string;
       buttonTwo_Part_2: string;
+      buttonTwo_Number: string;
       list: {
         title: string;
         description: string;
@@ -339,6 +342,11 @@ export interface Program {
       headingTwo: string;
       textOne: string;
       textTwo: string;
+      buttonText: string;
+      buttonLink: string;
+      buttonTwo_Part_1: string;
+      buttonTwo_Part_2: string;
+      buttonTwo_Number: string;
       images: {
         imageOne: string;
         imageTwo: string;
@@ -485,6 +493,11 @@ export interface Program {
       };
       imageUrl: string;
       imageAlt: string;
+      buttonText: string;
+      buttonLink: string;
+      buttonTwo_Part_1: string;
+      buttonTwo_Part_2: string;
+      buttonTwo_Number: string;
     };
     secondWhyChoose: {
       title: string;
@@ -494,6 +507,11 @@ export interface Program {
       };
       imageUrl: string;
       imageAlt: string;
+      buttonText: string;
+      buttonLink: string;
+      buttonTwo_Part_1: string;
+      buttonTwo_Part_2: string;
+      buttonTwo_Number: string;
     };
     whoNeeds: {
       heading: string;

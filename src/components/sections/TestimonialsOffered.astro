@@ -1,5 +1,5 @@
 ---
-const { image, heading, headingTwo_Part_1, headingTwo_Part_2, headingTwo_Part_3, buttonText, buttonTwo_Part_1, buttonTwo_Part_2, list } = Astro.props.Content;
+const { image, heading, headingTwo_Part_1, headingTwo_Part_2, headingTwo_Part_3, buttonText, buttonLink, buttonTwo_Part_1, buttonTwo_Part_2, buttonTwo_Number, list } = Astro.props.Content;
 ---
 
 <section id="treatment" class="testimonials-offered mx-auto my-10 max-w-[1320px] px-4 md:px-6 lg:px-0 max-md:my-10 relative">
@@ -24,10 +24,10 @@ const { image, heading, headingTwo_Part_1, headingTwo_Part_2, headingTwo_Part_3,
       </header>
       <div class="flex flex-col sm:flex-row gap-3 mt-8 w-full flex-wrap"> 
        
-        <a href="/contact" class="flex flex-1 justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 rounded-[50px] text-neutral-800 w-full sm:w-auto md:min-w-0 md:flex-grow">
+        <a href={buttonLink} class="flex flex-1 justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 rounded-[50px] text-neutral-800 w-full sm:w-auto md:min-w-0 md:flex-grow">
           <span>{buttonText}</span>
         </a>
-        <a href={`tel:${buttonTwo_Part_2}`}
+        <a href={`tel:${buttonTwo_Number}`}
           class="flex-1 justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 rounded-[50px] w-full sm:w-auto md:min-w-0 md:flex-grow" 
           aria-label="Call for questions"
         >

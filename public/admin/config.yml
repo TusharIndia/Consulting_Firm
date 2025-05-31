@@ -111,18 +111,20 @@ collections:
               - { label: "Link", name: "link", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
-      - label: "CTA"
+      - label: "Call to Action"
         name: "cta"
         widget: "object"
         collapsed: true
         fields:
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Text", name: "text", widget: "text" }
-          - { label: "Button Text", name: "buttonText", widget: "string" }
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Image Alt Text", name: "altText", widget: "string" }
-          - { label: "Phone Text", name: "phoneText", widget: "string" }
-          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
   - name: "programs"
     label: "Programs"
@@ -166,6 +168,11 @@ collections:
           - { label: "Heading Two", name: "headingTwo", widget: "string" }
           - { label: "Text One", name: "textOne", widget: "text" }
           - { label: "Text Two", name: "textTwo", widget: "text" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string" }
+          - { label: "Button Two Part 1", name: "buttonTwo_Part_1", widget: "string" }
+          - { label: "Button Two Part 2", name: "buttonTwo_Part_2", widget: "string" }
+          - { label: "Button Two Number", name: "buttonTwo_Number", widget: "string" }
           - label: "Images"
             name: "images"
             widget: "object"
@@ -228,6 +235,11 @@ collections:
               - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
           - { label: "Image URL", name: "imageUrl", widget: "image" }
           - { label: "Image Alt", name: "imageAlt", widget: "string" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string" }
+          - { label: "Button Two Part 1", name: "buttonTwo_Part_1", widget: "string" }
+          - { label: "Button Two Part 2", name: "buttonTwo_Part_2", widget: "string" }
+          - { label: "Button Two Number", name: "buttonTwo_Number", widget: "string" }
       - label: "Second Why Choose"
         name: "secondWhyChoose"
         widget: "object"
@@ -242,6 +254,11 @@ collections:
               - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
           - { label: "Image URL", name: "imageUrl", widget: "image" }
           - { label: "Image Alt", name: "imageAlt", widget: "string" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string" }
+          - { label: "Button Two Part 1", name: "buttonTwo_Part_1", widget: "string" }
+          - { label: "Button Two Part 2", name: "buttonTwo_Part_2", widget: "string" }
+          - { label: "Button Two Number", name: "buttonTwo_Number", widget: "string" }
       - label: "Program Steps"
         name: "program12"
         widget: "object"
@@ -309,18 +326,20 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Details", name: "details", widget: "text" }
-      - label: "CTA"
+      - label: "Call to Action"
         name: "cta"
         widget: "object"
         collapsed: true
         fields:
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Text", name: "text", widget: "text" }
-          - { label: "Button Text", name: "buttonText", widget: "string" }
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Image Alt Text", name: "altText", widget: "string" }
-          - { label: "Phone Text", name: "phoneText", widget: "string" }
-          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
 
 
@@ -692,7 +711,12 @@ collections:
               - { label: "Heading One", name: "headingOne", widget: "string" }
               - { label: "Text One", name: "textOne", widget: "text" }
               - { label: "Heading Two", name: "headingTwo", widget: "string" }
-              - { label: "Text Two", name: "textTwo", widget: "text" }
+              - { label: "Text One", name: "textOne", widget: "text" }
+              - { label: "Button One Text", name: "buttonOne", widget: "string" }
+              - { label: "Button One Link", name: "buttonOneLink", widget: "string" }
+              - { label: "Button Two Part 1", name: "buttonTwo_Part_1", widget: "string" }
+              - { label: "Button Two Part 2", name: "buttonTwo_Part_2", widget: "string" }
+              - { label: "Button Two Number", name: "buttonTwo_Number", widget: "string" }
               - label: "Images"
                 name: "images"
                 widget: "object"
@@ -716,12 +740,17 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+              - { label: "Button Two Part 1", name: "buttonTwo_Part_1", widget: "string" }
+              - { label: "Button Two Part 2", name: "buttonTwo_Part_2", widget: "string" }
+              - { label: "Button Two Number", name: "buttonTwo_Number", widget: "string" }
               - label: "Therapies List"
                 name: "list"
                 widget: "list"
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Image", name: "image", widget: "image" }
                   - { label: "Link", name: "link", widget: "string" }
 
           - label: "Testimonials"
@@ -1051,9 +1080,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Image Alt Text", name: "altText", widget: "string" }
-              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
               - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
       # Insurance Page Configuration
@@ -1176,9 +1207,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Image Alt Text", name: "altText", widget: "string" }
-              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
               - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
           - label: "Insurance Verification Section"
@@ -1288,9 +1321,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Image Alt Text", name: "altText", widget: "string" }
-              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
               - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
       
@@ -1404,9 +1439,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Image Alt Text", name: "altText", widget: "string" }
-              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
               - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
 
