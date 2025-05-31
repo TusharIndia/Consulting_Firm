@@ -1,7 +1,7 @@
 ---
 import Button from "./Button.astro";
 
-const { heading, text, buttonText, image, altText, phoneText, phoneNumber } = Astro.props.Content;
+const { heading, text, buttonText, image, altText, phoneTextOne, phoneTextTwo, phoneNumber, buttonLink } = Astro.props.Content;
 ---
 
 <section
@@ -22,7 +22,7 @@ const { heading, text, buttonText, image, altText, phoneText, phoneNumber } = As
         </p>
       </div>
       <div class="flex gap-3 items-center max-sm:flex-col max-sm:w-full">
-        <a href="/contact"
+        <a href={buttonLink}
           class="flex-1 px-5 py-4 text-lg font-semibold text-center bg-amber-300 cursor-pointer rounded-[50px] text-neutral-800 max-sm:w-full"
         >
           {buttonText}
@@ -32,9 +32,9 @@ const { heading, text, buttonText, image, altText, phoneText, phoneNumber } = As
           aria-label="Call for questions"
         >
           <div class="flex flex-col items-center">
-            <span class="text-xs"> {phoneText} </span>
+            <span class="text-xs"> {phoneTextOne} </span>
             <span class="text-xs font-semibold leading-6">
-              Call {phoneNumber}
+               {phoneTextTwo}
             </span>
           </div>
         </a>

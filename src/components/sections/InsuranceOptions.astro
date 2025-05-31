@@ -1,5 +1,5 @@
 ---
-const { headingOne, headingTwo, description, insuranceOptions } = Astro.props.Content;
+const { headingOne, headingTwo, description, insuranceOptions  , buttonOneLink,  buttonOneText, buttonTwoLink, buttonTwoTextOne, buttonTwoTextTwo } = Astro.props.Content;
 ---
 
 <section class="flex flex-col items-center px-5 py-10 mx-auto my-0 max-w-[1440px]">
@@ -37,12 +37,12 @@ const { headingOne, headingTwo, description, insuranceOptions } = Astro.props.Co
   </div>
 
   <div class="flex gap-3 justify-center max-md:flex-col max-md:w-full max-md:max-w-[400px] max-sm:gap-2.5">
-    <a  href="/contact" class="px-5 py-4 text-lg font-semibold text-center bg-amber-300 cursor-pointer min-w-[270px] rounded-[50px] text-neutral-800 max-sm:w-full max-sm:min-w-[unset]">
-      Get Started
+    <a  href={buttonOneLink} class="px-5 py-4 text-lg font-semibold text-center bg-amber-300 cursor-pointer min-w-[270px] rounded-[50px] text-neutral-800 max-sm:w-full max-sm:min-w-[unset]">
+      {buttonOneText}
     </a>
-    <a href={`tel:${1234567890}`} class="flex flex-col py-2 items-center px-5 py-1 text-white bg-purple-900 min-w-[270px] rounded-[50px] max-sm:w-full max-sm:min-w-[unset]">
-      <p class="mb-1 text-xs text-white">Have a question?</p>
-      <p class="text-xs font-semibold text-white">Call (123) 456-7890</p>
+    <a href={`tel:${buttonTwoLink}`} class="flex flex-col py-2 items-center px-5 py-1 text-white bg-purple-900 min-w-[270px] rounded-[50px] max-sm:w-full max-sm:min-w-[unset]">
+      <p class="mb-1 text-xs text-white">{buttonTwoTextOne}</p>
+      <p class="text-xs font-semibold text-white">{buttonTwoTextTwo}</p>
     </a>
   </div>
 

@@ -11,6 +11,7 @@ const {
   textBox2_Part_3,
   textBox3,
   buttonOne,
+  buttonOneLink,
   buttonTwo,
   telephoneNumber
 } = Astro.props.Content;
@@ -136,7 +137,7 @@ const GeneralData = Astro.props.GeneralData;
 
                 <div class="flex gap-3 mt-6 max-md:max-w-full">
                   <a
-                    href="/contact"
+                    href={buttonOneLink}
                     class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 rounded-[50px] text-neutral-800"
                   >
                     {buttonOne}

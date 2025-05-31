@@ -130,9 +130,11 @@ const contactCollection = {
       heading: z.string(),
       text: z.string(),
       buttonText: z.string(),
+      buttonLink: z.string(),
       phoneQuestionText: z.string(),
       treatmentsLabel: z.string(),
       callButtonText: z.string(),
+      callButtonLink: z.string(),
       navItems: z.array(
         z.object({
           text: z.string(),
@@ -187,21 +189,47 @@ const homeCollection = {
   type: "data",
   schema: z.object({
     hero: z.object({
-      location: z.string(),
-      heading: z.string(),
-      text: z.string(),
-      formTitle: z.string(),
-      features: z.array(z.string()),
+      backgroundImage: z.string(),
+      backgroundImageAlt: z.string(),
+      logo: z.string(),
+      buttonText: z.string(),
+      textBox1: z.string(),
+      textBox2_Part_1: z.string(),
+      textBox2_Part_2: z.string(),
+      textBox2_Part_3: z.string(),
+      textBox3: z.string(),
+      buttonOne: z.string(),
+      buttonOneLink: z.string(),
+      buttonTwo: z.string(),
+      telephoneNumber: z.string(),
+      heroLinks: z.array(
+        z.object({
+          text: z.string(),
+          link: z.string(),
+          sublinks: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+          sublinks2: z.array(
+            z.object({
+              text: z.string(),
+              link: z.string(),
+            })
+          ).optional(),
+        })
+      ),
     }),
     about: z.object({
-      headingOne: z.string(),
-      textOne: z.string(),
+      headingOne_Part_1: z.string(),
+      headingOne_Part_2: z.string(),
       headingTwo: z.string(),
-      textTwo: z.string(),
-      images: z.object({
-        imageOne: z.string(),
-        imageTwo: z.string(),
-      }),
+      textOne: z.string(),
+      buttonOne: z.string(),
+      buttonTwo_Part_1: z.string(),
+      buttonTwo_Part_2: z.string(),
+      buttonTwo_Number: z.string(),
     }),
     singleTestimonial: z.object({
       cardDetail: z.string(),
@@ -260,6 +288,12 @@ const homeCollection = {
     insuranceOptions: z.object({
       heading: z.string(),
       description: z.string(),
+      buttonOneText: z.string(),
+      buttonOneLink: z.string(),
+      buttonTwoTextOne: z.string(),
+      buttonTwoTextTwo: z.string(),
+      buttonTwoLink: z.string(),
+
       insuranceOptions: z.array(z.object({
         logo: z.string(),
       })),
@@ -268,9 +302,11 @@ const homeCollection = {
       heading: z.string(),
       text: z.string(),
       buttonText: z.string(),
+      buttoneLink: z.string(),
       image: z.string(),
       altText: z.string(),
-      phoneText: z.string(),
+      phoneTextOne: z.string(),
+      phoneTextTwo: z.string(),
       phoneNumber: z.string(),
     }),
   }),
@@ -343,9 +379,11 @@ const programCollection = {
       heading: z.string(),
       text: z.string(),
       buttonText: z.string(),
+      buttonLink: z.string(),
       phoneQuestionText: z.string(),
       treatmentsLabel: z.string(),
       callButtonText: z.string(),
+      callButtonLink: z.string(),
       navItems: z.array(
         z.object({
           text: z.string(),
@@ -543,7 +581,18 @@ const programCollection = {
         
       })),
     }),
-    programTMS: z.object({
+     cta: z.object({
+      heading: z.string(),
+      text: z.string(),
+      buttonText: z.string(),
+      buttoneLink: z.string(),
+      image: z.string(),
+      altText: z.string(),
+      phoneTextOne: z.string(),
+      phoneTextTwo: z.string(),
+      phoneNumber: z.string(),
+    }),
+     programTMS: z.object({
       mainHeading: z.string(),
       coloredHeading: z.string(),
       description: z.string(),
@@ -559,8 +608,7 @@ const programCollection = {
         icon: z.string(),
         description: z.string(),
       }))),
-    }),
-  }),
+  })}),
 };
 
 export const programarchiveCollection = {
@@ -779,9 +827,12 @@ const blogpageCollection = {
       heading: z.string(),
       text: z.string(),
       buttonText: z.string(),
+            buttonLink: z.string(),
+
       phoneQuestionText: z.string(),
       treatmentsLabel: z.string(),
       callButtonText: z.string(),
+      callButtonLink: z.string(),
       navItems: z.array(
         z.object({
           text: z.string(),
@@ -829,9 +880,12 @@ const insuranceCollection = {
       heading: z.string(),
       text: z.string(),
       buttonText: z.string(),
+            buttonLink: z.string(),
+
       phoneQuestionText: z.string(),
       treatmentsLabel: z.string(),
       callButtonText: z.string(),
+      callButtonLink: z.string(),
       navItems: z.array(
         z.object({
           text: z.string(),
@@ -873,10 +927,13 @@ const insuranceCollection = {
       heading: z.string(),
       subheading: z.string(),
       buttonText: z.string(),
+      buttonLink: z.string(),
       callText: z.string(),
+      callTextTwo: z.string(),
       phoneNumber: z.string(),
       footerText: z.string(),
       verifyButtonText: z.string(),
+      verifyButtonLink: z.string(),
       providers: z.array(
         z.object({
           name: z.string(),
@@ -929,9 +986,11 @@ const insuranceCollection = {
       heading: z.string(),
       text: z.string(),
       buttonText: z.string(),
+      buttoneLink: z.string(),
       image: z.string(),
       altText: z.string(),
-      phoneText: z.string(),
+      phoneTextOne: z.string(),
+      phoneTextTwo: z.string(),
       phoneNumber: z.string(),
     }),
   }),
@@ -944,9 +1003,11 @@ const locationCollection = {
       heading: z.string(),
       text: z.string(),
       buttonText: z.string(),
+      buttonLink: z.string(),
       phoneQuestionText: z.string(),
       treatmentsLabel: z.string(),
       callButtonText: z.string(),
+      callButtonLink: z.string(),
       navItems: z.array(
         z.object({
           text: z.string(),
@@ -979,6 +1040,7 @@ const locationCollection = {
         phone: z.string(),
         hours: z.string(),
         buttonText: z.string(),
+        buttonLink: z.string(),
       }),
     }),
     disorders: z.object({
@@ -992,13 +1054,15 @@ const locationCollection = {
         image: z.string(),
       })),
     }),
-    cta: z.object({
+     cta: z.object({
       heading: z.string(),
       text: z.string(),
       buttonText: z.string(),
+      buttoneLink: z.string(),
       image: z.string(),
       altText: z.string(),
-      phoneText: z.string(),
+      phoneTextOne: z.string(),
+      phoneTextTwo: z.string(),
       phoneNumber: z.string(),
     }),
   }),
@@ -1059,7 +1123,9 @@ const treatmentCollection = {
         })
       ),
       buttonText: z.string(),
-      phoneText: z.string(),
+      buttonLink: z.string(),
+      phoneTextOne: z.string(),
+      phoneTextTwo: z.string(),
       phoneNumber: z.string(),
       image: z.string(),
     }),
@@ -1093,9 +1159,11 @@ const pricingCollection = {
       heading: z.string(),
       text: z.string(),
       buttonText: z.string(),
+      buttonLink: z.string(),
       phoneQuestionText: z.string(),
       treatmentsLabel: z.string(),
       callButtonText: z.string(),
+      callButtonLink: z.string(),
       navItems: z.array(
         z.object({
           text: z.string(),
@@ -1154,13 +1222,15 @@ const pricingCollection = {
         image: z.string(),
       })),
     }),
-    cta: z.object({
+   cta: z.object({
       heading: z.string(),
       text: z.string(),
       buttonText: z.string(),
+      buttoneLink: z.string(),
       image: z.string(),
       altText: z.string(),
-      phoneText: z.string(),
+      phoneTextOne: z.string(),
+      phoneTextTwo: z.string(),
       phoneNumber: z.string(),
     }),
   

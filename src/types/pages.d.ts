@@ -69,9 +69,11 @@ export interface Contact {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       phoneQuestionText: string;
       treatmentsLabel: string;
       callButtonText: string;
+      callButtonLink: string;
       navItems: {
         text: string;
         url: string;
@@ -127,6 +129,7 @@ export interface Home {
       textBox2_Part_3: string;
       textBox3: string;
       buttonOne: string;
+      buttonOneLink: string;
       buttonTwo: string;
       telephoneNumber: string;
       heroLinks: {
@@ -232,6 +235,12 @@ export interface Home {
       headingOne: string;
       headingTwo: string;
       description: string;
+      buttonOneText: string;
+      buttonOneLink: string;
+      buttonTwoTextOne: string;
+      buttonTwoTextTwo: string;
+      buttonTwoLink: string;
+
       insuranceOptions: {
         logo: string;
         alt: string;
@@ -241,9 +250,11 @@ export interface Home {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       image: string;
       altText: string;
-      phoneText: string;
+      phoneTextOne: string;
+      phoneTextTwo: string;
       phoneNumber: string;
     };
   };
@@ -308,9 +319,11 @@ export interface Program {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       phoneQuestionText: string;
       treatmentsLabel: string;
       callButtonText: string;
+      callButtonLink: string;
       navItems: {
         text: string;
         url: string;
@@ -424,13 +437,15 @@ export interface Program {
         image: string;
       }[];
     };
-    cta: {
+       cta: {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       image: string;
       altText: string;
-      phoneText: string;
+      phoneTextOne: string;
+      phoneTextTwo: string;
       phoneNumber: string;
     };
     disorders: {
@@ -739,9 +754,11 @@ export interface BlogPage {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       phoneQuestionText: string;
       treatmentsLabel: string;
       callButtonText: string;
+      callButtonLink: string;
       navItems: {
         text: string;
         url: string;
@@ -771,9 +788,11 @@ export interface BlogPage {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       image: string;
       altText: string;
-      phoneText: string;
+      phoneTextOne: string;
+      phoneTextTwo: string;
       phoneNumber: string;
     };
   };
@@ -785,9 +804,11 @@ export interface Insurance {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       phoneQuestionText: string;
       treatmentsLabel: string;
       callButtonText: string;
+      callButtonLink: string;
       navItems: {
         text: string;
         url: string;
@@ -821,10 +842,13 @@ export interface Insurance {
       heading: string;
       subheading: string;
       buttonText: string;
+      buttonLink: string;
       callText: string;
+      callTextTwo: string;
       phoneNumber: string;
       footerText: string;
       verifyButtonText: string;
+      verifyButtonLink: string;
       providers: {
         name: string;
         description: string;
@@ -850,13 +874,15 @@ export interface Insurance {
         description: string;
       }[];
     };
-    cta: {
+   cta: {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       image: string;
       altText: string;
-      phoneText: string;
+      phoneTextOne: string;
+      phoneTextTwo: string;
       phoneNumber: string;
     };
     insuranceVerification: {
@@ -872,7 +898,9 @@ export interface Insurance {
         heading: string;
         subheading: string;
         buttonText: string;
+        buttonLink: string;
         callText: string;
+        callTextTwo: string;
         phoneNumber: string;
       };
     };
@@ -885,9 +913,11 @@ export interface Location {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       phoneQuestionText: string;
       treatmentsLabel: string;
       callButtonText: string;
+      callButtonLink: string;
       navItems: {
         text: string;
         url: string;
@@ -914,6 +944,7 @@ export interface Location {
         phone: string;
         hours: string;
         buttonText: string;
+        buttonLink: string;
       };
     };
     disorders: {
@@ -927,13 +958,15 @@ export interface Location {
         image: string;
       }[];
     };
-    cta: {
+   cta: {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       image: string;
       altText: string;
-      phoneText: string;
+      phoneTextOne: string;
+      phoneTextTwo: string;
       phoneNumber: string;
     };
   };
@@ -945,9 +978,11 @@ export interface Treatment {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       phoneQuestionText: string;
       treatmentsLabel: string;
       callButtonText: string;
+      callButtonLink: string;
       navItems: {
         text: string;
         url: string;
@@ -983,7 +1018,9 @@ export interface Treatment {
         text: string;
       }[];
       buttonText: string;
-      phoneText: string;
+      buttonLink: string;
+      phoneTextOne: string;
+      phoneTextTwo: string;
       phoneNumber: string;
       image: string;
     };
@@ -1002,9 +1039,11 @@ export interface Treatment {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       image: string;
       altText: string;
-      phoneText: string;
+      phoneTextOne: string;
+      phoneTextTwo: string;
       phoneNumber: string;
     };
   };
@@ -1016,9 +1055,11 @@ export interface Pricing {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       phoneQuestionText: string;
       treatmentsLabel: string;
       callButtonText: string;
+      callButtonLink: string;
       navItems: {
         text: string;
         url: string;
@@ -1071,13 +1112,15 @@ export interface Pricing {
         image: string;
       }[];
     };
-    cta: {
+  cta: {
       heading: string;
       text: string;
       buttonText: string;
+      buttonLink: string;
       image: string;
       altText: string;
-      phoneText: string;
+      phoneTextOne: string;
+      phoneTextTwo: string;
       phoneNumber: string;
     };
   };

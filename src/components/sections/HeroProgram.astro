@@ -3,7 +3,7 @@ import Button from "../Button.astro";
 import Form from "../Form.astro";
 
 const GeneralData = Astro.props.GeneralData;
-const { heading, text, buttonText, phoneQuestionText, treatmentsLabel, callButtonText, navItems , hideButton = false } = Astro.props.Content;
+const { heading, text, buttonText, buttonLink, phoneQuestionText, treatmentsLabel, callButtonText, callButtonLink, navItems , hideButton = false } = Astro.props.Content;
 ---
 
 <section class="lg:mx-auto mx-3 my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl max-md:mx-6 max-sm:mx-4 relative">
@@ -71,8 +71,8 @@ const { heading, text, buttonText, phoneQuestionText, treatmentsLabel, callButto
           ))}
         </ul>
 
-        <a href={`tel:${GeneralData.phoneNumber}`} class="hidden xl:flex flex-col justify-center self-stretch px-5 py-2 my-auto text-blue-900 bg-white min-h-10 rounded-[50px]">
-          <span class="gap-1 self-stretch">{callButtonText} {GeneralData.phoneNumber}</span>
+        <a href={`tel:${callButtonLink}`} class="hidden xl:flex flex-col justify-center self-stretch px-5 py-2 my-auto text-blue-900 bg-white min-h-10 rounded-[50px]">
+          <span class="gap-1 self-stretch">{callButtonText}</span>
         </a>
       </nav>
 
@@ -104,8 +104,8 @@ const { heading, text, buttonText, phoneQuestionText, treatmentsLabel, callButto
             </li>
           ))}
           <li class="mt-auto pt-6 w-full"> {/* Pushes to bottom */}
-            <a href={`tel:${GeneralData.phoneNumber}`} class="block w-full text-center px-6 py-3.5 text-lg font-semibold text-white bg-purple-800 rounded-[50px] hover:bg-purple-700">
-              {callButtonText} {GeneralData.phoneNumber}
+            <a href={`tel:${callButtonLink}`} class="block w-full text-center px-6 py-3.5 text-lg font-semibold text-white bg-purple-800 rounded-[50px] hover:bg-purple-700">
+              {callButtonText} 
             </a>
           </li>
         </ul>
@@ -125,14 +125,14 @@ const { heading, text, buttonText, phoneQuestionText, treatmentsLabel, callButto
 
         {hideButton == false && (
           <div class="flex flex-wrap gap-3 self-stretch mt-3 w-full max-md:max-w-full max-md:gap-2 max-sm:flex-col max-sm:gap-3 max-md:px-2">
-            <a href="/contact" class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800 max-md:min-w-[200px] max-sm:min-w-full">
+            <a href={buttonLink} class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800 max-md:min-w-[200px] max-sm:min-w-full">
               <span>{buttonText}</span>
             </a>
 
-            <a href={`tel:${GeneralData.phoneNumber}`} class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-blue-900 bg-white basis-0 min-w-60 rounded-[50px] max-md:min-w-[200px] max-sm:min-w-full">
+            <a href={`tel:${callButtonLink}`} class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-blue-900 bg-white basis-0 min-w-60 rounded-[50px] max-md:min-w-[200px] max-sm:min-w-full">
               <div class="flex flex-col items-center">
                 <span class="text-xs">{phoneQuestionText}</span>
-                <span class="text-xs font-semibold leading-6">{callButtonText} {GeneralData.phoneNumber}</span>
+                <span class="text-xs font-semibold leading-6">{callButtonText}</span>
               </div>
             </a>
           </div>

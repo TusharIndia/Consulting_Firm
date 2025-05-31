@@ -37,9 +37,11 @@ collections:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Text", name: "text", widget: "string" }
           - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string" }
           - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
           - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
           - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+          - { label: "Call Button Link", name: "callButtonLink", widget: "string" }
           - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
               { label: "Text", name: "text", widget: "string" },
               { label: "URL", name: "url", widget: "string" },
@@ -87,7 +89,9 @@ collections:
               - { label: "Icon", name: "icon", widget: "image" }
               - { label: "Text", name: "text", widget: "string" }
           - { label: "Button Text", name: "buttonText", widget: "string" }
-          - { label: "Phone Text", name: "phoneText", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string" }
+          - { label: "Phone Text One", name: "phoneTextOne", widget: "string" }
+          - { label: "Phone Text Two", name: "phoneTextTwo", widget: "string" }
           - { label: "Phone Number", name: "phoneNumber", widget: "string" }
           - { label: "Image", name: "image", widget: "image" }
       
@@ -107,18 +111,20 @@ collections:
               - { label: "Link", name: "link", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
-      - label: "CTA"
+      - label: "Call to Action"
         name: "cta"
         widget: "object"
         collapsed: true
         fields:
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Text", name: "text", widget: "text" }
-          - { label: "Button Text", name: "buttonText", widget: "string" }
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Image Alt Text", name: "altText", widget: "string" }
-          - { label: "Phone Text", name: "phoneText", widget: "string" }
-          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
   - name: "programs"
     label: "Programs"
@@ -136,9 +142,11 @@ collections:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Text", name: "text", widget: "string" }
           - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string" }
           - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
           - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
           - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+          - { label: "Call Button Link", name: "callButtonLink", widget: "string" }
           - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
               { label: "Text", name: "text", widget: "string" },
               { label: "URL", name: "url", widget: "string" },
@@ -321,18 +329,20 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Details", name: "details", widget: "text" }
-      - label: "CTA"
+      - label: "Call to Action"
         name: "cta"
         widget: "object"
         collapsed: true
         fields:
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Text", name: "text", widget: "text" }
-          - { label: "Button Text", name: "buttonText", widget: "string" }
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Image Alt Text", name: "altText", widget: "string" }
-          - { label: "Phone Text", name: "phoneText", widget: "string" }
-          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
 
 
@@ -571,9 +581,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
               - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
               - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Call Button Link", name: "callButtonLink", widget: "string" }
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
@@ -623,6 +635,23 @@ collections:
                   - { label: "Heading", name: "heading", widget: "string" }
                   - { label: "Hours (Weekdays)", name: "hours", widget: "string" }
                   - { label: "Hours (Weekend)", name: "weekend", widget: "string" }
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }  
+            
+            
+        
 
       # Home Page Configuration
       - label: "Home Page"
@@ -634,15 +663,33 @@ collections:
             widget: "object"
             collapsed: true
             fields:
-              - { label: "Location", name: "location", widget: "string" }
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Text", name: "text", widget: "string" }
-              - { label: "Form Title", name: "formTitle", widget: "string" }
-              - label: "Features"
-                name: "features"
+              - { label: "Background Image", name: "backgroundImage", widget: "image" }
+              - { label: "Background Image Alt", name: "backgroundImageAlt", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Text Box 1", name: "textBox1", widget: "string" }
+              - { label: "Text Box 2 Part 1", name: "textBox2_Part_1", widget: "string" }
+              - { label: "Text Box 2 Part 2", name: "textBox2_Part_2", widget: "string" }
+              - { label: "Text Box 2 Part 3", name: "textBox2_Part_3", widget: "string" }
+              - { label: "Text Box 3", name: "textBox3", widget: "text" }
+              - { label: "Button One", name: "buttonOne", widget: "string" }
+              - { label: "Button One Link", name: "buttonOneLink", widget: "string" }
+              - { label: "Button Two", name: "buttonTwo", widget: "string" }
+              - { label: "Telephone Number", name: "telephoneNumber", widget: "string" }
+              - label: "Hero Links"
+                name: "heroLinks"
                 widget: "list"
                 fields:
-                  - { label: "Feature", name: "feature", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
+                  - { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "Link", name: "link", widget: "string" }
+                  ]}
 
           - label: "Call to Action"
             name: "cta"
@@ -652,9 +699,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Image Alt Text", name: "altText", widget: "string" }
-              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
               - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
           - label: "About"
@@ -786,6 +835,11 @@ collections:
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button One Text", name: "buttonOneText", widget: "string" }
+              - { label: "Button One Link", name: "buttonOneLink", widget: "string" }
+              - { label: "Button Second Text One", name: "buttonTwoTextOne", widget: "string" }
+              - { label: "Button Second Text Second", name: "buttonTwoTextTwo", widget: "string" }
+              - { label: "Button Second Link", name: "buttonTwoLink", widget: "string" }
               - label: "Insurance Options List"
                 name: "insuranceOptions"
                 widget: "list"
@@ -983,9 +1037,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
               - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
               - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Call Button Link", name: "callButtonLink", widget: "string" }
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
@@ -1027,9 +1083,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Image Alt Text", name: "altText", widget: "string" }
-              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
               - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
       # Insurance Page Configuration
@@ -1045,9 +1103,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
               - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
               - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Call Button Link", name: "callButtonLink", widget: "string" }
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
@@ -1070,9 +1130,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
               - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
               - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Call Button Link", name: "callButtonLink", widget: "string" }
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
@@ -1095,10 +1157,13 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Subheading", name: "subheading", widget: "text" }
               - { label: "Get Started Button Text", name: "buttonText", widget: "string" }
+              - { label: "Get Started Button Link", name: "buttonLink", widget: "string" }
               - { label: "Call Question Text", name: "callText", widget: "string" }
+              - { label: "Call Question Text Two", name: "callTextTwo", widget: "string" }
               - { label: "Phone Number", name: "phoneNumber", widget: "string" }
               - { label: "Footer Text", name: "footerText", widget: "text" }
               - { label: "Verify Button Text", name: "verifyButtonText", widget: "string" }
+              - { label: "Verify Button Link", name: "verifyButtonLink", widget: "string" }
               - label: "Insurance Providers"
                 name: "providers"
                 widget: "list"
@@ -1145,9 +1210,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Image Alt Text", name: "altText", widget: "string" }
-              - { label: "Phone Question Text", name: "phoneText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
               - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
           - label: "Insurance Verification Section"
@@ -1174,7 +1241,9 @@ collections:
                   - { label: "Heading", name: "heading", widget: "string" }
                   - { label: "Subheading", name: "subheading", widget: "text" }
                   - { label: "Button Text", name: "buttonText", widget: "string" }
+                  - { label: "Button Link", name: "buttonLink", widget: "string" }
                   - { label: "Call Text", name: "callText", widget: "string" }
+                  - { label: "Call Text Two", name: "callTextTwo", widget: "string" }
                   - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
       # Location Page Configuration
@@ -1190,9 +1259,11 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
               - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
               - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Call Button Link", name: "callButtonLink", widget: "string" }
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
@@ -1227,6 +1298,7 @@ collections:
                   - { label: "Phone", name: "phone", widget: "string" }
                   - { label: "Hours", name: "hours", widget: "string" }
                   - { label: "Button Text", name: "buttonText", widget: "string" }
+                  - {label: "Button Link", name: "buttonLink", widget: "string" }
           
           - label: "Disorders"
             name: "disorders"
@@ -1244,11 +1316,26 @@ collections:
                   - { label: "Link", name: "link", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Image", name: "image", widget: "image" }
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
 
-      # Treatment Page Configuration
-      - label: "Treatment Page"
-        name: "treatment"
-        file: "src/content/pages/treatment.json"
+      
+      # Pricing Page Configuration
+      - label: "Pricing Page"
+        name: "pricing"
+        file: "src/content/pages/pricing.json"
         fields:
           - label: "Hero"
             name: "hero"
@@ -1258,12 +1345,15 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
               - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string" }
               - { label: "Treatments Label", name: "treatmentsLabel", widget: "string" }
               - { label: "Call Button Text", name: "callButtonText", widget: "string" }
+              - { label: "Call Button Link", name: "callButtonLink", widget: "string" }
               - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
                   { label: "Text", name: "text", widget: "string" },
                   { label: "URL", name: "url", widget: "string" },
+                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false },
                   { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
                     { label: "Text", name: "text", widget: "string" },
                     { label: "Link", name: "link", widget: "string" }
@@ -1274,6 +1364,91 @@ collections:
                   ]}
                 ] }
 
-       
+          - label: "Pricing Hero"
+            name: "pricingHero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "text" }
+              
+              - label: "Initial Consultation"
+                name: "initialConsultation"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Features"
+                    name: "features"
+                    widget: "list"
+                    field: { label: "Feature", name: "feature", widget: "string" }
+              
+              - label: "Follow-up Visits"
+                name: "followUpVisits"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Features"
+                    name: "features"
+                    widget: "list"
+                    field: { label: "Feature", name: "feature", widget: "string" }
+              
+              - { label: "Specialized Treatments Heading", name: "specializedTreatmentsHeading", widget: "string" }
+              
+              - label: "TMS Therapy"
+                name: "tmsTherapy"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Features"
+                    name: "features"
+                    widget: "list"
+                    field: { label: "Feature", name: "feature", widget: "string" }
+              
+              - label: "Spravato Treatment"
+                name: "spravatoTreatment"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Features"
+                    name: "features"
+                    widget: "list"
+                    field: { label: "Feature", name: "feature", widget: "string" }
+
+          - label: "Disorders"
+            name: "disorders"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Heading Two Part 1", name: "headingTwo_Part_1", widget: "string" }
+              - { label: "Heading Two Part 2", name: "headingTwo_Part_2", widget: "string" }
+              - { label: "Heading Two Part 3", name: "headingTwo_Part_3", widget: "string" }
+              - label: "Disorders List"
+                name: "disorders"
+                widget: "list"
+                fields:
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Phone Question One Text", name: "phoneTextOne", widget: "string" }
+              - { label: "Phone Question Two Text", name: "phoneTextTwo", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+
+
 
 

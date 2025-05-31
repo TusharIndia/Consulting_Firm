@@ -10,6 +10,7 @@
     "textBox2_Part_3": "-based mental health treatment",
     "textBox3": "Clear Path's treatments address the root cause of anxiety, depression, ADHD, and PTSD symptoms.",
     "buttonOne": "Get Started",
+    "buttonOneLink": "/contact",
     "buttonTwo": "Have a question?",
     "telephoneNumber": "1234567890",
     "heroLinks": [
@@ -311,7 +312,11 @@
     "headingOne": "Insurance",
     "headingTwo": "Partners",
     "description": "We work with multiple insurance providers and healthcare networks to ensure accessible mental health care for our patients.",
-    "buttonText": "Check Your Insurance",
+    "buttonOneText": "Check Your Insurance",
+    "buttonOneLink": "/insurance",
+    "buttonSecondTextOne": "Have a question?",
+    "buttonSecondTextTwo": "Call (123) 456-7890",
+    "buttonSecondLink": "tel:1234567890",
     "insuranceOptions": [
       {
         "logo": "/imgs/blue_cross.png",
@@ -339,9 +344,11 @@
     "heading": "Ready to Start Your Journey to Better Mental Health?",
     "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
     "buttonText": "Get Started",
+    "buttonLink": "/contact",
     "image": "/imgs/mental_health_support.png",
     "altText": "Mental health support",
-    "phoneText": "Have a question?",
-    "phoneNumber": "(123) 456-7890"
+    "phoneTextOne": "Have a question?",
+    "phoneTextTwo": "Call (123) 456-7890",
+    "phoneNumber": "1234567890"
   }
 }

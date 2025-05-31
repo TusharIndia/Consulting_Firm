@@ -153,9 +153,11 @@ export async function fetchContactData(): Promise<Contact> {
         heading: contact.data.hero.heading,
         text: contact.data.hero.text,
         buttonText: contact.data.hero.buttonText,
+        buttonLink: contact.data.hero.buttonLink,
         phoneQuestionText: contact.data.hero.phoneQuestionText,
         treatmentsLabel: contact.data.hero.treatmentsLabel,
         callButtonText: contact.data.hero.callButtonText,
+        callButtonLink: contact.data.hero.callButtonLink,
         navItems: contact.data.hero.navItems.map((item) => ({
           text: item.text,
           url: item.url,
@@ -215,6 +217,7 @@ export async function fetchHomeData(): Promise<Home> {
         textBox2_Part_3: home.data.hero.textBox2_Part_3,
         textBox3: home.data.hero.textBox3,
         buttonOne: home.data.hero.buttonOne,
+        buttonOneLink: home.data.hero.buttonOneLink,
         buttonTwo: home.data.hero.buttonTwo,
         telephoneNumber: home.data.hero.telephoneNumber,
         heroLinks: home.data.hero.heroLinks.map((link) => ({
@@ -321,6 +324,11 @@ export async function fetchHomeData(): Promise<Home> {
         headingOne: home.data.insuranceOptions.headingOne,
         headingTwo: home.data.insuranceOptions.headingTwo,
         description: home.data.insuranceOptions.description,
+        buttonOneText: home.data.insuranceOptions.buttonOneText,
+        buttonOneLink: home.data.insuranceOptions.buttonOneLink,
+        buttonTwoTextOne: home.data.insuranceOptions.buttonSecondTextOne,
+        buttonTwoTextTwo: home.data.insuranceOptions.buttonSecondTextTwo,
+        buttonTwoLink: home.data.insuranceOptions.buttonSecondLink,
         insuranceOptions: home.data.insuranceOptions.insuranceOptions.map(
           (option) => ({
             logo: option.logo,
@@ -331,9 +339,11 @@ export async function fetchHomeData(): Promise<Home> {
         heading: home.data.cta.heading,
         text: home.data.cta.text,
         buttonText: home.data.cta.buttonText,
+        buttonLink: home.data.cta.buttonLink,
         image: home.data.cta.image,
         altText: home.data.cta.altText,
-        phoneText: home.data.cta.phoneText,
+        phoneTextOne: home.data.cta.phoneTextOne,
+        phoneTextTwo: home.data.cta.phoneTextTwo,
         phoneNumber: home.data.cta.phoneNumber,
       },
     },
@@ -410,9 +420,11 @@ export async function fetchSubProgramData(sub_page): Promise<Program> {
         heading: programData.data.hero.heading,
         text: programData.data.hero.text,
         buttonText: programData.data.hero.buttonText,
+        buttonLink: programData.data.hero.buttonLink,
         phoneQuestionText: programData.data.hero.phoneQuestionText,
         treatmentsLabel: programData.data.hero.treatmentsLabel,
         callButtonText: programData.data.hero.callButtonText,
+        callButtonLink: programData.data.hero.callButtonLink,
         navItems: programData.data.hero.navItems.map((item: any) => ({
           text: item.text,
           url: item.url,
@@ -516,13 +528,15 @@ export async function fetchSubProgramData(sub_page): Promise<Program> {
         heading: programData.data.amenities.heading,
         description: programData.data.amenities.description,
       },
-      cta: {
+     cta: {
         heading: programData.data.cta.heading,
         text: programData.data.cta.text,
         buttonText: programData.data.cta.buttonText,
+        buttonLink: programData.data.cta.buttonLink,
         image: programData.data.cta.image,
         altText: programData.data.cta.altText,
-        phoneText: programData.data.cta.phoneText,
+        phoneTextOne: programData.data.cta.phoneTextOne,
+        phoneTextTwo: programData.data.cta.phoneTextTwo,
         phoneNumber: programData.data.cta.phoneNumber,
       },
       disorders: {
@@ -1097,9 +1111,11 @@ export async function fetchBlogPageData(): Promise<BlogPage> {
         heading: blogPage.data.hero.heading,
         text: blogPage.data.hero.text,
         buttonText: blogPage.data.hero.buttonText,
+        buttonLink: blogPage.data.hero.buttonLink,
         phoneQuestionText: blogPage.data.hero.phoneQuestionText,
         treatmentsLabel: blogPage.data.hero.treatmentsLabel,
         callButtonText: blogPage.data.hero.callButtonText,
+        callButtonLink: blogPage.data.hero.callButtonLink,
         navItems: blogPage.data.hero.navItems.map((item) => ({
           text: item.text,
           url: item.url,
@@ -1125,13 +1141,15 @@ export async function fetchBlogPageData(): Promise<BlogPage> {
           image: disorder.image,
         })),
       },
-      cta: {
+    cta: {
         heading: blogPage.data.cta.heading,
         text: blogPage.data.cta.text,
         buttonText: blogPage.data.cta.buttonText,
+        buttonLink: blogPage.data.cta.buttonLink,
         image: blogPage.data.cta.image,
         altText: blogPage.data.cta.altText,
-        phoneText: blogPage.data.cta.phoneText,
+        phoneTextOne: blogPage.data.cta.phoneTextOne,
+        phoneTextTwo: blogPage.data.cta.phoneTextTwo,
         phoneNumber: blogPage.data.cta.phoneNumber,
       },
     },
@@ -1139,82 +1157,10 @@ export async function fetchBlogPageData(): Promise<BlogPage> {
 }
 
 export async function fetchInsuranceData(): Promise<Insurance> {
-  try {
+
     const insurancePages = await getCollection("pages", (page) => page.id === "insurance");
     
-    if (!insurancePages || insurancePages.length === 0) {
-      console.error("No insurance page found in content collection");
-      return {
-        data: {
-          hero: {
-            heading: "Insurance Verification",
-            text: "Default text",
-            buttonText: "Verify Insurance",
-            phoneQuestionText: "Questions about insurance?",
-            treatmentsLabel: "Insurance",
-            callButtonText: "Call Now",
-            navItems: []
-          },
-          contactHero: {
-            title: {
-              line1: "Insurance",
-              line2: "Verification",
-              line3: "at ClearPath"
-            },
-            description: "Default description",
-            bottomDescription: "",
-            formTitle: "",
-            formSubtitle: "",
-            insuranceProviders: [],
-            privacyNotice: ""
-          },
-          insuranceProviders: {
-            heading: "",
-            subheading: "",
-            buttonText: "",
-            callText: "",
-            phoneNumber: "",
-            footerText: "",
-            verifyButtonText: "",
-            providers: []
-          },
-          testimonials: {
-            list: []
-          },
-          treatmentGrid: {
-            heading: "",
-            subheading: "",
-            description: "",
-            featuredImage: "",
-            treatments: []
-          },
-          cta: {
-            heading: "",
-            text: "",
-            buttonText: "",
-            image: "",
-            altText: "",
-            phoneText: "",
-            phoneNumber: ""
-          },
-          insuranceVerification: {
-            title: {
-              line1: "",
-              line2: ""
-            },
-            description: "",
-            features: [],
-            cta: {
-              heading: "",
-              subheading: "",
-              buttonText: "",
-              callText: "",
-              phoneNumber: ""
-            }
-          }
-        }
-      };
-    }
+  
 
     const insurance = insurancePages[0];
 
@@ -1224,9 +1170,11 @@ export async function fetchInsuranceData(): Promise<Insurance> {
           heading: insurance.data.hero.heading,
           text: insurance.data.hero.text,
           buttonText: insurance.data.hero.buttonText,
+          buttonLink: insurance.data.hero.buttonLink,
           phoneQuestionText: insurance.data.hero.phoneQuestionText,
           treatmentsLabel: insurance.data.hero.treatmentsLabel,
           callButtonText: insurance.data.hero.callButtonText,
+          callButtonLink: insurance.data.hero.callButtonLink,
           navItems: insurance.data.hero.navItems.map((item) => ({
             text: item.text,
             url: item.url,
@@ -1260,10 +1208,13 @@ export async function fetchInsuranceData(): Promise<Insurance> {
           heading: insurance.data.insuranceProviders.heading,
           subheading: insurance.data.insuranceProviders.subheading,
           buttonText: insurance.data.insuranceProviders.buttonText,
+          buttonLink: insurance.data.insuranceProviders.buttonLink,
           callText: insurance.data.insuranceProviders.callText,
+          callTextTwo: insurance.data.insuranceProviders.callTextTwo,
           phoneNumber: insurance.data.insuranceProviders.phoneNumber,
           footerText: insurance.data.insuranceProviders.footerText,
           verifyButtonText: insurance.data.insuranceProviders.verifyButtonText,
+          verifyButtonLink: insurance.data.insuranceProviders.verifyButtonLink,
           providers: insurance.data.insuranceProviders.providers.map((provider) => ({
             name: provider.name,
             description: provider.description,
@@ -1289,15 +1240,17 @@ export async function fetchInsuranceData(): Promise<Insurance> {
             description: treatment.description,
           })),
         },
-        cta: {
-          heading: insurance.data.cta.heading,
-          text: insurance.data.cta.text,
-          buttonText: insurance.data.cta.buttonText,
-          image: insurance.data.cta.image,
-          altText: insurance.data.cta.altText,
-          phoneText: insurance.data.cta.phoneText,
-          phoneNumber: insurance.data.cta.phoneNumber,
-        },
+       cta: {
+        heading: insurance.data.cta.heading,
+        text: insurance.data.cta.text,
+        buttonText: insurance.data.cta.buttonText,
+        buttonLink: insurance.data.cta.buttonLink,
+        image: insurance.data.cta.image,
+        altText: insurance.data.cta.altText,
+        phoneTextOne: insurance.data.cta.phoneTextOne,
+        phoneTextTwo: insurance.data.cta.phoneTextTwo,
+        phoneNumber: insurance.data.cta.phoneNumber,
+      },
         insuranceVerification: {
           title: {
             line1: insurance.data.insuranceVerification.title.line1,
@@ -1311,86 +1264,15 @@ export async function fetchInsuranceData(): Promise<Insurance> {
             heading: insurance.data.insuranceVerification.cta.heading,
             subheading: insurance.data.insuranceVerification.cta.subheading,
             buttonText: insurance.data.insuranceVerification.cta.buttonText,
+            buttonLink: insurance.data.insuranceVerification.cta.buttonLink,
             callText: insurance.data.insuranceVerification.cta.callText,
+            callTextTwo: insurance.data.insuranceVerification.cta.callTextTwo,
             phoneNumber: insurance.data.insuranceVerification.cta.phoneNumber,
           },
         },
       },
     };
-  } catch (error) {
-    console.error("Error fetching insurance data:", error);
-    // Return default structure with empty values to prevent undefined errors
-    return {
-      data: {
-        hero: {
-          heading: "Insurance Verification",
-          text: "Error loading content",
-          buttonText: "Contact Us",
-          phoneQuestionText: "Questions?",
-          treatmentsLabel: "Insurance",
-          callButtonText: "Call Now",
-          navItems: []
-        },
-        contactHero: {
-          title: {
-            line1: "Insurance",
-            line2: "Verification",
-            line3: ""
-          },
-          description: "",
-          bottomDescription: "",
-          formTitle: "",
-          formSubtitle: "",
-          insuranceProviders: [],
-          privacyNotice: ""
-        },
-        insuranceProviders: {
-          heading: "",
-          subheading: "",
-          buttonText: "",
-          callText: "",
-          phoneNumber: "",
-          footerText: "",
-          verifyButtonText: "",
-          providers: []
-        },
-        testimonials: {
-          list: []
-        },
-        treatmentGrid: {
-          heading: "",
-          subheading: "",
-          description: "",
-          featuredImage: "",
-          treatments: []
-        },
-        cta: {
-          heading: "",
-          text: "",
-          buttonText: "",
-          image: "",
-          altText: "",
-          phoneText: "",
-          phoneNumber: ""
-        },
-        insuranceVerification: {
-          title: {
-            line1: "",
-            line2: ""
-          },
-          description: "",
-          features: [],
-          cta: {
-            heading: "",
-            subheading: "",
-            buttonText: "",
-            callText: "",
-            phoneNumber: ""
-          }
-        }
-      }
-    };
-  }
+ 
 }
 
 export async function fetchLocationData(): Promise<Location> {
@@ -1405,9 +1287,11 @@ export async function fetchLocationData(): Promise<Location> {
         heading: locationData.data.hero.heading,
         text: locationData.data.hero.text,
         buttonText: locationData.data.hero.buttonText,
+        buttonLink: locationData.data.hero.buttonLink,
         phoneQuestionText: locationData.data.hero.phoneQuestionText,
         treatmentsLabel: locationData.data.hero.treatmentsLabel,
         callButtonText: locationData.data.hero.callButtonText,
+        callButtonLink: locationData.data.hero.callButtonLink,
         navItems: locationData.data.hero.navItems.map((item: any) => ({
           text: item.text,
           url: item.url,
@@ -1434,6 +1318,7 @@ export async function fetchLocationData(): Promise<Location> {
           phone: locationData.data.locationHero.locationInfo.phone,
           hours: locationData.data.locationHero.locationInfo.hours,
           buttonText: locationData.data.locationHero.locationInfo.buttonText,
+          buttonLink: locationData.data.locationHero.locationInfo.buttonLink,
         },
       },
       disorders: {
@@ -1451,92 +1336,17 @@ export async function fetchLocationData(): Promise<Location> {
         heading: locationData.data.cta.heading,
         text: locationData.data.cta.text,
         buttonText: locationData.data.cta.buttonText,
+        buttonLink: locationData.data.cta.buttonLink,
         image: locationData.data.cta.image,
         altText: locationData.data.cta.altText,
-        phoneText: locationData.data.cta.phoneText,
+        phoneTextOne: locationData.data.cta.phoneTextOne,
+        phoneTextTwo: locationData.data.cta.phoneTextTwo,
         phoneNumber: locationData.data.cta.phoneNumber,
       },
     },
   };
 }
 
-export async function fetchTreatmentData(): Promise<Treatment> {
-  const [treatment] = await getCollection(
-    "pages",
-    (page) => page.id === "treatment"
-  );
-
-  return {
-    data: {
-      hero: {
-        heading: treatment.data.hero.heading,
-        text: treatment.data.hero.text,
-        buttonText: treatment.data.hero.buttonText,
-        phoneQuestionText: treatment.data.hero.phoneQuestionText,
-        treatmentsLabel: treatment.data.hero.treatmentsLabel,
-        callButtonText: treatment.data.hero.callButtonText,
-        navItems: treatment.data.hero.navItems.map((item: any) => ({
-          text: item.text,
-          url: item.url,
-          hasDropdown: item.hasDropdown,
-          sublinks: item.sublinks?.map((sublink: any) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-          sublinks2: item.sublinks2?.map((sublink: any) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-        })),
-      },
-      treatmentHero: {
-        heading: treatment.data.treatmentHero.heading,
-        tagline: treatment.data.treatmentHero.tagline,
-        title: treatment.data.treatmentHero.title,
-        subtitle: treatment.data.treatmentHero.subtitle,
-        description: treatment.data.treatmentHero.description,
-        approaches: treatment.data.treatmentHero.approaches.map((approach: any) => ({
-          id: approach.id,
-          title: approach.title,
-          description: approach.description,
-        })),
-      },
-      treatment2: {
-        heading: treatment.data.treatment2.heading,
-        headingHighlight: treatment.data.treatment2.headingHighlight,
-        description: treatment.data.treatment2.description,
-        symptoms: treatment.data.treatment2.symptoms.map((symptom: any) => ({
-          icon: symptom.icon,
-          text: symptom.text,
-        })),
-        buttonText: treatment.data.treatment2.buttonText,
-        phoneText: treatment.data.treatment2.phoneText,
-        phoneNumber: treatment.data.treatment2.phoneNumber,
-        image: treatment.data.treatment2.image,
-      },
-      disorders: {
-        heading: treatment.data.disorders.heading,
-        headingTwo_Part_1: treatment.data.disorders.headingTwo_Part_1,
-        headingTwo_Part_2: treatment.data.disorders.headingTwo_Part_2,
-        headingTwo_Part_3: treatment.data.disorders.headingTwo_Part_3,
-        disorders: treatment.data.disorders.disorders.map((disorder: any) => ({
-          link: disorder.link,
-          title: disorder.title,
-          image: disorder.image,
-        })),
-      },
-      cta: {
-        heading: treatment.data.cta.heading,
-        text: treatment.data.cta.text,
-        buttonText: treatment.data.cta.buttonText,
-        image: treatment.data.cta.image,
-        altText: treatment.data.cta.altText,
-        phoneText: treatment.data.cta.phoneText,
-        phoneNumber: treatment.data.cta.phoneNumber,
-      },
-    },
-  };
-}
 
 export async function fetchSubTreatmentData(sub_page): Promise<Treatment> {
   const type = sub_page; 
@@ -1548,9 +1358,11 @@ export async function fetchSubTreatmentData(sub_page): Promise<Treatment> {
         heading: treatment.data.hero.heading,
         text: treatment.data.hero.text,
         buttonText: treatment.data.hero.buttonText,
+        buttonLink: treatment.data.hero.buttonLink,
         phoneQuestionText: treatment.data.hero.phoneQuestionText,
         treatmentsLabel: treatment.data.hero.treatmentsLabel,
         callButtonText: treatment.data.hero.callButtonText,
+        callButtonLink: treatment.data.hero.callButtonLink,
         navItems: treatment.data.hero.navItems.map((item: any) => ({
           text: item.text,
           url: item.url,
@@ -1586,7 +1398,9 @@ export async function fetchSubTreatmentData(sub_page): Promise<Treatment> {
           text: symptom.text,
         })),
         buttonText: treatment.data.treatment2.buttonText,
-        phoneText: treatment.data.treatment2.phoneText,
+        buttonLink: treatment.data.treatment2.buttonLink,
+        phoneTextOne: treatment.data.treatment2.phoneTextOne,
+        phoneTextTwo: treatment.data.treatment2.phoneTextTwo,
         phoneNumber: treatment.data.treatment2.phoneNumber,
         image: treatment.data.treatment2.image,
       },
@@ -1605,9 +1419,11 @@ export async function fetchSubTreatmentData(sub_page): Promise<Treatment> {
         heading: treatment.data.cta.heading,
         text: treatment.data.cta.text,
         buttonText: treatment.data.cta.buttonText,
+        buttonLink: treatment.data.cta.buttonLink,
         image: treatment.data.cta.image,
         altText: treatment.data.cta.altText,
-        phoneText: treatment.data.cta.phoneText,
+        phoneTextOne: treatment.data.cta.phoneTextOne,
+        phoneTextTwo: treatment.data.cta.phoneTextTwo,
         phoneNumber: treatment.data.cta.phoneNumber,
       },
     },
@@ -1626,9 +1442,11 @@ export async function fetchPricingData(): Promise<Pricing> {
         heading: pricing.data.hero.heading,
         text: pricing.data.hero.text,
         buttonText: pricing.data.hero.buttonText,
+        buttonLink: pricing.data.hero.buttonLink,
         phoneQuestionText: pricing.data.hero.phoneQuestionText,
         treatmentsLabel: pricing.data.hero.treatmentsLabel,
         callButtonText: pricing.data.hero.callButtonText,
+        callButtonLink: pricing.data.hero.callButtonLink,
         navItems: pricing.data.hero.navItems.map((item: any) => ({
           text: item.text,
           url: item.url,
@@ -1681,13 +1499,15 @@ export async function fetchPricingData(): Promise<Pricing> {
           image: disorder.image,
         })),
       },
-      cta: {
+       cta: {
         heading: pricing.data.cta.heading,
         text: pricing.data.cta.text,
         buttonText: pricing.data.cta.buttonText,
+        buttonLink: pricing.data.cta.buttonLink,
         image: pricing.data.cta.image,
         altText: pricing.data.cta.altText,
-        phoneText: pricing.data.cta.phoneText,
+        phoneTextOne: pricing.data.cta.phoneTextOne,
+        phoneTextTwo: pricing.data.cta.phoneTextTwo,
         phoneNumber: pricing.data.cta.phoneNumber,
       },
      

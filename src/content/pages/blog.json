@@ -6,7 +6,9 @@
     "buttonText": "Get Started",
     "phoneQuestionText": "Have a question?",
     "treatmentsLabel": "Treatments",
-    "callButtonText": "Call",
+     "buttonLink": "/contact",
+    "callButtonText": "Call (123) 456-7890",
+    "callButtonLink": "1234567890",
    "navItems": [
       {
         "text": "Treatments",
@@ -124,13 +126,15 @@
     ]
   }
   ,
-  "cta": {
+    "cta": {
     "heading": "Ready to Start Your Journey to Better Mental Health?",
     "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
     "buttonText": "Get Started",
+    "buttonLink": "/contact",
     "image": "/imgs/mental_health_support.png",
     "altText": "Mental health support",
-    "phoneText": "Have a question?",
-    "phoneNumber": "(123) 456-7890"
+    "phoneTextOne": "Have a question?",
+    "phoneTextTwo": "Call (123) 456-7890",
+    "phoneNumber": "1234567890"
   }
 }

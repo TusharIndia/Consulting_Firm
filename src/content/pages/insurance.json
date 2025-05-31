@@ -5,7 +5,9 @@
     "buttonText": "Verify Insurance",
     "phoneQuestionText": "Questions about insurance?",
     "treatmentsLabel": "Insurance",
-    "callButtonText": "Call Now",
+    "buttonLink": "/contact",
+    "callButtonText": "Call (123) 456-7890",
+    "callButtonLink": "1234567890",
    "navItems": [
       {
         "text": "Treatments",
@@ -117,10 +119,13 @@
     "heading": "Insurance Companies We Work With",
     "subheading": "ClearPath partners with numerous insurance providers to ensure you receive the coverage you deserve for your recovery journey. Our team will help you navigate your insurance benefits.",
     "buttonText": "Get Started",
+    "buttonLink": "/contact",
     "callText": "Have a question?",
-    "phoneNumber": "(123) 456-7890",
+    "callTextTwo": "Call: (123) 456-7890",
+    "phoneNumber": "1234567890",
     "footerText": "Don't see your insurance provider listed? We work with many more companies and plans. Contact our team to verify your specific coverage.",
     "verifyButtonText": "Check Your Coverage Now",
+    "verifyButtonLink": "/contact",
     "providers": [
       {
         "name": "Blue Cross Blue Shield",
@@ -179,15 +184,18 @@
       "image": "/imgs/testimonial_1.png"
     }
   ]},
-  "cta": {
-    "heading": "Begin Your Recovery Journey Today",
+   "cta": {
+      "heading": "Begin Your Recovery Journey Today",
     "text": "Our admissions team is available 24/7 to answer your questions and guide you through the insurance verification process.",
     "buttonText": "Verify Insurance Now",
-    "image": "/cta-image.jpg",
-    "altText": "Person speaking with insurance representative",
-    "phoneText": "Call us anytime",
-    "phoneNumber": "888-123-4567"
-  },
+    "buttonLink": "/contact",
+    "image": "/imgs/mental_health_support.png",
+    "altText": "Mental health support",
+    "phoneTextOne": "Have a question?",
+    "phoneTextTwo": "Call (123) 456-7890",
+    "phoneNumber": "1234567890"
+  }
+,
   "insuranceVerification": {
     "title": {
       "line1": "Fast, Confidential &",
@@ -213,8 +221,10 @@
       "heading": "Need Immediate Assistance?",
       "subheading": "Our admissions team is available 24/7 to help you verify your insurance benefits right now.",
       "buttonText": "Get Started",
+      "buttonLink": "/contact",
       "callText": "Have a question?",
-      "phoneNumber": "(123) 456-7890"
+      "callTextTwo": "Call:(123) 456-7890",
+      "phoneNumber": "1234567890"
     }
   },
       
