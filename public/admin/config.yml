@@ -201,10 +201,11 @@ collections:
           - { label: "List Heading", name: "listHeading", widget: "string" }
           - { label: "List Items", name: "listItems", widget: "list", field: { widget: "string" , name: "item"} }
           - { label: "List Description", name: "listDescription", widget: "text" }
-          - { label: "Primary Button Text", name: "primaryButtonText", widget: "string" }
-          - { label: "Phone Question", name: "phoneQuestion", widget: "string" }
-          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
-          - { label: "Phone Button Text", name: "phoneButtonText", widget: "string" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string" }
+          - { label: "Button Two Part 1", name: "buttonTwo_Part_1", widget: "string" }
+          - { label: "Button Two Part 2", name: "buttonTwo_Part_2", widget: "string" }
+          - { label: "Button Two Number", name: "buttonTwo_Number", widget: "string" }
       - label: "Treatment Grid"
         name: "treatmentGrid"
         widget: "object"
@@ -284,9 +285,11 @@ collections:
           - { label: "Main Heading", name: "mainHeading", widget: "string" }
           - { label: "Colored Heading", name: "coloredHeading", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
-          - { label: "Primary Button Text", name: "primaryButtonText", widget: "string" }
-          - { label: "Phone Question", name: "phoneQuestion", widget: "string" }
-          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string" }
+          - { label: "Button Two Part 1", name: "buttonTwo_Part_1", widget: "string" }
+          - { label: "Button Two Part 2", name: "buttonTwo_Part_2", widget: "string" }
+          - { label: "Button Two Number", name: "buttonTwo_Number", widget: "string" }
           - { label: "Image", name: "image", widget: "image" }
           - { label: "Image Alt", name: "imageAlt", widget: "string" }
           - label: "Conditions"

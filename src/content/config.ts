@@ -563,10 +563,11 @@ const programCollection = {
       listHeading: z.string(),
       listItems: z.array(z.string()),
       listDescription: z.string(),
-      primaryButtonText: z.string(),
-      phoneQuestion: z.string(),
-      phoneNumber: z.string(),
-      phoneButtonText: z.string(),
+      buttonText: z.string(),
+      buttonLink: z.string(),
+      buttonTwo_Part_1: z.string(),
+      buttonTwo_Part_2: z.string(),
+      buttonTwo_Number: z.string(),
     }),
     program12: z.object({
       badgeText: z.string(),
@@ -591,7 +592,23 @@ const programCollection = {
       phoneTextTwo: z.string(),
       phoneNumber: z.string(),
     }),
-  }),
+     programTMS: z.object({
+      mainHeading: z.string(),
+      coloredHeading: z.string(),
+      description: z.string(),
+      buttonText: z.string(),
+      buttonLink: z.string(),
+      buttonTwo_Part_1: z.string(),
+      buttonTwo_Part_2: z.string(),
+      buttonTwo_Number: z.string(),
+      image: z.string(),
+      imageAlt: z.string(),
+      conditions: z.array(z.array(z.object({
+        title: z.string(),
+        icon: z.string(),
+        description: z.string(),
+      }))),
+  })}),
 };
 
 export const programarchiveCollection = {

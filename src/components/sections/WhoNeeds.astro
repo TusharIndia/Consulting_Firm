@@ -8,10 +8,11 @@ interface Props {
     listHeading: string;
     listItems: string[];
     listDescription: string;
-    primaryButtonText: string;
-    phoneQuestion: string;
-    phoneNumber: string;
-    phoneButtonText: string;
+    buttonText: string;
+    buttonLink: string;
+    buttonTwo_Part_1: string;
+    buttonTwo_Part_2: string;
+    buttonTwo_Number: string;
   };
 }
 
@@ -35,15 +36,15 @@ const { Content } = Astro.props;
                 </p>
                 <div class="flex flex-wrap gap-3 mt-8 max-w-full w-[552px] max-[820px]:w-full">
                 <a href="/contact" class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
-                    {Content.primaryButtonText}
+                    {Content.buttonText}
                 </a>
-                <a href={`tel:${Content.phoneNumber.replace(/[^0-9]/g, '')}`} class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 min-w-60 rounded-[50px]">
+                <a href={`tel:${Content.buttonTwo_Number}`} class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 min-w-60 rounded-[50px]">
                     <div class="flex flex-col items-center">
                     <span class="text-xs">
-                        {Content.phoneQuestion}
+                        {Content.buttonTwo_Part_1}
                     </span>
                     <span class="text-xs font-semibold leading-6">
-                        {Content.phoneButtonText} {Content.phoneNumber}
+                        Call {Content.buttonTwo_Part_2}
                     </span>
                     </div>
                 </a>

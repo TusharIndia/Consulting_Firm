@@ -341,10 +341,11 @@
       "Individuals seeking an alternative or complementary approach to enhance their overall mental health."
     ],
     "listDescription": "TMS at Clear Path is a powerful tool for those ready to take control of their mental health journey, providing relief and stability in a supportive and professional environment.",
-    "primaryButtonText": "Get Started",
-    "phoneQuestion": "Have a question?",
-    "phoneNumber": "(123) 456-7890",
-    "phoneButtonText": "Call"
+    "buttonText": "Get Started",
+    "buttonLink": "/contact",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(123) 456-7890",
+    "buttonTwo_Number": "1234567890"
   },
   "testimonials": {
     "list": [
@@ -466,9 +467,11 @@
     "mainHeading": "What Conditions are ",
     "coloredHeading": "Treated During TMS?",
     "description": "The conditions treated with Transcranial Magnetic Stimulation (TMS) at Clear Path include a wide range of mental health disorders. Each condition is addressed using evidence-based therapies and innovative TMS technology, ensuring holistic care for individuals seeking to improve their mental well-being.",
-    "primaryButtonText": "Get Started",
-    "phoneQuestion": "Have a question?",
-    "phoneNumber": "Call (123) 456-7890",
+     "buttonText": "Get Started",
+    "buttonLink": "/contact",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(123) 456-7890",
+    "buttonTwo_Number": "1234567890",
     "image": "https://cdn.builder.io/api/v1/image/assets/TEMP/5ae4c8a0b7e18f561c9fbce4f7a0f6a1f625971a?placeholderIfAbsent=true&apiKey=8e58a67a091d4e78afb9bd86f140fa49",
     "imageAlt": "TMS Treatment Illustration",
     "conditions": [
