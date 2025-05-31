@@ -5,7 +5,9 @@
     "buttonText": "Get Started",
     "phoneQuestionText": "Have a question?",
     "treatmentsLabel": "Treatments",
-    "callButtonText": "Call",
+    "buttonLink": "/contact",
+    "callButtonText": "Call (123) 456-7890",
+    "callButtonLink": "1234567890",
    "navItems": [
       {
         "text": "Treatments",

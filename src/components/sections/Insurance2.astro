@@ -20,13 +20,13 @@ const { insuranceData } = Astro.props;
                         {insuranceData.subheading}
                     </p>
                     <div class="flex flex-wrap gap-3 mt-8 w-full">
-                        <button class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
+                        <a href={insuranceData.buttonLink} class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
                             <span>{insuranceData.buttonText}</span>
-                        </button>
+                        </a>
                         <a href={`tel:${insuranceData.phoneNumber}`} class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 min-w-60 rounded-[50px]">
                             <div class="flex flex-col items-center">
                                 <span class="text-xs">{insuranceData.callText}</span>
-                                <span class="text-xs font-semibold leading-6">{insuranceData.phoneNumber}</span>
+                                <span class="text-xs font-semibold leading-6">{insuranceData.callTextTwo}</span>
                             </div>
                         </a>
                     </div>
@@ -88,9 +88,9 @@ const { insuranceData } = Astro.props;
             <p class="text-lg leading-9 text-center text-neutral-800 max-md:max-w-full">
                 {insuranceData.footerText}
             </p>
-            <button class="flex flex-col justify-center items-center self-center px-5 py-3.5 mt-6 max-w-full text-base font-semibold text-white bg-indigo-500 min-h-[52px] rounded-[50px] w-[270px]">
+            <a href={insuranceData.verifyButtonLink} class="flex flex-col justify-center items-center self-center px-5 py-3.5 mt-6 max-w-full text-base font-semibold text-white bg-indigo-500 min-h-[52px] rounded-[50px] w-[270px]">
                 <span>{insuranceData.verifyButtonText}</span>
-            </button>
+            </a>
         </footer>
     </section>
 </body>
