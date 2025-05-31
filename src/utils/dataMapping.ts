@@ -236,6 +236,7 @@ export async function fetchHomeData(): Promise<Home> {
         headingTwo: home.data.about.headingTwo,
         textOne: home.data.about.textOne,
         buttonOne: home.data.about.buttonOne,
+        buttonOneLink: home.data.about.buttonOneLink,
         buttonTwo_Part_1: home.data.about.buttonTwo_Part_1,
         buttonTwo_Part_2: home.data.about.buttonTwo_Part_2,
         buttonTwo_Number: home.data.about.buttonTwo_Number,

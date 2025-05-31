@@ -148,6 +148,7 @@ export interface Home {
       headingTwo: string;
       textOne: string;
       buttonOne: string;
+      buttonOneLink: string;
       buttonTwo_Part_1: string;
       buttonTwo_Part_2: string;
       buttonTwo_Number: string;

@@ -1,5 +1,5 @@
 ---
-const { headingOne_Part_1, headingOne_Part_2, headingTwo, textOne, buttonOne, buttonTwo_Part_1, buttonTwo_Part_2, buttonTwo_Number  } = Astro.props.Content;
+const { headingOne_Part_1, headingOne_Part_2, headingTwo, textOne, buttonOne, buttonOneLink, buttonTwo_Part_1, buttonTwo_Part_2, buttonTwo_Number  } = Astro.props.Content;
 ---
 
 <section id="about" class="about-us-section my-20">
@@ -22,7 +22,7 @@ const { headingOne_Part_1, headingOne_Part_2, headingTwo, textOne, buttonOne, bu
         </p>
         <div class="flex flex-col gap-4 max-sm:gap-3">
           <div class="flex gap-3 items-center w-full max-w-[800px] max-md:max-w-[600px] max-sm:flex-col max-sm:gap-4 max-sm:w-full">
-            <a href="/contact" class="flex-1 px-5 py-4 text-lg font-bold leading-6 bg-amber-300 cursor-pointer rounded-[50px] text-neutral-800 max-sm:w-full text-center">
+            <a href={buttonOneLink} class="flex-1 px-5 py-4 text-lg font-bold leading-6 bg-amber-300 cursor-pointer rounded-[50px] text-neutral-800 max-sm:w-full text-center">
               {buttonOne}
             </a>
             <a href={`tel:${buttonTwo_Number}`} class="flex flex-col flex-1 justify-center items-center px-5 py-2 bg-purple-900 cursor-pointer rounded-[50px] max-sm:w-full">

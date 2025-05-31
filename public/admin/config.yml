@@ -647,7 +647,12 @@ collections:
               - { label: "Heading One", name: "headingOne", widget: "string" }
               - { label: "Text One", name: "textOne", widget: "text" }
               - { label: "Heading Two", name: "headingTwo", widget: "string" }
-              - { label: "Text Two", name: "textTwo", widget: "text" }
+              - { label: "Text One", name: "textOne", widget: "text" }
+              - { label: "Button One Text", name: "buttonOne", widget: "string" }
+              - { label: "Button One Link", name: "buttonOneLink", widget: "string" }
+              - { label: "Button Two Part 1", name: "buttonTwo_Part_1", widget: "string" }
+              - { label: "Button Two Part 2", name: "buttonTwo_Part_2", widget: "string" }
+              - { label: "Button Two Number", name: "buttonTwo_Number", widget: "string" }
               - label: "Images"
                 name: "images"
                 widget: "object"
