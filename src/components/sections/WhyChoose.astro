@@ -8,6 +8,11 @@ interface WhyChooseContent {
   };
   imageUrl: string;
   imageAlt: string;
+  buttonText?: string;
+  buttonLink ?: string;
+  buttonTwo_Part_1?: string;
+  buttonTwo_Part_2?: string; 
+  buttonTwo_Number ?: string;
 }
 
 // Define default content
@@ -18,7 +23,7 @@ const defaultContent: WhyChooseContent = {
     paragraph2: "For those with dual diagnoses or treatment-resistant conditions, TMS complements other therapies to create a comprehensive and effective pathway to recovery. By focusing on targeted areas of the brain, TMS fosters emotional stability, enhances daily functioning, and helps individuals regain control of their mental health."
   },
   imageUrl: "/imgs/why_choose_us.png",
-  imageAlt: "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office"
+  imageAlt: "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office",
 };
 
 // Accept content prop with default value
@@ -58,23 +63,21 @@ const lastPart = content.title.includes("Magnetic") && content.title.indexOf("Ma
             )}
         </article>
 
-        <div class="flex gap-6 items-center justify-center w-full max-w-[600px] mx-auto mb-10 max-sm:flex-col">
-            <a href="/contact" class="flex flex-col gap-2.5 justify-center items-center px-8 py-4 bg-amber-300 cursor-pointer rounded-[50px] min-w-[200px] flex-1 max-sm:w-full hover:bg-amber-400 transition-colors">
-                <span class="text-base font-semibold text-neutral-800">
-                    Get Started
-                </span>
-            </a>
+        <div class="flex flex-wrap gap-3 mt-8 max-w-[600px] mx-auto max-md:max-w-full max-[820px]:max-w-full">
+                <a href={content.buttonLink} class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 min-w-60 rounded-[50px] text-neutral-800">
+                    {content.buttonText}
+                </a>
 
-            <a href={`tel:${1234567890}`} class="flex flex-col gap-2.5 justify-center items-center px-8 py-4 bg-[#562987] cursor-pointer rounded-[50px] min-w-[200px] flex-1 max-sm:w-full hover:bg-[#4a2373] transition-colors">
-                <div class="flex flex-col items-center">
-                    <span class="text-sm text-white">
-                        Have a question?
+           <a href=`tel:${content.buttonTwo_Number}` class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 min-w-60 rounded-[50px]">
+                    <div class="flex flex-col items-center">
+                    <span class="text-xs">
+                        {content.buttonTwo_Part_1}
                     </span>
-                    <span class="text-sm font-bold text-white">
-                        Call (123) 456-7890
+                    <span class="text-xs font-semibold leading-6">
+                        Call {content.buttonTwo_Part_2}
                     </span>
-                </div>
-            </a>
+                    </div>
+                </a>
         </div>
     </div>
     

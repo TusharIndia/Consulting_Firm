@@ -211,6 +211,10 @@ const homeCollection = {
       heading: z.string(),
       text: z.string(),
       buttonText: z.string(),
+      buttonLink: z.string(),
+      buttonTwo_Part_1: z.string(),
+      buttonTwo_Part_2: z.string(),
+      buttonTwo_Number: z.string(),
       list: z.array(z.object({
         title: z.string(),
         description: z.string(),
@@ -366,6 +370,11 @@ const programCollection = {
       headingTwo: z.string(),
       textOne: z.string(),
       textTwo: z.string(),
+      buttonText: z.string(),
+      buttonLink: z.string(),
+      buttonTwo_Part_1: z.string(),
+      buttonTwo_Part_2: z.string(),
+      buttonTwo_Number: z.string(),
       images: z.object({
         imageOne: z.string(),
         imageTwo: z.string(),
@@ -428,9 +437,14 @@ const programCollection = {
     therapies: z.object({
       heading: z.string(),
       description: z.string(),
-      therapies: z.array(z.object({
+      buttonText: z.string(),
+      buttonLink: z.string(),
+      buttonTwo_Part_1: z.string(),
+      buttonTwo_Part_2: z.string(),
+      buttonTwo_Number: z.string(),
+      list: z.array(z.object({
         title: z.string(),
-        details: z.string(),
+        description: z.string(),
         link: z.string().optional(), // Added link field with optional to maintain backward compatibility
       })),
     }),
@@ -483,6 +497,11 @@ const programCollection = {
       }),
       imageUrl: z.string(),
       imageAlt: z.string(),
+      buttonText: z.string(),
+      buttonLink: z.string(),
+      buttonTwo_Part_1: z.string(),
+      buttonTwo_Part_2: z.string(),
+      buttonTwo_Number: z.string(),
     }),
     secondWhyChoose: z.object({
       title: z.string(),
@@ -492,6 +511,11 @@ const programCollection = {
       }),
       imageUrl: z.string(),
       imageAlt: z.string(),
+      buttonText: z.string(),
+      buttonLink: z.string(),
+      buttonTwo_Part_1: z.string(),
+      buttonTwo_Part_2: z.string(),
+      buttonTwo_Number: z.string(),
     }),
     whoNeeds: z.object({
       heading: z.string(),
