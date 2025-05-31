@@ -506,10 +506,11 @@ export interface Program {
       listHeading: string;
       listItems: string[];
       listDescription: string;
-      primaryButtonText: string;
-      phoneQuestion: string;
-      phoneNumber: string;
-      phoneButtonText: string;
+      buttonText: string;
+      buttonLink: string;
+      buttonTwo_Part_1: string;
+      buttonTwo_Part_2: string;
+      buttonTwo_Number: string;
     };
     program12: {
       badgeText: string;
@@ -527,9 +528,11 @@ export interface Program {
       mainHeading: string;
       coloredHeading: string;
       description: string;
-      primaryButtonText: string;
-      phoneQuestion: string;
-      phoneNumber: string;
+      buttonText: string;
+      buttonLink: string;
+      buttonTwo_Part_1: string;
+      buttonTwo_Part_2: string;
+      buttonTwo_Number: string;
       image: string;
       imageAlt: string;
       conditions: Array<Array<{
