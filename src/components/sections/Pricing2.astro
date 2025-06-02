@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
   Content: {
     heading: string;
@@ -61,10 +63,13 @@ const { Content } = Astro.props;
         <div
           class="inline-flex relative justify-end items-center pt-4 pr-0 pb-12 pl-4 bg-white rounded-3xl shadow-2xl size-full"
         >
-          <img
+          <Image
             src={Content.image}
-            class="object-cover absolute left-4 shrink-0 rounded-3xl h-[361px] top-[18px] w-[453px] max-[900px]:h-[calc(100%_-_36px)] max-[900px]:w-[calc(100%_-_32px)] max-sm:h-[calc(100%_-_36px)] max-sm:w-[calc(100%_-_32px)]"
+            class="object-cover absolute left-0 p-3 lg:left-3 rounded-3xl h-[361px] top-[18px] w-[453px] max-[900px]:h-[calc(100%_-_36px)] max-[900px]:w-[calc(100%_-_32px)] max-sm:h-[calc(100%_-_36px)] max-sm:w-[calc(100%_-_32px)]"
             alt={Content.imageAlt}
+            
+            width={453}
+            height={361}
           />
         </div>
       </div>
