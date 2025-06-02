@@ -1,6 +1,6 @@
 {
   "hero": {
-    "backgroundImage": "/imgs/hero_home_bg.png",
+    "backgroundImage": "/imgs/hero_home_bg.webp",
     "backgroundImageAlt": "Background image of mental health treatment facility",
     "logo": "/imgs/hero_logo.png",
     "buttonText": "Call (123) 456-7890",
