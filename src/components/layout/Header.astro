@@ -1,6 +1,7 @@
 ---
 import { fetchGeneralData } from '../../utils/dataMapping.ts';
 import NavMenu from "./NavMenu.astro";
+import { Image } from 'astro:assets';
 
 const Data = await fetchGeneralData();
 ---
@@ -21,7 +22,7 @@ const Data = await fetchGeneralData();
       <!-- Logo Section -->
       <div class="flex items-center space-x-2">
         <a href="/">
-          <img src="/branding/brand-north-logo-dark.svg" alt="Company Logo" class="h-12" />
+          <Image src="/branding/brand-north-logo-dark.svg" alt="Company Logo" class="h-12" width={48} height={48} />
         </a>
       </div>
       <NavMenu />
