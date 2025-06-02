@@ -361,6 +361,41 @@ collections:
           - { label: "Phone Number", name: "phoneNumber", widget: "string" }
           - { label: "Second Phone Number", name: "phoneNumber2", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
+          - label: "Analytics"
+            name: "analytics"
+            widget: "object"
+            fields:
+              - { label: "Google Tag Manager ID", name: "gtmId", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Navigation Column 1"
+                name: "navColumn1"
+                widget: "object"
+                fields:
+                  - label: "Links"
+                    name: "links"
+                    widget: "list"
+                    fields:
+                      - { label: "Text", name: "text", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
+              - label: "Navigation Column 2"
+                name: "navColumn2"
+                widget: "object"
+                fields:
+                  - label: "Links"
+                    name: "links"
+                    widget: "list"
+                    fields:
+                      - { label: "Text", name: "text", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
+              - { label: "Email Placeholder", name: "emailPlaceholder", widget: "string" }
+              - { label: "Sign Up Button Text", name: "signUpButtonText", widget: "string" }
+              - { label: "Copyright Text", name: "copyrightText", widget: "string" }
+              - { label: "Back to Top Text", name: "backToTopText", widget: "string" }
 
   - label: "Pages"
     name: "pages"

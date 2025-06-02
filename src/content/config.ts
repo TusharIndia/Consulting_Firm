@@ -14,7 +14,7 @@ const blogCollection = defineCollection({
   }),
 });
 
-const generalCollection = defineCollection({
+const generalCollection = {
   type: "data",
   schema: z.object({
     companyName: z.string(),
@@ -24,7 +24,10 @@ const generalCollection = defineCollection({
     address: z.string(),
     phoneNumber: z.string(),
     phoneNumber2: z.string().optional(),
-    Email: z.string().email(),
+    Email: z.string(),
+    analytics: z.object({
+      gtmId: z.string(),
+    }),
     footer: z.object({
       description: z.string(),
       navColumn1: z.object({
@@ -49,7 +52,7 @@ const generalCollection = defineCollection({
       backToTopText: z.string(),
     }),
   }),
-});
+};
 
 const aboutCollection = defineCollection({
   type: "data",
@@ -1255,3 +1258,4 @@ export const collections = {
   treatment: treatmentCollection,
   pricing: pricingCollection
 };
+

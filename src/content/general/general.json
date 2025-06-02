@@ -6,6 +6,9 @@
   "address": "Your Address",
   "phoneNumber": "123-456-7890",
   "Email": "info@clearpathmentalhealth.com",
+  "analytics": {
+    "gtmId": "GTM-TT65WQBH"
+  },
   "footer": {
     "description": "We are mental health experienced therapists that are passionate about our <br>goal on empowering you mentally with our wellness journey.",
     "navColumn1": {

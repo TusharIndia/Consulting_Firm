@@ -7,6 +7,9 @@ export interface General {
   phoneNumber: string;
   phoneNumber2?: string;
   email: string;
+  analytics: {
+    gtmId: string;
+  };
   footer: {
     description: string;
     navColumn1: {

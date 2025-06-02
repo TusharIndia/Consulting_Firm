@@ -50,6 +50,9 @@ export async function fetchGeneralData(): Promise<General> {
     phoneNumber: general.data.phoneNumber,
     phoneNumber2: general.data.phoneNumber2,
     email: general.data.Email,
+    analytics: {
+      gtmId: general.data.analytics.gtmId,
+    },
     footer: {
       description: general.data.footer.description,
       navColumn1: {
