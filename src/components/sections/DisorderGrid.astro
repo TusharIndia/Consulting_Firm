@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 const { heading, headingTwo_Part_1, headingTwo_Part_2, headingTwo_Part_3, disorders } = Astro.props.Content;
 ---
 
@@ -18,7 +19,14 @@ const { heading, headingTwo_Part_1, headingTwo_Part_2, headingTwo_Part_3, disord
       {disorders.map((disorder) => (
         <article class="article-card overflow-hidden relative bg-white rounded-3xl h-[410px] shadow-[0px_9px_36px_rgba(0,0,0,0.05)] max-sm:h-[300px]">
           <figure class="overflow-hidden relative m-6 rounded-2xl h-[366px] max-sm:h-64">
-            <img src={disorder.image} alt={disorder.title} class="object-cover size-full">
+            <Image 
+              src={disorder.image} 
+              alt={disorder.title} 
+              class="object-cover size-full" 
+              width={800} 
+              height={600}
+              quality={90}
+            />
           </figure>
           <div class="absolute bg-white rounded-bl-3xl h-[74px] right-[22px] top-[22px] w-[74px]"></div>
           <h3 class="absolute pt-3.5 pr-3.5 pb-3.5 pl-0 text-xl font-medium leading-8 underline bg-white rounded-tr-3xl bottom-[20px] left-[22px] text-neutral-800 max-w-[292px] max-sm:text-lg max-sm:leading-6">

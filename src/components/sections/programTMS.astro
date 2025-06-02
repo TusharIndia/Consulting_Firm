@@ -1,3 +1,7 @@
+---
+import { Image } from 'astro:assets';
+---
+
 <section class="overflow-hidden justify-center px-16 py-11 bg-white max-w-[1400px] mx-auto max-md:px-5 max-lg:px-10 max-xl:px-12">
   <div class="flex gap-5 max-md:flex-col max-[820px]:flex-col max-[800px]:flex-col">
     <article class="w-[46%] max-md:ml-0 max-md:w-full max-[820px]:w-full max-[800px]:w-full">
@@ -25,10 +29,14 @@
     </article>
 
     <figure class="ml-5 w-[54%] max-md:ml-0 max-md:w-full max-[820px]:ml-0 max-[820px]:w-full max-[800px]:ml-0 max-[800px]:w-full">
-      <img
+      <Image
         src={Astro.props.Content.image}
         alt={Astro.props.Content.imageAlt}
         class="object-contain grow w-full rounded-3xl aspect-[1.35] max-md:mt-10 max-md:max-w-full"
+        width={800}
+        height={593}
+        loading="lazy"
+        format="webp"
       />
     </figure>
   </div>
@@ -43,7 +51,16 @@
             <div class="flex justify-between items-center self-stretch max-sm:gap-2 dropdown-header cursor-pointer">
               <div class="flex gap-3 items-center max-md:w-full max-sm:gap-2">
                 <div class="shrink-0 w-10 h-10 max-sm:w-8 max-sm:h-8">
-                  <img src={condition.icon} alt={`${condition.title} Icon`} class="icon" style="width: 40px; height: 40px; flex-shrink: 0">
+                  <Image 
+                    src={condition.icon} 
+                    alt={`${condition.title} Icon`} 
+                    class="icon" 
+                    style="width: 40px; height: 40px; flex-shrink: 0"
+                    width={40}
+                    height={40}
+                    loading="lazy"
+                    format="webp"
+                  />
                 </div>
                 <h2 class="text-2xl leading-10 text-neutral-800 max-md:text-xl max-md:leading-8 max-sm:text-lg max-sm:leading-7">
                   {condition.title}

@@ -1,5 +1,6 @@
 ---
 import VideoModal from "../VideoModal.astro"
+import { Image } from 'astro:assets';
 
 const { Content } = Astro.props;
 const { heading, headingColored, description, image, imageAlt } = Content;
@@ -20,10 +21,14 @@ const { heading, headingColored, description, image, imageAlt } = Content;
                 </p>
             </div>
             <div class="ml-5 w-2/5 max-md:ml-0 max-md:w-full">
-                <img
+                <Image
                 src={image}
                 alt={imageAlt}
                 class="object-contain grow w-full rounded-none aspect-[1.47] max-md:mt-10 max-md:max-w-full"
+                width={588}
+                height={400}
+                quality={90}
+                loading="lazy"
                 />
             </div>
             </div>

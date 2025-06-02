@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 // Treatment2 component - Signs and Symptoms We Treat
 interface Props {
     Content: {
@@ -36,7 +38,7 @@ const { Content } = Astro.props;
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-7 w-full text-xl md:text-2xl text-white">
                         {Content.symptoms.map(symptom => (
                             <div class="flex gap-3 items-center">
-                                <img src={symptom.icon} class="object-contain shrink-0 w-8 md:w-10 aspect-square" alt={`${symptom.text} icon`} />
+                                <Image src={symptom.icon} class="object-contain shrink-0 w-8 md:w-10 aspect-square" alt={`${symptom.text} icon`} width={40} height={40} />
                                 <span>{symptom.text}</span>
                             </div>
                         ))}
@@ -58,7 +60,7 @@ const { Content } = Astro.props;
             </div>
 
             <div class="w-full md:w-[43%] mt-4 md:mt-0">
-                <img src={Content.image} class="object-contain mx-auto md:mx-0 w-full max-w-md md:max-w-full rounded-none aspect-[1.22]" alt="Treatment illustration" />
+                <Image src={Content.image} class="object-contain mx-auto md:mx-0 w-full max-w-md md:max-w-full rounded-none aspect-[1.22]" alt="Treatment illustration" width={500} height={410} />
             </div>
         </div>
     </div>

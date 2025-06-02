@@ -1,17 +1,17 @@
 ---
 import Button from "../Button.astro";
 import Form from "../Form.astro";
+import { Image } from "astro:assets";
 
 const GeneralData = Astro.props.GeneralData;
 const { heading, text, buttonText, buttonLink, phoneQuestionText, treatmentsLabel, callButtonText, callButtonLink, navItems , hideButton = false } = Astro.props.Content;
 ---
 
-<section class="lg:mx-auto mx-3 my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl max-md:mx-6 max-sm:mx-4 relative">
+<section class="lg:mx-auto mx-3 my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl max-md:mx-6 max-sm:mx-2 relative">
   <div class="rounded-none">
-    <section class="flex flex-col px-20 pt-3 pb-20 w-full bg-purple-900 rounded-3xl max-md:px-6 max-sm:px-4 px-3 max-md:max-w-full">
-      <nav class="flex flex-wrap gap-10 justify-between items-center w-full text-base max-md:max-w-full">
+    <section class="flex flex-col px-20 pt-3 pb-20 w-full bg-purple-900 rounded-3xl max-md:px-6 max-sm:px-4 px-3 max-md:max-w-full">      <nav class="flex flex-wrap gap-10 justify-between items-center w-full text-base max-md:max-w-full">
         <a href="/">
-          <img src="/imgs/hero_logo.png" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[4.67] w-[159px]">
+          <Image src="/imgs/hero_logo.png" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[4.67] w-[159px]" width={159} height={34} />
         </a>
         <div class="lg:hidden">
           <button id="hamburgerButton" aria-label="Open menu" aria-expanded="false" class="text-white focus:outline-none">
@@ -25,12 +25,13 @@ const { heading, text, buttonText, buttonLink, phoneQuestionText, treatmentsLabe
           {navItems.map((item) => (
             <li class="group relative self-stretch my-auto whitespace-nowrap">
               <a href={item.url} class="text-white self-stretch my-auto flex items-center">
-                {item.text}
-                {item.sublinks && item.sublinks.length > 0 && (
-                  <img
+                {item.text}                {item.sublinks && item.sublinks.length > 0 && (
+                  <Image
                     src="/imgs/dropdown_arrow.svg"
                     alt="Dropdown arrow"
                     class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square ml-1"
+                    width={16}
+                    height={16}
                   />
                 )}
               </a>
@@ -76,9 +77,8 @@ const { heading, text, buttonText, buttonLink, phoneQuestionText, treatmentsLabe
         </a>
       </nav>
 
-      <div id="mobileNav" class="fixed inset-0 z-50 bg-white text-purple-900 p-6 hidden flex-col lg:hidden">
-        <div class="flex justify-between items-center mb-8">
-          <img src="/imgs/hero_logo.png" alt="Company Logo Mobile" class="object-contain shrink-0 h-10">
+      <div id="mobileNav" class="fixed inset-0 z-50 bg-white text-purple-900 p-6 hidden flex-col lg:hidden">        <div class="flex justify-between items-center mb-8">
+          <Image src="/imgs/hero_logo.png" alt="Company Logo Mobile" class="object-contain shrink-0 h-10" width={159} height={40} />
           <button id="closeMobileNavButton" aria-label="Close menu" class="focus:outline-none">
             <svg class="w-8 h-8 text-purple-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>

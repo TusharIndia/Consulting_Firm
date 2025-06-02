@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 const { heading, text, programs } = Astro.props.Content;
 ---
 
@@ -25,10 +26,12 @@ const { heading, text, programs } = Astro.props.Content;
           </div>
         </div>
         <div class="ml-5 w-[61%] max-md:ml-0 max-md:w-full">
-          <img
+          <Image
             src="/imgs/condition_retreated_img.png"
             alt="Mental health conditions illustration"
             class="object-contain grow w-full rounded-none aspect-[1.86] max-md:mt-10 max-md:max-w-full"
+            width={800}
+            height={430}
           />
         </div>
       </div>
@@ -47,10 +50,12 @@ const { heading, text, programs } = Astro.props.Content;
               <div class="flex gap-10 justify-between items-center w-full">
                 <div class="flex gap-3 items-center self-stretch my-auto">
                   {program.image && (
-                  <img
+                  <Image
                     src={program.image}
                     alt={`${program.title} icon`}
                     class="object-contain shrink-0 self-stretch my-auto w-10 aspect-square"
+                    width={40}
+                    height={40}
                   />
                   )}
                   <h3 class="self-stretch my-auto">{program.title}</h3>
@@ -59,10 +64,12 @@ const { heading, text, programs } = Astro.props.Content;
                   )}
                 </div>
                 <div class="cursor-pointer">
-                  <img
+                  <Image
                     src="/imgs/expand_arrow.svg"
                     alt="Expand arrow"
                     class="object-contain shrink-0 self-stretch my-auto aspect-[5.13] w-[41px]"
+                    width={41}
+                    height={8}
                   />
                 </div>
               </div>

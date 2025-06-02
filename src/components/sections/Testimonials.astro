@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 const { list } = Astro.props.Content;
 ---
 <section
@@ -19,9 +20,11 @@ const { list } = Astro.props.Content;
         </blockquote>
         <figure class="flex gap-4 items-center max-sm:flex-col max-sm:text-center">
           <div class="relative w-20 h-20">
-            <img
+            <Image
               src={testimonial.image}
               alt={`Photo of ${testimonial.name}`}
+              width={80}
+              height={80}
               class="object-cover w-20 h-20 rounded-full"
             />
             <div class="absolute top-0 left-0 border-white border-solid border-4 rounded-full w-20 h-20"></div>

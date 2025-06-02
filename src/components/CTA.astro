@@ -1,5 +1,6 @@
 ---
 import Button from "./Button.astro";
+import { Image } from "astro:assets";
 
 const { heading, text, buttonText, image, altText, phoneTextOne, phoneTextTwo, phoneNumber, buttonLink } = Astro.props.Content;
 ---
@@ -40,7 +41,7 @@ const { heading, text, buttonText, image, altText, phoneTextOne, phoneTextTwo, p
         </a>
       </div>
     </div>
-    <img
+    <Image
       src={image}
       class="rounded-3xl h-auto md:h-[350px] lg:h-[450px] opacity-[0.9942] w-full  lg:w-[550px] max-[900px]:mt-8 max-[900px]:w-full object-cover ml-0 "
       alt={altText}

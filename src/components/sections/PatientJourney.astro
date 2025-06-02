@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 const { heading, headingTwo_Part_1, headingTwo_Part_2, image, imageAlt, steps } = Astro.props.Content;
 ---
 
@@ -15,11 +16,14 @@ const { heading, headingTwo_Part_1, headingTwo_Part_2, image, imageAlt, steps } 
 
       <div class="flex flex-col gap-12">
         <figure class="p-4 w-full bg-white rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.05)]">
-          <img
+          <Image
             src={image}
             alt={imageAlt}
+            width={1200}
+            height={675}
             class="object-cover w-full h-auto rounded-3xl"
-          >
+            quality={80}
+          />
         </figure>
 
         <div class="flex gap-6 mt-12 max-md:flex-col">

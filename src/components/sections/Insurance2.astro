@@ -1,13 +1,16 @@
 ---
+import { Image } from 'astro:assets';
 const { insuranceData } = Astro.props;
 ---
 
     <section class="flex overflow-hidden flex-col px-16 pt-16 pb-9 bg-white max-w-7xl mx-auto max-md:px-5">
         <header class="flex flex-wrap lg:flex-nowrap gap-6 justify-between items-center max-md:max-w-full">
-            <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/aea9adaf8ba067cc285455ffc54c90dd07117103?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+            <Image
+                src="/imgs/insurance/insurance.png"
                 alt="Insurance coverage illustration"
                 class="object-contain self-stretch my-auto rounded-3xl aspect-[1.57] min-w-60 w-[706px] max-md:max-w-full"
+                width={706}
+                height={450}
             />
             <div class="self-stretch my-auto min-w-60 w-[552px] max-md:max-w-full">
                 <div class="w-full max-w-[566px] max-md:max-w-full">
@@ -41,10 +44,12 @@ const { insuranceData } = Astro.props;
                         <div class="flex-1 shrink w-full basis-0 min-w-60">
                             <header class="w-full">
                                 <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
-                                    <img
+                                    <Image
                                         src={provider.logo}
                                         alt={`${provider.name} logo`}
                                         class="object-contain w-10 aspect-square"
+                                        width={40}
+                                        height={40}
                                     />
                                 </div>
                                 <h3 class="mt-4 text-base font-bold text-neutral-800">
@@ -65,10 +70,12 @@ const { insuranceData } = Astro.props;
                         <div class="flex-1 shrink w-full basis-0 min-w-60">
                             <header class="w-full">
                                 <div class="flex overflow-hidden flex-col items-start w-full rounded-[100px] max-md:pr-5">
-                                    <img
+                                    <Image
                                         src={provider.logo}
                                         alt={`${provider.name} logo`}
                                         class="object-contain w-10 aspect-square"
+                                        width={40}
+                                        height={40}
                                     />
                                 </div>
                                 <h3 class="mt-4 text-base font-bold text-neutral-800">

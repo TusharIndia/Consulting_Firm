@@ -1,5 +1,6 @@
 ---
 // Accept the blog post as a prop
+import { Image } from 'astro:assets';
 const { post } = Astro.props;
 ---
 
@@ -7,10 +8,14 @@ const { post } = Astro.props;
   <main class="z-10 pl-7 mt-20 text-neutral-800 max-md:pl-5 max-md:max-w-full">
     <!-- Display the featured image from the blog post -->
     {post.featuredImg && (
-      <img
+      <Image
         src={post.featuredImg}
         alt={post.title}
         class="object-contain mr-7 w-full rounded-3xl aspect-[1.82] max-w-[1105px] max-md:mr-2.5 max-md:max-w-full"
+        width={1105}
+        height={607}
+        format="webp"
+        loading="eager"
       />
     )}
 
