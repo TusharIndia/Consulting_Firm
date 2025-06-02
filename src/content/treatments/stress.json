@@ -124,50 +124,50 @@
       }
     ]
   },
-  "treatment2": {
+    "treatment2": {
     "heading": "Signs and Symptoms",
     "headingHighlight": "We Treat",
     "description": "Our experienced team addresses these common symptoms of depression:",
     "symptoms": [
       {
-        "icon": "https://cdn.builder.io/api/v1/image/assets/TEMP/deb28911c2509c015fecc194e8bc731bca25f1d2",
+        "icon": "/imgs/treatment/ff.png",
         "text": "Persistent sadness"
       },
       {
-        "icon": "https://cdn.builder.io/api/v1/image/assets/TEMP/369460a143b47ca575d4546feb67dc51e26a7cee",
+        "icon": "/imgs/treatment/fs.png",
         "text": "Loss of interest"
       },
       {
-        "icon": "https://cdn.builder.io/api/v1/image/assets/TEMP/503c23d6cfa7acfc56ab853b592f6ce7a316509a",
+        "icon": "/imgs/treatment/ft.png",
         "text": "Sleep disturbances"
       },
       {
-        "icon": "https://cdn.builder.io/api/v1/image/assets/TEMP/3c0476848a532f434a925ccd99b6aaf9758e44c1",
+        "icon": "/imgs/treatment/ffor.png",
         "text": "Changes in appetite"
       },
       {
-        "icon": "https://cdn.builder.io/api/v1/image/assets/TEMP/be88084ec004cf82687e9c408a97a47292958cde",
+        "icon": "/imgs/treatment/ffi.png",
         "text": "Difficulty concentrating"
       },
       {
-        "icon": "https://cdn.builder.io/api/v1/image/assets/TEMP/058269127759ee5bd99095b5623361550812cdd4",
+        "icon": "/imgs/treatment/fsi.png",
         "text": "Fatigue"
       },
       {
-        "icon": "https://cdn.builder.io/api/v1/image/assets/TEMP/af4eade6b38fb6447b8cee662b68191c336b7d2c",
+        "icon": "/imgs/treatment/fse.png",
         "text": "Feelings of worthlessness"
       },
       {
-        "icon": "https://cdn.builder.io/api/v1/image/assets/TEMP/d8f931f62dfba6968faa096619a5864378096b3c",
+        "icon": "/imgs/treatment/fei.png",
         "text": "Suicidal thoughts"
       }
     ],
- "buttonText": "Get Started",
+    "buttonText": "Get Started",
     "buttonLink": "/contact",
     "phoneTextOne": "Have a question?",
     "phoneTextTwo": "Call (123) 456-7890",
     "phoneNumber": "1234567890",
-    "image": "https://cdn.builder.io/api/v1/image/assets/TEMP/6703266a2174ff1ea2155f9fd0b933475c50aea2"
+    "image": "/imgs/treatment/img.png"
   },
    "disorders": {
     "heading": "OUR INSIGHTS",

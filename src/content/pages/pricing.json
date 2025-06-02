@@ -146,7 +146,7 @@
       "Payment plans for qualifying patients"
     ],
     "contactText": "Contact Us to discuss pricing and payment options.",
-    "image": "https://cdn.builder.io/api/v1/image/assets/TEMP/e24e8a9be7665ae989aefb1ee1a1e41d69c09150?placeholderIfAbsent=true",
+    "image": "/imgs/pricing/ninth.png",
     "imageAlt": "Person with arms raised in a field"
   },
   "disorders": {

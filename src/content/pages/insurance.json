@@ -130,42 +130,42 @@
       {
         "name": "Blue Cross Blue Shield",
         "description": "Coverage for mental health and substance abuse treatment",
-        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/7e6dc01b6b652281c476ad8c31d39e70bba9efb3?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+        "logo": "/imgs/insurance/first.png"
       },
       {
         "name": "Aetna",
         "description": "Comprehensive addiction treatment coverage options",
-        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/1f621116f916091310ed95608e2ba5aab785ff73?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+        "logo": "/imgs/insurance/second.png"
       },
       {
         "name": "Cigna",
         "description": "Behavioral health services and substance abuse treatment",
-        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/fa312405d3b348efb65494738dfb54ab5d7163be?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+        "logo": "/imgs/insurance/third.png"
       },
       {
         "name": "United Healthcare",
         "description": "Mental health and substance use disorder services",
-        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/0e928467bdbb2cfbe5e71531740124722cde11a8?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+        "logo": "/imgs/insurance/fourth.png"
       },
       {
         "name": "Humana",
         "description": "Behavioral health and substance abuse treatment benefits",
-        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/c851e31e484aefc25669c738f82db380e37319e9?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+        "logo": "/imgs/insurance/fifth.png"
       },
       {
         "name": "Anthem",
         "description": "Behavioral health coverage for addiction treatment",
-        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/fb44a36610820f7e62c13822e6c9e380a1c7c7fe?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+        "logo": "/imgs/insurance/sixth.png"
       },
       {
         "name": "Kaiser Permanente",
         "description": "Chemical dependency and mental health treatment",
-        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/8ff8e4cbbce70b6b24a60f9a7f545554bba4218f?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+        "logo": "/imgs/insurance/seventh.png"
       },
       {
         "name": "Other Providers",
         "description": "Contact us to verify coverage with your specific provider",
-        "logo": "https://cdn.builder.io/api/v1/image/assets/TEMP/95d11ada50f76b90d9751d516241f047f10f0eb3?placeholderIfAbsent=true&apiKey=690bf820441a475da55a71029fb68f67"
+        "logo": "/imgs/insurance/eighth.png"
       }
     ]
   },
