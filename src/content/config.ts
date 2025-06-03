@@ -170,7 +170,7 @@ const contactCollection = {
       ),
     }),
     
-    contactHero: z.object({
+    contactDetails: z.object({
      
       address: z.string(),
       email: z.string(),

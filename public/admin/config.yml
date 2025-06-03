@@ -651,8 +651,8 @@ collections:
                   - { label: "Person Image", name: "image", widget: "image" }
                   
           # Contact Hero Section
-          - label: "Contact Hero"
-            name: "contactHero"
+          - label: "Contact Details"
+            name: "contactDetails"
             widget: "object"
             collapsed: true
             fields:

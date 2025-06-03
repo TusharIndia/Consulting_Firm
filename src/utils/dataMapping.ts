@@ -185,7 +185,7 @@ export async function fetchContactData(): Promise<Contact> {
         })),
       },
       
-      contactHero: {
+      contactDetails: {
     
         address: contact.data.contactHero.address,
         email: contact.data.contactHero.email,
