@@ -667,7 +667,7 @@ collections:
                 name: "businessHours"
                 widget: "object"
                 fields:
-                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Heading", name: "businessHoursHeading", widget: "string" }
                   - { label: "Hours (Weekdays)", name: "hours", widget: "string" }
                   - { label: "Hours (Weekend)", name: "weekend", widget: "string" }
           - label: "Call to Action"
