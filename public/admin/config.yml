@@ -747,7 +747,6 @@ collections:
             collapsed: true
             fields:
               - { label: "Heading One", name: "headingOne", widget: "string" }
-              - { label: "Text One", name: "textOne", widget: "text" }
               - { label: "Heading Two", name: "headingTwo", widget: "string" }
               - { label: "Text One", name: "textOne", widget: "text" }
               - { label: "Button One Text", name: "buttonOne", widget: "string" }
