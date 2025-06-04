@@ -49,10 +49,12 @@ const GeneralData = Astro.props.GeneralData;
         <nav
           class="flex flex-wrap gap-10 justify-between items-center self-end w-full text-base max-w-[1160px] max-md:max-w-full"
         >
-          <img
+          <Image
             src={logo}
             alt="Clear Path logo"
             class="object-contain shrink-0 self-stretch my-auto aspect-[4.67] w-[159px]"
+            width={159}
+            height={34}
           />
 
           <ul
@@ -250,7 +252,7 @@ const GeneralData = Astro.props.GeneralData;
     class="fixed inset-0 z-50 bg-white text-purple-900 p-6 hidden flex-col"
   >
     <div class="flex justify-between items-center mb-8">
-      <Image src={logo} alt="Company Logo Mobile" class="object-contain shrink-0 h-10" width={112} height={40}>
+      <Image src={logo} alt="Company Logo Mobile" class="object-contain shrink-0 h-10" width={112} height={40} />
       <button id="close-menu-button" aria-label="Close menu" class="focus:outline-none">
         <svg class="w-8 h-8 text-purple-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
