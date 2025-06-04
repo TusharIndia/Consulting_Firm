@@ -6,7 +6,7 @@
     "phoneQuestionText": "Have a question?",
     "treatmentsLabel": "Locations",
      "buttonLink": "/contact",
-    "callButtonText": "Call +1 561-220-6505",
+    "callButtonText": "Call (561) 220 6505",
     "callButtonLink": "+15612206505",
    "navItems": [
       {
@@ -146,7 +146,7 @@
     "image": "/imgs/mental_health_support.png",
     "altText": "Mental health support",
     "phoneTextOne": "Have a question?",
-    "phoneTextTwo": "Call +1 561-220-6505",
+    "phoneTextTwo": "Call (561) 220 6505",
     "phoneNumber": "+15612206505"
   }
 }

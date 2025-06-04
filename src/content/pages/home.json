@@ -3,7 +3,7 @@
     "backgroundImage": "/imgs/hero_home_bg.webp",
     "backgroundImageAlt": "Background image of mental health treatment facility",
     "logo": "/imgs/hero_logo.png",
-    "buttonText": "Call +1 561-220-6505",
+    "buttonText": "Call (561) 220 6505",
     "textBox1": "Interventional Psychiatry",
     "textBox2_Part_1": "Highly",
     "textBox2_Part_2": "effective evidence",
@@ -108,7 +108,7 @@
     "buttonOne": "Get Started",
     "buttonOneLink": "/contact",
     "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "Call +1 561-220-6505",
+    "buttonTwo_Part_2": "Call (561) 220 6505",
     "buttonTwo_Number": "+15612206505"
   },
   "testimonials": {
@@ -135,7 +135,7 @@
     "buttonText": "Get Started",
     "buttonLink": "/contact",
     "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "+1 561-220-6505",
+    "buttonTwo_Part_2": "(561) 220 6505",
     "buttonTwo_Number": "+15612206505",
     "list": [
       {
@@ -315,7 +315,7 @@
     "buttonOneText": "Check Your Insurance",
     "buttonOneLink": "/insurance",
     "buttonSecondTextOne": "Have a question?",
-    "buttonSecondTextTwo": "Call +1 561-220-6505",
+    "buttonSecondTextTwo": "Call (561) 220 6505",
     "buttonSecondLink": "tel:+15612206505",
     "insuranceOptions": [
       {
@@ -348,7 +348,7 @@
     "image": "/imgs/mental_health_support.png",
     "altText": "Mental health support",
     "phoneTextOne": "Have a question?",
-    "phoneTextTwo": "Call +1 561-220-6505",
+    "phoneTextTwo": "Call (561) 220 6505",
     "phoneNumber": "+15612206505"
   }
 }

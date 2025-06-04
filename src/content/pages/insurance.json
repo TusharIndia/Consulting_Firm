@@ -6,7 +6,7 @@
     "phoneQuestionText": "Questions about insurance?",
     "treatmentsLabel": "Insurance",
     "buttonLink": "/contact",
-    "callButtonText": "Call +1 561-220-6505",
+    "callButtonText": "Call (561) 220 6505",
     "callButtonLink": "+15612206505",
    "navItems": [
       {
@@ -121,7 +121,7 @@
     "buttonText": "Get Started",
     "buttonLink": "/contact",
     "callText": "Have a question?",
-    "callTextTwo": "Call: +1 561-220-6505",
+    "callTextTwo": "Call: (561) 220 6505",
     "phoneNumber": "+15612206505",
     "footerText": "Don't see your insurance provider listed? We work with many more companies and plans. Contact our team to verify your specific coverage.",
     "verifyButtonText": "Check Your Coverage Now",
@@ -192,7 +192,7 @@
     "image": "/imgs/mental_health_support.png",
     "altText": "Mental health support",
     "phoneTextOne": "Have a question?",
-    "phoneTextTwo": "Call +1 561-220-6505",
+    "phoneTextTwo": "Call (561) 220 6505",
     "phoneNumber": "+15612206505"
   }
 ,
@@ -223,7 +223,7 @@
       "buttonText": "Get Started",
       "buttonLink": "/contact",
       "callText": "Have a question?",
-      "callTextTwo": "Call:+1 561-220-6505",
+      "callTextTwo": "Call:(561) 220 6505",
       "phoneNumber": "+15612206505"
     }
   },
