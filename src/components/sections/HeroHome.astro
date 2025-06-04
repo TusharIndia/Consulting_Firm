@@ -192,9 +192,18 @@ const GeneralData = Astro.props.GeneralData;
   </header>
 
   <section
-    class="relative flex flex-col justify-center items-center py-10 px-5 text-center text-white min-h-[400px] -mt-20 pt-20"
-    style={`background-image: url(${backgroundImage}); background-size: cover; background-position: center;`}
+    class="relative flex flex-col justify-center items-center py-10 px-5 text-center text-white min-h-screen -mt-20 pt-20"
   >
+    <Image
+      src={backgroundImage}
+      alt={backgroundImageAlt}
+      class="object-cover absolute inset-0 size-full -z-10"
+      width={1320}
+      height={800}
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
     <div class="bg-white rounded-xl p-6 mb-6 max-w-4xl">
       <h1 class="text-2xl sm:text-3xl font-bold leading-tight mb-4 text-neutral-800">
         {textBox2_Part_1}
