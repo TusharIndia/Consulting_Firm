@@ -5,13 +5,13 @@ const { post } = Astro.props;
 ---
 
 <article class="flex overflow-hidden flex-col items-start px-20 pb-32 bg-white max-md:px-5 max-md:py-10">
-  <main class="z-10 pl-7 mt-20 text-neutral-800 max-md:pl-5 max-md:max-w-full">
+  <main class="z-10 pl-7 mt-20 text-neutral-800 max-md:pl-5 max-md:max-w-full md:pl-0 md:mx-auto md:max-w-[1105px] md:text-center">
     <!-- Display the featured image from the blog post -->
     {post.featuredImg && (
       <Image
         src={post.featuredImg}
         alt={post.title}
-        class="object-contain mr-7 w-full rounded-3xl aspect-[1.82] max-w-[1105px] max-md:mr-2.5 max-md:max-w-full"
+        class="object-contain mx-auto w-full rounded-3xl aspect-[1.82] max-w-[1105px] max-md:max-w-full"
         width={1105}
         height={607}
         format="webp"
@@ -20,31 +20,31 @@ const { post } = Astro.props;
     )}
 
     <!-- Blog title and description -->
-    <h1 class="mt-8 text-4xl font-bold">{post.title}</h1>
+    <h1 class="mt-8 text-4xl font-bold md:text-center">{post.title}</h1>
     
     <!-- Blog metadata -->
-    <div class="flex items-center mt-4 text-sm text-gray-600">
+    <div class="flex items-center mt-4 text-sm text-gray-600 md:justify-center">
       {post.date && <span class="mr-4">{new Date(post.date).toLocaleDateString()}</span>}
       {post.readingTime && <span class="mr-4">• {post.readingTime}</span>}
       {post.author && <span>• By {post.author}</span>}
     </div>
 
     <!-- Blog description/excerpt -->
-    <p class="mt-7 text-lg leading-9 max-md:max-w-full">
+    <p class="mt-7 text-lg leading-9 max-md:max-w-full md:text-center md:max-w-[800px] md:mx-auto">
       {post.description}
     </p>
 
     <!-- Blog content using slot -->
-    <div class="blog-content">
+    <div class="blog-content md:max-w-[800px] md:mx-auto md:text-left">
       <slot />
     </div>
 
     
     <!-- Tags -->
     {post.tags && post.tags.length > 0 && (
-      <div class="mt-10">
+      <div class="mt-10 md:max-w-[800px] md:mx-auto md:text-center">
         <h3 class="text-lg font-bold">Tags:</h3>
-        <div class="flex flex-wrap gap-2 mt-2">
+        <div class="flex flex-wrap gap-2 mt-2 md:justify-center">
           {post.tags.map((tag) => (
             <span class="px-3 py-1 text-sm bg-gray-100 rounded-full">{tag}</span>
           ))}
