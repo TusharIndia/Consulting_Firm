@@ -20,231 +20,197 @@ const {
 const GeneralData = Astro.props.GeneralData;
 ---
 
-<!-- Desktop Layout -->
 <div class="max-[820px]:hidden">
-  <main class="rounded-none mx-auto mb-10 max-w-[1320px] relative">
-    <section
+  <section
+    class="rounded-none mx-auto mb-10 max-w-[1320px] relative"
+  >
+    <div
       class="flex overflow-hidden relative flex-col w-full rounded-b-3xl min-h-[672px]"
-      aria-label="Hero section"
     >
-      <img
+       <img
         src={backgroundImage}
         alt={backgroundImageAlt}
         class="object-cover absolute inset-0 size-full"
-        loading="eager"
-        decoding="async"
       />
 
-      <div class="flex relative flex-col pt-6 pr-20 w-full max-md:pr-5 max-md:max-w-full">
-        <header class="flex flex-wrap gap-10 justify-between items-center self-end w-full text-base max-w-[1160px] max-md:max-w-full">
+      <div
+        class="flex relative flex-col pt-6 pr-20 w-full max-md:pr-5 max-md:max-w-full"
+      >
+        <nav
+          class="flex flex-wrap gap-10 justify-between items-center self-end w-full text-base max-w-[1160px] max-md:max-w-full"
+        >
           <img
             src={logo}
             alt="Clear Path logo"
             class="object-contain shrink-0 self-stretch my-auto aspect-[4.67] w-[159px]"
-            loading="eager"
-            decoding="async"
           />
 
-          <nav
+          <ul
             class="flex flex-wrap gap-10 items-center self-stretch my-auto text-white min-w-60 max-md:max-w-full"
-            aria-label="Main navigation"
           >
-            <ul class="flex flex-wrap gap-10 items-center" role="menubar">
-              {heroLinks.map((link, index) => (
-                <li class="group relative self-stretch my-auto whitespace-nowrap" role="none">
-                  <a 
-                    href={link.link} 
-                    class="text-white self-stretch my-auto flex items-center hover:text-amber-300 focus:text-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 focus:ring-offset-transparent transition-colors duration-200 rounded-sm px-1 py-1"
-                    role="menuitem"
-                    aria-haspopup={link.sublinks && link.sublinks.length > 0 ? "true" : "false"}
-                    aria-expanded="false"
-                    tabindex={index === 0 ? "0" : "-1"}
-                  >
-                    {link.text}
-                    {link.sublinks && link.sublinks.length > 0 && (
-                      <Image
-                        src="/imgs/dropdown_arrow.svg"
-                        alt=""
-                        class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square ml-1"
-                        width={16}
-                        height={16}
-                        aria-hidden="true"
-                      />
-                    )}
-                  </a>
+            {heroLinks.map((link) => (
+              <li class="group relative self-stretch my-auto whitespace-nowrap">
+                <a href={link.link} class="text-white self-stretch my-auto flex items-center hover:text-amber-300 transition-colors duration-200">
+                  {link.text}
                   {link.sublinks && link.sublinks.length > 0 && (
-                    <div 
-                      class="absolute left-0 top-full hidden group-hover:block group-focus-within:block z-10 pt-2"
-                      role="menu"
-                      aria-label="Submenu"
-                    >
-                      <section class="flex gap-2.5 p-6 mx-auto my-0 bg-white rounded-xl shadow-2xl max-w-[686px] max-md:p-5 max-sm:flex-col max-sm:p-4">
-                        <article class="flex flex-col flex-1 gap-5">
-                          <h2 class="text-lg font-medium text-neutral-800">
-                            By Treatment Offering
-                          </h2>
-                          <ul class="flex flex-col gap-3" role="group">
-                            {link.sublinks.map((sublink) => (
-                              <li role="none">
-                                <a 
-                                  href={sublink.link} 
-                                  class="text-sm text-blue-900 hover:text-blue-700 focus:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 transition-colors duration-200 rounded-sm px-1 py-1 block"
-                                  role="menuitem"
-                                >
-                                  {sublink.text}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </article>
-
-                        <div class="mx-5 my-0 w-px bg-neutral-800 bg-opacity-10 max-sm:mx-0 max-sm:my-5 max-sm:w-full max-sm:h-px" aria-hidden="true"></div>
-
-                        <article class="flex flex-col flex-1 gap-5">
-                          <h3 class="text-lg font-medium text-neutral-800">
-                            By what you're experiencing
-                          </h3>
-                          <ul class="flex flex-col gap-3" role="group">
-                            {link.sublinks2.map((sublink) => (
-                              <li role="none">
-                                <a 
-                                  href={sublink.link} 
-                                  class="text-sm text-blue-900 hover:text-blue-700 focus:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 transition-colors duration-200 rounded-sm px-1 py-1 block"
-                                  role="menuitem"
-                                >
-                                  {sublink.text}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </article>
-                      </section>
-                    </div>
+                    <Image
+                      src="/imgs/dropdown_arrow.svg"
+                      alt="Dropdown arrow"
+                      class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square ml-1"
+                      width={16}
+                      height={16}
+                    />
                   )}
-                </li>
-              ))}
-            </ul>
+                </a>
+                {link.sublinks && link.sublinks.length > 0 && (
+                  <div class="absolute left-0 top-full hidden group-hover:block z-10 pt-2">
+                    <section class="flex gap-2.5 p-6 mx-auto my-0 bg-white rounded-xl shadow-2xl max-w-[686px] max-md:p-5 max-sm:flex-col max-sm:p-4">
+                      <article class="flex flex-col flex-1 gap-5">
+                        <h2 class="text-lg font-medium text-neutral-800">
+                          By Treatment Offering
+                        </h2>
+                        <ul class="flex flex-col gap-3">
+                          {link.sublinks.map((sublink) => (
+                            <li class="text-sm text-blue-900">
+                              <a href={sublink.link} class="hover:text-blue-700 transition-colors duration-200">{sublink.text}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      </article>
 
-            <a
-              href={`tel:${telephoneNumber}`}
-              class="flex flex-col justify-center self-stretch px-5 py-2 my-auto text-blue-900 bg-white min-h-10 rounded-[50px] hover:bg-gray-50 focus:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200"
-              aria-label={`Call us at ${buttonText}`}
-            >
-              <span class="gap-1 self-stretch">{buttonText}</span>
-            </a>
-          </nav>
-        </header>
+                      <div class="mx-5 my-0 w-px bg-neutral-800 bg-opacity-10 max-sm:mx-0 max-sm:my-5 max-sm:w-full max-sm:h-px"></div>
 
-        <section class="mt-52 max-md:mt-10 max-md:max-w-full" aria-label="Hero content">
+                      <article class="flex flex-col flex-1 gap-5">
+                        <h2 class="text-lg font-medium text-neutral-800">
+                          By what your experiencing
+                        </h2>
+                        <ul class="flex flex-col gap-3">
+                          {link.sublinks2.map((sublink) => (
+                            <li class="text-sm text-blue-900">
+                              <a href={sublink.link} class="hover:text-blue-700 transition-colors duration-200">{sublink.text}</a>
+                            </li>
+                            ))}
+                        </ul>
+                      </article>
+                    </section>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={`tel:${telephoneNumber}`}
+            class="flex flex-col justify-center self-stretch px-5 py-2 my-auto text-blue-900 bg-white min-h-10 rounded-[50px]"
+          >
+            <span class="gap-1 self-stretch">{buttonText}</span>
+          </a>
+        </nav>
+
+        <div class="mt-52 max-md:mt-10 max-md:max-w-full">
           <div class="flex gap-5 max-md:flex-col">
             <div class="w-[61%] max-md:ml-0 max-md:w-full">
-              <div class="flex flex-col mt-20 w-full font-medium max-md:mt-10 max-md:max-w-full">
-                <div
+              <div
+                class="flex flex-col mt-20 w-full font-medium max-md:mt-10 max-md:max-w-full"
+              >
+                  <span
                   class="gap-2.5 self-start px-6 py-4 ml-20 text-2xl text-white rounded-[20px] border border-[rgba(255,255,255,0.53)] bg-[linear-gradient(96deg,rgba(10,39,126,0.50)_0%,rgba(10,39,126,0.50)_100%)] leading-[49px] max-md:px-5 max-md:ml-2.5"
-                  role="banner"
-                >
+                  >
                   {textBox1}
-                </div>
-
-                <h1 class="overflow-hidden px-6 py-8 mt-8 text-4xl bg-white rounded-none rounded-tr-[24px] leading-[72px] text-neutral-800 max-md:px-5 max-md:max-w-full">
-                  {textBox2_Part_1}
-                  <span class="text-blue-700">
-                    {textBox2_Part_2}
                   </span>
+
+                <h1
+                  class="overflow-hidden px-6 py-8 mt-8 text-4xl bg-white rounded-none rounded-tr-[24px] leading-[72px] text-neutral-800 max-md:px-5 max-md:max-w-full"
+                >
+                  {textBox2_Part_1}
+                  <span style="color: rgba(10, 39, 126, 1)">
+                    {textBox2_Part_2}</span
+                  >
                   {textBox2_Part_3}
                 </h1>
               </div>
             </div>
 
-            <aside class="ml-5 w-[39%] max-md:ml-0 max-md:w-full">
+            <div class="ml-5 w-[39%] max-md:ml-0 max-md:w-full">
               <div class="w-full max-md:mt-10 max-md:max-w-full">
-                <p class="flex-1 shrink gap-2.5 self-stretch px-6 py-8 text-3xl font-medium text-white rounded-[20px] border border-solid basis-0 leading-[49px] max-md:px-5 bg-[linear-gradient(96deg,rgba(10,39,126,0.50)_0%,rgba(10,39,126,0.50)_100%)] border-[rgba(255,255,255,0.53)]">
+                  <p
+                  class="flex-1 shrink gap-2.5 self-stretch px-6 py-8 text-3xl font-medium text-white rounded-[20px] border border-solid basis-0 leading-[49px] max-md:px-5 bg-[linear-gradient(96deg,rgba(10,39,126,0.50)_0%,rgba(10,39,126,0.50)_100%)] border-[rgba(255,255,255,0.53)]"
+                  >
                   {textBox3}
-                </p>
+                  </p>
 
-                <div class="flex gap-3 mt-6 max-md:max-w-full" role="group" aria-label="Call to action buttons">
+                <div class="flex gap-3 mt-6 max-md:max-w-full">
                   <a
                     href={buttonOneLink}
-                    class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 rounded-[50px] text-neutral-800 hover:bg-amber-400 focus:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 transition-colors duration-200"
+                    class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 text-lg font-semibold leading-none bg-amber-300 basis-0 rounded-[50px] text-neutral-800"
                   >
                     {buttonOne}
                   </a>
 
                   <a
                     href={`tel:${telephoneNumber}`}
-                    class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 rounded-[50px] hover:bg-purple-800 focus:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors duration-200"
-                    aria-label={`${buttonTwo} - Call ${buttonText}`}
+                    class="flex flex-col flex-1 shrink justify-center items-center px-5 py-4 my-auto text-white bg-purple-900 basis-0 rounded-[50px]"
                   >
                     <div class="flex flex-col items-center">
                       <span class="text-xs">{buttonTwo}</span>
-                      <span class="text-xs font-semibold leading-6">{buttonText}</span>
+                      <span class="text-xs font-semibold leading-6"
+                        >{buttonText}</span
+                      >
                     </div>
                   </a>
                 </div>
               </div>
-            </aside>
+            </div>
           </div>
-        </section>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </div>
 
-<!-- Mobile Layout -->
 <div class="min-[821px]:hidden">
   <header class="relative flex items-center justify-between p-4 bg-transparent z-20">
-    <img
+     <img
       src={logo}
       alt="Clear Path logo"
       class="object-contain w-28"
-      loading="eager"
-      decoding="async"
     />
-    <button 
-      id="hamburger-menu-button" 
-      aria-label="Open navigation menu" 
-      aria-expanded="false" 
-      aria-controls="mobile-nav-overlay"
-      class="text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent rounded-sm p-1"
-    >
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <button id="hamburger-menu-button" aria-label="Open menu" aria-expanded="false" class="text-white focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
   </header>
 
-  <main
+  <section
     class="relative flex flex-col justify-center items-center py-10 px-5 text-center text-white min-h-[400px] -mt-20 pt-20"
     style={`background-image: url(${backgroundImage}); background-size: cover; background-position: center;`}
   >
-    <section class="bg-white rounded-xl p-6 mb-6 max-w-4xl">
+    <div class="bg-white rounded-xl p-6 mb-6 max-w-4xl">
       <h1 class="text-2xl sm:text-3xl font-bold leading-tight mb-4 text-neutral-800">
         {textBox2_Part_1}
         <span class="text-blue-700">{textBox2_Part_2}</span>
         {textBox2_Part_3}
       </h1>
-    </section>
-
+    </div>
     {textBox3 && (
-      <section class="bg-blue-900 bg-opacity-50 backdrop-blur-sm border border-white border-opacity-50 rounded-xl p-6 mb-8 max-w-md">
+      <div class="bg-blue-900 bg-opacity-50 backdrop-blur-sm border border-white border-opacity-50 rounded-xl p-6 mb-8 max-w-md">
         <p class="text-base sm:text-lg leading-relaxed text-white">
           {textBox3}
         </p>
-      </section>
+      </div>
     )}
-
-    <div class="w-full max-w-xs flex flex-col gap-4" role="group" aria-label="Call to action buttons">
+    <div class="w-full max-w-xs flex flex-col gap-4">
       <a
         href="/contact"
-        class="w-full inline-block px-8 py-4 text-base sm:text-lg font-semibold rounded-full bg-amber-300 text-neutral-800 hover:bg-amber-400 focus:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 transition-colors duration-200 shadow-lg text-center"
+        class="w-full inline-block px-8 py-4 text-base sm:text-lg font-semibold rounded-full bg-amber-300 text-neutral-800 hover:bg-amber-400 transition-colors shadow-lg text-center"
       >
         {buttonOne}
       </a>
       {telephoneNumber && (
         <a
           href={`tel:${telephoneNumber}`}
-          class="w-full flex flex-col justify-center items-center px-5 py-4 text-white bg-purple-900 rounded-full transition-colors duration-200 shadow-md hover:bg-purple-800 focus:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 text-center"
-          aria-label={`${buttonTwo} - Call ${buttonText}`}
+          class="w-full flex flex-col justify-center items-center px-5 py-4 text-white bg-purple-900 rounded-full transition-colors shadow-md hover:bg-purple-800 text-center"
         >
           <div class="flex flex-col items-center">
             <span class="text-xs">{buttonTwo}</span>
@@ -253,95 +219,64 @@ const GeneralData = Astro.props.GeneralData;
         </a>
       )}
     </div>
-  </main>
+  </section>
 
   <nav
     id="mobile-nav-overlay"
     class="fixed inset-0 z-50 bg-white text-purple-900 p-6 hidden flex-col"
-    aria-label="Mobile navigation"
-    role="dialog"
-    aria-modal="true"
   >
-    <header class="flex justify-between items-center mb-8">
-      <Image 
-        src={logo} 
-        alt="Company Logo" 
-        class="object-contain shrink-0 h-10" 
-        width={112} 
-        height={40}
-        loading="eager"
-        decoding="async"
-      />
-      <button 
-        id="close-menu-button" 
-        aria-label="Close navigation menu" 
-        class="focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded-sm p-1"
-      >
-        <svg class="w-8 h-8 text-purple-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <div class="flex justify-between items-center mb-8">
+      <Image src={logo} alt="Company Logo Mobile" class="object-contain shrink-0 h-10" width={112} height={40}>
+      <button id="close-menu-button" aria-label="Close menu" class="focus:outline-none">
+        <svg class="w-8 h-8 text-purple-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
-    </header>
+    </div>
 
-    <ul class="flex flex-col items-start gap-4 text-xl overflow-y-auto flex-grow" role="menubar">
-      {heroLinks.map((link, index) => (
-        <li class="w-full" role="none">
-          <a 
-            href={link.link} 
-            class="hover:text-amber-500 focus:text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 py-2 block font-medium rounded-sm transition-colors duration-200"
-            role="menuitem"
-            tabindex={index === 0 ? "0" : "-1"}
-          >
-            {link.text}
-          </a>
+    <ul class="flex flex-col items-start gap-4 text-xl overflow-y-auto flex-grow">
+      {heroLinks.map((link) => (
+        <li class="w-full">
+          <a href={link.link} class="hover:text-amber-500 py-2 block font-medium">{link.text}</a>
           {(link.sublinks && link.sublinks.length > 0 || link.sublinks2 && link.sublinks2.length > 0) && (
             <div class="pl-4 mt-1 space-y-1 text-lg">
               {link.sublinks && link.sublinks.length > 0 && (
-                <section>
-                  <h2 class="text-md font-semibold text-neutral-700 mb-2">By Treatment Offering</h2>
-                  <ul class="flex flex-col gap-2" role="group">
+                <>
+                  <h3 class="text-md font-semibold text-neutral-700 mb-2">By Treatment Offering</h3>
+                  <ul class="flex flex-col gap-2">
                     {link.sublinks.map((sublink) => (
-                      <li role="none">
-                        <a 
-                          href={sublink.link} 
-                          class="text-sm text-blue-700 hover:underline focus:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 block py-1 rounded-sm transition-colors duration-200"
-                          role="menuitem"
-                        >
+                      <li>
+                        <a href={sublink.link} class="text-sm text-blue-700 hover:underline block py-1">
                           {sublink.text}
                         </a>
                       </li>
                     ))}
                   </ul>
-                </section>
+                </>
               )}
               {link.sublinks2 && link.sublinks2.length > 0 && (
-                <section>
-                  <div class="my-3 h-px bg-gray-200" aria-hidden="true"></div>
+                <>
+                  <div class="my-3 h-px bg-gray-200"></div>
                   <h3 class="text-md font-semibold text-neutral-700 mb-2">By what you're experiencing</h3>
-                  <ul class="flex flex-col gap-2" role="group">
+                  <ul class="flex flex-col gap-2">
                     {link.sublinks2.map((sublink) => (
-                      <li role="none">
-                        <a 
-                          href={sublink.link} 
-                          class="text-sm text-blue-700 hover:underline focus:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 block py-1 rounded-sm transition-colors duration-200"
-                          role="menuitem"
-                        >
+                      <li>
+                        <a href={sublink.link} class="text-sm text-blue-700 hover:underline block py-1">
                           {sublink.text}
                         </a>
                       </li>
                     ))}
                   </ul>
-                </section>
+                </>
               )}
             </div>
           )}
         </li>
       ))}
-      <li class="mt-auto pt-6 w-full" role="none">
+      <li class="mt-auto pt-6 w-full">
         <a
           href={`tel:${telephoneNumber}`}
-          class="block w-full text-center px-5 py-3 text-lg font-semibold bg-purple-900 text-white rounded-full hover:bg-purple-800 focus:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors duration-200 shadow-md"
-          aria-label={`Call us at ${buttonText}`}
+          class="block w-full text-center px-5 py-3 text-lg font-semibold bg-purple-900 text-white rounded-full hover:bg-purple-800 transition-colors shadow-md"
         >
           {buttonText}
         </a>
@@ -363,51 +298,13 @@ const GeneralData = Astro.props.GeneralData;
           mobileNavOverlay.classList.add('flex');
           document.body.style.overflow = 'hidden';
           hamburgerButton.setAttribute('aria-expanded', 'true');
-          
-          // Focus management
-          const firstFocusableElement = mobileNavOverlay.querySelector('button, a[href]');
-          if (firstFocusableElement) {
-            firstFocusableElement.focus();
-          }
-
-          // Trap focus
-          trapFocus(mobileNavOverlay);
         } else {
           mobileNavOverlay.classList.add('hidden');
           mobileNavOverlay.classList.remove('flex');
           document.body.style.overflow = '';
           hamburgerButton.setAttribute('aria-expanded', 'false');
-          hamburgerButton.focus();
         }
       }
-    }
-
-    function trapFocus(element) {
-      const focusableElements = element.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      const firstElement = focusableElements[0];
-      const lastElement = focusableElements[focusableElements.length - 1];
-
-      element.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
-              lastElement.focus();
-              e.preventDefault();
-            }
-          } else {
-            if (document.activeElement === lastElement) {
-              firstElement.focus();
-              e.preventDefault();
-            }
-          }
-        }
-        
-        if (e.key === 'Escape') {
-          toggleMobileNav(false);
-        }
-      });
     }
 
     if (hamburgerButton) {
@@ -434,36 +331,5 @@ const GeneralData = Astro.props.GeneralData;
         });
       });
     }
-
-    // Close menu on outside click
-    document.addEventListener('click', (e) => {
-      if (mobileNavOverlay && !mobileNavOverlay.classList.contains('hidden')) {
-        if (!mobileNavOverlay.contains(e.target) && !hamburgerButton.contains(e.target)) {
-          toggleMobileNav(false);
-        }
-      }
-    });
-
-    // Keyboard navigation for desktop dropdown menus
-    const navItems = document.querySelectorAll('[role="menubar"] [role="menuitem"]');
-    navItems.forEach((item, index) => {
-      item.addEventListener('keydown', (e) => {
-        switch (e.key) {
-          case 'ArrowRight':
-            e.preventDefault();
-            const nextItem = navItems[index + 1] || navItems[0];
-            nextItem.focus();
-            break;
-          case 'ArrowLeft':
-            e.preventDefault();
-            const prevItem = navItems[index - 1] || navItems[navItems.length - 1];
-            prevItem.focus();
-            break;
-          case 'Escape':
-            item.blur();
-            break;
-        }
-      });
-    });
   });
 </script>

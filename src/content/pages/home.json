@@ -3,7 +3,7 @@
     "backgroundImage": "/imgs/hero_home_bg.webp",
     "backgroundImageAlt": "Background image of mental health treatment facility",
     "logo": "/imgs/hero_logo.png",
-    "buttonText": "Call (123) 456-7890",
+    "buttonText": "Call +1 561-220-6505",
     "textBox1": "Interventional Psychiatry",
     "textBox2_Part_1": "Highly",
     "textBox2_Part_2": "effective evidence",
@@ -12,7 +12,7 @@
     "buttonOne": "Get Started",
     "buttonOneLink": "/contact",
     "buttonTwo": "Have a question?",
-    "telephoneNumber": "1234567890",
+    "telephoneNumber": "+15612206505",
     "heroLinks": [
       {
         "text": "Treatments",
@@ -108,8 +108,8 @@
     "buttonOne": "Get Started",
     "buttonOneLink": "/contact",
     "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "Call (123) 456-7890",
-    "buttonTwo_Number": "1234567890"
+    "buttonTwo_Part_2": "Call +1 561-220-6505",
+    "buttonTwo_Number": "+15612206505"
   },
   "testimonials": {
     "list": [
@@ -135,8 +135,8 @@
     "buttonText": "Get Started",
     "buttonLink": "/contact",
     "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(123) 456-7890",
-    "buttonTwo_Number": "1234567890",
+    "buttonTwo_Part_2": "+1 561-220-6505",
+    "buttonTwo_Number": "+15612206505",
     "list": [
       {
         "title": "Medication Management",
@@ -315,8 +315,8 @@
     "buttonOneText": "Check Your Insurance",
     "buttonOneLink": "/insurance",
     "buttonSecondTextOne": "Have a question?",
-    "buttonSecondTextTwo": "Call (123) 456-7890",
-    "buttonSecondLink": "tel:1234567890",
+    "buttonSecondTextTwo": "Call +1 561-220-6505",
+    "buttonSecondLink": "tel:+15612206505",
     "insuranceOptions": [
       {
         "logo": "/imgs/blue_cross.png",
@@ -348,7 +348,7 @@
     "image": "/imgs/mental_health_support.png",
     "altText": "Mental health support",
     "phoneTextOne": "Have a question?",
-    "phoneTextTwo": "Call (123) 456-7890",
-    "phoneNumber": "1234567890"
+    "phoneTextTwo": "Call +1 561-220-6505",
+    "phoneNumber": "+15612206505"
   }
 }
