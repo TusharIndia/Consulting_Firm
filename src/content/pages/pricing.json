@@ -1,11 +1,10 @@
 {
   "hero": {
-    "heading": "Transparent Pricing for Mental Health Treatment",
-    "text": "We believe in clarity and affordability for mental health services. Discover our pricing options and payment plans.",
+    "heading": "Pricing Information",
     "buttonText": "Get Started",
     "phoneQuestionText": "Have a question?",
-    "treatmentsLabel": "Treatments",
-     "buttonLink": "/contact",
+    "treatmentsLabel": "May 4, 2025",
+    "buttonLink": "/contact",
     "callButtonText": "Call (123) 456-7890",
     "callButtonLink": "1234567890",
    "navItems": [
