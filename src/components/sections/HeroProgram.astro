@@ -95,14 +95,37 @@ const { heading, text, buttonText, buttonLink, phoneQuestionText, treatmentsLabe
             <li class="w-full">
               <a href={item.url} class="hover:text-amber-500 py-2 block font-medium">{item.text}</a>
               {(item.sublinks && item.sublinks.length > 0 || item.sublinks2 && item.sublinks2.length > 0) && (
-                <ul class="pl-4 mt-1 space-y-1 text-lg">
-                  {item.sublinks && item.sublinks.map((sublink) => (
-                    <li><a href={sublink.link} class="hover:text-amber-500 py-1 block text-gray-700">{sublink.text}</a></li>
-                  ))}
-                  {item.sublinks2 && item.sublinks2.map((sublink) => (
-                    <li><a href={sublink.link} class="hover:text-amber-500 py-1 block text-gray-700">{sublink.text}</a></li>
-                  ))}
-                </ul>
+                <div class="pl-4 mt-1 space-y-1 text-lg">
+                  {item.sublinks && item.sublinks.length > 0 && (
+                    <>
+                      <h3 class="text-md font-semibold text-neutral-700 mb-2">By Treatment Offering</h3>
+                      <ul class="flex flex-col gap-2">
+                        {item.sublinks.map((sublink) => (
+                          <li>
+                            <a href={sublink.link} class="text-sm text-blue-700 hover:underline block py-1">
+                              {sublink.text}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                  {item.sublinks2 && item.sublinks2.length > 0 && (
+                    <>
+                      <div class="my-3 h-px bg-gray-200"></div>
+                      <h3 class="text-md font-semibold text-neutral-700 mb-2">By what you're experiencing</h3>
+                      <ul class="flex flex-col gap-2">
+                        {item.sublinks2.map((sublink) => (
+                          <li>
+                            <a href={sublink.link} class="text-sm text-blue-700 hover:underline block py-1">
+                              {sublink.text}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </div>
               )}
             </li>
           ))}
