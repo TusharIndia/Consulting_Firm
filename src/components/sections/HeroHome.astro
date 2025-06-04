@@ -22,7 +22,8 @@ const GeneralData = Astro.props.GeneralData;
 
 <!-- Preload hero images for better LCP - targeting both desktop and mobile -->
 <link rel="preload" as="image" href={backgroundImage.src} fetchpriority="high" media="(min-width: 821px)" />
-<link rel="preload" as="image" href={backgroundImage.src} fetchpriority="high" media="(max-width: 820px)" />
+<!-- Mobile specific preload with Netlify image optimization -->
+<link rel="preload" as="image" href={`/.netlify/images?w=820&fit=cover&url=${encodeURIComponent(backgroundImage.src)}`} fetchpriority="high" media="(max-width: 820px)" />
 
 <div class="max-[820px]:hidden">
   <section
@@ -208,6 +209,8 @@ const GeneralData = Astro.props.GeneralData;
       decoding="async"
       fetchpriority="high"
       sizes="(max-width: 820px) 100vw, 820px"
+      quality={85}
+      format="webp"
     />
     <div class="bg-white rounded-xl p-6 mb-6 max-w-4xl">
       <h1 class="text-2xl sm:text-3xl font-bold leading-tight mb-4 text-neutral-800">
