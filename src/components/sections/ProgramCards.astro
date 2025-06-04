@@ -4,32 +4,32 @@ const { heading, text, programs } = Astro.props.Content;
 ---
 
 <section class="rounded-none mx-auto my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl">
-  <div class="flex overflow-hidden flex-col px-20 py-14 w-full rounded-3xl max-md:px-5 max-md:max-w-full" style="background: linear-gradient(270deg, #F6F2EE 0%, #F3EFEC 100%);">
+  <div class="flex overflow-hidden flex-col px-20 py-14 w-full rounded-3xl max-md:px-5 max-md:max-w-full mobile-container" style="background: linear-gradient(270deg, #F6F2EE 0%, #F3EFEC 100%);">
     <!-- Services Badge -->
     <header>
-      <span class="self-start px-10 py-3 text-base text-white bg-purple-900 rounded-[50px] max-md:px-5">
+      <span class="self-start px-10 py-3 text-base text-white bg-purple-900 rounded-[50px] max-md:px-5 mobile-badge">
         # Services
       </span>
     </header>
 
     <!-- Main Content Header -->
-    <div class="mt-20 max-md:mt-10 max-md:max-w-full">
-      <div class="flex gap-5 max-md:flex-col">
-        <div class="w-[39%] max-md:ml-0 max-md:w-full">
-          <div class="grow mt-16 text-neutral-800 max-md:mt-10 max-md:max-w-full">
-            <h2 class="text-5xl font-medium leading-[72px] max-md:text-4xl max-md:leading-[64px]">
+    <div class="mt-20 max-md:mt-10 max-md:max-w-full mobile-header">
+      <div class="flex gap-5 max-md:flex-col mobile-content-wrapper">
+        <div class="w-[39%] max-md:ml-0 max-md:w-full mobile-text-section">
+          <div class="grow mt-16 text-neutral-800 max-md:mt-10 max-md:max-w-full mobile-text-content">
+            <h2 class="text-5xl font-medium leading-[72px] max-md:text-4xl max-md:leading-[64px] mobile-heading">
               {heading}
             </h2>
-            <p class="mt-4 text-lg leading-9 max-md:max-w-full">
+            <p class="mt-4 text-lg leading-9 max-md:max-w-full mobile-description">
               {text}
             </p>
           </div>
         </div>
-        <div class="ml-5 w-[61%] max-md:ml-0 max-md:w-full">
+        <div class="ml-5 w-[61%] max-md:ml-0 max-md:w-full mobile-image-section">
           <Image
             src="/imgs/condition_retreated_img.png"
             alt="Mental health conditions illustration"
-            class="object-contain grow w-full rounded-none aspect-[1.86] max-md:mt-10 max-md:max-w-full"
+            class="object-contain grow w-full rounded-none aspect-[1.86] max-md:mt-10 max-md:max-w-full mobile-hero-image"
             width={800}
             height={430}
           />
@@ -44,36 +44,36 @@ const { heading, text, programs } = Astro.props.Content;
         rows.push(programs.slice(i, i + 3));
       }
       return rows.map((row, rowIndex) => (
-        <div class={`flex flex-wrap gap-6 items-center ${rowIndex === 0 ? 'mt-14' : 'mt-7'} text-2xl font-medium leading-loose whitespace-nowrap text-neutral-800`}>
+        <div class={`flex flex-wrap gap-6 items-center ${rowIndex === 0 ? 'mt-14' : 'mt-7'} text-2xl font-medium leading-loose whitespace-nowrap text-neutral-800 mobile-programs-row`}>
           {row.map(program => (
-            <a href={program.link || '#'} class="flex-1 shrink self-stretch my-auto basis-0 min-w-60 cursor-pointer">
-              <div class="flex gap-10 justify-between items-center w-full">
-                <div class="flex gap-3 items-center self-stretch my-auto">
+            <a href={program.link || '#'} class="flex-1 shrink self-stretch my-auto basis-0 min-w-60 cursor-pointer mobile-program-card">
+              <div class="flex gap-10 justify-between items-center w-full mobile-program-content">
+                <div class="flex gap-3 items-center self-stretch my-auto mobile-program-info">
                   {program.image && (
                   <Image
                     src={program.image}
                     alt={`${program.title} icon`}
-                    class="object-contain shrink-0 self-stretch my-auto w-10 aspect-square"
+                    class="object-contain shrink-0 self-stretch my-auto w-10 aspect-square mobile-program-icon"
                     width={40}
                     height={40}
                   />
                   )}
-                  <h3 class="self-stretch my-auto">{program.title}</h3>
+                  <h3 class="self-stretch my-auto mobile-program-title">{program.title}</h3>
                   {!program.image && (
                     <div class="w-10 aspect-square"></div>
                   )}
                 </div>
-                <div class="cursor-pointer">
+                <div class="cursor-pointer mobile-arrow">
                   <Image
                     src="/imgs/expand_arrow.svg"
                     alt="Expand arrow"
-                    class="object-contain shrink-0 self-stretch my-auto aspect-[5.13] w-[41px]"
+                    class="object-contain shrink-0 self-stretch my-auto aspect-[5.13] w-[41px] mobile-arrow-icon"
                     width={41}
                     height={8}
                   />
                 </div>
               </div>
-              <hr class="mt-4 w-full min-h-px border-black" />
+              <hr class="mt-4 w-full min-h-px border-black mobile-divider" />
             </a>
           ))}
         </div>
@@ -81,3 +81,101 @@ const { heading, text, programs } = Astro.props.Content;
     })()}
   </div>
 </section>
+
+<style>
+  @media (max-width: 900px) {
+    .mobile-container {
+      padding: 2rem 1rem !important;
+    }
+    
+    .mobile-badge {
+      padding: 0.75rem 2rem !important;
+      font-size: 0.875rem !important;
+    }
+    
+    .mobile-header {
+      margin-top: 2rem !important;
+    }
+    
+    .mobile-content-wrapper {
+      flex-direction: column !important;
+      gap: 2rem !important;
+    }
+    
+    .mobile-text-section {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+    
+    .mobile-text-content {
+      margin-top: 0 !important;
+    }
+    
+    .mobile-heading {
+      font-size: 2rem !important;
+      line-height: 2.5rem !important;
+    }
+    
+    .mobile-description {
+      font-size: 1rem !important;
+      line-height: 1.5rem !important;
+      margin-top: 1rem !important;
+    }
+    
+    .mobile-image-section {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+    
+    .mobile-hero-image {
+      margin-top: 1rem !important;
+      aspect-ratio: 16/9 !important;
+    }
+    
+    .mobile-programs-row {
+      flex-direction: column !important;
+      gap: 1rem !important;
+      margin-top: 2rem !important;
+      align-items: stretch !important;
+    }
+    
+    .mobile-programs-row:first-of-type {
+      margin-top: 3rem !important;
+    }
+    
+    .mobile-program-card {
+      flex: none !important;
+      min-width: auto !important;
+      width: 100% !important;
+    }
+    
+    .mobile-program-content {
+      gap: 1rem !important;
+      padding: 1rem 0 !important;
+    }
+    
+    .mobile-program-info {
+      gap: 0.75rem !important;
+    }
+    
+    .mobile-program-title {
+      font-size: 1.25rem !important;
+      line-height: 1.75rem !important;
+      white-space: normal !important;
+    }
+    
+    .mobile-program-icon {
+      width: 2rem !important;
+      height: 2rem !important;
+    }
+    
+    .mobile-arrow-icon {
+      width: 2rem !important;
+      height: auto !important;
+    }
+    
+    .mobile-divider {
+      margin-top: 1rem !important;
+    }
+  }
+</style>
