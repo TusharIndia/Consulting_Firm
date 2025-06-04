@@ -3,13 +3,13 @@ const { isInsurancePage = false, insuranceData, contactData } = Astro.props;
 ---
 
 {isInsurancePage ? (
-  <main class="flex justify-center items-center px-5 py-28 bg-white w-full max-w-[1320px] mx-auto my-0 max-md:px-10 max-md:py-16 max-md:w-full max-md:h-auto max-sm:px-5 max-sm:py-10">
-    <div class="flex justify-between w-full max-md:flex-col max-md:gap-10 max-md:w-full max-md:h-auto max-sm:gap-8">
+  <main class="flex justify-center items-center px-5 py-28 bg-white w-full max-w-[1320px] mx-auto my-0 max-[900px]:px-10 max-[900px]:py-16 max-[900px]:w-full max-[900px]:h-auto max-sm:px-5 max-sm:py-10">
+    <div class="flex justify-between w-full max-[900px]:flex-col max-[900px]:gap-10 max-[900px]:w-full max-[900px]:h-auto max-sm:gap-8">
       <!-- Left Section -->
-      <section class="flex flex-col gap-8 items-start w-[48%] max-md:w-full">
+      <section class="flex flex-col gap-8 items-start w-[48%] max-[900px]:w-full">
         <!-- Header -->
         <header class="flex flex-col gap-4 items-start self-stretch">
-          <h1 class="flex flex-col justify-center self-stretch text-5xl font-medium leading-[72px] max-md:h-auto max-md:text-4xl max-md:leading-[56px] max-sm:text-3xl max-sm:leading-10">
+          <h1 class="flex flex-col justify-center self-stretch text-5xl font-medium leading-[72px] max-[900px]:h-auto max-[900px]:text-4xl max-[900px]:leading-[56px] max-sm:text-3xl max-sm:leading-10">
             <span class="text-neutral-800">{insuranceData?.title.line1}</span>
             <span class="text-indigo-500">{insuranceData?.title.line2}</span>
             <span class="text-neutral-800">{insuranceData?.title.line3}</span>
@@ -48,10 +48,10 @@ const { isInsurancePage = false, insuranceData, contactData } = Astro.props;
       </section>
 
       <!-- Right Section - Form -->
-      <section class="w-[48%] max-md:w-full">
+      <section class="w-[48%] max-[900px]:w-full">
         <div class="relative rounded-3xl w-full">
           <!-- Form Container -->
-          <div class="flex flex-col gap-8 items-start w-full p-6 bg-gradient-to-r from-[#F3EFEC] to-[#F6F2EE] rounded-3xl shadow-lg max-md:pb-10 max-sm:gap-6">
+          <div class="flex flex-col gap-8 items-start w-full p-6 bg-gradient-to-r from-[#F3EFEC] to-[#F6F2EE] rounded-3xl shadow-lg max-[900px]:pb-10 max-sm:gap-6">
             <!-- Form Header -->
             <header class="flex flex-col gap-6 items-start w-full">
               <div class="px-10 py-1.5 text-base leading-6 text-white bg-purple-900 rounded-[50px]">
@@ -130,10 +130,10 @@ const { isInsurancePage = false, insuranceData, contactData } = Astro.props;
     </div>
   </main>
 ) : (
-  <main class="flex gap-16 justify-center items-start px-5 py-14 mx-auto my-0 bg-white w-full max-w-[1320px] max-md:flex-col max-md:gap-10 max-md:px-8 max-md:py-10 max-md:w-full max-md:max-w-[1320px] max-sm:gap-8 max-sm:px-5 max-sm:py-6">
-    <section class="flex flex-col gap-8 items-start w-[45%] max-md:w-full">
+  <main class="flex gap-16 justify-center items-start px-5 py-14 mx-auto my-0 bg-white w-full max-w-[1320px] max-[900px]:flex-col max-[900px]:gap-10 max-[900px]:px-8 max-[900px]:py-10 max-[900px]:w-full max-[900px]:max-w-[1320px] max-sm:gap-8 max-sm:px-5 max-sm:py-6">
+    <section class="flex flex-col gap-8 items-start w-[45%] max-[900px]:w-full">
       <header class="flex flex-col gap-4 items-start self-stretch">
-        <h1 class="text-5xl font-medium leading-[60px] text-neutral-800 max-md:text-4xl max-md:leading-[56px] max-sm:text-3xl max-sm:leading-10">
+        <h1 class="text-5xl font-medium leading-[60px] text-neutral-800 max-[900px]:text-4xl max-[900px]:leading-[56px] max-sm:text-3xl max-sm:leading-10">
           {contactData?.emergencyHeading}
         </h1>
         <p class="self-stretch text-lg leading-7 opacity-75 text-neutral-800 max-sm:text-base max-sm:leading-6">
@@ -182,7 +182,7 @@ const { isInsurancePage = false, insuranceData, contactData } = Astro.props;
       </article>
     </section>
 
-    <section class="flex shrink-0 w-[45%] max-md:w-full">
+    <section class="flex shrink-0 w-[45%] max-[900px]:w-full">
       <div class="relative shrink-0 rounded-xl bg-gradient-to-r from-[#F3EFEC] to-[#F6F2EE] p-6 w-full shadow-lg">
         <form class="flex flex-col gap-6 items-start w-full">
           <div class="flex items-start w-full">
@@ -257,7 +257,7 @@ const { isInsurancePage = false, insuranceData, contactData } = Astro.props;
 )}
 
 <style>
-@media (min-width: 768px) and (max-width: 820px) {
+@media (min-width: 901px) and (max-width: 1320px) {
   main {
     margin-left: 20px;
     margin-right: 20px;
@@ -265,7 +265,7 @@ const { isInsurancePage = false, insuranceData, contactData } = Astro.props;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   main {
     margin-left: 16px;
     margin-right: 16px;
