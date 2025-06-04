@@ -14,22 +14,22 @@ function formatDate(date: Date) {
 }
 ---
 
-<section class="mx-auto px-6 py-14 max-w-[1320px] bg-white max-md:px-5 max-md:pt-24">
-  <div class="grid gap-6 w-full grid-cols-3 max-md:grid-cols-1 max-md:gap-0">
+<section class="mx-auto px-6 py-14 max-w-[1320px] bg-white max-[900px]:px-5 max-[900px]:pt-10">
+  <div class="grid gap-6 w-full grid-cols-3 max-[900px]:grid-cols-1 max-[900px]:gap-0">
     {sortedPosts.map((post) => (
-      <article class="article-card overflow-hidden relative bg-white rounded-3xl h-[410px] shadow-[0px_9px_36px_rgba(0,0,0,0.05)] max-sm:h-[300px] max-md:mt-7">
+      <article class="article-card overflow-hidden relative bg-white rounded-3xl h-[410px] shadow-[0px_9px_36px_rgba(0,0,0,0.05)] max-sm:h-[300px] max-[900px]:mt-7">
         <figure class="overflow-hidden relative m-6 rounded-2xl h-[366px] max-sm:h-64">
           <img 
             src={post.data.featuredImg} 
             alt={post.data.title} 
             class="object-cover absolute inset-0 size-full"
           />
-          <time class="absolute gap-2.5 left-4 top-4 px-6 py-1.5 text-base text-white bg-purple-900 rounded-[50px] max-md:px-5">
+          <time class="absolute gap-2.5 left-4 top-4 px-6 py-1.5 text-base text-white bg-purple-900 rounded-[50px] max-[900px]:px-5">
             {formatDate(post.data.date)}
           </time>
         </figure>
         <div class="absolute bg-white rounded-bl-3xl h-[74px] right-[22px] top-[22px] w-[74px]"></div>
-        <h2 class="absolute pt-3.5 pr-5 pb-3.5 pl-6 text-xl font-medium leading-8 bg-white rounded-tr-3xl bottom-[20px] left-[22px] text-neutral-800 max-w-[292px] max-md:text-lg max-md:leading-6">
+        <h2 class="absolute pt-3.5 pr-5 pb-3.5 pl-6 text-xl font-medium leading-8 bg-white rounded-tr-3xl bottom-[20px] left-[22px] text-neutral-800 max-w-[292px] max-[900px]:text-lg max-[900px]:leading-6">
           {post.data.title}
         </h2>
         <a href={`/blog/${post.slug}`} class="flex absolute justify-center items-center h-[58px] right-[22px] rounded-[90.127px] top-[22px] w-[58px]" aria-label={`Read more about ${post.data.title}`}>
