@@ -185,19 +185,19 @@ export async function fetchContactData(): Promise<Contact> {
         })),
       },
       
-      contactHero: {
+      contactDetails: {
     
-        address: contact.data.contactHero.address,
-        email: contact.data.contactHero.email,
-        phone: contact.data.contactHero.phone,
-        formHeading: contact.data.contactHero.formHeading,
-        emergencyHeading: contact.data.contactHero.emergencyHeading,
-        emergencyText: contact.data.contactHero.emergencyText,
-        supportHeading: contact.data.contactHero.supportHeading,
+        address: contact.data.contactDetails.address,
+        email: contact.data.contactDetails.email,
+        phone: contact.data.contactDetails.phone,
+        formHeading: contact.data.contactDetails.formHeading,
+        emergencyHeading: contact.data.contactDetails.emergencyHeading,
+        emergencyText: contact.data.contactDetails.emergencyText,
+        supportHeading: contact.data.contactDetails.supportHeading,
         businessHours: {
-          heading: contact.data.contactHero.businessHours.heading,
-          hours: contact.data.contactHero.businessHours.hours,
-          weekend: contact.data.contactHero.businessHours.weekend,
+          heading: contact.data.contactDetails.businessHours.heading,
+          hours: contact.data.contactDetails.businessHours.hours,
+          weekend: contact.data.contactDetails.businessHours.weekend,
         },
       },
     },

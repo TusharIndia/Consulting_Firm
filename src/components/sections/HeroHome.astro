@@ -20,6 +20,11 @@ const {
 const GeneralData = Astro.props.GeneralData;
 ---
 
+<!-- Preload hero images for better LCP - targeting both desktop and mobile -->
+<link rel="preload" as="image" href={backgroundImage.src} fetchpriority="high" media="(min-width: 821px)" />
+<!-- Mobile specific preload with Netlify image optimization -->
+<link rel="preload" as="image" href={`/.netlify/images?w=820&fit=cover&url=${encodeURIComponent(backgroundImage.src)}`} fetchpriority="high" media="(max-width: 820px)" />
+
 <div class="max-[820px]:hidden">
   <section
     class="rounded-none mx-auto mb-10 max-w-[1320px] relative"
@@ -192,9 +197,21 @@ const GeneralData = Astro.props.GeneralData;
   </header>
 
   <section
-    class="relative flex flex-col justify-center items-center py-10 px-5 text-center text-white min-h-[400px] -mt-20 pt-20"
-    style={`background-image: url(${backgroundImage}); background-size: cover; background-position: center;`}
+    class="relative flex flex-col justify-center items-center py-10 px-5 text-center text-white min-h-screen -mt-20 pt-20"
   >
+    <Image
+      src={backgroundImage}
+      alt={backgroundImageAlt}
+      class="object-cover absolute inset-0 size-full -z-10"
+      width={820}
+      height={800}
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      sizes="(max-width: 820px) 100vw, 820px"
+      quality={85}
+      format="webp"
+    />
     <div class="bg-white rounded-xl p-6 mb-6 max-w-4xl">
       <h1 class="text-2xl sm:text-3xl font-bold leading-tight mb-4 text-neutral-800">
         {textBox2_Part_1}

@@ -98,7 +98,7 @@ export interface Contact {
       }[];
     };
     
-    contactHero: {
+    contactDetails: {
       
       address: string;
       email: string;

@@ -651,8 +651,8 @@ collections:
                   - { label: "Person Image", name: "image", widget: "image" }
                   
           # Contact Hero Section
-          - label: "Contact Hero"
-            name: "contactHero"
+          - label: "Contact Details"
+            name: "contactDetails"
             widget: "object"
             collapsed: true
             fields:
@@ -667,7 +667,7 @@ collections:
                 name: "businessHours"
                 widget: "object"
                 fields:
-                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Heading", name: "businessHoursHeading", widget: "string" }
                   - { label: "Hours (Weekdays)", name: "hours", widget: "string" }
                   - { label: "Hours (Weekend)", name: "weekend", widget: "string" }
           - label: "Call to Action"
@@ -747,7 +747,6 @@ collections:
             collapsed: true
             fields:
               - { label: "Heading One", name: "headingOne", widget: "string" }
-              - { label: "Text One", name: "textOne", widget: "text" }
               - { label: "Heading Two", name: "headingTwo", widget: "string" }
               - { label: "Text One", name: "textOne", widget: "text" }
               - { label: "Button One Text", name: "buttonOne", widget: "string" }
