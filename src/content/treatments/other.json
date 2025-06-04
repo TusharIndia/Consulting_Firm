@@ -6,8 +6,8 @@
     "phoneQuestionText": "Have a question?",
     "treatmentsLabel": "May 4, 2025",
       "buttonLink": "/contact",
-    "callButtonText": "Call (123) 456-7890",
-    "callButtonLink": "1234567890",
+    "callButtonText": "Call (561) 220 6505",
+    "callButtonLink": "+15612206505",
     "navItems": [
       {
         "text": "Treatments",
@@ -165,8 +165,8 @@
     "buttonText": "Get Started",
     "buttonLink": "/contact",
     "phoneTextOne": "Have a question?",
-    "phoneTextTwo": "Call (123) 456-7890",
-    "phoneNumber": "1234567890",
+    "phoneTextTwo": "Call (561) 220 6505",
+    "phoneNumber": "+15612206505",
     "image": "/imgs/treatment/img.png"
   },
    "disorders": {
@@ -205,7 +205,7 @@
     "image": "/imgs/mental_health_support.png",
     "altText": "Mental health support",
     "phoneTextOne": "Have a question?",
-    "phoneTextTwo": "Call (123) 456-7890",
-    "phoneNumber": "1234567890"
+    "phoneTextTwo": "Call (561) 220 6505",
+    "phoneNumber": "+15612206505"
   }
 }

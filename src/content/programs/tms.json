@@ -7,8 +7,8 @@
     "phoneQuestionText": "Have a question?",
     "treatmentsLabel": "Treatments",
     "buttonLink": "/contact",
-    "callButtonText": "Call (123) 456-7890",
-    "callButtonLink": "1234567890",
+    "callButtonText": "Call (561) 220 6505",
+    "callButtonLink": "+15612206505",
     "navItems": [
       {
         "text": "Treatments",
@@ -108,8 +108,8 @@
     "buttonText": "Get Started",
     "buttonLink": "/contact",
     "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(123) 456-7890",
-    "buttonTwo_Number": "1234567890"
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonTwo_Number": "+15612206505"
   },
   "singleReview": {
     "heading": "Some next steps you can take",
@@ -326,8 +326,8 @@
     "image": "/imgs/mental_health_support.png",
     "altText": "Mental health support",
     "phoneTextOne": "Have a question?",
-    "phoneTextTwo": "Call (123) 456-7890",
-    "phoneNumber": "1234567890"
+    "phoneTextTwo": "Call (561) 220 6505",
+    "phoneNumber": "+15612206505"
   },
   "whoNeeds": {
     "heading": "Who Needs",
@@ -345,8 +345,8 @@
     "buttonText": "Get Started",
     "buttonLink": "/contact",
     "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(123) 456-7890",
-    "buttonTwo_Number": "1234567890"
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonTwo_Number": "+15612206505"
   },
   "testimonials": {
     "list": [
@@ -401,8 +401,8 @@
     "buttonText": "Get Started",
     "buttonLink": "/contact",
     "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(123) 456-7890",
-    "buttonTwo_Number": "1234567890",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonTwo_Number": "+15612206505",
     "imageUrl": "/imgs/why_choose_us.png",
     "imageAlt": "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office"
   },
@@ -417,8 +417,8 @@
     "buttonText": "Get Started",
     "buttonLink": "/contact",
     "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(123) 456-7890",
-    "buttonTwo_Number": "1234567890"
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonTwo_Number": "+15612206505"
   },
   "program12": {
     "badgeText": "Steps to Choose a TMS Program",
@@ -471,8 +471,8 @@
      "buttonText": "Get Started",
     "buttonLink": "/contact",
     "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(123) 456-7890",
-    "buttonTwo_Number": "1234567890",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonTwo_Number": "+15612206505",
     "image": "/imgs/program/twelfth.png",
     "imageAlt": "TMS Treatment Illustration",
     "conditions": [
