@@ -14,13 +14,31 @@ const { Content } = Astro.props;
     </header>
 
     <article class="box-border flex relative flex-col shrink-0 gap-6 p-12 mx-auto my-0 rounded-3xl h-[449px] w-[640px] max-md:p-8 max-md:w-full max-md:max-w-[600px] max-sm:p-6 max-sm:h-auto bg-[linear-gradient(270deg,#F6F2EE_0%,#F3EFEC_100%)]">
-      <header>
+      <!-- Background Wave SVG -->
+      <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded-3xl">
+        <svg
+          viewBox="0 0 1320 261"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute top-[20px] w-full h-auto max-w-none"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          <path
+            d="M-29 159.359C4 128.359 105.5 73.3593 167 103.359C225.389 131.842 318.785 141.851 362.533 96.4732C391.024 66.9222 361.543 17.1347 320.893 22.8408C283.379 28.1068 249.542 59.3098 253.5 149.859C259.9 296.259 1031.5 218.026 1354.5 211.359"
+            stroke="white"
+            stroke-opacity="0.46"
+            stroke-width="44">
+          </path>
+        </svg>
+      </div>
+
+      <header class="relative z-[1]">
         <h2 class="text-4xl font-medium text-neutral-800 max-md:text-3xl max-sm:text-2xl">
           {Content.locationInfo.title}
         </h2>
       </header>
 
-      <div class="flex flex-col flex-1 gap-6">
+      <div class="flex flex-col flex-1 gap-6 relative z-[1]">
         <address class="not-italic">
           <div class="flex gap-2 items-center">
             <div>
@@ -118,7 +136,7 @@ const { Content } = Astro.props;
         </div>
       </div>
 
-      <a href = {Content.locationInfo.buttonLink} class="gap-2.5 px-5 py-3.5 text-center text-base font-bold leading-6 text-white bg-indigo-500 cursor-pointer h-[52px] rounded-[50px] max-sm:mt-2 hover:bg-indigo-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+      <a href = {Content.locationInfo.buttonLink} class="gap-2.5 px-5 py-3.5 text-center text-base font-bold leading-6 text-white bg-indigo-500 cursor-pointer h-[52px] rounded-[50px] max-sm:mt-2 hover:bg-indigo-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 relative z-[1]">
         {Content.locationInfo.buttonText}
       </a>
     </article>

@@ -5,15 +5,33 @@ const { heading, text, programs } = Astro.props.Content;
 
 <section class="rounded-none mx-auto my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl">
   <div class="flex overflow-hidden flex-col px-20 py-14 w-full rounded-3xl max-md:px-5 max-md:max-w-full mobile-container" style="background: linear-gradient(270deg, #F6F2EE 0%, #F3EFEC 100%);">
+    <!-- Background Wave SVG -->
+    <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded-3xl z-[10]">
+      <svg
+        viewBox="0 0 1320 261"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="absolute top-[80px] w-full h-auto max-w-none max-md:top-0"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        <path
+          d="M-29 159.359C4 128.359 105.5 73.3593 167 103.359C225.389 131.842 318.785 141.851 362.533 96.4732C391.024 66.9222 361.543 17.1347 320.893 22.8408C283.379 28.1068 249.542 59.3098 253.5 149.859C259.9 296.259 1031.5 218.026 1354.5 211.359"
+          stroke="white"
+          stroke-opacity="0.46"
+          stroke-width="44"
+        />
+      </svg>
+    </div>
+
     <!-- Services Badge -->
-    <header>
+    <header class="relative z-20">
       <span class="self-start px-10 py-3 text-base text-white bg-purple-900 rounded-[50px] max-md:px-5 mobile-badge">
         # Services
       </span>
     </header>
 
     <!-- Main Content Header -->
-    <div class="mt-20 max-md:mt-10 max-md:max-w-full mobile-header">
+    <div class="mt-20 max-md:mt-10 max-md:max-w-full mobile-header z-20 relative">
       <div class="flex gap-5 max-md:flex-col mobile-content-wrapper">
         <div class="w-[39%] max-md:ml-0 max-md:w-full mobile-text-section">
           <div class="grow mt-16 text-neutral-800 max-md:mt-10 max-md:max-w-full mobile-text-content">
@@ -83,6 +101,10 @@ const { heading, text, programs } = Astro.props.Content;
 </section>
 
 <style>
+  .mobile-container {
+    position: relative;
+  }
+  
   @media (max-width: 900px) {
     .mobile-container {
       padding: 2rem 1rem !important;
@@ -132,11 +154,17 @@ const { heading, text, programs } = Astro.props.Content;
       aspect-ratio: 16/9 !important;
     }
     
+    figure {
+      height: 280px !important;
+    }
+    
     .mobile-programs-row {
       flex-direction: column !important;
       gap: 1rem !important;
       margin-top: 2rem !important;
       align-items: stretch !important;
+      position: relative;
+      z-index: 20;
     }
     
     .mobile-programs-row:first-of-type {
@@ -176,6 +204,18 @@ const { heading, text, programs } = Astro.props.Content;
     
     .mobile-divider {
       margin-top: 1rem !important;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    figure {
+      height: 240px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    figure {
+      height: 200px !important;
     }
   }
 </style>
