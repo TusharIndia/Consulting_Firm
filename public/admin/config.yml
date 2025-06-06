@@ -425,109 +425,109 @@ collections:
     name: "pages"
     files:
       # About Page Configuration
-      - label: "About Page"
-        name: "about"
-        file: "src/content/pages/about.json"
-        fields:
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: false }
-              - { label: "Text", name: "text", widget: "string", required: false }
+      # - label: "About Page"
+      #   name: "about"
+      #   file: "src/content/pages/about.json"
+      #   fields:
+      #     - label: "Hero"
+      #       name: "hero"
+      #       widget: "object"
+      #       collapsed: true
+      #       fields:
+      #         - { label: "Heading", name: "heading", widget: "string", required: false }
+      #         - { label: "Text", name: "text", widget: "string", required: false }
 
-          - label: "About"
-            name: "about"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading One", name: "headingOne", widget: "string", required: false }
-              - { label: "Text One", name: "textOne", widget: "text", required: false }
-              - { label: "Heading Two", name: "headingTwo", widget: "string", required: false }
-              - { label: "Text Two", name: "textTwo", widget: "text", required: false }
-              - label: "Images"
-                name: "images"
-                widget: "object"
-                fields:
-                  - { label: "Image One", name: "imageOne", widget: "image", required: false }
-                  - { label: "Image Two", name: "imageTwo", widget: "image", required: false }
+      #     - label: "About"
+      #       name: "about"
+      #       widget: "object"
+      #       collapsed: true
+      #       fields:
+      #         - { label: "Heading One", name: "headingOne", widget: "string", required: false }
+      #         - { label: "Text One", name: "textOne", widget: "text", required: false }
+      #         - { label: "Heading Two", name: "headingTwo", widget: "string", required: false }
+      #         - { label: "Text Two", name: "textTwo", widget: "text", required: false }
+      #         - label: "Images"
+      #           name: "images"
+      #           widget: "object"
+      #           fields:
+      #             - { label: "Image One", name: "imageOne", widget: "image", required: false }
+      #             - { label: "Image Two", name: "imageTwo", widget: "image", required: false }
 
-          - label: "Core Values"
-            name: "coreValues"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: false }
-              - { label: "Text", name: "text", widget: "text", required: false }
-              - label: "Core Values List"
-                name: "list"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string", required: false }
-                  - { label: "Description", name: "description", widget: "text", required: false }
-              - { label: "Button Text", name: "buttonText", widget: "string", required: false }
+      #     - label: "Core Values"
+      #       name: "coreValues"
+      #       widget: "object"
+      #       collapsed: true
+      #       fields:
+      #         - { label: "Heading", name: "heading", widget: "string", required: false }
+      #         - { label: "Text", name: "text", widget: "text", required: false }
+      #         - label: "Core Values List"
+      #           name: "list"
+      #           widget: "list"
+      #           fields:
+      #             - { label: "Title", name: "title", widget: "string", required: false }
+      #             - { label: "Description", name: "description", widget: "text", required: false }
+      #         - { label: "Button Text", name: "buttonText", widget: "string", required: false }
 
-          - label: "Facility"
-            name: "facility"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: false }
-              - { label: "Text", name: "text", widget: "text", required: false }
-              - { label: "Button Text", name: "buttonText", widget: "string", required: false }
-              - label: "Images"
-                name: "images"
-                widget: "object"
-                fields:
-                  - { label: "Image One", name: "imageOne", widget: "image", required: false }
-                  - { label: "Image Two", name: "imageTwo", widget: "image", required: false }
+      #     - label: "Facility"
+      #       name: "facility"
+      #       widget: "object"
+      #       collapsed: true
+      #       fields:
+      #         - { label: "Heading", name: "heading", widget: "string", required: false }
+      #         - { label: "Text", name: "text", widget: "text", required: false }
+      #         - { label: "Button Text", name: "buttonText", widget: "string", required: false }
+      #         - label: "Images"
+      #           name: "images"
+      #           widget: "object"
+      #           fields:
+      #             - { label: "Image One", name: "imageOne", widget: "image", required: false }
+      #             - { label: "Image Two", name: "imageTwo", widget: "image", required: false }
 
-          - label: "Approach"
-            name: "approach"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading One", name: "headingOne", widget: "string", required: false }
-              - { label: "Text One", name: "textOne", widget: "text", required: false }
-              - { label: "Heading Two", name: "headingTwo", widget: "string", required: false }
-              - { label: "Text Two", name: "textTwo", widget: "text", required: false }
-              - label: "Images"
-                name: "images"
-                widget: "object"
-                fields:
-                  - { label: "Image One", name: "imageOne", widget: "image", required: false }
-                  - { label: "Image Two", name: "imageTwo", widget: "image", required: false }
+      #     - label: "Approach"
+      #       name: "approach"
+      #       widget: "object"
+      #       collapsed: true
+      #       fields:
+      #         - { label: "Heading One", name: "headingOne", widget: "string", required: false }
+      #         - { label: "Text One", name: "textOne", widget: "text", required: false }
+      #         - { label: "Heading Two", name: "headingTwo", widget: "string", required: false }
+      #         - { label: "Text Two", name: "textTwo", widget: "text", required: false }
+      #         - label: "Images"
+      #           name: "images"
+      #           widget: "object"
+      #           fields:
+      #             - { label: "Image One", name: "imageOne", widget: "image", required: false }
+      #             - { label: "Image Two", name: "imageTwo", widget: "image", required: false }
 
-          - label: "Team"
-            name: "team"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: false }
-              - { label: "Button Text", name: "buttonText", widget: "string", required: false }
-              - { label: "Description", name: "description", widget: "text", required: false }
-              - label: "Team Members"
-                name: "team"
-                widget: "list"
-                fields:
-                  - { label: "Name", name: "name", widget: "string", required: false }
-                  - { label: "Designation", name: "designation", widget: "string", required: false }
-                  - { label: "Image", name: "image", widget: "image", required: false }
+      #     - label: "Team"
+      #       name: "team"
+      #       widget: "object"
+      #       collapsed: true
+      #       fields:
+      #         - { label: "Heading", name: "heading", widget: "string", required: false }
+      #         - { label: "Button Text", name: "buttonText", widget: "string", required: false }
+      #         - { label: "Description", name: "description", widget: "text", required: false }
+      #         - label: "Team Members"
+      #           name: "team"
+      #           widget: "list"
+      #           fields:
+      #             - { label: "Name", name: "name", widget: "string", required: false }
+      #             - { label: "Designation", name: "designation", widget: "string", required: false }
+      #             - { label: "Image", name: "image", widget: "image", required: false }
 
-          - label: "FAQ"
-            name: "faq"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: false }
-              - { label: "SubHeading", name: "subheading", widget: "string", required: false }
-              - label: "FAQ List"
-                name: "faq"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string", required: false }
-                  - { label: "Details", name: "details", widget: "text", required: false }
+      #     - label: "FAQ"
+      #       name: "faq"
+      #       widget: "object"
+      #       collapsed: true
+      #       fields:
+      #         - { label: "Heading", name: "heading", widget: "string", required: false }
+      #         - { label: "SubHeading", name: "subheading", widget: "string", required: false }
+      #         - label: "FAQ List"
+      #           name: "faq"
+      #           widget: "list"
+      #           fields:
+      #             - { label: "Title", name: "title", widget: "string", required: false }
+      #             - { label: "Details", name: "details", widget: "text", required: false }
       
       # # Admissions Page Configuration
       # - label: "Admissions Page"
