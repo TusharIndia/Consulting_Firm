@@ -1129,27 +1129,23 @@ collections:
             widget: "object"
             collapsed: true
             fields:
-              - { label: "Heading", name: "heading", widget: "string", required: false }
-              - { label: "Text", name: "text", widget: "string", required: false }
-              - { label: "Button Text", name: "buttonText", widget: "string", required: false }
-              - { label: "Button Link", name: "buttonLink", widget: "string", required: false }
-              - { label: "Phone Question Text", name: "phoneQuestionText", widget: "string", required: false }
-              - { label: "Treatments Label", name: "treatmentsLabel", widget: "string", required: false }
-              - { label: "Call Button Text", name: "callButtonText", widget: "string", required: false }
-              - { label: "Call Button Link", name: "callButtonLink", widget: "string", required: false }
-              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
-                  { label: "Text", name: "text", widget: "string", required: false },
-                  { label: "URL", name: "url", widget: "string", required: false },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false, required: false },
-                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]},
-                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]}
-                ] }
+              - label: "Title"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Line 1", name: "line1", widget: "string", required: false }
+                  - { label: "Line 2", name: "line2", widget: "string", required: false }
+                  - { label: "Line 3", name: "line3", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Bottom Description", name: "bottomDescription", widget: "text", required: false }
+              - { label: "Form Title", name: "formTitle", widget: "string", required: false }
+              - { label: "Form Subtitle", name: "formSubtitle", widget: "string", required: false }
+              - label: "Insurance Providers"
+                name: "insuranceProviders"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string", required: false }
+              - { label: "Privacy Notice", name: "privacyNotice", widget: "text", required: false }
           
           - label: "Insurance Providers Section"
             name: "insuranceProviders"
