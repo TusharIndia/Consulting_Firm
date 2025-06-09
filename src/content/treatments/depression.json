@@ -1,20 +1,19 @@
-{"title": "Depression Treatment at Clear Path",
+{
+  "title": "Depression Treatment at Clear Path",
   "hero": {
-    "heading": "Depression Treatment",
-    "text": "Depression is a complex mental health condition that can affect every aspect of life. At Clear Path, we offer comprehensive treatment approaches tailored to your specific needs.",
-    "buttonText": "Get Started",
     "phoneQuestionText": "Have a question?",
-    "treatmentsLabel": "May 4, 2025",
-    "buttonLink": "/contact",
-    "callButtonText": "Call (561) 220 6505",
+    "heading": "Advanced Psychiatric Care for Depression.",
     "callButtonLink": "+15612206505",
-     "navItems": [
+    "buttonLink": "/contact",
+    "text": "At Clear Path, we offer premier depression treatment tailored to individuals seeking expert care for their mental well-being. Our comprehensive program is designed to provide relief from the burdens of depression and help you rediscover a fulfilling life",
+    "treatmentsLabel": "May 4, 2025",
+    "navItems": [
       {
         "text": "Treatments",
         "url": "#",
         "hasDropdown": true,
         "sublinks": [
-                {
+          {
             "text": "Medication Management",
             "link": "/program/medication_management"
           },
@@ -31,7 +30,7 @@
             "link": "/program/psychotherapy"
           }
         ],
-       "sublinks2": [
+        "sublinks2": [
           {
             "text": "Depression",
             "link": "/treatment/depression"
@@ -98,7 +97,9 @@
         "sublinks": [],
         "sublinks2": []
       }
-    ]
+    ],
+    "callButtonText": "Call (561) 220 6505",
+    "buttonText": "Get Started"
   },
   "treatmentHero": {
     "heading": "Our Approach",
@@ -109,25 +110,23 @@
     "approaches": [
       {
         "id": "01",
-        "title": "Medication Management",
-        "description": "Antidepressant medications, Regular monitoring and adjustments, Side effect management and Combination therapy when needed"
+        "title": "Booking and Initial Assessment",
+        "description": "Patients can book appointments directly through the website using Zocdoc integration. New patients will undergo an initial assessment to establish care and begin treatment."
       },
       {
         "id": "02",
-        "title": "Transcranial Magnetic Stimulation (TMS)",
-        "description": "FDA-approved non-invasive treatment, Particularly effective for treatment-resistant depression, No anesthesia required and Minimal side effects"
+        "title": "Medication Management",
+        "description": "Safe and effective prescription and adjustment of medications to stabilize symptoms and support long-term recovery"
       },
       {
         "id": "03",
-        "title": "Spravato (Esketamine)",
-        "description": "Fast-acting nasal spray, Monitored administration, Effective for treatment-resistant cases and Covered by many insurance plans"
+        "title": "Transcranial Magnetic Stimulation (TMS)",
+        "description": " A non-invasive procedure that uses magnetic fields to stimulate nerve cells in the brain, improving symptoms of depression."
       }
     ]
   },
-    "treatment2": {
+  "treatment2": {
     "heading": "Signs and Symptoms",
-    "headingHighlight": "We Treat",
-    "description": "Our experienced team addresses these common symptoms of depression:",
     "symptoms": [
       {
         "icon": "/imgs/treatment/ff.png",
@@ -162,14 +161,16 @@
         "text": "Suicidal thoughts"
       }
     ],
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
     "phoneTextOne": "Have a question?",
+    "buttonLink": "/contact",
     "phoneTextTwo": "Call (561) 220 6505",
+    "headingHighlight": "We Treat",
     "phoneNumber": "+15612206505",
-    "image": "/imgs/treatment/img.png"
+    "image": "/imgs/treatment/img.png",
+    "description": "Our experienced team addresses these common symptoms of depression:",
+    "buttonText": "Get Started"
   },
-   "disorders": {
+  "disorders": {
     "heading": "OUR INSIGHTS",
     "headingTwo_Part_1": "Expert guidance for your ",
     "headingTwo_Part_2": "mental health ",
@@ -197,15 +198,15 @@
       }
     ]
   },
-   "cta": {
+  "cta": {
     "heading": "Ready to Start Your Journey to Better Mental Health?",
-    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
-    "buttonText": "Schedule a Consultation",
-    "buttonLink": "/contact",
-    "image": "/imgs/mental_health_support.png",
-    "altText": "Mental health support",
     "phoneTextOne": "Have a question?",
+    "buttonLink": "/contact",
+    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
     "phoneTextTwo": "Call (561) 220 6505",
-    "phoneNumber": "+15612206505"
+    "altText": "Mental health support",
+    "phoneNumber": "+15612206505",
+    "image": "/imgs/mental_health_support.png",
+    "buttonText": "Schedule a Consultation"
   }
 }

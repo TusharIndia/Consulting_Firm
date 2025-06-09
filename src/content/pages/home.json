@@ -1,24 +1,203 @@
 {
+  "insuranceOptions": {
+    "buttonSecondLink": "tel:+15612206505",
+    "buttonOneText": "Check Your Insurance",
+    "headingOne": "Insurance",
+    "insuranceOptions": [
+      {
+        "logo": "/imgs/blue_cross.png",
+        "alt": "Blue Cross Blue Shield"
+      },
+      {
+        "logo": "/imgs/aetna.png",
+        "alt": "Aetna"
+      },
+      {
+        "logo": "/imgs/anthem.png",
+        "alt": "Anthem"
+      },
+      {
+        "logo": "/imgs/tufts.png",
+        "alt": "Tufts Health Plan"
+      },
+      {
+        "logo": "/imgs/cigna.png",
+        "alt": "Cigna"
+      }
+    ],
+    "headingTwo": "Partners",
+    "buttonOneLink": "/insurance",
+    "buttonSecondTextOne": "Have a question?",
+    "buttonSecondTextTwo": "Call (561) 220 6505",
+    "description": "We work with multiple insurance providers and healthcare networks to ensure accessible mental health care for our patients."
+  },
+  "therapies": {
+    "heading": "Treatments Offered",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonLink": "/contact",
+    "buttonTwo_Number": "+15612206505",
+    "headingTwo_Part_1": "At launch,",
+    "image": "/imgs/testimonial_offered.png",
+    "headingTwo_Part_2": "Clear Path will offer the",
+    "headingTwo_Part_3": "following core treatments",
+    "list": [
+      {
+        "title": "Medication Management",
+        "description": "Ongoing evaluation and adjustment of psychiatric medications to manage mental health conditions.",
+        "image": "/imgs/medication_management.svg",
+        "link": "/program/medication_management"
+      },
+      {
+        "title": "Transcranial Magnetic Stimulation (TMS)",
+        "description": "A non-invasive procedure used to treat depression by stimulating nerve cells in the brain.",
+        "image": "/imgs/tms_icon.svg",
+        "link": "/program/tms"
+      },
+      {
+        "title": "Spravato (Esketamine) Infusions",
+        "description": "A cutting-edge treatment for treatment-resistant depression, administered under medical supervision.",
+        "image": "/imgs/spravato_icon.svg",
+        "link": "/program/spravato"
+      }
+    ],
+    "buttonText": "Get Started"
+  },
+  "about": {
+    "headingOne_Part_1": "Clear",
+    "headingOne_Part_2": "Path Behavioral",
+    "headingTwo": "Health Provider",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "Call (561) 220 6505",
+    "buttonTwo_Number": "+15612206505",
+    "buttonOneLink": "/contact",
+    "buttonOne": "Get Started",
+    "textOne": "Specializing in medication management and mental health intervention services. With a focus on offering in-person care, Clear Path differentiates itself from telehealth-only providers by ensuring patients receive direct, face-to-face treatment from experienced psychiatrists and psychiatric physician assistants (PAs)."
+  },
+  "programs": {
+    "heading": "Conditions Treated",
+    "text": "Clear Path focuses on addressing a wide range of mental health conditions through psychiatric care and medication management. The primary target conditions include:",
+    "programs": [
+      {
+        "title": "Depression",
+        "image": "/imgs/depression_icon.svg",
+        "link": "/treatment/depression"
+      },
+      {
+        "title": "Anxiety",
+        "image": "/imgs/anxiety_icon.svg",
+        "link": "/treatment/anxiety"
+      },
+      {
+        "title": "Stress and Insomnia",
+        "image": "/imgs/adhd_icon.svg",
+        "link": "/treatment/stress"
+      },
+      {
+        "title": "PTSD",
+        "image": "/imgs/ptsd_icon.svg",
+        "link": "/treatment/ptsd"
+      },
+      {
+        "title": "Bipolar Disorder",
+        "image": "/imgs/bipolar_icon.svg",
+        "link": "/treatment/bipolar"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Ready to Start Your Journey to Better Mental Health?",
+    "phoneTextOne": "Have a question?",
+    "buttonLink": "/contact",
+    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
+    "phoneTextTwo": "Call (561) 220 6505",
+    "altText": "Mental health support",
+    "phoneNumber": "+15612206505",
+    "image": "/imgs/mental_health_support.png",
+    "buttonText": "Get Started"
+  },
+  "disorders": {
+    "heading": "OUR INSIGHTS",
+    "headingTwo_Part_1": "Expert guidance for your ",
+    "headingTwo_Part_2": "mental health ",
+    "headingTwo_Part_3": "journey",
+    "disorders": [
+      {
+        "link": "/blog/managing-depression",
+        "title": "Effective Strategies for Managing Depression",
+        "image": "/imgs/Depression_Article.png"
+      },
+      {
+        "link": "/blog/managing-anxiety",
+        "title": "Effective Strategies for Managing Anxiety",
+        "image": "/imgs/Anxiety_Article.png"
+      },
+      {
+        "link": "/blog/managing-adhd",
+        "title": "Effective Strategies for Managing ADHD",
+        "image": "/imgs/ADHD_Article.png"
+      },
+      {
+        "link": "/blog/managing-ptsd",
+        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
+        "image": "/imgs/PTSD_Article.png"
+      }
+    ]
+  },
+  "testimonials": {
+    "list": [
+      {
+        "name": "Veronica L.",
+        "position": "Client from United States",
+        "text": "Clearpath gave me the strength to overcome my anxiety. The compassionate therapists provided unwavering support, and I've found a renewed sense of purpose andtranquility in my life.",
+        "image": "/imgs/testimonial_1.png"
+      },
+      {
+        "name": "Pushpender Singh",
+        "position": "Client from Florida",
+        "text": "Clearpath helped me regain control of my life. The personalized treatment plan and the caring staff made all the difference. I am now on a path to recovery and happiness.",
+        "image": "/imgs/testimonial_1.png"
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "subheading": "Find answers to common questions about our services and support",
+    "faq": [
+      {
+        "title": "What is Medication-Assisted Treatment?",
+        "details": "Medication-Assisted Treatment (MAT) involves using medication, along with counseling and behavioral therapies, to treat substance use disorders."
+      },
+      {
+        "title": "How does Sober Living Placement work?",
+        "details": "Sober Living Placement helps individuals find safe and supportive housing environments where they can continue their recovery journey."
+      },
+      {
+        "title": "What services are included in Case Management?",
+        "details": "Case Management includes resume building, job search assistance, accessing community resources, and more."
+      }
+    ]
+  },
   "hero": {
-    "backgroundImage": "/imgs/hero_home_bg.webp",
-    "backgroundImageAlt": "Background image of mental health treatment facility",
     "logo": "/imgs/hero_logo.png",
-    "buttonText": "Call (561) 220 6505",
-    "textBox1": "Interventional Psychiatry",
+    "telephoneNumber": "+15612206505",
+    "backgroundImage": "/imgs/hero_home_bg.webp",
+    "buttonOneLink": "/contact",
     "textBox2_Part_1": "Highly",
     "textBox2_Part_2": "effective evidence",
     "textBox2_Part_3": "-based mental health treatment",
-    "textBox3": "Clear Path's treatments address the root cause of anxiety, depression, ADHD, and PTSD symptoms.",
+    "textBox1": "Interventional Psychiatry",
     "buttonOne": "Get Started",
-    "buttonOneLink": "/contact",
+    "textBox3": "Clear Path's treatments address the root cause of anxiety, depression, stress, and PTSD symptoms.",
     "buttonTwo": "Have a question?",
-    "telephoneNumber": "+15612206505",
+    "backgroundImageAlt": "Background image of mental health treatment facility",
+    "buttonText": "Call (561) 220 6505",
     "heroLinks": [
       {
         "text": "Treatments",
         "link": "#",
         "sublinks": [
-               {
+          {
             "text": "Medication Management",
             "link": "/program/medication_management"
           },
@@ -29,10 +208,6 @@
           {
             "text": "Spravato® (Esketamine) ",
             "link": "/program/spravato"
-          },
-          {
-            "text": "Psychotherapy",
-            "link": "/program/psychotherapy"
           }
         ],
         "sublinks2": [
@@ -45,10 +220,6 @@
             "link": "/treatment/anxiety"
           },
           {
-            "text": "ADHD",
-            "link": "/treatment/adhd"
-          },
-          {
             "text": "PTSD",
             "link": "/treatment/ptsd"
           },
@@ -59,18 +230,6 @@
           {
             "text": "Stress",
             "link": "/treatment/stress"
-          },
-          {
-            "text": "OCD",
-            "link": "/treatment/ocd"
-          },
-          {
-            "text": "Addiction",
-            "link": "/treatment/addiction"
-          },
-          {
-            "text": "and more",
-            "link": "/treatment/other"
           }
         ]
       },
@@ -100,113 +259,24 @@
       }
     ]
   },
-  "about": {
-    "headingOne_Part_1": "Clear",
-    "headingOne_Part_2": "Path Behavioral",
-    "headingTwo": "Health Provider", 
-    "textOne": "specializing in medication management and mental health intervention services. With a focus on offering in-person care, Clear Path differentiates itself from telehealth-only providers by ensuring patients receive direct, face-to-face treatment from experienced psychiatrists and psychiatric physician assistants (PAs).",
-    "buttonOne": "Get Started",
-    "buttonOneLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "Call (561) 220 6505",
-    "buttonTwo_Number": "+15612206505"
-  },
-  "testimonials": {
-    "list": [
-    {
-      "name": "Veronica L.",
-      "position": "Client from United States",
-      "text": "Clearpath gave me the strength to overcome my anxiety. The compassionate therapists provided unwavering support, and I've found a renewed sense of purpose andtranquility in my life.",
-      "image": "/imgs/testimonial_1.png"
-    },
-    {
-      "name": "Pushpender Singh",
-      "position": "Client from Florida",
-      "text": "Clearpath helped me regain control of my life. The personalized treatment plan and the caring staff made all the difference. I am now on a path to recovery and happiness.",
-      "image": "/imgs/testimonial_1.png"
-    }
-  ]},
-  "therapies": {
-    "image": "/imgs/testimonial_offered.png",
-    "heading": "Treatments Offered",
-    "headingTwo_Part_1": "At launch,",
-    "headingTwo_Part_2": "Clear Path will offer the",
-    "headingTwo_Part_3": "following core treatments",
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(561) 220 6505",
-    "buttonTwo_Number": "+15612206505",
-    "list": [
+  "patientJourney": {
+    "heading": "Patient Journey and Process",
+    "headingTwo_Part_1": "Patient Journey",
+    "headingTwo_Part_2": "and Process",
+    "image": "/imgs/patient_journey.png",
+    "imageAlt": "Patient showing signs of distress while sitting with laptop",
+    "steps": [
       {
-        "title": "Medication Management",
-        "description": "Ongoing evaluation and adjustment of psychiatric medications to manage mental health conditions.",
-        "image": "/imgs/medication_management.svg",
-        "link": "/program/medication_management"
+        "title": "Booking and Initial Assessment",
+        "description": "Patients can book appointments directly through the website using Zocdoc integration. New patients will undergo an initial assessment to establish care and begin treatment."
       },
       {
-        "title": "Transcranial Magnetic Stimulation (TMS)",
-        "description": "A non-invasive procedure used to treat depression by stimulating nerve cells in the brain.",
-        "image": "/imgs/tms_icon.svg",
-        "link": "/program/tms"
+        "title": "Treatment Path",
+        "description": "Following the initial assessment, patients will receive ongoing medication management and, when necessary, be introduced to additional services like TMS or Spravato."
       },
       {
-        "title": "Spravato (Esketamine) Infusions",
-        "description": "A cutting-edge treatment for treatment-resistant depression, administered under medical supervision.",
-        "image": "/imgs/spravato_icon.svg",
-        "link": "/program/spravato"
-      }
-    ]
-  },
-  
-  "programs": {
-    "heading": "Conditions Treated",
-    "text": "Clear Path focuses on addressing a wide range of mental health conditions through psychiatric care and medication management. The primary target conditions include:",
-    "programs": [
-      {
-        "title": "Depression",
-        "image": "/imgs/depression_icon.svg",
-        "link": "/treatment/depression"
-      },
-      {
-        "title": "Anxiety",
-        "image": "/imgs/anxiety_icon.svg",
-        "link": "/treatment/anxiety"
-      },
-      {
-        "title": "ADHD",
-        "image": "/imgs/adhd_icon.svg",
-        "link": "/treatment/adhd"
-      },
-      {
-        "title": "PTSD",
-        "image": "/imgs/ptsd_icon.svg",
-        "link": "/treatment/ptsd"
-      },
-      {
-        "title": "Bipolar Disorder",
-        "image": "/imgs/bipolar_icon.svg",
-        "link": "/treatment/bipolar"
-      },
-      {
-        "title": "OCD",
-        "image": "/imgs/ocd_icon.svg",
-        "link": "/treatment/ocd"
-      },
-      {
-        "title": "OCD",
-        "image": "/imgs/ocd_icon2.svg",
-        "link": "/treatment/ocd"
-      },
-      {
-        "title": "Addiction",
-        "image": "/imgs/addiction_icon.svg",
-        "link": "/treatment/addiction"
-      },
-      {
-        "title": "More",
-        "image": "",
-        "link": "/treatment/other"
+        "title": "Follow-up Appointments",
+        "description": "Patients will typically attend monthly in-person follow-up appointments to ensure progress and make medication adjustments as needed."
       }
     ]
   },
@@ -240,115 +310,5 @@
         "description": "Assistance with resume building, job search, court paperwork, and accessing community resources to help clients develop life skills and achieve long-term stability."
       }
     ]
-  },
-  "patientJourney": {
-    "heading": "Patient Journey and Process",
-    "headingTwo_Part_1": "Patient Journey",
-    "headingTwo_Part_2": "and Process",
-    "image": "/imgs/patient_journey.png",
-    "imageAlt": "Patient showing signs of distress while sitting with laptop",
-    "steps": [
-      {
-        "title": "Booking and Initial Assessment",
-        "description": "Patients can book appointments directly through the website using Zocdoc integration. New patients will undergo an initial assessment to establish care and begin treatment."
-      },
-      {
-        "title": "Treatment Path",
-        "description": "Following the initial assessment, patients will receive ongoing medication management and, when necessary, be introduced to additional services like TMS or Spravato."
-      },
-      {
-        "title": "Follow-up Appointments",
-        "description": "Patients will typically attend monthly in-person follow-up appointments to ensure progress and make medication adjustments as needed."
-      }
-    ]
-  },
-  "disorders": {
-    "heading": "OUR INSIGHTS",
-    "headingTwo_Part_1": "Expert guidance for your ",
-    "headingTwo_Part_2": "mental health ",
-    "headingTwo_Part_3": "journey",
-    "disorders": [
-      {
-        "link": "/blog/managing-depression",
-        "title": "Effective Strategies for Managing Depression",
-        "image": "/imgs/Depression_Article.png"
-      },
-      {
-        "link": "/blog/managing-anxiety",
-        "title": "Effective Strategies for Managing Anxiety",
-        "image": "/imgs/Anxiety_Article.png"
-      },
-      {
-        "link": "/blog/managing-adhd",
-        "title": "Effective Strategies for Managing ADHD",
-        "image": "/imgs/ADHD_Article.png"
-      },
-      {
-        "link": "/blog/managing-ptsd",
-        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
-        "image": "/imgs/PTSD_Article.png"
-      }
-    ]
-  },
-  "faq": {
-    "heading": "Frequently Asked Questions",
-    "subheading": "Find answers to common questions about our services and support",
-    "faq": [
-      {
-        "title": "What is Medication-Assisted Treatment?",
-        "details": "Medication-Assisted Treatment (MAT) involves using medication, along with counseling and behavioral therapies, to treat substance use disorders."
-      },
-      {
-        "title": "How does Sober Living Placement work?",
-        "details": "Sober Living Placement helps individuals find safe and supportive housing environments where they can continue their recovery journey."
-      },
-      {
-        "title": "What services are included in Case Management?",
-        "details": "Case Management includes resume building, job search assistance, accessing community resources, and more."
-      }
-    ]
-  },
-  "insuranceOptions": {
-    "headingOne": "Insurance",
-    "headingTwo": "Partners",
-    "description": "We work with multiple insurance providers and healthcare networks to ensure accessible mental health care for our patients.",
-    "buttonOneText": "Check Your Insurance",
-    "buttonOneLink": "/insurance",
-    "buttonSecondTextOne": "Have a question?",
-    "buttonSecondTextTwo": "Call (561) 220 6505",
-    "buttonSecondLink": "tel:+15612206505",
-    "insuranceOptions": [
-      {
-        "logo": "/imgs/blue_cross.png",
-        "alt": "Blue Cross Blue Shield"
-      },
-      {
-        "logo": "/imgs/aetna.png",
-        "alt": "Aetna"
-      },
-      {
-        "logo": "/imgs/anthem.png",
-        "alt": "Anthem"
-      },
-      {
-        "logo": "/imgs/tufts.png",
-        "alt": "Tufts Health Plan"
-      },
-      {
-        "logo": "/imgs/cigna.png",
-        "alt": "Cigna"
-      }
-    ]
-  },
-  "cta": {
-    "heading": "Ready to Start Your Journey to Better Mental Health?",
-    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "image": "/imgs/mental_health_support.png",
-    "altText": "Mental health support",
-    "phoneTextOne": "Have a question?",
-    "phoneTextTwo": "Call (561) 220 6505",
-    "phoneNumber": "+15612206505"
   }
 }
