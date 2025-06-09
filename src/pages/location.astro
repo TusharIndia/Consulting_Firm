@@ -1,5 +1,5 @@
 ---
-import { fetchGeneralData, fetchLocationData } from '../utils/dataMapping.ts';
+import { fetchGeneralData, fetchHomeData, fetchLocationData } from '../utils/dataMapping.ts';
 import MainLayout from "../layouts/MainLayout.astro"
 import DisorderGrid from "../components/sections/DisorderGrid.astro";
 import CTA from "../components/CTA.astro";
@@ -8,10 +8,11 @@ import LocationHero from '../components/sections/LocationHero.astro';
 
 const GeneralData = await fetchGeneralData();
 const { data: LocationData } = await fetchLocationData();
+const {data:HomeData} = await fetchHomeData();
 ---
 
 <MainLayout title="Locations" description="Find a Clear Path facility near you for expert mental health treatment">
-    <HeroProgram Content={LocationData.hero} GeneralData={GeneralData} />
+    <HeroProgram Content={LocationData.hero} GeneralData={GeneralData} LinkData={HomeData.hero.heroLinks} />
     <LocationHero Content={LocationData.locationHero} />
     <DisorderGrid Content={LocationData.disorders} />
 	<CTA Content={LocationData.cta} />

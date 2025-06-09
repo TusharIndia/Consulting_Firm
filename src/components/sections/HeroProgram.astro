@@ -4,6 +4,7 @@ import Form from "../Form.astro";
 import { Image } from "astro:assets";
 
 const GeneralData = Astro.props.GeneralData;
+const LinkData = Astro.props.LinkData;
 const { heading, text, buttonText, buttonLink, phoneQuestionText, treatmentsLabel, callButtonText, callButtonLink, navItems , hideButton = false } = Astro.props.Content;
 ---
 
@@ -23,9 +24,9 @@ const { heading, text, buttonText, buttonLink, phoneQuestionText, treatmentsLabe
         </div>
 
         <ul class="hidden lg:flex flex-wrap gap-8 items-center self-stretch my-auto text-white">
-          {navItems.map((item) => (
+          {LinkData.map((item) => (
             <li class="group relative self-stretch my-auto whitespace-nowrap">
-              <a href={item.url} class="text-white self-stretch my-auto flex items-center hover:text-gray-200 transition-colors">
+              <a href={item.link} class="text-white self-stretch my-auto flex items-center hover:text-gray-200 transition-colors">
                 {item.text}
                 {item.sublinks && item.sublinks.length > 0 && (
                   <Image
@@ -91,7 +92,7 @@ const { heading, text, buttonText, buttonLink, phoneQuestionText, treatmentsLabe
         </div>
 
         <ul class="flex flex-col items-start gap-4 text-xl overflow-y-auto flex-grow">
-          {navItems.map((item) => (
+          {LinkData.map((item) => (
             <li class="w-full">
               <a href={item.url} class="hover:text-amber-500 py-2 block font-medium">{item.text}</a>
               {(item.sublinks && item.sublinks.length > 0 || item.sublinks2 && item.sublinks2.length > 0) && (

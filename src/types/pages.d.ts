@@ -74,29 +74,10 @@ export interface Contact {
       treatmentsLabel: string;
       callButtonText: string;
       callButtonLink: string;
-      navItems: {
-        text: string;
-        url: string;
-        hasDropdown: boolean;
-        sublinks?: {
-          text: string;
-          link: string;
-        }[];
-        sublinks2?: {
-          text: string;
-          link: string;
-        }[];
-      }[];
+      
     };
     
-    testimonials: {
-      list: {
-        name: string;
-        position: string;
-        text: string;
-        image: string;
-      }[];
-    };
+    
     
     contactDetails: {
       
@@ -324,18 +305,7 @@ export interface Program {
       treatmentsLabel: string;
       callButtonText: string;
       callButtonLink: string;
-      navItems: {
-        text: string;
-        url: string;
-        sublinks?: {
-          text: string;
-          link: string;
-        }[];
-        sublinks2?: {
-          text: string;
-          link: string;
-        }[];
-      }[];
+     
     };
     about: {
       headingOne: string;
@@ -459,14 +429,7 @@ export interface Program {
         image: string;
       }[];
     };
-    testimonials: {
-      list: {
-        name: string;
-        position: string;
-        text: string;
-        image: string;
-      }[];
-    };
+    
     video: {
       heading: string;
       headingColored: string;
@@ -759,19 +722,7 @@ export interface BlogPage {
       treatmentsLabel: string;
       callButtonText: string;
       callButtonLink: string;
-      navItems: {
-        text: string;
-        url: string;
-        hasDropdown: boolean;
-        sublinks?: {
-          text: string;
-          link: string;
-        }[];
-        sublinks2?: {
-          text: string;
-          link: string;
-        }[];
-      }[];
+     
     };
      disorders: {
       heading: string;
@@ -809,19 +760,7 @@ export interface Insurance {
       treatmentsLabel: string;
       callButtonText: string;
       callButtonLink: string;
-      navItems: {
-        text: string;
-        url: string;
-        hasDropdown: boolean;
-        sublinks?: {
-          text: string;
-          link: string;
-        }[];
-        sublinks2?: {
-          text: string;
-          link: string;
-        }[];
-      }[];
+      
     };
     contactHero: {
       title: {
@@ -855,14 +794,7 @@ export interface Insurance {
         logo: string;
       }[];
     };
-    testimonials: {
-      list: {
-        name: string;
-        position: string;
-        text: string;
-        image: string;
-      }[];
-    };
+   
     treatmentGrid: {
       heading: string;
       subheading: string;
@@ -918,19 +850,7 @@ export interface Location {
       treatmentsLabel: string;
       callButtonText: string;
       callButtonLink: string;
-      navItems: {
-        text: string;
-        url: string;
-        hasDropdown: boolean;
-        sublinks?: {
-          text: string;
-          link: string;
-        }[];
-        sublinks2?: {
-          text: string;
-          link: string;
-        }[];
-      }[];
+     
     };
     locationHero: {
       header: string;
@@ -983,19 +903,7 @@ export interface Treatment {
       treatmentsLabel: string;
       callButtonText: string;
       callButtonLink: string;
-      navItems: {
-        text: string;
-        url: string;
-        hasDropdown: boolean;
-        sublinks?: {
-          text: string;
-          link: string;
-        }[];
-        sublinks2?: {
-          text: string;
-          link: string;
-        }[];
-      }[];
+      
     };
     treatmentHero: {
       heading: string;
@@ -1060,18 +968,7 @@ export interface Pricing {
       treatmentsLabel: string;
       callButtonText: string;
       callButtonLink: string;
-      navItems: {
-        text: string;
-        url: string;
-        sublinks?: {
-          text: string;
-          link: string;
-        }[];
-        sublinks2?: {
-          text: string;
-          link: string;
-        }[];
-      }[];
+     
     };
     pricingHero: {
       heading: string;

@@ -2,6 +2,7 @@
 import {
   fetchGeneralData,
   fetchBlogPageData,
+  fetchHomeData,
 } from "../../utils/dataMapping.ts";
 import MainLayout from "../../layouts/MainLayout.astro";
 import DisorderGrid from "../../components/sections/DisorderGrid.astro";
@@ -28,6 +29,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 
 const GeneralData = await fetchGeneralData();
+const { data: HomeData } = await fetchHomeData();
 const { data: BlogPageData } = await fetchBlogPageData();
 
 // Format the date for display
@@ -57,7 +59,7 @@ const slugHerodata = {
   description={entry.data.description ||
     "Alcohol and Drug Rehab in Boca Raton, Florida"}
 >
-  <HeroProgram Content={slugHerodata} GeneralData={GeneralData} />
+  <HeroProgram Content={slugHerodata} GeneralData={GeneralData} LinkData={HomeData.hero.heroLinks} />
   <SingleBlog post={entry.data}>
     <Content />
   </SingleBlog>

@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import { fetchGeneralData, fetchSubProgramData } from '../../utils/dataMapping.ts';
+import { fetchGeneralData, fetchSubProgramData , fetchHomeData } from '../../utils/dataMapping.ts';
 
 
 import FAQ from "../../components/sections/FAQ.astro";
@@ -28,12 +28,13 @@ export async function getStaticPaths() {
 const sub_type = Astro.params.slug;
 const GeneralData = await fetchGeneralData();
 const { data: ProgramData } = await fetchSubProgramData(sub_type);
+const { data: HomeData } = await fetchHomeData(); // Assuming HomeData is also needed for links
 ---
 
 <MainLayout title="Program">
     <div class="px-1 md:px-1 lg:px-0">
         <!-- Hero Section -->
-        <HeroProgram Content={ProgramData.hero}  GeneralData={GeneralData} />
+        <HeroProgram Content={ProgramData.hero}  GeneralData={GeneralData}  LinkData={HomeData.hero.heroLinks} />
 
         <!-- About Section -->
         <ProgramAbout Content={ProgramData.about} />
@@ -48,7 +49,7 @@ const { data: ProgramData } = await fetchSubProgramData(sub_type);
         <WhyChoose content={ProgramData.whyChoose} />
         
         <ProgramTMS Content={ProgramData.programTMS} />
-        <Testimonials Content={ProgramData.testimonials} />
+        <Testimonials Content={HomeData.testimonials} />
         <Program12 Content={ProgramData.program12} />
         
         <!-- Second WhyChoose with custom content from CMS -->

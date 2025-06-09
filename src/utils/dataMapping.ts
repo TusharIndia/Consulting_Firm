@@ -161,30 +161,10 @@ export async function fetchContactData(): Promise<Contact> {
         treatmentsLabel: contact.data.hero.treatmentsLabel,
         callButtonText: contact.data.hero.callButtonText,
         callButtonLink: contact.data.hero.callButtonLink,
-        navItems: contact.data.hero.navItems.map((item) => ({
-          text: item.text,
-          url: item.url,
-          hasDropdown: item.hasDropdown,
-          sublinks: item.sublinks?.map((sublink) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-          sublinks2: item.sublinks2?.map((sublink) => ({
-            text: sublink.text, 
-            link: sublink.link,
-          })),
-        })),
+       
       },
       
-      testimonials: {
-        list: contact.data.testimonials.list.map((testimonial) => ({
-          name: testimonial.name,
-          position: testimonial.position,
-          text: testimonial.text,
-          image: testimonial.image,
-        })),
-      },
-      
+     
       contactDetails: {
     
         address: contact.data.contactDetails.address,
@@ -428,18 +408,7 @@ export async function fetchSubProgramData(sub_page): Promise<Program> {
         treatmentsLabel: programData.data.hero.treatmentsLabel,
         callButtonText: programData.data.hero.callButtonText,
         callButtonLink: programData.data.hero.callButtonLink,
-        navItems: programData.data.hero.navItems.map((item: any) => ({
-          text: item.text,
-          url: item.url,
-          sublinks: item.sublinks?.map((sublink: any) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-          sublinks2: item.sublinks2?.map((sublink: any) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-        })),
+       
       },
       about: {
         headingOne: programData.data.about.headingOne,
@@ -553,14 +522,7 @@ export async function fetchSubProgramData(sub_page): Promise<Program> {
           image: disorder.image,
         })),
       },
-      testimonials: {
-        list: programData.data.testimonials.list.map((testimonial) => ({
-          name: testimonial.name,
-          position: testimonial.position,
-          text: testimonial.text,
-          image: testimonial.image,
-        })),
-      },
+      
       faq: {
         heading: programData.data.faq.heading,
         subheading: programData.data.faq.subheading,
@@ -1119,19 +1081,7 @@ export async function fetchBlogPageData(): Promise<BlogPage> {
         treatmentsLabel: blogPage.data.hero.treatmentsLabel,
         callButtonText: blogPage.data.hero.callButtonText,
         callButtonLink: blogPage.data.hero.callButtonLink,
-        navItems: blogPage.data.hero.navItems.map((item) => ({
-          text: item.text,
-          url: item.url,
-          hasDropdown: item.hasDropdown,
-          sublinks: item.sublinks?.map((sublink) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-          sublinks2: item.sublinks2?.map((sublink) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-        })),
+       
       },
        disorders: {
         heading: blogPage.data.disorders.heading,
@@ -1177,20 +1127,8 @@ export async function fetchInsuranceData(): Promise<Insurance> {
           phoneQuestionText: insurance.data.hero.phoneQuestionText,
           treatmentsLabel: insurance.data.hero.treatmentsLabel,
           callButtonText: insurance.data.hero.callButtonText,
-          callButtonLink: insurance.data.hero.callButtonLink,
-          navItems: insurance.data.hero.navItems.map((item) => ({
-            text: item.text,
-            url: item.url,
-            hasDropdown: item.hasDropdown,
-            sublinks: item.sublinks?.map((sublink) => ({
-              text: sublink.text,
-              link: sublink.link,
-            })),
-            sublinks2: item.sublinks2?.map((sublink) => ({
-              text: sublink.text,
-              link: sublink.link,
-            })),
-          })),
+          callButtonLink: insurance.data.hero.callButtonLink
+       
         },
         contactHero: {
           title: {
@@ -1224,14 +1162,7 @@ export async function fetchInsuranceData(): Promise<Insurance> {
             logo: provider.logo,
           })),
         },
-        testimonials: {
-          list: insurance.data.testimonials.list.map((testimonial) => ({
-            name: testimonial.name,
-            position: testimonial.position,
-            text: testimonial.text,
-            image: testimonial.image,
-          })),
-        },
+        
         treatmentGrid: {
           heading: insurance.data.treatmentGrid.heading,
           subheading: insurance.data.treatmentGrid.subheading,
@@ -1295,19 +1226,7 @@ export async function fetchLocationData(): Promise<Location> {
         treatmentsLabel: locationData.data.hero.treatmentsLabel,
         callButtonText: locationData.data.hero.callButtonText,
         callButtonLink: locationData.data.hero.callButtonLink,
-        navItems: locationData.data.hero.navItems.map((item: any) => ({
-          text: item.text,
-          url: item.url,
-          hasDropdown: item.hasDropdown,
-          sublinks: item.sublinks?.map((sublink: any) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-          sublinks2: item.sublinks2?.map((sublink: any) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-        })),
+      
       },
       locationHero: {
         header: locationData.data.locationHero.header,
@@ -1366,19 +1285,7 @@ export async function fetchSubTreatmentData(sub_page): Promise<Treatment> {
         treatmentsLabel: treatment.data.hero.treatmentsLabel,
         callButtonText: treatment.data.hero.callButtonText,
         callButtonLink: treatment.data.hero.callButtonLink,
-        navItems: treatment.data.hero.navItems.map((item: any) => ({
-          text: item.text,
-          url: item.url,
-          hasDropdown: item.hasDropdown,
-          sublinks: item.sublinks?.map((sublink: any) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-          sublinks2: item.sublinks2?.map((sublink: any) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-        })),
+       
       },
       treatmentHero: {
         heading: treatment.data.treatmentHero.heading,
@@ -1450,18 +1357,7 @@ export async function fetchPricingData(): Promise<Pricing> {
         treatmentsLabel: pricing.data.hero.treatmentsLabel,
         callButtonText: pricing.data.hero.callButtonText,
         callButtonLink: pricing.data.hero.callButtonLink,
-        navItems: pricing.data.hero.navItems.map((item: any) => ({
-          text: item.text,
-          url: item.url,
-          sublinks: item.sublinks?.map((sublink: any) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-          sublinks2: item.sublinks2?.map((sublink: any) => ({
-            text: sublink.text,
-            link: sublink.link,
-          })),
-        })),
+        
       },
       pricingHero: {
         heading: pricing.data.pricingHero.heading,

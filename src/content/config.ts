@@ -158,17 +158,7 @@ const contactCollection = {
         })
       ),
     }),
-    
-    testimonials: z.object({
-      list: z.array(
-        z.object({
-          name: z.string(),
-          position: z.string(),
-          text: z.string(),
-          image: z.string(),
-        })
-      ),
-    }),
+
     
     contactDetails: z.object({
      
@@ -974,17 +964,7 @@ const insuranceCollection = {
         })
       ),
     }),
-     treatmentGrid: z.object({
-      heading: z.string(),
-      subheading: z.string(),
-      description: z.string(),
-      featuredImage: z.string(),
-      treatments: z.array(z.object({
-        icon: z.string(),
-        title: z.string(),
-        description: z.string(),
-      })),
-    }),
+     
     cta: z.object({
       heading: z.string(),
       text: z.string(),

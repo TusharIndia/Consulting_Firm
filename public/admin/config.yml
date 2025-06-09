@@ -43,19 +43,7 @@ collections:
           - { label: "Treatments Label", name: "treatmentsLabel", widget: "string", required: false }
           - { label: "Call Button Text", name: "callButtonText", widget: "string", required: false }
           - { label: "Call Button Link", name: "callButtonLink", widget: "string", required: false }
-          - { label: "Navigation Items", name: "navItems", widget: "list", required: false, fields: [
-              { label: "Text", name: "text", widget: "string", required: false },
-              { label: "URL", name: "url", widget: "string", required: false },
-              { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false, required: false },
-              { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
-                { label: "Text", name: "text", widget: "string", required: false },
-                { label: "Link", name: "link", widget: "string", required: false }
-              ]},
-              { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
-                { label: "Text", name: "text", widget: "string", required: false },
-                { label: "Link", name: "link", widget: "string", required: false }
-              ]}
-            ] }
+          
       
       - label: "Treatment Hero"
         name: "treatmentHero"
@@ -156,18 +144,7 @@ collections:
           - { label: "Treatments Label", name: "treatmentsLabel", widget: "string", required: false }
           - { label: "Call Button Text", name: "callButtonText", widget: "string", required: false }
           - { label: "Call Button Link", name: "callButtonLink", widget: "string", required: false }
-          - { label: "Navigation Items", name: "navItems", widget: "list", required: false, fields: [
-              { label: "Text", name: "text", widget: "string", required: false },
-              { label: "URL", name: "url", widget: "string", required: false },
-              { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
-                { label: "Text", name: "text", widget: "string", required: false },
-                { label: "Link", name: "link", widget: "string", required: false }
-              ]},
-              { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
-                { label: "Text", name: "text", widget: "string", required: false },
-                { label: "Link", name: "link", widget: "string", required: false }
-              ]}
-            ] }
+          
       - label: "About"
         name: "about"
         widget: "object"
@@ -324,20 +301,20 @@ collections:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Icon", name: "icon", widget: "image", required: false }
                   - { label: "Description", name: "description", widget: "text", required: false }
-      - label: "Testimonials"
-        name: "testimonials"
-        widget: "object"
-        collapsed: true
-        required: false
-        fields:
-          - label: "Testimonials List"
-            name: "list"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: "string", required: false }
-              - { label: "Position", name: "position", widget: "string", required: false }
-              - { label: "Text", name: "text", widget: "text", required: false }
-              - { label: "Image", name: "image", widget: "image", required: false }
+      # - label: "Testimonials"
+      #   name: "testimonials"
+      #   widget: "object"
+      #   collapsed: true
+      #   required: false
+      #   fields:
+      #     - label: "Testimonials List"
+      #       name: "list"
+      #       widget: "list"
+      #       fields:
+      #         - { label: "Name", name: "name", widget: "string", required: false }
+      #         - { label: "Position", name: "position", widget: "string", required: false }
+      #         - { label: "Text", name: "text", widget: "text", required: false }
+      #         - { label: "Image", name: "image", widget: "image", required: false }
       - label: "FAQ"
         name: "faq"
         widget: "object"
@@ -645,34 +622,21 @@ collections:
               - { label: "Treatments Label", name: "treatmentsLabel", widget: "string", required: false }
               - { label: "Call Button Text", name: "callButtonText", widget: "string", required: false }
               - { label: "Call Button Link", name: "callButtonLink", widget: "string", required: false }
-              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
-                  { label: "Text", name: "text", widget: "string", required: false },
-                  { label: "URL", name: "url", widget: "string", required: false },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false, required: false },
-                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]},
-                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]}
-                ] }
-          
-          # Testimonials Section
-          - label: "Testimonials"
-            name: "testimonials"
-            widget: "object"
-            collapsed: true
-            fields:
-              - label: "Testimonials List"
-                name: "list"
-                widget: "list"
-                fields:
-                  - { label: "Name", name: "name", widget: "string", required: false }
-                  - { label: "Position", name: "position", widget: "string", required: false }
-                  - { label: "Testimonial Text", name: "text", widget: "text", required: false }
-                  - { label: "Person Image", name: "image", widget: "image", required: false }
+             
+          # # Testimonials Section
+          # - label: "Testimonials"
+          #   name: "testimonials"
+          #   widget: "object"
+          #   collapsed: true
+          #   fields:
+          #     - label: "Testimonials List"
+          #       name: "list"
+          #       widget: "list"
+          #       fields:
+          #         - { label: "Name", name: "name", widget: "string", required: false }
+          #         - { label: "Position", name: "position", widget: "string", required: false }
+          #         - { label: "Testimonial Text", name: "text", widget: "text", required: false }
+          #         - { label: "Person Image", name: "image", widget: "image", required: false }
                   
           # Contact Hero Section
           - label: "Contact Details"
@@ -1101,19 +1065,7 @@ collections:
               - { label: "Treatments Label", name: "treatmentsLabel", widget: "string", required: false }
               - { label: "Call Button Text", name: "callButtonText", widget: "string", required: false }
               - { label: "Call Button Link", name: "callButtonLink", widget: "string", required: false }
-              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
-                  { label: "Text", name: "text", widget: "string", required: false },
-                  { label: "URL", name: "url", widget: "string", required: false },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false, required: false },
-                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]},
-                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]}
-                ] }
+              
 
       
           
@@ -1170,19 +1122,7 @@ collections:
               - { label: "Treatments Label", name: "treatmentsLabel", widget: "string", required: false }
               - { label: "Call Button Text", name: "callButtonText", widget: "string", required: false }
               - { label: "Call Button Link", name: "callButtonLink", widget: "string", required: false }
-              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
-                  { label: "Text", name: "text", widget: "string", required: false },
-                  { label: "URL", name: "url", widget: "string", required: false },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false, required: false },
-                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]},
-                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]}
-                ] }
+             
           
           - label: "Contact Hero"
             name: "contactHero"
@@ -1234,19 +1174,19 @@ collections:
                   - { label: "Provider Description", name: "description", widget: "text", required: false }
                   - { label: "Provider Logo", name: "logo", widget: "image", required: false }
           
-          - label: "Testimonials"
-            name: "testimonials"
-            widget: "object"
-            collapsed: true
-            fields:
-              - label: "Testimonials List"
-                name: "list"
-                widget: "list"
-                fields:
-                  - { label: "Name", name: "name", widget: "string", required: false }
-                  - { label: "Position", name: "position", widget: "string", required: false }
-                  - { label: "Testimonial Text", name: "text", widget: "text", required: false }
-                  - { label: "Person Image", name: "image", widget: "image", required: false }
+          # - label: "Testimonials"
+          #   name: "testimonials"
+          #   widget: "object"
+          #   collapsed: true
+          #   fields:
+          #     - label: "Testimonials List"
+          #       name: "list"
+          #       widget: "list"
+          #       fields:
+          #         - { label: "Name", name: "name", widget: "string", required: false }
+          #         - { label: "Position", name: "position", widget: "string", required: false }
+          #         - { label: "Testimonial Text", name: "text", widget: "text", required: false }
+          #         - { label: "Person Image", name: "image", widget: "image", required: false }
           - label: "Treatment Grid"
             name: "treatmentGrid"
             widget: "object"
@@ -1326,19 +1266,7 @@ collections:
               - { label: "Treatments Label", name: "treatmentsLabel", widget: "string", required: false }
               - { label: "Call Button Text", name: "callButtonText", widget: "string", required: false }
               - { label: "Call Button Link", name: "callButtonLink", widget: "string", required: false }
-              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
-                  { label: "Text", name: "text", widget: "string", required: false },
-                  { label: "URL", name: "url", widget: "string", required: false },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false, required: false },
-                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]},
-                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]}
-                ] }
+              
           
           - label: "Location Hero"
             name: "locationHero"
@@ -1415,19 +1343,7 @@ collections:
               - { label: "Treatments Label", name: "treatmentsLabel", widget: "string", required: false }
               - { label: "Call Button Text", name: "callButtonText", widget: "string", required: false }
               - { label: "Call Button Link", name: "callButtonLink", widget: "string", required: false }
-              - { label: "Navigation Items", name: "navItems", widget: "list", fields: [
-                  { label: "Text", name: "text", widget: "string", required: false },
-                  { label: "URL", name: "url", widget: "string", required: false },
-                  { label: "Has Dropdown", name: "hasDropdown", widget: "boolean", default: false, required: false },
-                  { label: "Sublinks", name: "sublinks", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]},
-                  { label: "Sublinks 2", name: "sublinks2", widget: "list", required: false, fields: [
-                    { label: "Text", name: "text", widget: "string", required: false },
-                    { label: "Link", name: "link", widget: "string", required: false }
-                  ]}
-                ] }
+              
 
           - label: "Pricing Hero"
             name: "pricingHero"

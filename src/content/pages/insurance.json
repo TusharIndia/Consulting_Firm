@@ -169,21 +169,7 @@
       }
     ]
   },
-  "testimonials": {
-    "list": [
-    {
-      "name": "Veronica L.",
-      "position": "Client from United States",
-      "text": "Clearpath gave me the strength to overcome my anxiety. The compassionate therapists provided unwavering support, and I've found a renewed sense of purpose andtranquility in my life.",
-      "image": "/imgs/testimonial_1.png"
-    },
-    {
-      "name": "Pushpender Singh",
-      "position": "Client from Florida",
-      "text": "Clearpath helped me regain control of my life. The personalized treatment plan and the caring staff made all the difference. I am now on a path to recovery and happiness.",
-      "image": "/imgs/testimonial_1.png"
-    }
-  ]},
+  
    "cta": {
       "heading": "Begin Your Recovery Journey Today",
     "text": "Our admissions team is available 24/7 to answer your questions and guide you through the insurance verification process.",

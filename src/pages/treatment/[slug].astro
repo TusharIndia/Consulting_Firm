@@ -1,5 +1,5 @@
 ---
-import { fetchGeneralData , fetchSubTreatmentData} from '../../utils/dataMapping.ts';
+import { fetchGeneralData , fetchSubTreatmentData , fetchHomeData} from '../../utils/dataMapping.ts';
 import MainLayout from "../../layouts/MainLayout.astro"
 const GeneralData = await fetchGeneralData();
 
@@ -22,10 +22,11 @@ export async function getStaticPaths() {
 const sub_type = Astro.params.slug;
 
 const { data: TreatmentData } = await fetchSubTreatmentData(sub_type);
+const { data: HomeData } = await fetchHomeData();
 ---
 
 <MainLayout title="Treatment" description="Mental Health Treatment at Clear Path">
-    <HeroProgram Content={TreatmentData.hero} GeneralData={GeneralData} />
+    <HeroProgram Content={TreatmentData.hero} GeneralData={GeneralData} LinkData={HomeData.hero.heroLinks} />
     <TreatmentHero Content={TreatmentData.treatmentHero} />
     <Treatment2 Content={TreatmentData.treatment2} />
     <DisorderGrid Content={TreatmentData.disorders} />
