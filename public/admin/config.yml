@@ -770,7 +770,8 @@ collections:
             widget: "object"
             collapsed: true
             fields:
-              - { label: "Heading One", name: "headingOne", widget: "string", required: false }
+              - { label: "Heading One Part 1", name: "headingOne_Part_1", widget: "string", required: false }
+              - { label: "Heading One Part 2", name: "headingOne_Part_2", widget: "string", required: false }
               - { label: "Heading Two", name: "headingTwo", widget: "string", required: false }
               - { label: "Text One", name: "textOne", widget: "text", required: false }
               - { label: "Button One Text", name: "buttonOne", widget: "string", required: false }
