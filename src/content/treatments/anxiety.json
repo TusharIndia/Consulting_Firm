@@ -1,20 +1,19 @@
-{"title": "Depression Treatment at Clear Path",
+{
+  "title": "Depression Treatment at Clear Path",
   "hero": {
-    "heading": "Anxiety Treatment",
-    "text": "Depression is a complex mental health condition that can affect every aspect of life. At Clear Path, we offer comprehensive treatment approaches tailored to your specific needs.",
-    "buttonText": "Get Started",
     "phoneQuestionText": "Have a question?",
-    "treatmentsLabel": "May 4, 2025",
-     "buttonLink": "/contact",
-    "callButtonText": "Call (561) 220 6505",
+    "heading": "Anxiety Treatment",
     "callButtonLink": "+15612206505",
+    "buttonLink": "/contact",
+    "text": "Anxiety treatment is a clinical approach to managing anxiety disorders, which are characterized by excessive worry, fear, or panic that interferes with daily life. These conditions cause both psychological and physical symptoms, including restlessness, rapid heartbeat, muscle tension, and sleep disturbances. Effective treatment for anxiety addresses these symptoms through personalized medical care and advanced interventions. At Clear Path, we provide structured treatment plans that include innovative therapies and medication management to promote emotional stability and long-term wellness. According to the Anxiety and Depression Association of America (ADAA), anxiety disorders affect over 40 million adults in the United States every year, making them the most common mental health condition in the country.",
+    "treatmentsLabel": "",
     "navItems": [
       {
         "text": "Treatments",
         "url": "#",
         "hasDropdown": true,
-       "sublinks": [
-                {
+        "sublinks": [
+          {
             "text": "Medication Management",
             "link": "/program/medication_management"
           },
@@ -25,13 +24,9 @@
           {
             "text": "Spravato® (Esketamine) ",
             "link": "/program/spravato"
-          },
-          {
-            "text": "Psychotherapy",
-            "link": "/program/psychotherapy"
           }
         ],
-       "sublinks2": [
+        "sublinks2": [
           {
             "text": "Depression",
             "link": "/treatment/depression"
@@ -39,10 +34,6 @@
           {
             "text": "Anxiety",
             "link": "/treatment/anxiety"
-          },
-          {
-            "text": "ADHD",
-            "link": "/treatment/adhd"
           },
           {
             "text": "PTSD",
@@ -55,18 +46,6 @@
           {
             "text": "Stress",
             "link": "/treatment/stress"
-          },
-          {
-            "text": "OCD",
-            "link": "/treatment/ocd"
-          },
-          {
-            "text": "Addiction",
-            "link": "/treatment/addiction"
-          },
-          {
-            "text": "and more",
-            "link": "/treatment/other"
           }
         ]
       },
@@ -98,14 +77,16 @@
         "sublinks": [],
         "sublinks2": []
       }
-    ]
+    ],
+    "callButtonText": "Call (561) 220 6505",
+    "buttonText": "Get Started"
   },
   "treatmentHero": {
     "heading": "Our Approach",
     "tagline": "Our Treatment",
     "title": "Approach",
-    "subtitle": "We utilize multiple evidence-based treatments",
-    "description": "for depression:",
+    "subtitle": "Our anxiety care model is designed for adults seeking clarity, structure, and results. We focus on: In-person psychiatric evaluations Safe and effective medication management Advanced treatments for patients who haven’t responded to first-line medications Patients receive monthly follow-ups to monitor symptom improvement, adjust medications, and explore treatment alternatives when needed.",
+    "description": "for anxiety:",
     "approaches": [
       {
         "id": "01",
@@ -124,10 +105,8 @@
       }
     ]
   },
-    "treatment2": {
+  "treatment2": {
     "heading": "Signs and Symptoms",
-    "headingHighlight": "We Treat",
-    "description": "Our experienced team addresses these common symptoms of depression:",
     "symptoms": [
       {
         "icon": "/imgs/treatment/ff.png",
@@ -162,14 +141,16 @@
         "text": "Suicidal thoughts"
       }
     ],
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
     "phoneTextOne": "Have a question?",
+    "buttonLink": "/contact",
     "phoneTextTwo": "Call (561) 220 6505",
+    "headingHighlight": "We Treat",
     "phoneNumber": "+15612206505",
-    "image": "/imgs/treatment/img.png"
+    "image": "/imgs/treatment/img.png",
+    "description": "Our experienced team addresses these common symptoms of anxiety:",
+    "buttonText": "Get Started"
   },
-   "disorders": {
+  "disorders": {
     "heading": "OUR INSIGHTS",
     "headingTwo_Part_1": "Expert guidance for your ",
     "headingTwo_Part_2": "mental health ",
@@ -197,15 +178,15 @@
       }
     ]
   },
-   "cta": {
+  "cta": {
     "heading": "Ready to Start Your Journey to Better Mental Health?",
-    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
-    "buttonText": "Schedule a Consultation",
-    "buttonLink": "/contact",
-    "image": "/imgs/mental_health_support.png",
-    "altText": "Mental health support",
     "phoneTextOne": "Have a question?",
+    "buttonLink": "/contact",
+    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
     "phoneTextTwo": "Call (561) 220 6505",
-    "phoneNumber": "+15612206505"
+    "altText": "Mental health support",
+    "phoneNumber": "+15612206505",
+    "image": "/imgs/mental_health_support.png",
+    "buttonText": "Schedule a Consultation"
   }
 }
