@@ -7,46 +7,46 @@
     "cardTitle": "- Shannon B."
   },
   "program12": {
-    "badgeText": "Steps to Choose a TMS Program",
-    "heading": "How to Choose a Transcranial Magnetic Stimulation Program?",
-    "description": "Choosing the right TMS program is important to ensure you receive effective care tailored to your specific needs. A systematic approach can help you identify the program that best aligns with your mental health goals.",
+    "badgeText": "Choose Clear Path",
+    "heading": "How To Choose a Spravato (Esketamine) Infusion Program?",
+    "description": "To choose a Spravato (Esketamine) infusion program requires careful consideration to ensure the treatment aligns with your mental health needs and offers safe, effective care. Following a systematic approach will help you make the right choice for your recovery journey.",
     "mainImage": "/imgs/program/eleventh.png",
     "mainImageAlt": "Woman relaxing in a comfortable chair with plants in background",
     "steps": [
       {
         "stepNumber": "01",
         "title": "Understand Your Health Needs",
-        "description": "Before selecting a TMS program, it's crucial to have a clear understanding of your mental health needs. This includes identifying any specific conditions you are dealing with, such as depression, anxiety, or PTSD, and considering how TMS might fit into your overall treatment plan."
+        "description": "Identify whether you have treatment-resistant depression or other qualifying conditions for Spravato infusions. Determine how this therapy fits into your overall mental health treatment plan."
       },
       {
         "stepNumber": "02",
         "title": "Consult with Healthcare Professionals",
-        "description": "Engage with mental health professionals who can provide insights into your specific needs and help determine if TMS is a suitable option."
+        "description": "Speak with your psychiatrist, primary care provider, or mental health specialist to determine if Spravato is the right option for your condition. Their insights can guide you to reputable programs."
       },
       {
         "stepNumber": "03",
         "title": "Research Available Programs",
-        "description": "Look into different TMS programs offered by various clinics and providers. Consider factors such as location, treatment approach, and patient reviews."
+        "description": "Look for programs offering comprehensive care, including in-person administration of Spravato under medical supervision and follow-up support to monitor progress and adjust treatment as needed."
       },
       {
         "stepNumber": "04",
         "title": "Verify Program Credentials",
-        "description": "Ensure that the TMS program is accredited and that the providers are qualified to deliver this specialized treatment."
+        "description": "Ensure the program is licensed and led by experienced healthcare professionals certified to administer Spravato safely."
       },
       {
         "stepNumber": "05",
         "title": "Assess the Treatment Plan",
-        "description": "Review the proposed treatment plan to ensure it aligns with your needs and expectations."
+        "description": "Review the program's approach to Spravato infusions, including the frequency of sessions, patient monitoring during and after infusions, and how progress is tracked over time."
       },
       {
         "stepNumber": "06",
         "title": "Evaluate Accessibility",
-        "description": "Consider the location of the TMS program and whether it is easily accessible for you."
+        "description": "Confirm the program’s location, availability, and flexibility to accommodate your schedule. In-person care is essential for this treatment, so proximity and convenience are key."
       },
       {
         "stepNumber": "07",
         "title": "Check Financial and Insurance Coverage",
-        "description": "Review your insurance plan to understand coverage options for TMS and inquire about any out-of-pocket costs."
+        "description": "Review your insurance plan to understand coverage options for Spravato infusions and inquire about any out-of-pocket costs."
       }
     ]
   },
@@ -81,12 +81,12 @@
     "buttonTwo_Part_2": "(561) 220 6505",
     "buttonLink": "/contact",
     "buttonTwo_Number": "+15612206505",
-    "imageAlt": "TMS therapy benefits illustration at Clear Path",
+    "imageAlt": "Spravato therapy benefits illustration at Clear Path",
     "imageUrl": "/imgs/program/tenth.png",
-    "title": "What Are the Benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path?",
+    "title": "What Are the Benefits of Spravato (Esketamine) Infusions at Clear Path?",
     "content": {
-      "paragraph1": "The benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path include a personalized, non-invasive approach to treating mental health conditions. This innovative therapy targets specific areas of the brain to help regulate mood and reduce symptoms of disorders such as depression, anxiety, PTSD, and OCD. TMS is particularly beneficial for individuals who have not found success with traditional treatments, offering a safe and effective alternative without the need for medication.",
-      "paragraph2": "With care provided by experienced professionals, Clear Path ensures that each TMS treatment plan is tailored to the individual's needs. Regular monitoring and adjustments during the treatment process enhance effectiveness, while the in-person approach fosters a compassionate and supportive environment. By utilizing evidence-based therapies like TMS, Clear Path empowers patients to achieve lasting mental well-being and improved quality of life."
+      "paragraph1": "Spravato (Esketamine) infusions at Clear Path offer a highly effective treatment option for individuals with treatment-resistant depression, delivering rapid symptom relief when traditional antidepressants have failed. One of the key benefits of Spravato is its unique ability to target the brain’s glutamate system, which plays a critical role in restoring neural connections and improving mood. This fast-acting therapy is especially beneficial for individuals experiencing severe depressive episodes or acute suicidal ideation, providing relief within hours or days rather than weeks.",
+      "paragraph2": "Clear Path’s Spravato program is designed with patient safety and support in mind. Infusions are administered under close medical supervision, ensuring a controlled and comfortable environment. Patients benefit from personalized care, including regular evaluations to monitor progress and tailor treatment plans to their needs. Additionally, the in-person approach fosters a supportive experience, helping patients feel guided and empowered throughout their recovery journey. By offering a cutting-edge solution like Spravato, Clear Path provides a pathway to improved mental health and renewed hope for lasting well-being."
     },
     "buttonText": "Get Started"
   },
@@ -113,8 +113,8 @@
     ]
   },
   "about": {
-    "headingOne": "Clear Path TMS: Cutting-Edge Care for ",
-    "headingTwo": "Mental Well-Being",
+    "headingOne": "Beginning Your Journey to a Healthier Mind ",
+    "headingTwo": "with Spravato Therapy Sessions",
     "buttonTwo_Part_1": "Have a question?",
     "buttonTwo_Part_2": "(561) 220 6505",
     "buttonLink": "/contact",
@@ -123,7 +123,7 @@
       "imageOne": "/imgs/program_about.png",
       "imageTwo": ""
     },
-    "textOne": "Transcranial Magnetic Stimulation (TMS) is a groundbreaking treatment designed to improve mental well-being and provide relief for individuals struggling with depression and other mental health conditions. At Clear Path, our TMS program offers a personalized, non-invasive approach to care, making it a safe and effective solution for those seeking innovative treatment options.",
+    "textOne": "Finding effective solutions for long-term mental health and stability is imperative. At Clear Path, our Spravato (Esketamine) Infusion program offers a groundbreaking approach for individuals seeking relief from treatment-resistant depression. This innovative therapy provides targeted care in a safe and supportive environment.\n\n",
     "textTwo": "",
     "buttonText": "Get Started"
   },
@@ -235,61 +235,56 @@
     "subheading": "Find answers to common questions about our services and support",
     "faq": [
       {
-        "title": " What is Medication-Assisted Treatment?",
-        "details": "Medication-Assisted Treatment (MAT) involves using medication, along with counseling and behavioral therapies, to treat substance use disorders."
+        "title": "Is Spravato safe?",
+        "details": "Yes, Spravato is FDA-approved and administered under medical supervision. Side effects are closely monitored during and after each session.\n"
       },
       {
-        "title": "How does Sober Living Placement work?",
-        "details": "Sober Living Placement helps individuals find safe and supportive housing environments where they can continue their recovery journey."
+        "title": "How is Spravato administered?",
+        "details": "Spravato is self-administered as a nasal spray in a certified medical office under the supervision of trained healthcare professionals.\n"
       },
       {
-        "title": "What services are included in Case Management?",
-        "details": "Case Management includes resume building, job search assistance, accessing community resources, and more."
+        "title": "​​How long does a Spravato session take?",
+        "details": "Each session typically lasts about 2 hours, including the administration of the nasal spray and the required post-treatment observation period."
       }
     ]
   },
   "programTMS": {
-    "coloredHeading": "Treated During TMS?",
+    "coloredHeading": "Treated During Spravato Therapy?",
     "mainHeading": "What Conditions are ",
     "buttonTwo_Part_1": "Have a question?",
     "buttonTwo_Part_2": "(561) 220 6505",
     "buttonLink": "/contact",
     "buttonTwo_Number": "+15612206505",
-    "imageAlt": "TMS Treatment Illustration",
+    "imageAlt": "Spravato Treatment Illustration",
     "conditions": [
       {
         "title": "Depression",
         "icon": "/imgs/program/Depression.svg",
-        "description": "TMS is particularly effective for individuals with treatment-resistant depression, providing a non-invasive alternative to medication."
+        "description": "Spravato  is particularly effective for individuals with treatment-resistant depression, providing a non-invasive alternative to medication."
       },
       {
         "title": "Stress and Insomnia",
         "icon": "/imgs/program/Stress and Insomnia.svg",
-        "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if TMS is the right treatment option for their needs."
+        "description": "Spravato infusions help reduce stress that creates depression."
       },
       {
         "title": "Anxiety Disorders",
         "icon": "/imgs/program/Anxiety Disorders.svg",
-        "description": "TMS can help alleviate symptoms of anxiety disorders, providing relief for those who have not responded well to traditional treatments."
+        "description": "Spravato can help alleviate symptoms of anxiety disorders, providing relief for those who have not responded well to traditional treatments."
       },
       {
         "title": "Post-Traumatic Stress Disorder (PTSD)",
         "icon": "/imgs/program/Post-Traumatic Stress Disorder (PTSD).svg",
-        "description": "TMS is used to treat PTSD by targeting brain areas involved in emotional regulation, helping to reduce intrusive thoughts and hyperarousal symptoms."
-      },
-      {
-        "title": "Obsessive-Compulsive Disorder (OCD)",
-        "icon": "/imgs/program/Obsessive-Compulsive Disorder (OCD).svg",
-        "description": "TMS can be effective in reducing the severity of OCD symptoms, particularly for those who have not found relief through other therapies."
+        "description": "Spravato is used to treat PTSD by targeting brain areas involved in emotional regulation, helping to reduce intrusive thoughts and hyperarousal symptoms."
       },
       {
         "title": "Bipolar Disorder",
         "icon": "/imgs/program/Bipolar Disorder.svg",
-        "description": "TMS is used as an adjunctive treatment for bipolar disorder, helping to stabilize mood and reduce depressive episodes."
+        "description": "Spravato is used as an adjunctive treatment for bipolar disorder, helping to stabilize mood and reduce depressive episodes."
       }
     ],
     "image": "/imgs/program/twelfth.png",
-    "description": "The conditions treated with Transcranial Magnetic Stimulation (TMS) at Clear Path include a wide range of mental health disorders. Each condition is addressed using evidence-based therapies and innovative TMS technology, ensuring holistic care for individuals seeking to improve their mental well-being.",
+    "description": "The conditions treated with Spravato include treatment-resistant depression and major depressive disorder. Spravato (esketamine) nasal spray is an FDA-approved treatment for adults with treatment-resistant depression (TRD). It offers rapid relief for individuals who have not responded adequately to at least two oral antidepressants.",
     "buttonText": "Get Started"
   },
   "amenities": {
@@ -299,7 +294,7 @@
   },
   "title": "Spravato Program",
   "hero": {
-    "heading": "Spravato Therapy at Clear Path",
+    "heading": "Spravato (Esketamine) Infusions at Clear Path",
     "text": "",
     "buttonText": "Get Started",
     "phoneQuestionText": "Have a question?",
@@ -309,11 +304,11 @@
     "callButtonLink": "+15612206505"
   },
   "video": {
-    "heading": "What is Transcranial Magnetic ",
-    "headingColored": "Stimulation (TMS)?",
-    "description": "Transcranial Magnetic Stimulation (TMS) is a groundbreaking treatment designed to improve mental well-being and provide relief for individuals struggling with depression and other mental health conditions. At Clear Path, our TMS program offers a personalized, non-invasive approach to care, making it a safe and effective solution for those seeking innovative treatment options.",
+    "heading": "What are",
+    "headingColored": "Spravato (Esketamine) Infusions?",
+    "description": "Spravato (Esketamine) Infusions are an innovative, FDA-approved treatment specifically designed for individuals struggling with treatment-resistant depression. This groundbreaking therapy uses Esketamine, a fast-acting medication, to target the root causes of depression by stimulating key brain pathways involved in mood regulation. Administered under the supervision of healthcare professionals, Spravato infusions provide a new avenue of relief for individuals who have not responded to traditional antidepressants.\n\nAt Clear Path, our Spravato infusion services are a critical component of mental health recovery, offering cutting-edge solutions to help patients achieve lasting emotional stability and overall well-being.\n",
     "image": "/imgs/tms_program.png",
-    "imageAlt": "Transcranial Magnetic Stimulation treatment illustration"
+    "imageAlt": "Spravato treatment illustration"
   },
   "howWeTreat": {
     "heading": "What is the Treatment Process During Residential Rehab at “Name of Treatment Center”?",
@@ -359,50 +354,50 @@
     ]
   },
   "treatmentGrid": {
-    "heading": "What is the Treatment Process During Transcranial Magnetic Stimulation at Clear Path?",
+    "heading": "What is the Treatment Process During Spravato (Esketamine) Infusions at Clear Path?",
     "subheading": "Treatment Process",
-    "description": "The TMS treatment process at Clear Path is designed to be simple, effective, and tailored to each individual's needs. We stand apart by ensuring patients receive direct, in-person care from experienced psychiatrists and healthcare professionals.",
+    "description": "The treatment process for Spravato infusions at Clear Path is designed to be straightforward, supportive, and tailored to each individual’s needs. Clear Path stands apart by offering direct, face-to-face care from experienced psychiatrists and healthcare professionals, ensuring the highest standard of safety and effectiveness.\n\nThe treatment process during Spravato Infusions include:\n",
     "featuredImage": "/imgs/tms_treatment_process.png",
     "treatments": [
       {
         "icon": "calendar",
         "title": "Booking and Initial Assessment",
-        "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if TMS is the right treatment option for their needs."
+        "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if Spravato is the right treatment option for their needs."
       },
       {
         "icon": "personalized",
         "title": "Personalized Treatment Path",
-        "description": "Following the assessment, a customized TMS treatment plan is created, tailored to the individual's condition and goals. This plan ensures that each session targets the specific areas of the brain associated with their symptoms."
+        "description": "Following the assessment, a customized Spravato treatment plan is created, tailored to the individual's condition and goals. This plan ensures that each session targets the specific areas of the brain associated with their symptoms."
       },
       {
         "icon": "treatment",
-        "title": "TMS Treatment Sessions",
-        "description": "TMS sessions are conducted in a comfortable, outpatient setting. Each session typically lasts 20 to 40 minutes and involves placing a magnetic coil on the scalp to deliver targeted magnetic pulses to stimulate brain activity."
+        "title": "Spravato Treatment Sessions",
+        "description": "During each session, patients self-administer the Esketamine nasal spray under medical supervision. Sessions are typically conducted twice weekly during the initial phase of treatment and gradually reduce in frequency over time based on the patient’s progress.\n"
       },
       {
         "icon": "monitoring",
         "title": "Ongoing Monitoring and Support",
-        "description": "Patients will attend regular sessions over several weeks, with progress monitored closely by the Clear Path team. Adjustments are made as needed to optimize results and ensure the best possible outcomes."
+        "description": "Clear Path provides continuous support with regular follow-up appointments to monitor progress, adjust treatment as necessary, and ensure optimal outcomes. These in-person check-ins allow for personalized care and adjustments to the treatment plan as needed."
       }
     ]
   },
   "whoNeeds": {
-    "headingColored": "Transcranial Magnetic Stimulation",
+    "headingColored": "Spravato (Esketamine) Infusions",
     "listItems": [
       "Individuals with treatment-resistant depression or other mood disorders.",
       "Those experiencing anxiety or PTSD who are looking for non-invasive treatment options.",
       "People with OCD who require targeted therapy to reduce intrusive thoughts and compulsive behaviors.",
-      "Individuals seeking an alternative or complementary approach to enhance their overall mental health."
+      "People with Major Depressive Disorder (MDD) with Acute Suicidal Ideation or Behavior"
     ],
-    "heading": "Who Needs",
-    "listHeading": "The people who benefit from TMS include:",
+    "heading": "Why Are  ",
+    "listHeading": "The people who benefit from Spravato Therapy include:",
     "buttonTwo_Part_1": "Have a question?",
     "buttonTwo_Part_2": "(561) 220 6505",
     "buttonLink": "/contact",
     "buttonTwo_Number": "+15612206505",
-    "headingEnd": "(TMS)?",
-    "description": "Individuals who need TMS are those experiencing treatment-resistant mental health disorders or seeking a non-medication-based approach to recovery. This therapy is ideal for those who have struggled to find relief through medications or traditional psychotherapy and require an innovative solution for managing their symptoms.",
-    "listDescription": "TMS at Clear Path is a powerful tool for those ready to take control of their mental health journey, providing relief and stability in a supportive and professional environment.",
+    "headingEnd": "Important?",
+    "description": "Spravato infusions are important for stabilizing mental health conditions and improving quality of life for individuals with severe depression. This therapy offers rapid symptom relief, which is particularly crucial for individuals at risk of self-harm or those who have experienced limited success with conventional medications. By working differently than traditional antidepressants, Esketamine targets glutamate receptors in the brain, promoting faster and more effective recovery.",
+    "listDescription": "Spravato offers a promising option for individuals seeking alternative treatments for mental health disorders, especially when traditional therapies have been ineffective. Its unique mechanism and rapid onset of action make it a valuable addition to mental health care strategies.",
     "buttonText": "Get Started"
   },
   "whyChoose": {
@@ -412,10 +407,10 @@
     "buttonTwo_Number": "+15612206505",
     "imageAlt": "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office",
     "imageUrl": "/imgs/why_choose_us.png",
-    "title": "Why Choose Transcranial Magnetic Stimulation (TMS)?",
+    "title": "Why Are Spravato (Esketamine) Infusions Important?",
     "content": {
-      "paragraph1": "TMS offers a transformative option for individuals seeking relief from symptoms of depression and other mental health conditions. Unlike medications, which can have side effects or may not work for everyone, TMS directly stimulates the brain to encourage natural healing and improved functionality. This non-invasive treatment is well-tolerated, requires no anesthesia, and involves no downtime, making it a convenient and accessible solution for busy individuals.",
-      "paragraph2": "For those with dual diagnoses or treatment-resistant conditions, TMS complements other therapies to create a comprehensive and effective pathway to recovery. By focusing on targeted areas of the brain, TMS fosters emotional stability, enhances daily functioning, and helps individuals regain control of their mental health."
+      "paragraph1": "Spravato infusions are important for stabilizing mental health conditions and improving quality of life for individuals with severe depression. This therapy offers rapid symptom relief, which is particularly crucial for individuals at risk of self-harm or those who have experienced limited success with conventional medications. By working differently than traditional antidepressants, Esketamine targets glutamate receptors in the brain, promoting faster and more effective recovery.",
+      "paragraph2": "For individuals with co-occurring conditions, Spravato infusions complement other mental health treatments, providing a holistic and comprehensive path to recovery. This innovative therapy supports long-term adherence to treatment plans, helping patients achieve sustained relief and enhanced daily functioning. Patients undergoing Spravato treatment experience significant improvement in depressive symptoms, making it a transformative option for those who have struggled with other therapies."
     },
     "buttonText": "Get Started"
   }
