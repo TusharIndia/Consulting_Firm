@@ -62,39 +62,41 @@ const { heading, text, programs } = Astro.props.Content;
         rows.push(programs.slice(i, i + 3));
       }
       return rows.map((row, rowIndex) => (
-        <div class={`flex flex-wrap gap-6 items-center ${rowIndex === 0 ? 'mt-14' : 'mt-7'} text-2xl font-medium leading-loose whitespace-nowrap text-neutral-800 mobile-programs-row`}>
-          {row.map(program => (
-            <a href={program.link || '#'} class="flex-1 shrink self-stretch my-auto basis-0 min-w-60 cursor-pointer mobile-program-card">
-              <div class="flex gap-10 justify-between items-center w-full mobile-program-content">
-                <div class="flex gap-3 items-center self-stretch my-auto mobile-program-info">
-                  {program.image && (
-                  <Image
-                    src={program.image}
-                    alt={`${program.title} icon`}
-                    class="object-contain shrink-0 self-stretch my-auto w-10 aspect-square mobile-program-icon"
-                    width={40}
-                    height={40}
-                  />
-                  )}
-                  <h3 class="self-stretch my-auto mobile-program-title">{program.title}</h3>
-                  {!program.image && (
-                    <div class="w-10 aspect-square"></div>
-                  )}
-                </div>
-                <div class="cursor-pointer mobile-arrow">
-                  <Image
-                    src="/imgs/expand_arrow.svg"
-                    alt="Expand arrow"
-                    class="object-contain shrink-0 self-stretch my-auto aspect-[5.13] w-[41px] mobile-arrow-icon"
-                    width={41}
-                    height={8}
-                  />
-                </div>
-              </div>
-              <hr class="mt-4 w-full min-h-px border-black mobile-divider" />
-            </a>
-          ))}
+      // ...existing code...
+<div class={`flex flex-wrap gap-6 items-center ${rowIndex === 0 ? 'mt-14' : 'mt-7'} text-2xl font-medium leading-loose whitespace-nowrap text-neutral-800 mobile-programs-row`}>
+  {row.map(program => (
+    <a href={program.link || '#'} class="flex-1 shrink self-stretch my-auto basis-0 min-w-60 cursor-pointer mobile-program-card relative z-30 block">
+      <div class="flex gap-10 justify-between items-center w-full mobile-program-content">
+        <div class="flex gap-3 items-center self-stretch my-auto mobile-program-info">
+          {program.image && (
+          <Image
+            src={program.image}
+            alt={`${program.title} icon`}
+            class="object-contain shrink-0 self-stretch my-auto w-10 aspect-square mobile-program-icon pointer-events-none"
+            width={40}
+            height={40}
+          />
+          )}
+          <h3 class="self-stretch my-auto mobile-program-title pointer-events-none">{program.title}</h3>
+          {!program.image && (
+            <div class="w-10 aspect-square"></div>
+          )}
         </div>
+        <div class="cursor-pointer mobile-arrow pointer-events-none">
+          <Image
+            src="/imgs/expand_arrow.svg"
+            alt="Expand arrow"
+            class="object-contain shrink-0 self-stretch my-auto aspect-[5.13] w-[41px] mobile-arrow-icon pointer-events-none"
+            width={41}
+            height={8}
+          />
+        </div>
+      </div>
+      <hr class="mt-4 w-full min-h-px border-black mobile-divider pointer-events-none" />
+    </a>
+  ))}
+</div>
+// ...existing code...
       ));
     })()}
   </div>
