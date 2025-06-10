@@ -27,10 +27,10 @@ collections:
     create: true
     format: "json"  # Add this line
     extension: "json"
-    slug: "{{filename}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Filename"  , name: "filename" , widget: "string" , required: false}
-      - { label: "Slug", name: "slug", widget: "slug", required: true, slugify: "filename" }
+      - { label: "Slug", name: "slug", widget: "string"}
       - { label: "Title", name: "title", widget: "string", required: false }
       - label: "Hero"
         name: "hero"
