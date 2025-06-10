@@ -1,36 +1,54 @@
 {
-  "title": "Transcranial Magnetic Stimulation Program",
-  "hero": {
-    "heading": "Transformative Transcranial Magnetic Stimulation (TMS) at Clear Path",
-    "text": "",
-    "buttonText": "Get Started",
-    "phoneQuestionText": "Have a question?",
-    "treatmentsLabel": "Treatments",
-   "buttonLink": "/contact",
-    "callButtonText": "Call (561) 220 6505",
-    "callButtonLink": "+15612206505"
-  },
-  "about": {
-    "headingOne": "Clear Path TMS: Cutting-Edge Care for ",
-    "headingTwo": "Mental Well-Being",
-    "textOne": "Transcranial Magnetic Stimulation (TMS) is a groundbreaking treatment designed to improve mental well-being and provide relief for individuals struggling with depression and other mental health conditions. At Clear Path, our TMS program offers a personalized, non-invasive approach to care, making it a safe and effective solution for those seeking innovative treatment options.",
-    "textTwo": "",
-    "images": {
-      "imageOne": "/imgs/program_about.png",
-      "imageTwo": ""
-    },
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(561) 220 6505",
-    "buttonTwo_Number": "+15612206505"
-  },
   "singleReview": {
     "heading": "Some next steps you can take",
     "description": "At Placeholder Company, our expert multidisciplinary team and high-end treatment facilities, coupled with our partnered luxury sober living experience, are meticulously designed to help patients overcome the challenges of addiction, trauma, and mental health issues.",
     "buttonText": "Meet Our Experts",
     "cardDetail": "At Placeholder Company, our expert multidisciplinary team and high-end treatment facilities, coupled with our partnered luxury sober living experience, are meticulously designed to help patients overcome the challenges of addiction, trauma, and mental health issues.",
     "cardTitle": "- Shannon B."
+  },
+  "program12": {
+    "badgeText": "Steps to Choose a TMS Program",
+    "heading": "How to Choose a Transcranial Magnetic Stimulation Program?",
+    "description": "Choosing the right TMS program is important to ensure you receive effective care tailored to your specific needs. A systematic approach can help you identify the program that best aligns with your mental health goals.",
+    "mainImage": "/imgs/program/eleventh.png",
+    "mainImageAlt": "Woman relaxing in a comfortable chair with plants in background",
+    "steps": [
+      {
+        "stepNumber": "01",
+        "title": "Understand Your Health Needs",
+        "description": "Before selecting a TMS program, it's crucial to have a clear understanding of your mental health needs. This includes identifying any specific conditions you are dealing with, such as depression, anxiety, or PTSD, and considering how TMS might fit into your overall treatment plan."
+      },
+      {
+        "stepNumber": "02",
+        "title": "Consult with Healthcare Professionals",
+        "description": "Engage with mental health professionals who can provide insights into your specific needs and help determine if TMS is a suitable option."
+      },
+      {
+        "stepNumber": "03",
+        "title": "Research Available Programs",
+        "description": "Look into different TMS programs offered by various clinics and providers. Consider factors such as location, treatment approach, and patient reviews."
+      },
+      {
+        "stepNumber": "04",
+        "title": "Verify Program Credentials",
+        "description": "Ensure that the TMS program is accredited and that the providers are qualified to deliver this specialized treatment."
+      },
+      {
+        "stepNumber": "05",
+        "title": "Assess the Treatment Plan",
+        "description": "Review the proposed treatment plan to ensure it aligns with your needs and expectations."
+      },
+      {
+        "stepNumber": "06",
+        "title": "Evaluate Accessibility",
+        "description": "Consider the location of the TMS program and whether it is easily accessible for you."
+      },
+      {
+        "stepNumber": "07",
+        "title": "Check Financial and Insurance Coverage",
+        "description": "Review your insurance plan to understand coverage options for TMS and inquire about any out-of-pocket costs."
+      }
+    ]
   },
   "therapies": {
     "heading": "What Therapies are Included in the Residential Drug Treatment Program at The Placeholder Company ?",
@@ -58,6 +76,20 @@
       }
     ]
   },
+  "secondWhyChoose": {
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonLink": "/contact",
+    "buttonTwo_Number": "+15612206505",
+    "imageAlt": "TMS therapy benefits illustration at Clear Path",
+    "imageUrl": "/imgs/program/tenth.png",
+    "title": "What Are the Benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path?",
+    "content": {
+      "paragraph1": "The benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path include a personalized, non-invasive approach to treating mental health conditions. This innovative therapy targets specific areas of the brain to help regulate mood and reduce symptoms of disorders such as depression, anxiety, PTSD, and OCD. TMS is particularly beneficial for individuals who have not found success with traditional treatments, offering a safe and effective alternative without the need for medication.",
+      "paragraph2": "With care provided by experienced professionals, Clear Path ensures that each TMS treatment plan is tailored to the individual's needs. Regular monitoring and adjustments during the treatment process enhance effectiveness, while the in-person approach fosters a compassionate and supportive environment. By utilizing evidence-based therapies like TMS, Clear Path empowers patients to achieve lasting mental well-being and improved quality of life."
+    },
+    "buttonText": "Get Started"
+  },
   "otherTreatments": {
     "heading": "Other Treatments",
     "buttonText": "View all",
@@ -80,7 +112,32 @@
       }
     ]
   },
-  
+  "about": {
+    "headingOne": "Clear Path TMS: Cutting-Edge Care for ",
+    "headingTwo": "Mental Well-Being",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonLink": "/contact",
+    "buttonTwo_Number": "+15612206505",
+    "images": {
+      "imageOne": "/imgs/program_about.png",
+      "imageTwo": ""
+    },
+    "textOne": "Transcranial Magnetic Stimulation (TMS) is a groundbreaking treatment designed to improve mental well-being and provide relief for individuals struggling with depression and other mental health conditions. At Clear Path, our TMS program offers a personalized, non-invasive approach to care, making it a safe and effective solution for those seeking innovative treatment options.",
+    "textTwo": "",
+    "buttonText": "Get Started"
+  },
+  "cta": {
+    "heading": "Ready to Start Your Journey to Better Mental Health?",
+    "phoneTextOne": "Have a question?",
+    "buttonLink": "/contact",
+    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
+    "phoneTextTwo": "Call (561) 220 6505",
+    "altText": "Mental health support",
+    "phoneNumber": "+15612206505",
+    "image": "/imgs/mental_health_support.png",
+    "buttonText": "Schedule a Consultation"
+  },
   "pdf": {
     "heading": "Download our White Paper",
     "description": "Empower Your Journey, Embrace Your Potential!",
@@ -106,6 +163,50 @@
       {
         "title": " Benzodiazepines:",
         "details": "Benzodiazepine dependence requires a carefully monitored tapering process to safely reduce the dosage and prevent severe withdrawal symptoms. Therapeutic interventions often include behavioral therapies and counseling to address the psychological aspects of addiction. Medical intervention is critical, as outlined in research published in the Journal of Addiction Medicine, due to the potential severity of benzodiazepine withdrawal. At “Name of Treatment Center”, our treatment strategies are tailored to each substance. We combine medical interventions to manage physical dependence and withdrawal symptoms with comprehensive therapeutic approaches to tackle the underlying psychological and behavioral issues contributing to addiction."
+      }
+    ]
+  },
+  "disorders": {
+    "heading": "OUR INSIGHTS",
+    "headingTwo_Part_1": "Expert guidance for your ",
+    "headingTwo_Part_2": "mental health ",
+    "headingTwo_Part_3": "journey",
+    "disorders": [
+      {
+        "link": "/blog/managing-depression",
+        "title": "Effective Strategies for Managing Depression",
+        "image": "/imgs/Depression_Article.png"
+      },
+      {
+        "link": "/blog/managing-anxiety",
+        "title": "Effective Strategies for Managing Anxiety",
+        "image": "/imgs/Anxiety_Article.png"
+      },
+      {
+        "link": "/blog/managing-adhd",
+        "title": "Effective Strategies for Managing ADHD",
+        "image": "/imgs/ADHD_Article.png"
+      },
+      {
+        "link": "/blog/managing-ptsd",
+        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
+        "image": "/imgs/PTSD_Article.png"
+      }
+    ]
+  },
+  "testimonials": {
+    "list": [
+      {
+        "name": "Veronica L.",
+        "position": "Client from United States",
+        "text": "Clearpath gave me the strength to overcome my anxiety. The compassionate therapists provided unwavering support, and I've found a renewed sense of purpose andtranquility in my life.",
+        "image": "/imgs/testimonial_1.png"
+      },
+      {
+        "name": "Pushpender Singh",
+        "position": "Client from Florida",
+        "text": "Clearpath helped me regain control of my life. The personalized treatment plan and the caring staff made all the difference. I am now on a path to recovery and happiness.",
+        "image": "/imgs/testimonial_1.png"
       }
     ]
   },
@@ -147,12 +248,72 @@
       }
     ]
   },
+  "programTMS": {
+    "coloredHeading": "Treated During TMS?",
+    "mainHeading": "What Conditions are ",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonLink": "/contact",
+    "buttonTwo_Number": "+15612206505",
+    "imageAlt": "TMS Treatment Illustration",
+    "conditions": [
+      [
+        {
+          "title": "Depression",
+          "icon": "/imgs/program/Depression.svg",
+          "description": "TMS is particularly effective for individuals with treatment-resistant depression, providing a non-invasive alternative to medication."
+        },
+        {
+          "title": "Stress and Insomnia",
+          "icon": "/imgs/program/Stress and Insomnia.svg",
+          "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if TMS is the right treatment option for their needs."
+        }
+      ],
+      [
+        {
+          "title": "Anxiety Disorders",
+          "icon": "/imgs/program/Anxiety Disorders.svg",
+          "description": "TMS can help alleviate symptoms of anxiety disorders, providing relief for those who have not responded well to traditional treatments."
+        },
+        {
+          "title": "Post-Traumatic Stress Disorder (PTSD)",
+          "icon": "/imgs/program/Post-Traumatic Stress Disorder (PTSD).svg",
+          "description": "TMS is used to treat PTSD by targeting brain areas involved in emotional regulation, helping to reduce intrusive thoughts and hyperarousal symptoms."
+        }
+      ],
+      [
+        {
+          "title": "Obsessive-Compulsive Disorder (OCD)",
+          "icon": "/imgs/program/Obsessive-Compulsive Disorder (OCD).svg",
+          "description": "TMS can be effective in reducing the severity of OCD symptoms, particularly for those who have not found relief through other therapies."
+        },
+        {
+          "title": "Bipolar Disorder",
+          "icon": "/imgs/program/Bipolar Disorder.svg",
+          "description": "TMS is used as an adjunctive treatment for bipolar disorder, helping to stabilize mood and reduce depressive episodes."
+        }
+      ]
+    ],
+    "image": "/imgs/program/twelfth.png",
+    "description": "The conditions treated with Transcranial Magnetic Stimulation (TMS) at Clear Path include a wide range of mental health disorders. Each condition is addressed using evidence-based therapies and innovative TMS technology, ensuring holistic care for individuals seeking to improve their mental well-being.",
+    "buttonText": "Get Started"
+  },
   "amenities": {
     "img": "https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png",
     "heading": "What Amenities Does the Residential Treatment Provide at The Grove Estate?",
     "description": "The amenities that we provide at The Grove Estate are designed to create a comfortable, supportive, and therapeutic environment that fosters recovery. Our high-quality living spaces offer a serene and homely atmosphere where individuals can feel safe and relaxed. We also have dedicated therapeutic spaces for counseling and group sessions, ensuring privacy and comfort during treatment. Our recreational areas are equipped with facilities for physical activities, such as yoga, gym sessions, and outdoor sports, which are integral in promoting physical health and well-being. Additionally, our center includes amenities that support holistic therapies like art and music therapy, further enriching the treatment experience. These services benefit patients with substance abuse disorder by providing an enriching, positive environment that aids in mental and emotional healing. A well-structured and tranquil setting helps reduce stress and anxiety, which are common during detox and recovery. According to a study published in the Journal of Substance Abuse Treatment, patients in residential detox programs with access to stimulating and positive environments exhibit improved mental health outcomes and reduced relapse rates. By integrating comprehensive amenities into our residential treatment program, we ensure that our patients receive well-rounded care that supports all facets of their recovery journey."
   },
-
+  "title": "Transcranial Magnetic Stimulation Program",
+  "hero": {
+    "heading": "Spravato Therapy at Clear Path",
+    "text": "",
+    "buttonText": "Get Started",
+    "phoneQuestionText": "Have a question?",
+    "treatmentsLabel": "Treatments",
+    "buttonLink": "/contact",
+    "callButtonText": "Call (561) 220 6505",
+    "callButtonLink": "+15612206505"
+  },
   "video": {
     "heading": "What is Transcranial Magnetic ",
     "headingColored": "Stimulation (TMS)?",
@@ -203,80 +364,6 @@
       }
     ]
   },
-  "disorders": {
-    "heading": "OUR INSIGHTS",
-    "headingTwo_Part_1": "Expert guidance for your ",
-    "headingTwo_Part_2": "mental health ",
-    "headingTwo_Part_3": "journey",
-    "disorders": [
-      {
-        "link": "/blog/managing-depression",
-        "title": "Effective Strategies for Managing Depression",
-        "image": "/imgs/Depression_Article.png"
-      },
-      {
-        "link": "/blog/managing-anxiety",
-        "title": "Effective Strategies for Managing Anxiety",
-        "image": "/imgs/Anxiety_Article.png"
-      },
-      {
-        "link": "/blog/managing-adhd",
-        "title": "Effective Strategies for Managing ADHD",
-        "image": "/imgs/ADHD_Article.png"
-      },
-      {
-        "link": "/blog/managing-ptsd",
-        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
-        "image": "/imgs/PTSD_Article.png"
-      }
-    ]
-  },
-   "cta": {
-    "heading": "Ready to Start Your Journey to Better Mental Health?",
-    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
-    "buttonText": "Schedule a Consultation",
-    "buttonLink": "/contact",
-    "image": "/imgs/mental_health_support.png",
-    "altText": "Mental health support",
-    "phoneTextOne": "Have a question?",
-    "phoneTextTwo": "Call (561) 220 6505",
-    "phoneNumber": "+15612206505"
-  },
-  "whoNeeds": {
-    "heading": "Who Needs",
-    "headingColored": "Transcranial Magnetic Stimulation",
-    "headingEnd": "(TMS)?",
-    "description": "Individuals who need TMS are those experiencing treatment-resistant mental health disorders or seeking a non-medication-based approach to recovery. This therapy is ideal for those who have struggled to find relief through medications or traditional psychotherapy and require an innovative solution for managing their symptoms.",
-    "listHeading": "The people who benefit from TMS include:",
-    "listItems": [
-      "Individuals with treatment-resistant depression or other mood disorders.",
-      "Those experiencing anxiety or PTSD who are looking for non-invasive treatment options.",
-      "People with OCD who require targeted therapy to reduce intrusive thoughts and compulsive behaviors.",
-      "Individuals seeking an alternative or complementary approach to enhance their overall mental health."
-    ],
-    "listDescription": "TMS at Clear Path is a powerful tool for those ready to take control of their mental health journey, providing relief and stability in a supportive and professional environment.",
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(561) 220 6505",
-    "buttonTwo_Number": "+15612206505"
-  },
-  "testimonials": {
-    "list": [
-    {
-      "name": "Veronica L.",
-      "position": "Client from United States",
-      "text": "Clearpath gave me the strength to overcome my anxiety. The compassionate therapists provided unwavering support, and I've found a renewed sense of purpose andtranquility in my life.",
-      "image": "/imgs/testimonial_1.png"
-    },
-    {
-      "name": "Pushpender Singh",
-      "position": "Client from Florida",
-      "text": "Clearpath helped me regain control of my life. The personalized treatment plan and the caring staff made all the difference. I am now on a path to recovery and happiness.",
-      "image": "/imgs/testimonial_1.png"
-    }
-  ]},
-  
   "treatmentGrid": {
     "heading": "What is the Treatment Process During Transcranial Magnetic Stimulation at Clear Path?",
     "subheading": "Treatment Process",
@@ -305,120 +392,37 @@
       }
     ]
   },
+  "whoNeeds": {
+    "headingColored": "Transcranial Magnetic Stimulation",
+    "listItems": [
+      "Individuals with treatment-resistant depression or other mood disorders.",
+      "Those experiencing anxiety or PTSD who are looking for non-invasive treatment options.",
+      "People with OCD who require targeted therapy to reduce intrusive thoughts and compulsive behaviors.",
+      "Individuals seeking an alternative or complementary approach to enhance their overall mental health."
+    ],
+    "heading": "Who Needs",
+    "listHeading": "The people who benefit from TMS include:",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonLink": "/contact",
+    "buttonTwo_Number": "+15612206505",
+    "headingEnd": "(TMS)?",
+    "description": "Individuals who need TMS are those experiencing treatment-resistant mental health disorders or seeking a non-medication-based approach to recovery. This therapy is ideal for those who have struggled to find relief through medications or traditional psychotherapy and require an innovative solution for managing their symptoms.",
+    "listDescription": "TMS at Clear Path is a powerful tool for those ready to take control of their mental health journey, providing relief and stability in a supportive and professional environment.",
+    "buttonText": "Get Started"
+  },
   "whyChoose": {
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonLink": "/contact",
+    "buttonTwo_Number": "+15612206505",
+    "imageAlt": "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office",
+    "imageUrl": "/imgs/why_choose_us.png",
     "title": "Why Choose Transcranial Magnetic Stimulation (TMS)?",
     "content": {
       "paragraph1": "TMS offers a transformative option for individuals seeking relief from symptoms of depression and other mental health conditions. Unlike medications, which can have side effects or may not work for everyone, TMS directly stimulates the brain to encourage natural healing and improved functionality. This non-invasive treatment is well-tolerated, requires no anesthesia, and involves no downtime, making it a convenient and accessible solution for busy individuals.",
       "paragraph2": "For those with dual diagnoses or treatment-resistant conditions, TMS complements other therapies to create a comprehensive and effective pathway to recovery. By focusing on targeted areas of the brain, TMS fosters emotional stability, enhances daily functioning, and helps individuals regain control of their mental health."
     },
-    "imageUrl": "/imgs/why_choose_us.png",
-    "imageAlt": "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office",
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(561) 220 6505",
-    "buttonTwo_Number": "+15612206505"
-  },
-  "secondWhyChoose": {
-    "title": "What Are the Benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path?",
-    "content": {
-      "paragraph1": "The benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path include a personalized, non-invasive approach to treating mental health conditions. This innovative therapy targets specific areas of the brain to help regulate mood and reduce symptoms of disorders such as depression, anxiety, PTSD, and OCD. TMS is particularly beneficial for individuals who have not found success with traditional treatments, offering a safe and effective alternative without the need for medication.",
-      "paragraph2": "With care provided by experienced professionals, Clear Path ensures that each TMS treatment plan is tailored to the individual's needs. Regular monitoring and adjustments during the treatment process enhance effectiveness, while the in-person approach fosters a compassionate and supportive environment. By utilizing evidence-based therapies like TMS, Clear Path empowers patients to achieve lasting mental well-being and improved quality of life."
-    },
-    "imageUrl": "/imgs/program/tenth.png",
-    "imageAlt": "TMS therapy benefits illustration at Clear Path",
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(561) 220 6505",
-    "buttonTwo_Number": "+15612206505"
-  },
-"program12": {
-    "badgeText": "Steps to Choose a TMS Program",
-    "heading": "How to Choose a Transcranial Magnetic Stimulation Program?",
-    "description": "Choosing the right TMS program is important to ensure you receive effective care tailored to your specific needs. A systematic approach can help you identify the program that best aligns with your mental health goals.",
-    "mainImage": "/imgs/program/eleventh.png",
-    "mainImageAlt": "Woman relaxing in a comfortable chair with plants in background",
-    "steps": [
-      {
-        "stepNumber": "01",
-        "title": "Understand Your Health Needs",
-        "description": "Before selecting a TMS program, it's crucial to have a clear understanding of your mental health needs. This includes identifying any specific conditions you are dealing with, such as depression, anxiety, or PTSD, and considering how TMS might fit into your overall treatment plan."
-      },
-      {
-        "stepNumber": "02",
-        "title": "Consult with Healthcare Professionals",
-        "description": "Engage with mental health professionals who can provide insights into your specific needs and help determine if TMS is a suitable option."
-      },
-      {
-        "stepNumber": "03",
-        "title": "Research Available Programs",
-        "description": "Look into different TMS programs offered by various clinics and providers. Consider factors such as location, treatment approach, and patient reviews."
-      },
-      {
-        "stepNumber": "04",
-        "title": "Verify Program Credentials",
-        "description": "Ensure that the TMS program is accredited and that the providers are qualified to deliver this specialized treatment."
-      },
-      {
-        "stepNumber": "05",
-        "title": "Assess the Treatment Plan",
-        "description": "Review the proposed treatment plan to ensure it aligns with your needs and expectations."
-      },
-      {
-        "stepNumber": "06",
-        "title": "Evaluate Accessibility",
-        "description": "Consider the location of the TMS program and whether it is easily accessible for you."
-      },
-      {
-        "stepNumber": "07",
-        "title": "Check Financial and Insurance Coverage",
-        "description": "Review your insurance plan to understand coverage options for TMS and inquire about any out-of-pocket costs."
-      }
-    ]
-  },
-  "programTMS": {
-    "mainHeading": "What Conditions are ",
-    "coloredHeading": "Treated During TMS?",
-    "description": "The conditions treated with Transcranial Magnetic Stimulation (TMS) at Clear Path include a wide range of mental health disorders. Each condition is addressed using evidence-based therapies and innovative TMS technology, ensuring holistic care for individuals seeking to improve their mental well-being.",
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(561) 220 6505",
-    "buttonTwo_Number": "+15612206505",
-    "image": "/imgs/program/twelfth.png",
-    "imageAlt": "TMS Treatment Illustration",
-      "conditions": [
-      {
-        "title": "Depression",
-        "icon": "/imgs/program/Depression.svg",
-        "description": "TMS is particularly effective for individuals with treatment-resistant depression, providing a non-invasive alternative to medication."
-      },
-      {
-        "title": "Stress and Insomnia",
-        "icon": "/imgs/program/Stress and Insomnia.svg",
-        "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if TMS is the right treatment option for their needs."
-      },
-      {
-        "title": "Anxiety Disorders",
-        "icon": "/imgs/program/Anxiety Disorders.svg",
-        "description": "TMS can help alleviate symptoms of anxiety disorders, providing relief for those who have not responded well to traditional treatments."
-      },
-      {
-        "title": "Post-Traumatic Stress Disorder (PTSD)",
-        "icon": "/imgs/program/Post-Traumatic Stress Disorder (PTSD).svg",
-        "description": "TMS is used to treat PTSD by targeting brain areas involved in emotional regulation, helping to reduce intrusive thoughts and hyperarousal symptoms."
-      },
-      {
-        "title": "Obsessive-Compulsive Disorder (OCD)",
-        "icon": "/imgs/program/Obsessive-Compulsive Disorder (OCD).svg",
-        "description": "TMS can be effective in reducing the severity of OCD symptoms, particularly for those who have not found relief through other therapies."
-      },
-      {
-        "title": "Bipolar Disorder",
-        "icon": "/imgs/program/Bipolar Disorder.svg",
-        "description": "TMS is used as an adjunctive treatment for bipolar disorder, helping to stabilize mood and reduce depressive episodes."
-      }
-    ]
+    "buttonText": "Get Started"
   }
 }
