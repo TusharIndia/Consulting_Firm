@@ -250,7 +250,7 @@
     "buttonLink": "/contact",
     "buttonTwo_Number": "+15612206505",
     "imageAlt": "MM Treatment ",
-      "conditions": [
+    "conditions": [
       {
         "title": "Depression",
         "icon": "/imgs/program/Depression.svg",
@@ -427,7 +427,7 @@
       {
         "icon": "calendar",
         "title": "Booking and Initial Assessment",
-        "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if TMS is the right treatment option for their needs."
+        "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if medication management is the right treatment option for their needs."
       },
       {
         "icon": "personalized",
