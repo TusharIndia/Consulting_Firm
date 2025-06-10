@@ -522,6 +522,7 @@ const programCollection = {
     }),
     whyChoose: z.object({
       title: z.string(),
+      titleTwo: z.string(),
       content: z.object({
         paragraph1: z.string(),
         paragraph2: z.string().optional(),

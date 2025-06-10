@@ -555,6 +555,7 @@ export async function fetchSubProgramData(sub_page): Promise<Program> {
       },
       whyChoose: {
         title: programData.data.whyChoose.title,
+        titleTwo: programData.data.whyChoose.titleTwo,
         content: {
           paragraph1: programData.data.whyChoose.content.paragraph1,
           paragraph2: programData.data.whyChoose.content.paragraph2,

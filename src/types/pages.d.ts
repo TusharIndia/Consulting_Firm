@@ -451,6 +451,7 @@ export interface Program {
     };
     whyChoose: {
       title: string;
+      titleTwo: string;
       content: {
         paragraph1: string;
         paragraph2: string;

@@ -199,7 +199,7 @@
         "sublinks": [
           {
             "text": "Medication Management",
-            "link": "/program/medication_management"
+            "link": "/program/medication-management"
           },
           {
             "text": "Transcranial Magnetic Stimulation (TMS)",
@@ -213,23 +213,23 @@
         "sublinks2": [
           {
             "text": "Depression",
-            "link": "/treatment/depression"
+            "link": "/program/depression"
           },
           {
             "text": "Anxiety",
-            "link": "/treatment/anxiety"
+            "link": "/program/anxiety"
           },
           {
             "text": "PTSD",
-            "link": "/treatment/ptsd"
+            "link": "/program/ptsd"
           },
           {
             "text": "BiPolar",
-            "link": "/treatment/bipolar"
+            "link": "/program/bipolar"
           },
           {
             "text": "Stress",
-            "link": "/treatment/stress"
+            "link": "/program/stress"
           }
         ]
       },
