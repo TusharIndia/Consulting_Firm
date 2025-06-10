@@ -1,36 +1,59 @@
 {
-  "title": "Exclusive Bipolar Treatment at Clear Path",
-  "hero": {
-    "heading": "Advanced Psychiatric Care for Depression.",
-    "text": "At Clear Path, we offer premier depression treatment tailored to individuals seeking expert care for their mental well-being. Our comprehensive program is designed to provide relief from the burdens of depression and help you rediscover a fulfilling life.",
-    "buttonText": "Get Started",
-    "phoneQuestionText": "Have a question?",
-    "treatmentsLabel": "Treatments",
-    "buttonLink": "/contact",
-    "callButtonText": "Call (561) 220 6505",
-    "callButtonLink": "+15612206505"
-  },
-  "about": {
-    "headingOne": "What Is Depression Treatment? ",
-    "headingTwo": "",
-    "textOne": "Depression treatment is a structured approach to managing and relieving the symptoms of clinical depression, a mental health disorder marked by persistent sadness, hopelessness, and loss of interest in daily life. Effective treatment combines therapeutic strategies, medical support, and lifestyle interventions to address both emotional and physical symptoms, such as fatigue, sleep disturbances, and difficulty concentrating.",
-    "textTwo": "",
-    "images": {
-      "imageOne": "/imgs/program_about.png",
-      "imageTwo": ""
-    },
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(561) 220 6505",
-    "buttonTwo_Number": "+15612206505"
-  },
   "singleReview": {
     "heading": "Some next steps you can take",
     "description": "At Placeholder Company, our expert multidisciplinary team and high-end treatment facilities, coupled with our partnered luxury sober living experience, are meticulously designed to help patients overcome the challenges of addiction, trauma, and mental health issues.",
     "buttonText": "Meet Our Experts",
     "cardDetail": "At Placeholder Company, our expert multidisciplinary team and high-end treatment facilities, coupled with our partnered luxury sober living experience, are meticulously designed to help patients overcome the challenges of addiction, trauma, and mental health issues.",
     "cardTitle": "- Shannon B."
+  },
+  "program12": {
+    "badgeText": "Steps to Choose a TMS Program",
+    "heading": "Why Choose Clear Path for Depression Treatment?",
+    "description": "You should choose Clear Path for depression treatment because we offer premier treatment designed to provide comprehensive, individualized care for those seeking relief and recovery.",
+    "mainImage": "/imgs/program/eleventh.png",
+    "mainImageAlt": "Woman relaxing in a comfortable chair with plants in background",
+    "steps": [
+      {
+        "stepNumber": "01",
+        "title": "Medication Management",
+        "description": "Expert monitoring and adjustment of medications to ensure optimal treatment outcomes"
+      },
+      {
+        "stepNumber": "02",
+        "title": "Innovative Therapies",
+        "description": "Cutting-edge treatments like Transcranial Magnetic Stimulation (TMS) and Spravato (Esketamine) infusions for treatment-resistant depression."
+      },
+      {
+        "stepNumber": "03",
+        "title": "Dual Diagnosis Support:",
+        "description": "Comprehensive care for co-occurring mental health conditions alongside depression treatment."
+      },
+      {
+        "stepNumber": "04",
+        "title": "In-Person Appointments",
+        "description": "Clear Path emphasizes in-person care, distinguishing itself from telehealth-only providers."
+      },
+      {
+        "stepNumber": "05",
+        "title": "Board-Certified Staff",
+        "description": " Each location will feature a medical director, board-certified psychiatrists, and psychiatric PAs."
+      },
+      {
+        "stepNumber": "06",
+        "title": "Compassionate, Professional Approach",
+        "description": "The company aims to create a warm, welcoming environment that encourages individuals struggling with mental health to seek help without hesitation."
+      },
+      {
+        "stepNumber": "07",
+        "title": "Insurance Coverage",
+        "description": " Clear Path accepts a range of insurance plans, though coverage and rates will vary by location. For example, services in Los Angeles will likely be more expensive compared to other regions like Texas."
+      },
+      {
+        "stepNumber": "08",
+        "title": "Location-Based Pricing",
+        "description": "Each location will have distinct pricing models based on the local market and insurance contracts"
+      }
+    ]
   },
   "therapies": {
     "heading": "What Therapies are Included in the Residential Drug Treatment Program at The Placeholder Company ?",
@@ -58,6 +81,20 @@
       }
     ]
   },
+  "secondWhyChoose": {
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonLink": "/contact",
+    "buttonTwo_Number": "+15612206505",
+    "imageAlt": "TMS therapy benefits illustration at Clear Path",
+    "imageUrl": "/imgs/program/tenth.png",
+    "title": "What Are the Benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path?",
+    "content": {
+      "paragraph1": "The benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path include a personalized, non-invasive approach to treating mental health conditions. This innovative therapy targets specific areas of the brain to help regulate mood and reduce symptoms of disorders such as depression, anxiety, PTSD, and OCD. TMS is particularly beneficial for individuals who have not found success with traditional treatments, offering a safe and effective alternative without the need for medication.",
+      "paragraph2": "With care provided by experienced professionals, Clear Path ensures that each TMS treatment plan is tailored to the individual's needs. Regular monitoring and adjustments during the treatment process enhance effectiveness, while the in-person approach fosters a compassionate and supportive environment. By utilizing evidence-based therapies like TMS, Clear Path empowers patients to achieve lasting mental well-being and improved quality of life."
+    },
+    "buttonText": "Get Started"
+  },
   "otherTreatments": {
     "heading": "Other Treatments",
     "buttonText": "View all",
@@ -80,7 +117,32 @@
       }
     ]
   },
-  
+  "about": {
+    "headingOne": "What Is Depression Treatment? ",
+    "headingTwo": "",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonLink": "/contact",
+    "buttonTwo_Number": "+15612206505",
+    "images": {
+      "imageOne": "/imgs/program_about.png",
+      "imageTwo": ""
+    },
+    "textOne": "Depression treatment is a structured approach to managing and relieving the symptoms of clinical depression, a mental health disorder marked by persistent sadness, hopelessness, and loss of interest in daily life. Effective treatment combines therapeutic strategies, medical support, and lifestyle interventions to address both emotional and physical symptoms, such as fatigue, sleep disturbances, and difficulty concentrating.",
+    "textTwo": "",
+    "buttonText": "Get Started"
+  },
+  "cta": {
+    "heading": "Ready to Start Your Journey to Better Mental Health?",
+    "phoneTextOne": "Have a question?",
+    "buttonLink": "/contact",
+    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
+    "phoneTextTwo": "Call (561) 220 6505",
+    "altText": "Mental health support",
+    "phoneNumber": "+15612206505",
+    "image": "/imgs/mental_health_support.png",
+    "buttonText": "Schedule a Consultation"
+  },
   "pdf": {
     "heading": "Download our White Paper",
     "description": "Empower Your Journey, Embrace Your Potential!",
@@ -106,6 +168,50 @@
       {
         "title": " Benzodiazepines:",
         "details": "Benzodiazepine dependence requires a carefully monitored tapering process to safely reduce the dosage and prevent severe withdrawal symptoms. Therapeutic interventions often include behavioral therapies and counseling to address the psychological aspects of addiction. Medical intervention is critical, as outlined in research published in the Journal of Addiction Medicine, due to the potential severity of benzodiazepine withdrawal. At “Name of Treatment Center”, our treatment strategies are tailored to each substance. We combine medical interventions to manage physical dependence and withdrawal symptoms with comprehensive therapeutic approaches to tackle the underlying psychological and behavioral issues contributing to addiction."
+      }
+    ]
+  },
+  "disorders": {
+    "heading": "OUR INSIGHTS",
+    "headingTwo_Part_1": "Expert guidance for your ",
+    "headingTwo_Part_2": "mental health ",
+    "headingTwo_Part_3": "journey",
+    "disorders": [
+      {
+        "link": "/blog/managing-depression",
+        "title": "Effective Strategies for Managing Depression",
+        "image": "/imgs/Depression_Article.png"
+      },
+      {
+        "link": "/blog/managing-anxiety",
+        "title": "Effective Strategies for Managing Anxiety",
+        "image": "/imgs/Anxiety_Article.png"
+      },
+      {
+        "link": "/blog/managing-adhd",
+        "title": "Effective Strategies for Managing ADHD",
+        "image": "/imgs/ADHD_Article.png"
+      },
+      {
+        "link": "/blog/managing-ptsd",
+        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
+        "image": "/imgs/PTSD_Article.png"
+      }
+    ]
+  },
+  "testimonials": {
+    "list": [
+      {
+        "name": "Veronica L.",
+        "position": "Client from United States",
+        "text": "Clearpath gave me the strength to overcome my anxiety. The compassionate therapists provided unwavering support, and I've found a renewed sense of purpose andtranquility in my life.",
+        "image": "/imgs/testimonial_1.png"
+      },
+      {
+        "name": "Pushpender Singh",
+        "position": "Client from Florida",
+        "text": "Clearpath helped me regain control of my life. The personalized treatment plan and the caring staff made all the difference. I am now on a path to recovery and happiness.",
+        "image": "/imgs/testimonial_1.png"
       }
     ]
   },
@@ -147,12 +253,72 @@
       }
     ]
   },
+  "programTMS": {
+    "coloredHeading": "Treated During TMS?",
+    "mainHeading": "What Conditions are ",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonLink": "/contact",
+    "buttonTwo_Number": "+15612206505",
+    "imageAlt": "TMS Treatment Illustration",
+    "conditions": [
+      [
+        {
+          "title": "Depression",
+          "icon": "/imgs/program/Depression.svg",
+          "description": "TMS is particularly effective for individuals with treatment-resistant depression, providing a non-invasive alternative to medication."
+        },
+        {
+          "title": "Stress and Insomnia",
+          "icon": "/imgs/program/Stress and Insomnia.svg",
+          "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if TMS is the right treatment option for their needs."
+        }
+      ],
+      [
+        {
+          "title": "Anxiety Disorders",
+          "icon": "/imgs/program/Anxiety Disorders.svg",
+          "description": "TMS can help alleviate symptoms of anxiety disorders, providing relief for those who have not responded well to traditional treatments."
+        },
+        {
+          "title": "Post-Traumatic Stress Disorder (PTSD)",
+          "icon": "/imgs/program/Post-Traumatic Stress Disorder (PTSD).svg",
+          "description": "TMS is used to treat PTSD by targeting brain areas involved in emotional regulation, helping to reduce intrusive thoughts and hyperarousal symptoms."
+        }
+      ],
+      [
+        {
+          "title": "Obsessive-Compulsive Disorder (OCD)",
+          "icon": "/imgs/program/Obsessive-Compulsive Disorder (OCD).svg",
+          "description": "TMS can be effective in reducing the severity of OCD symptoms, particularly for those who have not found relief through other therapies."
+        },
+        {
+          "title": "Bipolar Disorder",
+          "icon": "/imgs/program/Bipolar Disorder.svg",
+          "description": "TMS is used as an adjunctive treatment for bipolar disorder, helping to stabilize mood and reduce depressive episodes."
+        }
+      ]
+    ],
+    "image": "/imgs/program/twelfth.png",
+    "description": "The conditions treated with Transcranial Magnetic Stimulation (TMS) at Clear Path include a wide range of mental health disorders. Each condition is addressed using evidence-based therapies and innovative TMS technology, ensuring holistic care for individuals seeking to improve their mental well-being.",
+    "buttonText": "Get Started"
+  },
   "amenities": {
     "img": "https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png",
     "heading": "What Amenities Does the Residential Treatment Provide at The Grove Estate?",
     "description": "The amenities that we provide at The Grove Estate are designed to create a comfortable, supportive, and therapeutic environment that fosters recovery. Our high-quality living spaces offer a serene and homely atmosphere where individuals can feel safe and relaxed. We also have dedicated therapeutic spaces for counseling and group sessions, ensuring privacy and comfort during treatment. Our recreational areas are equipped with facilities for physical activities, such as yoga, gym sessions, and outdoor sports, which are integral in promoting physical health and well-being. Additionally, our center includes amenities that support holistic therapies like art and music therapy, further enriching the treatment experience. These services benefit patients with substance abuse disorder by providing an enriching, positive environment that aids in mental and emotional healing. A well-structured and tranquil setting helps reduce stress and anxiety, which are common during detox and recovery. According to a study published in the Journal of Substance Abuse Treatment, patients in residential detox programs with access to stimulating and positive environments exhibit improved mental health outcomes and reduced relapse rates. By integrating comprehensive amenities into our residential treatment program, we ensure that our patients receive well-rounded care that supports all facets of their recovery journey."
   },
-
+  "title": "Exclusive Bipolar Treatment at Clear Path",
+  "hero": {
+    "heading": "Advanced Psychiatric Care for Depression.",
+    "text": "At Clear Path, we offer premier depression treatment tailored to individuals seeking expert care for their mental well-being. Our comprehensive program is designed to provide relief from the burdens of depression and help you rediscover a fulfilling life.",
+    "buttonText": "Get Started",
+    "phoneQuestionText": "Have a question?",
+    "treatmentsLabel": "Treatments",
+    "buttonLink": "/contact",
+    "callButtonText": "Call (561) 220 6505",
+    "callButtonLink": "+15612206505"
+  },
   "video": {
     "heading": "Why is Depression Treatment  ",
     "headingColored": "Important?",
@@ -203,82 +369,8 @@
       }
     ]
   },
-   "disorders": {
-    "heading": "OUR INSIGHTS",
-    "headingTwo_Part_1": "Expert guidance for your ",
-    "headingTwo_Part_2": "mental health ",
-    "headingTwo_Part_3": "journey",
-    "disorders": [
-      {
-        "link": "/blog/managing-depression",
-        "title": "Effective Strategies for Managing Depression",
-        "image": "/imgs/Depression_Article.png"
-      },
-      {
-        "link": "/blog/managing-anxiety",
-        "title": "Effective Strategies for Managing Anxiety",
-        "image": "/imgs/Anxiety_Article.png"
-      },
-      {
-        "link": "/blog/managing-adhd",
-        "title": "Effective Strategies for Managing ADHD",
-        "image": "/imgs/ADHD_Article.png"
-      },
-      {
-        "link": "/blog/managing-ptsd",
-        "title": "Person coping with PTSDEffective Strategies for Managing PTSD",
-        "image": "/imgs/PTSD_Article.png"
-      }
-    ]
-  },
-   "cta": {
-    "heading": "Ready to Start Your Journey to Better Mental Health?",
-    "text": "Take the first step towards healing. Our experienced team is here to support you with personalized, evidence-based treatment plans.",
-    "buttonText": "Schedule a Consultation",
-    "buttonLink": "/contact",
-    "image": "/imgs/mental_health_support.png",
-    "altText": "Mental health support",
-    "phoneTextOne": "Have a question?",
-    "phoneTextTwo": "Call (561) 220 6505",
-    "phoneNumber": "+15612206505"
-  },
-  "whoNeeds": {
-    "heading": "Who Needs ",
-    "headingColored": "Depression Treatment?",
-    "headingEnd": "",
-    "description": "The people who need depression treatment include a wide range of individuals suffering from different symptoms. At Clear Path, we provide personalized care and innovative therapies to support recovery and help individuals regain control of their lives.The following individuals benefit from depression treatment:",
-    "listHeading": "The people who benefit from TMS include:",
-    "listItems": [
-      "Those Experiencing Persistent Symptoms: Individuals with ongoing sadness, loss of interest, fatigue, or sleep issues that impact daily life.",
-      "People with Co-Occurring Conditions: Those managing depression alongside anxiety, PTSD, or substance use disorders requiring dual diagnosis care.",
-      "Individuals with Treatment-Resistant Depression: People who have not responded to traditional medications may benefit from advanced therapies like TMS or Spravato",
-      "Anyone Struggling to Function: If depression makes it difficult to maintain relationships, work, or personal well-being, professional treatment is necessary."
-    ],
-    "listDescription": "If you're feeling overwhelmed by depression and need real, in-person support, call Clear Path today to begin your recovery journey.",
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(561) 220 6505",
-    "buttonTwo_Number": "+15612206505"
-  },
-  "testimonials": {
-    "list": [
-    {
-      "name": "Veronica L.",
-      "position": "Client from United States",
-      "text": "Clearpath gave me the strength to overcome my anxiety. The compassionate therapists provided unwavering support, and I've found a renewed sense of purpose andtranquility in my life.",
-      "image": "/imgs/testimonial_1.png"
-    },
-    {
-      "name": "Pushpender Singh",
-      "position": "Client from Florida",
-      "text": "Clearpath helped me regain control of my life. The personalized treatment plan and the caring staff made all the difference. I am now on a path to recovery and happiness.",
-      "image": "/imgs/testimonial_1.png"
-    }
-  ]},
-  
   "treatmentGrid": {
-    "heading":" What to Expect During Depression Treatment at Clear Path?",
+    "heading": " What to Expect During Depression Treatment at Clear Path?",
     "subheading": "Treatment Process",
     "description": "At Clear Path, our comprehensive depression treatment program combines advanced medical interventions, and personalized care to help you regain control of your mental health. Each step of the treatment process is designed to address your unique needs",
     "featuredImage": "/imgs/tms_treatment_process.png",
@@ -305,131 +397,38 @@
       }
     ]
   },
+  "whoNeeds": {
+    "headingColored": "Depression Treatment?",
+    "listItems": [
+      "Those Experiencing Persistent Symptoms: Individuals with ongoing sadness, loss of interest, fatigue, or sleep issues that impact daily life.",
+      "People with Co-Occurring Conditions: Those managing depression alongside anxiety, PTSD, or substance use disorders requiring dual diagnosis care.",
+      "Individuals with Treatment-Resistant Depression: People who have not responded to traditional medications may benefit from advanced therapies like TMS or Spravato",
+      "Anyone Struggling to Function: If depression makes it difficult to maintain relationships, work, or personal well-being, professional treatment is necessary."
+    ],
+    "heading": "Who Needs ",
+    "listHeading": "The people who benefit from TMS include:",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonLink": "/contact",
+    "buttonTwo_Number": "+15612206505",
+    "headingEnd": "",
+    "description": "The people who need depression treatment include a wide range of individuals suffering from different symptoms. At Clear Path, we provide personalized care and innovative therapies to support recovery and help individuals regain control of their lives.The following individuals benefit from depression treatment:",
+    "listDescription": "If you're feeling overwhelmed by depression and need real, in-person support, call Clear Path today to begin your recovery journey.",
+    "buttonText": "Get Started"
+  },
   "whyChoose": {
-    "title": "What is the Difference Between Depression and Anxiety Treatment?",
+    "buttonTwo_Part_1": "Have a question?",
+    "buttonTwo_Part_2": "(561) 220 6505",
+    "buttonLink": "/contact",
+    "buttonTwo_Number": "+15612206505",
+    "imageAlt": "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office",
     "titleTwo": "",
+    "imageUrl": "/imgs/why_choose_us.png",
+    "title": "What is the Difference Between Depression and Anxiety Treatment?",
     "content": {
       "paragraph1": "The difference between depression and anxiety treatment is that depression treatment focuses on improving mood and addressing hopelessness, while anxiety treatment targets excessive worry and physical symptoms of fear. Depression treatment addresses persistent sadness, fatigue, and hopelessness through medications like SSRIs or SNRIs to stabilize mood. For treatment-resistant cases, advanced options like Transcranial Magnetic Stimulation (TMS) or Spravato (Esketamine) are used",
       "paragraph2": "Anxiety treatment targets excessive worry, panic, and physical symptoms with therapies like CBT and medications, including SSRIs, which regulate serotonin. Short-term use of benzodiazepines may be prescribed for acute episodes. Both treatments aim to relieve symptoms and improve daily functioning."
     },
-    "imageUrl": "/imgs/why_choose_us.png",
-    "imageAlt": "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office",
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(561) 220 6505",
-    "buttonTwo_Number": "+15612206505"
-  },
-  "secondWhyChoose": {
-    "title": "What Are the Benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path?",
-    "content": {
-      "paragraph1": "The benefits of Transcranial Magnetic Stimulation (TMS) at Clear Path include a personalized, non-invasive approach to treating mental health conditions. This innovative therapy targets specific areas of the brain to help regulate mood and reduce symptoms of disorders such as depression, anxiety, PTSD, and OCD. TMS is particularly beneficial for individuals who have not found success with traditional treatments, offering a safe and effective alternative without the need for medication.",
-      "paragraph2": "With care provided by experienced professionals, Clear Path ensures that each TMS treatment plan is tailored to the individual's needs. Regular monitoring and adjustments during the treatment process enhance effectiveness, while the in-person approach fosters a compassionate and supportive environment. By utilizing evidence-based therapies like TMS, Clear Path empowers patients to achieve lasting mental well-being and improved quality of life."
-    },
-    "imageUrl": "/imgs/program/tenth.png",
-    "imageAlt": "TMS therapy benefits illustration at Clear Path",
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(561) 220 6505",
-    "buttonTwo_Number": "+15612206505"
-  },
-  "program12": {
-    "badgeText": "Steps to Choose a TMS Program",
-    "heading": "Why Choose Clear Path for Depression Treatment?",
-    "description": "You should choose Clear Path for depression treatment because we offer premier treatment designed to provide comprehensive, individualized care for those seeking relief and recovery.",
-    "mainImage": "/imgs/program/eleventh.png",
-    "mainImageAlt": "Woman relaxing in a comfortable chair with plants in background",
-    "steps": [
-      {
-        "stepNumber": "01",
-        "title": "Medication Management",
-        "description": "Expert monitoring and adjustment of medications to ensure optimal treatment outcomes."
-      },
-      {
-        "stepNumber": "02",
-        "title": "Innovative Therapies",
-        "description": "Cutting-edge treatments like Transcranial Magnetic Stimulation (TMS) and Spravato (Esketamine) infusions for treatment-resistant depression."
-      },
-      {
-        "stepNumber": "03",
-        "title": "Dual Diagnosis Support:",
-        "description": "Comprehensive care for co-occurring mental health conditions alongside depression treatment."
-      },
-      {
-        "stepNumber": "04",
-        "title": "In-Person Appointments",
-        "description": "Clear Path emphasizes in-person care, distinguishing itself from telehealth-only providers."
-      },
-      {
-        "stepNumber": "05",
-        "title": "Board-Certified Staff",
-        "description": " Each location will feature a medical director, board-certified psychiatrists, and psychiatric PAs."
-      },
-      {
-        "stepNumber": "06",
-        "title": "Compassionate, Professional Approach",
-        "description": "The company aims to create a warm, welcoming environment that encourages individuals struggling with mental health to seek help without hesitation."
-      },
-      {
-        "stepNumber": "07",
-        "title": "Insurance Coverage",
-        "description": " Clear Path accepts a range of insurance plans, though coverage and rates will vary by location. For example, services in Los Angeles will likely be more expensive compared to other regions like Texas."
-      },  {
-        "stepNumber": "08",
-        "title": "Location-Based Pricing",
-        "description": "Each location will have distinct pricing models based on the local market and insurance contracts"
-      }
-    ]
-  },
-  "programTMS": {
-    "mainHeading": "What Conditions are ",
-    "coloredHeading": "Treated During TMS?",
-    "description": "The conditions treated with Transcranial Magnetic Stimulation (TMS) at Clear Path include a wide range of mental health disorders. Each condition is addressed using evidence-based therapies and innovative TMS technology, ensuring holistic care for individuals seeking to improve their mental well-being.",
-    "buttonText": "Get Started",
-    "buttonLink": "/contact",
-    "buttonTwo_Part_1": "Have a question?",
-    "buttonTwo_Part_2": "(561) 220 6505",
-    "buttonTwo_Number": "+15612206505",
-    "image": "/imgs/program/twelfth.png",
-    "imageAlt": "TMS Treatment Illustration",
-    "conditions": [
-      [
-        {
-          "title": "Depression",
-          "icon": "/imgs/program/Depression.svg",
-          "description": "TMS is particularly effective for individuals with treatment-resistant depression, providing a non-invasive alternative to medication."
-        },
-        {
-          "title": "Stress and Insomnia",
-          "icon": "/imgs/program/Stress and Insomnia.svg",
-          "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if TMS is the right treatment option for their needs."
-        }
-      ],
-      [
-        {
-          "title": "Anxiety Disorders",
-          "icon": "/imgs/program/Anxiety Disorders.svg",
-          "description": "TMS can help alleviate symptoms of anxiety disorders, providing relief for those who have not responded well to traditional treatments."
-        },
-        {
-          "title": "Post-Traumatic Stress Disorder (PTSD)",
-          "icon": "/imgs/program/Post-Traumatic Stress Disorder (PTSD).svg",
-          "description": "TMS is used to treat PTSD by targeting brain areas involved in emotional regulation, helping to reduce intrusive thoughts and hyperarousal symptoms."
-        }
-      ],
-      [
-        {
-          "title": "Obsessive-Compulsive Disorder (OCD)",
-          "icon": "/imgs/program/Obsessive-Compulsive Disorder (OCD).svg",
-          "description": "TMS can be effective in reducing the severity of OCD symptoms, particularly for those who have not found relief through other therapies."
-        },
-        {
-          "title": "Bipolar Disorder",
-          "icon": "/imgs/program/Bipolar Disorder.svg",
-          "description": "TMS is used as an adjunctive treatment for bipolar disorder, helping to stabilize mood and reduce depressive episodes."
-        }
-      ]
-    ]
+    "buttonText": "Get Started"
   }
 }
