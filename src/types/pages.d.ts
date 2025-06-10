@@ -516,12 +516,9 @@ export interface Program {
       image: string;
       imageAlt: string;
       conditions: Array<{
-        rowId: string;
-        items: Array<{
-          title: string;
-          icon: string;
-          description: string;
-        }>;
+        title: string;
+        icon: string;
+        description: string;
       }>;
     };
       

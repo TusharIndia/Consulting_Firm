@@ -597,11 +597,11 @@ const programCollection = {
       buttonTwo_Number: z.string(),
       image: z.string(),
       imageAlt: z.string(),
-      conditions: z.array(z.array(z.object({
+      conditions: z.array(z.object({
         title: z.string(),
         icon: z.string(),
         description: z.string(),
-      }))),
+      })),
   })}),
 };
 

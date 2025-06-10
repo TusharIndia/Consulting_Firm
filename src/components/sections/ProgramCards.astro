@@ -1,12 +1,19 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 const { heading, text, programs } = Astro.props.Content;
 ---
 
-<section class="rounded-none mx-auto my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl">
-  <div class="flex overflow-hidden flex-col px-20 py-14 w-full rounded-3xl max-md:px-5 max-md:max-w-full mobile-container" style="background: linear-gradient(270deg, #F6F2EE 0%, #F3EFEC 100%);">
+<section
+  class="rounded-none mx-auto my-10 max-w-[1320px] max-md:my-10 max-md:rounded-3xl"
+>
+  <div
+    class="flex overflow-hidden flex-col px-20 py-14 w-full rounded-3xl max-md:px-5 max-md:max-w-full mobile-container"
+    style="background: linear-gradient(270deg, #F6F2EE 0%, #F3EFEC 100%);"
+  >
     <!-- Background Wave SVG -->
-    <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded-3xl z-[10]">
+    <div
+      class="absolute w-full h-full top-0 left-0 overflow-hidden rounded-3xl z-[10]"
+    >
       <svg
         viewBox="0 0 1320 261"
         fill="none"
@@ -18,32 +25,43 @@ const { heading, text, programs } = Astro.props.Content;
           d="M-29 159.359C4 128.359 105.5 73.3593 167 103.359C225.389 131.842 318.785 141.851 362.533 96.4732C391.024 66.9222 361.543 17.1347 320.893 22.8408C283.379 28.1068 249.542 59.3098 253.5 149.859C259.9 296.259 1031.5 218.026 1354.5 211.359"
           stroke="white"
           stroke-opacity="0.46"
-          stroke-width="44"
-        />
+          stroke-width="44"></path>
       </svg>
     </div>
 
     <!-- Services Badge -->
     <header class="relative z-20">
-      <span class="self-start px-10 py-3 text-base text-white bg-purple-900 rounded-[50px] max-md:px-5 mobile-badge">
+      <span
+        class="self-start px-10 py-3 text-base text-white bg-purple-900 rounded-[50px] max-md:px-5 mobile-badge"
+      >
         # Services
       </span>
     </header>
 
     <!-- Main Content Header -->
-    <div class="mt-20 max-md:mt-10 max-md:max-w-full mobile-header z-20 relative">
+    <div
+      class="mt-20 max-md:mt-10 max-md:max-w-full mobile-header z-20 relative"
+    >
       <div class="flex gap-5 max-md:flex-col mobile-content-wrapper">
         <div class="w-[39%] max-md:ml-0 max-md:w-full mobile-text-section">
-          <div class="grow mt-16 text-neutral-800 max-md:mt-10 max-md:max-w-full mobile-text-content">
-            <h2 class="text-5xl font-medium leading-[72px] max-md:text-4xl max-md:leading-[64px] mobile-heading">
+          <div
+            class="grow mt-16 text-neutral-800 max-md:mt-10 max-md:max-w-full mobile-text-content"
+          >
+            <h2
+              class="text-5xl font-medium leading-[72px] max-md:text-4xl max-md:leading-[64px] mobile-heading"
+            >
               {heading}
             </h2>
-            <p class="mt-4 text-lg leading-9 max-md:max-w-full mobile-description">
+            <p
+              class="mt-4 text-lg leading-9 max-md:max-w-full mobile-description"
+            >
               {text}
             </p>
           </div>
         </div>
-        <div class="ml-5 w-[61%] max-md:ml-0 max-md:w-full mobile-image-section">
+        <div
+          class="ml-5 w-[61%] max-md:ml-0 max-md:w-full mobile-image-section"
+        >
           <Image
             src="/imgs/condition_retreated_img.png"
             alt="Mental health conditions illustration"
@@ -56,49 +74,56 @@ const { heading, text, programs } = Astro.props.Content;
     </div>
 
     <!-- Conditions Grid Dynamic Rendering -->
-    {(() => {
-      const rows = [];
-      for (let i = 0; i < programs.length; i += 3) {
-        rows.push(programs.slice(i, i + 3));
-      }
-      return rows.map((row, rowIndex) => (
-      // ...existing code...
-<div class={`flex flex-wrap gap-6 items-center ${rowIndex === 0 ? 'mt-14' : 'mt-7'} text-2xl font-medium leading-loose whitespace-nowrap text-neutral-800 mobile-programs-row`}>
-  {row.map(program => (
-    <a href={program.link || '#'} class="flex-1 shrink self-stretch my-auto basis-0 min-w-60 cursor-pointer mobile-program-card relative z-30 block">
-      <div class="flex gap-10 justify-between items-center w-full mobile-program-content">
-        <div class="flex gap-3 items-center self-stretch my-auto mobile-program-info">
-          {program.image && (
-          <Image
-            src={program.image}
-            alt={`${program.title} icon`}
-            class="object-contain shrink-0 self-stretch my-auto w-10 aspect-square mobile-program-icon pointer-events-none"
-            width={40}
-            height={40}
-          />
-          )}
-          <h3 class="self-stretch my-auto mobile-program-title pointer-events-none">{program.title}</h3>
-          {!program.image && (
-            <div class="w-10 aspect-square"></div>
-          )}
-        </div>
-        <div class="cursor-pointer mobile-arrow pointer-events-none">
-          <Image
-            src="/imgs/expand_arrow.svg"
-            alt="Expand arrow"
-            class="object-contain shrink-0 self-stretch my-auto aspect-[5.13] w-[41px] mobile-arrow-icon pointer-events-none"
-            width={41}
-            height={8}
-          />
-        </div>
-      </div>
-      <hr class="mt-4 w-full min-h-px border-black mobile-divider pointer-events-none" />
-    </a>
-  ))}
-</div>
-// ...existing code...
-      ));
-    })()}
+    {
+      (() => {
+        const rows = [];
+        for (let i = 0; i < programs.length; i += 3) {
+          rows.push(programs.slice(i, i + 3));
+        }
+        return rows.map((row, rowIndex) => (
+          // ...existing code...
+          <div
+            class={`flex flex-wrap gap-6 items-center ${rowIndex === 0 ? "mt-14" : "mt-7"} text-2xl font-medium leading-loose whitespace-nowrap text-neutral-800 mobile-programs-row`}
+          >
+            {row.map((program) => (
+              <a
+                href={program.link || "#"}
+                class="flex-1 shrink self-stretch my-auto basis-0 min-w-60 cursor-pointer mobile-program-card relative z-30 block"
+              >
+                <div class="flex gap-10 justify-between items-center w-full mobile-program-content">
+                  <div class="flex gap-3 items-center self-stretch my-auto mobile-program-info">
+                    {program.image && (
+                      <Image
+                        src={program.image}
+                        alt={`${program.title} icon`}
+                        class="object-contain shrink-0 self-stretch my-auto w-10 aspect-square mobile-program-icon pointer-events-none"
+                        width={40}
+                        height={40}
+                      />
+                    )}
+                    <h3 class="self-stretch my-auto mobile-program-title pointer-events-none">
+                      {program.title}
+                    </h3>
+                    {!program.image && <div class="w-10 aspect-square" />}
+                  </div>
+                  <div class="cursor-pointer mobile-arrow pointer-events-none">
+                    <Image
+                      src="/imgs/expand_arrow.svg"
+                      alt="Expand arrow"
+                      class="object-contain shrink-0 self-stretch my-auto aspect-[5.13] w-[41px] mobile-arrow-icon pointer-events-none"
+                      width={41}
+                      height={8}
+                    />
+                  </div>
+                </div>
+                <hr class="mt-4 w-full min-h-px border-black mobile-divider pointer-events-none" />
+              </a>
+            ))}
+          </div>
+          // ...existing code...
+        ));
+      })()
+    }
   </div>
 </section>
 
@@ -106,60 +131,60 @@ const { heading, text, programs } = Astro.props.Content;
   .mobile-container {
     position: relative;
   }
-  
+
   @media (max-width: 900px) {
     .mobile-container {
       padding: 2rem 1rem !important;
     }
-    
+
     .mobile-badge {
       padding: 0.75rem 2rem !important;
       font-size: 0.875rem !important;
     }
-    
+
     .mobile-header {
       margin-top: 2rem !important;
     }
-    
+
     .mobile-content-wrapper {
       flex-direction: column !important;
       gap: 2rem !important;
     }
-    
+
     .mobile-text-section {
       width: 100% !important;
       margin-left: 0 !important;
     }
-    
+
     .mobile-text-content {
       margin-top: 0 !important;
     }
-    
+
     .mobile-heading {
       font-size: 2rem !important;
       line-height: 2.5rem !important;
     }
-    
+
     .mobile-description {
       font-size: 1rem !important;
       line-height: 1.5rem !important;
       margin-top: 1rem !important;
     }
-    
+
     .mobile-image-section {
       width: 100% !important;
       margin-left: 0 !important;
     }
-    
+
     .mobile-hero-image {
       margin-top: 1rem !important;
       aspect-ratio: 16/9 !important;
     }
-    
+
     figure {
       height: 280px !important;
     }
-    
+
     .mobile-programs-row {
       flex-direction: column !important;
       gap: 1rem !important;
@@ -168,53 +193,53 @@ const { heading, text, programs } = Astro.props.Content;
       position: relative;
       z-index: 20;
     }
-    
+
     .mobile-programs-row:first-of-type {
       margin-top: 3rem !important;
     }
-    
+
     .mobile-program-card {
       flex: none !important;
       min-width: auto !important;
       width: 100% !important;
     }
-    
+
     .mobile-program-content {
       gap: 1rem !important;
       padding: 1rem 0 !important;
     }
-    
+
     .mobile-program-info {
       gap: 0.75rem !important;
     }
-    
+
     .mobile-program-title {
       font-size: 1.25rem !important;
       line-height: 1.75rem !important;
       white-space: normal !important;
     }
-    
+
     .mobile-program-icon {
       width: 2rem !important;
       height: 2rem !important;
     }
-    
+
     .mobile-arrow-icon {
       width: 2rem !important;
       height: auto !important;
     }
-    
+
     .mobile-divider {
       margin-top: 1rem !important;
     }
   }
-  
+
   @media (max-width: 767px) {
     figure {
       height: 240px !important;
     }
   }
-  
+
   @media (max-width: 480px) {
     figure {
       height: 200px !important;
