@@ -21,19 +21,19 @@ export async function fetchBlogData(): Promise<Blog[]> {
   const posts = await getCollection("blog");
 
   return posts.map((post) => ({
-    id: post.id,
-    slug: post.slug,
-    body: post.body,
-    collection: post.collection,
+    id: post.id || " ",
+    slug: post.slug|| " ",
+    body: post.body|| " ",
+    collection: post.collection|| " ",
     render: post.render,
     data: {
-      title: post.data.title,
-      description: post.data.description,
-      featuredImg: post.data.featuredImg,
-      date: post.data.date,
-      author: post.data.author,
-      tags: post.data.tags,
-      readingTime: post.data.readingTime,
+      title: post.data.title|| " ",
+      description: post.data.description|| " ",
+      featuredImg: post.data.featuredImg|| " ",
+      date: post.data.date|| " ",
+      author: post.data.author|| " ",
+      tags: post.data.tags|| " ",
+      readingTime: post.data.readingTime|| " ",
     },
   }));
 }
@@ -42,35 +42,35 @@ export async function fetchGeneralData(): Promise<General> {
   const [general] = await getCollection("general");
 
   return {
-    companyName: general.data.companyName,
-    logo: general.data.logo,
-    city: general.data.city,
-    state: general.data.state,
-    address: general.data.address,
-    phoneNumber: general.data.phoneNumber,
-    phoneNumber2: general.data.phoneNumber2,
-    email: general.data.Email,
+    companyName: general.data.companyName|| " ",
+    logo: general.data.logo|| " ",
+    city: general.data.city|| " ",
+    state: general.data.state|| " ",
+    address: general.data.address|| " ",
+    phoneNumber: general.data.phoneNumber|| " ",
+    phoneNumber2: general.data.phoneNumber2|| " ",
+    email: general.data.Email|| " ",
     analytics: {
-      gtmId: general.data.analytics.gtmId,
+      gtmId: general.data.analytics.gtmId || " ",
     },
     footer: {
-      description: general.data.footer.description,
+      description: general.data.footer.description|| " ",
       navColumn1: {
         links: general.data.footer.navColumn1.links.map(link => ({
-          text: link.text,
-          url: link.url
+          text: link.text|| " ",
+          url: link.url|| " "
         }))
       },
       navColumn2: {
         links: general.data.footer.navColumn2.links.map(link => ({
-          text: link.text,
-          url: link.url
+          text: link.text|| " ",
+          url: link.url|| " "
         }))
       },
-      emailPlaceholder: general.data.footer.emailPlaceholder,
-      signUpButtonText: general.data.footer.signUpButtonText,
-      copyrightText: general.data.footer.copyrightText,
-      backToTopText: general.data.footer.backToTopText
+      emailPlaceholder: general.data.footer.emailPlaceholder|| " ",
+      signUpButtonText: general.data.footer.signUpButtonText|| " ",
+      copyrightText: general.data.footer.copyrightText|| " ",
+      backToTopText: general.data.footer.backToTopText|| " "
     }
   };
 }
@@ -81,63 +81,63 @@ export async function fetchAboutData(): Promise<About> {
   return {
     data: {
       hero: {
-        heading: about.data.hero.heading,
-        text: about.data.hero.text,
+        heading: about.data.hero.heading|| " ",
+        text: about.data.hero.text|| " ",
       },
       about: {
-        headingOne: about.data.about.headingOne,
-        textOne: about.data.about.textOne,
-        headingTwo: about.data.about.headingTwo,
-        textTwo: about.data.about.textTwo,
+        headingOne: about.data.about.headingOne|| " ",
+        textOne: about.data.about.textOne|| " ",
+        headingTwo: about.data.about.headingTwo|| " ",
+        textTwo: about.data.about.textTwo|| " ",
         images: {
-          imageOne: about.data.about.images.imageOne,
-          imageTwo: about.data.about.images.imageTwo,
+          imageOne: about.data.about.images.imageOne|| " ",
+          imageTwo: about.data.about.images.imageTwo|| " ",
         },
       },
       coreValues: {
-        heading: about.data.coreValues.heading,
-        text: about.data.coreValues.text,
+        heading: about.data.coreValues.heading|| " ",
+        text: about.data.coreValues.text|| " ",
         list: about.data.coreValues.list.map((item) => ({
-          title: item.title,
-          description: item.description,
+          title: item.title|| " ",
+          description: item.description|| " ",
         })),
-        buttonText: about.data.coreValues.buttonText,
+        buttonText: about.data.coreValues.buttonText|| " ",
       },
       facility: {
-        heading: about.data.facility.heading,
-        text: about.data.facility.text,
-        buttonText: about.data.facility.buttonText,
+        heading: about.data.facility.heading|| " ",
+        text: about.data.facility.text|| " ",
+        buttonText: about.data.facility.buttonText|| " ",
         images: {
-          imageOne: about.data.facility.images.imageOne,
-          imageTwo: about.data.facility.images.imageTwo,
+          imageOne: about.data.facility.images.imageOne|| " ",
+          imageTwo: about.data.facility.images.imageTwo|| " ",
         },
       },
       approach: {
-        headingOne: about.data.approach.headingOne,
-        textOne: about.data.approach.textOne,
-        headingTwo: about.data.approach.headingTwo,
-        textTwo: about.data.approach.textTwo,
+        headingOne: about.data.approach.headingOne|| " ",
+        textOne: about.data.approach.textOne || " ",
+        headingTwo: about.data.approach.headingTwo|| " ",
+        textTwo: about.data.approach.textTwo|| " ",
         images: {
-          imageOne: about.data.approach.images.imageOne,
-          imageTwo: about.data.approach.images.imageTwo,
+          imageOne: about.data.approach.images.imageOne|| " ",
+          imageTwo: about.data.approach.images.imageTwo|| " ",
         },
       },
       team: {
-        heading: about.data.team.heading,
-        buttonText: about.data.team.buttonText,
-        description: about.data.team.description,
+        heading: about.data.team.heading|| " ",
+        buttonText: about.data.team.buttonText|| " ",
+        description: about.data.team.description|| " ",
         team: about.data.team.team.map((member) => ({
-          name: member.name,
-          designation: member.designation,
-          image: member.image,
+          name: member.name|| " ",
+          designation: member.designation|| " ",
+          image: member.image|| " ",
         })),
       },
       faq: {
-        heading: about.data.faq.heading,
-        subheading: about.data.faq.subheading,
+        heading: about.data.faq.heading|| " ",
+        subheading: about.data.faq.subheading|| " ",
         faq: about.data.faq.faq.map((q) => ({
-          title: q.title,
-          details: q.details,
+          title: q.title|| " ",
+          details: q.details|| " ",
         })),
       },
     },
@@ -153,31 +153,31 @@ export async function fetchContactData(): Promise<Contact> {
   return {
     data: {
       hero: {
-        heading: contact.data.hero.heading,
-        text: contact.data.hero.text,
-        buttonText: contact.data.hero.buttonText,
-        buttonLink: contact.data.hero.buttonLink,
-        phoneQuestionText: contact.data.hero.phoneQuestionText,
-        treatmentsLabel: contact.data.hero.treatmentsLabel,
-        callButtonText: contact.data.hero.callButtonText,
-        callButtonLink: contact.data.hero.callButtonLink,
-       
+        heading: contact.data.hero.heading|| " ",
+        text: contact.data.hero.text|| " ",
+        buttonText: contact.data.hero.buttonText|| " ",
+        buttonLink: contact.data.hero.buttonLink|| " ",
+        phoneQuestionText: contact.data.hero.phoneQuestionText|| " ",
+        treatmentsLabel: contact.data.hero.treatmentsLabel|| " ",
+        callButtonText: contact.data.hero.callButtonText|| " ",
+        callButtonLink: contact.data.hero.callButtonLink|| " ",
+
       },
       
      
       contactDetails: {
-    
-        address: contact.data.contactDetails.address,
-        email: contact.data.contactDetails.email,
-        phone: contact.data.contactDetails.phone,
-        formHeading: contact.data.contactDetails.formHeading,
-        emergencyHeading: contact.data.contactDetails.emergencyHeading,
-        emergencyText: contact.data.contactDetails.emergencyText,
-        supportHeading: contact.data.contactDetails.supportHeading,
+
+        address: contact.data.contactDetails.address|| " ",
+        email: contact.data.contactDetails.email|| " ",
+        phone: contact.data.contactDetails.phone|| " ",
+        formHeading: contact.data.contactDetails.formHeading|| " ",
+        emergencyHeading: contact.data.contactDetails.emergencyHeading|| " ",
+        emergencyText: contact.data.contactDetails.emergencyText|| " ",
+        supportHeading: contact.data.contactDetails.supportHeading|| " ",
         businessHours: {
-          heading: contact.data.contactDetails.businessHours.heading,
-          hours: contact.data.contactDetails.businessHours.hours,
-          weekend: contact.data.contactDetails.businessHours.weekend,
+          heading: contact.data.contactDetails.businessHours.heading|| " ",
+          hours: contact.data.contactDetails.businessHours.hours|| " ",
+          weekend: contact.data.contactDetails.businessHours.weekend|| " ",
         },
       },
     },
@@ -190,9 +190,9 @@ export async function fetchHomeData(): Promise<Home> {
   return {
     data: {
       hero: {
-        backgroundImage: home.data.hero.backgroundImage,
+        backgroundImage: home.data.hero.backgroundImage ,
         backgroundImageAlt: home.data.hero.backgroundImageAlt,
-        logo: home.data.hero.logo,
+        logo: home.data.hero.logo ,
         buttonText: home.data.hero.buttonText,
         textBox1: home.data.hero.textBox1,
         textBox2_Part_1: home.data.hero.textBox2_Part_1,
@@ -1137,7 +1137,7 @@ export async function fetchSubTreatmentData(sub_page): Promise<Program> {
        
       },
       about: {
-        headingOne: programData.data.about.headingOne,
+        headingOne: programData.data.about.headingOne ,
         headingTwo: programData.data.about.headingTwo,
         textOne: programData.data.about.textOne,
         textTwo: programData.data.about.textTwo,

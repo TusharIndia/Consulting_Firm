@@ -13,14 +13,14 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Slug", name: "slug", widget: "string"}
-      - { label: "Title", name: "title", widget: "string" , required: false }
-      - { label: "Description", name: "description", widget: "text" , required: false  }
-      - { label: "Featured Image", name: "featuredImg", widget: "image" , required: false }
-      - { label: "Date", name: "date", widget: "datetime", required: false }
-      - { label: "Author", name: "author", widget: "string", required: false }
-      - { label: "Tags", name: "tags", widget: "list", field: { widget: "string", name: "tag", required: false }, required: false }
-      - { label: "Reading Time", name: "readingTime", widget: "string", required: false }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text"  }
+      - { label: "Featured Image", name: "featuredImg", widget: "image" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", field: { widget: "string", name: "tag" } }
+      - { label: "Reading Time", name: "readingTime", widget: "string"}
+      - { label: "Body", name: "body", widget: "markdown" }
   
   - name: "treatments"
     label: "Treatments"
