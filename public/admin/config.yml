@@ -297,9 +297,11 @@ collections:
             widget: "list"
             required: false
             fields:
-              - label: "Condition Group"
-                name: "group"
+              - { label: "Row ID", name: "rowId", widget: "string", required: false }
+              - label: "Items"
+                name: "items"
                 widget: "list"
+                required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Icon", name: "icon", widget: "image", required: false }

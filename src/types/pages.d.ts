@@ -515,11 +515,14 @@ export interface Program {
       buttonTwo_Number: string;
       image: string;
       imageAlt: string;
-      conditions: Array<Array<{
-        title: string;
-        icon: string;
-        description: string;
-      }>>;
+      conditions: Array<{
+        rowId: string;
+        items: Array<{
+          title: string;
+          icon: string;
+          description: string;
+        }>;
+      }>;
     };
       
   }; 

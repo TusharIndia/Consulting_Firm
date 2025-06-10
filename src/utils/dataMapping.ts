@@ -619,13 +619,14 @@ export async function fetchSubProgramData(sub_page): Promise<Program> {
         buttonTwo_Number: programData.data.programTMS.buttonTwo_Number,
         image: programData.data.programTMS.image,
         imageAlt: programData.data.programTMS.imageAlt,
-        conditions: programData.data.programTMS.conditions.map((row: any) => 
-          row.map((condition: any) => ({
+        conditions: programData.data.programTMS.conditions.map((row: any) => ({
+          rowId: row.rowId,
+          items: row.items.map((condition: any) => ({
             title: condition.title,
             icon: condition.icon,
             description: condition.description
           }))
-        ),
+        })),
       },
     }
   };
