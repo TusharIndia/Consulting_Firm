@@ -10,8 +10,9 @@ collections:
     label: "Blog"
     folder: "src/content/blog"
     create: true
-    slug: "{{filename}}"
+    slug: "{{slug}}"
     fields:
+      - { label: "Slug", name: "slug", widget: "string"}
       - { label: "Title", name: "title", widget: "string" , required: false }
       - { label: "Description", name: "description", widget: "text" , required: false  }
       - { label: "Featured Image", name: "featuredImg", widget: "image" , required: false }
@@ -249,8 +250,9 @@ collections:
     create: true
     format: "json"  # Add this line
     extension: "json"
-    slug: "{{filename}}"
+    slug: "{{slug}}"
     fields:
+      - { label: "Slug", name: "slug", widget: "string"}
       - { label: "Title", name: "title", widget: "string", required: false }
       - label: "Hero"
         name: "hero"
