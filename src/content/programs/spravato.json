@@ -256,7 +256,7 @@
     "buttonLink": "/contact",
     "buttonTwo_Number": "+15612206505",
     "imageAlt": "TMS Treatment Illustration",
-     "conditions": [
+    "conditions": [
       {
         "title": "Depression",
         "icon": "/imgs/program/Depression.svg",
@@ -297,7 +297,7 @@
     "heading": "What Amenities Does the Residential Treatment Provide at The Grove Estate?",
     "description": "The amenities that we provide at The Grove Estate are designed to create a comfortable, supportive, and therapeutic environment that fosters recovery. Our high-quality living spaces offer a serene and homely atmosphere where individuals can feel safe and relaxed. We also have dedicated therapeutic spaces for counseling and group sessions, ensuring privacy and comfort during treatment. Our recreational areas are equipped with facilities for physical activities, such as yoga, gym sessions, and outdoor sports, which are integral in promoting physical health and well-being. Additionally, our center includes amenities that support holistic therapies like art and music therapy, further enriching the treatment experience. These services benefit patients with substance abuse disorder by providing an enriching, positive environment that aids in mental and emotional healing. A well-structured and tranquil setting helps reduce stress and anxiety, which are common during detox and recovery. According to a study published in the Journal of Substance Abuse Treatment, patients in residential detox programs with access to stimulating and positive environments exhibit improved mental health outcomes and reduced relapse rates. By integrating comprehensive amenities into our residential treatment program, we ensure that our patients receive well-rounded care that supports all facets of their recovery journey."
   },
-  "title": "Transcranial Magnetic Stimulation Program",
+  "title": "Spravato Program",
   "hero": {
     "heading": "Spravato Therapy at Clear Path",
     "text": "",
