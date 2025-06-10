@@ -29,7 +29,6 @@ collections:
     extension: "json"
     slug: "{{slug}}"
     fields:
-      - { label: "Filename"  , name: "filename" , widget: "string" , required: false}
       - { label: "Slug", name: "slug", widget: "string"}
       - { label: "Title", name: "title", widget: "string", required: false }
       - label: "Hero"
