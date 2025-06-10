@@ -213,23 +213,23 @@
         "sublinks2": [
           {
             "text": "Depression",
-            "link": "/program/depression"
+            "link": "/treatment/depression"
           },
           {
             "text": "Anxiety",
-            "link": "/program/anxiety"
+            "link": "/treatment/anxiety"
           },
           {
             "text": "PTSD",
-            "link": "/program/ptsd"
+            "link": "/treatment/ptsd"
           },
           {
             "text": "BiPolar",
-            "link": "/program/bipolar"
+            "link": "/treatment/bipolar"
           },
           {
             "text": "Stress",
-            "link": "/program/stress"
+            "link": "/treatment/stress"
           }
         ]
       },

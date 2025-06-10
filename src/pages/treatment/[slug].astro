@@ -1,4 +1,89 @@
 ---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { fetchGeneralData, fetchSubTreatmentData , fetchHomeData } from '../../utils/dataMapping.ts';
+
+
+import FAQ from "../../components/sections/FAQ.astro";
+import HeroProgram from "../../components/sections/HeroProgram.astro";
+import ProgramAbout from "../../components/sections/ProgramAbout.astro";
+import Video from "../../components/sections/Video.astro";
+import TreatmentGrid from "../../components/sections/TreatmentGrid.astro";
+import WhyChoose from "../../components/sections/WhyChoose.astro";
+import WhoNeeds from "../../components/sections/WhoNeeds.astro";
+import Testimonials from "../../components/sections/Testimonials.astro";
+import DisorderGrid from "../../components/sections/DisorderGrid.astro";
+import CTA from "../../components/CTA.astro";
+import ProgramTMS from "../../components/sections/programTMS.astro";
+import Program12 from "../../components/sections/Program12.astro";
+
+export async function getStaticPaths() {
+    const treatments = import.meta.glob('../../content/treatments/*.json', { eager: true });
+    const paths = Object.keys(treatments).map((file) => {
+        const slug = file.split('/').pop().replace('.json', '');
+        return { params: { slug } };
+    });
+    return paths;
+}
+
+const sub_type = Astro.params.slug;
+const GeneralData = await fetchGeneralData();
+const { data: ProgramData } = await fetchSubTreatmentData(sub_type);
+const { data: HomeData } = await fetchHomeData(); // Assuming HomeData is also needed for links
+---
+
+<MainLayout title="Program">
+    <div class="px-1 md:px-1 lg:px-0">
+        <!-- Hero Section -->
+        <HeroProgram Content={ProgramData.hero}  GeneralData={GeneralData}  LinkData={HomeData.hero.heroLinks} />
+
+        <!-- About Section -->
+        <ProgramAbout Content={ProgramData.about} />
+
+        <!-- Video Section -->
+        <Video Content={ProgramData.video} />
+
+        <!-- Treatment Grid - Now passing Content prop -->
+        <TreatmentGrid Content={ProgramData.treatmentGrid} />
+
+        <!-- First WhyChoose with content from CMS -->
+        <WhyChoose content={ProgramData.whyChoose} />
+        
+        <ProgramTMS Content={ProgramData.programTMS} />
+        <Testimonials Content={HomeData.testimonials} />
+        <Program12 Content={ProgramData.program12} />
+        
+        <!-- Second WhyChoose with custom content from CMS -->
+        <WhyChoose content={ProgramData.secondWhyChoose} />
+        
+        <WhoNeeds Content={ProgramData.whoNeeds} />
+        <FAQ Content={ProgramData.faq} />
+        <DisorderGrid Content={ProgramData.disorders} />
+        <CTA Content={ProgramData.cta}/>
+    </div>
+</MainLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ---
 import { fetchGeneralData , fetchSubTreatmentData , fetchHomeData} from '../../utils/dataMapping.ts';
 import MainLayout from "../../layouts/MainLayout.astro"
 const GeneralData = await fetchGeneralData();
@@ -31,4 +116,4 @@ const { data: HomeData } = await fetchHomeData();
     <Treatment2 Content={TreatmentData.treatment2} />
     <DisorderGrid Content={TreatmentData.disorders} />
 	<CTA Content={TreatmentData.cta}/>
-</MainLayout>
+</MainLayout> -->
