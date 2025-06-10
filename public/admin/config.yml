@@ -30,7 +30,6 @@ collections:
     slug: "{{filename}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: false }
-      - { label: "Slug", name: "slug", widget: "slug", required: false }
       - label: "Hero"
         name: "hero"
         widget: "object"
@@ -133,7 +132,6 @@ collections:
     slug: "{{filename}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: false }
-      - { label: "Slug", name: "slug", widget: "slug", required: false }
       - label: "Hero"
         name: "hero"
         widget: "object"
