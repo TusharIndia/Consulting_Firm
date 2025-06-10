@@ -1137,7 +1137,7 @@ export async function fetchSubTreatmentData(sub_page): Promise<Program> {
        
       },
       about: {
-        headingOne: programData.data.about.headingOne ,
+        headingOne: programData.data.about.headingOne,
         headingTwo: programData.data.about.headingTwo,
         textOne: programData.data.about.textOne,
         textTwo: programData.data.about.textTwo,
