@@ -400,7 +400,6 @@ export async function fetchSubProgramData(sub_page): Promise<Program> {
   return {
     data: {
       title: programData.data.title,
-      slug: programData.data.slug,
       hero: {
         heading: programData.data.hero.heading,
         text: programData.data.hero.text,
@@ -1279,7 +1278,6 @@ export async function fetchSubTreatmentData(sub_page): Promise<Treatment> {
   return {
    data: {
       title: treatment.data.title,
-      slug: treatment.data.slug,
       hero: {
         heading: treatment.data.hero.heading,
         text: treatment.data.hero.text,

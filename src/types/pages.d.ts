@@ -297,7 +297,6 @@ export interface Admissions {
 export interface Program {
   data: {
     title: string;
-    slug: string;
     hero: {
       heading: string;
       text: string;
@@ -897,7 +896,6 @@ export interface Location {
 export interface Treatment {
   data: {
     title: string;
-    slug: string;
     hero: {
       heading: string;
       text: string;
