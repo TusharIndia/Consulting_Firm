@@ -399,6 +399,7 @@ export async function fetchSubProgramData(sub_page): Promise<Program> {
 
   return {
     data: {
+      title: programData.data.title,
       hero: {
         heading: programData.data.hero.heading,
         text: programData.data.hero.text,
@@ -1276,6 +1277,7 @@ export async function fetchSubTreatmentData(sub_page): Promise<Treatment> {
 
   return {
    data: {
+      title: treatment.data.title,
       hero: {
         heading: treatment.data.hero.heading,
         text: treatment.data.hero.text,

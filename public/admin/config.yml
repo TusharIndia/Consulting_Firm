@@ -29,6 +29,7 @@ collections:
     extension: "json"
     slug: "{{filename}}"
     fields:
+      - { label: "Title", name: "title", widget: "string", required: false }
       - label: "Hero"
         name: "hero"
         widget: "object"
@@ -130,6 +131,7 @@ collections:
     extension: "json"
     slug: "{{filename}}"
     fields:
+      - { label: "Title", name: "title", widget: "string", required: false }
       - label: "Hero"
         name: "hero"
         widget: "object"
