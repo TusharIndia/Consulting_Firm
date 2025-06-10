@@ -1,6 +1,6 @@
 ---
 author: Clear Path Editorial Team
-slug: caffeine-addiction
+slug: Managing Mental Health
 title: "Mental Health Disorders: Definition, Types, Symptoms, Treatment"
 description: A comprehensive guide to understanding Mental Health Disorders,
   symptoms, causes, effects, and how to treat and prevent it.
