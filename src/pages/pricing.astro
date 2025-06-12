@@ -1,5 +1,5 @@
 ---
-import { fetchGeneralData, fetchHomeData, fetchPricingData } from '../utils/dataMapping.ts';
+import { fetchGeneralData, fetchHomeData, fetchPricingData , fetchBlogPageData } from '../utils/dataMapping.ts';
 import MainLayout from "../layouts/MainLayout.astro"
 const GeneralData = await fetchGeneralData();
 const Data = { heading: "Blog", text: "Providing personalized care for substance use and mental health to help individuals achieve lasting recovery."}
@@ -11,12 +11,13 @@ import PricingHero from '../components/sections/PricingHero.astro';
 import Pricing2 from '../components/sections/Pricing2.astro';
 
 const { data: HomeData } = await fetchHomeData();
+const { data: BlogPageData } = await fetchBlogPageData(); // Assuming BlogPageData is also needed for disorders
 ---
 
 <MainLayout>
     <HeroProgram Content={PricingData.hero} GeneralData={GeneralData}   LinkData={HomeData.hero.heroLinks}/>
     <PricingHero Content={PricingData.pricingHero} />
     <Pricing2 Content={PricingData.paymentOptions}/>
-    <DisorderGrid  Content={PricingData.disorders} />
+    <DisorderGrid  Content={BlogPageData.disorders} />
 	<CTA Content={PricingData.cta}/>
 </MainLayout>

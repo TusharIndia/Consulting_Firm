@@ -1,5 +1,5 @@
 ---
-import { fetchGeneralData, fetchHomeData } from '../utils/dataMapping.ts';
+import { fetchGeneralData, fetchHomeData, fetchBlogPageData } from '../utils/dataMapping.ts';
 
 import MainLayout from "../layouts/MainLayout.astro"
 
@@ -16,6 +16,7 @@ import PatientJourney from '../components/sections/PatientJourney.astro';
 
 const GeneralData = await fetchGeneralData();
 const { data: HomeData } = await fetchHomeData();
+const { data: BlogPageData } = await fetchBlogPageData(); // Assuming BlogPageData is also needed for disorders
 ---
 
 <MainLayout title="Home" description="Alcohol and Drug Rehab in Boca Raton, Florida">
@@ -26,7 +27,7 @@ const { data: HomeData } = await fetchHomeData();
 	<Testimonials Content={HomeData.testimonials} />
 	<TestimonialsOffered Content={HomeData.therapies}/>
 	<PatientJourney Content={HomeData.patientJourney}/>
-	<DisorderGrid  Content={HomeData.disorders} />
+	<DisorderGrid  Content={BlogPageData.disorders} />
 	<CTA Content={HomeData.cta}/>
 </MainLayout>
 

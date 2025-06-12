@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import { fetchGeneralData, fetchSubProgramData , fetchHomeData } from '../../utils/dataMapping.ts';
+import { fetchGeneralData, fetchSubProgramData , fetchHomeData , fetchBlogPageData } from '../../utils/dataMapping.ts';
 
 
 import FAQ from "../../components/sections/FAQ.astro";
@@ -24,6 +24,8 @@ export async function getStaticPaths() {
     });
     return paths;
 }
+
+const { data: BlogPageData } = await fetchBlogPageData();
 
 const sub_type = Astro.params.slug;
 const GeneralData = await fetchGeneralData();
@@ -57,7 +59,7 @@ const { data: HomeData } = await fetchHomeData(); // Assuming HomeData is also n
         
         <WhoNeeds Content={ProgramData.whoNeeds} />
         <FAQ Content={ProgramData.faq} />
-        <DisorderGrid Content={ProgramData.disorders} />
+        <DisorderGrid Content={BlogPageData.disorders} />
         <CTA Content={ProgramData.cta}/>
     </div>
 </MainLayout>

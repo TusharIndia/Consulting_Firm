@@ -1,17 +1,17 @@
 ---
-author: "Clear Path "
 slug: managing-depression
 title: "Managing Depression: Symptoms, Causes, Effects, Treatment and Prevention"
 description: "Comprehensive guide to management depression symptoms by getting
   to the root cause and finding ways to cope and get treatment. "
 featuredImg: /imgs/Depression_Article.png
 date: 2025-06-09T14:05:00.000Z
+author: Clear Path Editorial Team
 tags:
   - depression
   - mental health
   - health
   - treatment
-readingTime: ""
+readingTime: 6 min
 ---
 
 

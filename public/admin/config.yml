@@ -944,19 +944,7 @@ collections:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Description", name: "description", widget: "text", required: false }
 
-          - label: "Disorders"
-            name: "disorders"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: false }
-              - { label: "Description", name: "description", widget: "text", required: false }
-              - label: "Disorders List"
-                name: "disorders"
-                widget: "list"
-                fields:
-                  - { label: "Icon", name: "iconName", widget: "string", required: false }
-                  - { label: "Title", name: "title", widget: "string", required: false }
+         
 
           - label: "FAQ"
             name: "faq"
@@ -1407,24 +1395,7 @@ collections:
                   - { label: "Button Text", name: "buttonText", widget: "string", required: false }
                   - {label: "Button Link", name: "buttonLink", widget: "string", required: false }
           
-          - label: "Disorders"
-            name: "disorders"
-            widget: "object"
-            collapsed: true
-            required: false
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: false }
-              - { label: "Heading Two Part 1", name: "headingTwo_Part_1", widget: "string", required: false }
-              - { label: "Heading Two Part 2", name: "headingTwo_Part_2", widget: "string", required: false }
-              - { label: "Heading Two Part 3", name: "headingTwo_Part_3", widget: "string", required: false }
-              - label: "Disorders List"
-                name: "disorders"
-                widget: "list"
-                required: false
-                fields:
-                  - { label: "Link", name: "link", widget: "string", required: false }
-                  - { label: "Title", name: "title", widget: "string", required: false }
-                  - { label: "Image", name: "image", widget: "image", required: false }
+    
           - label: "Call to Action"
             name: "cta"
             widget: "object"
@@ -1516,24 +1487,7 @@ collections:
                     widget: "list"
                     field: { label: "Feature", name: "feature", widget: "string", required: false }
 
-          - label: "Disorders"
-            name: "disorders"
-            widget: "object"
-            collapsed: true
-            required: false
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: false }
-              - { label: "Heading Two Part 1", name: "headingTwo_Part_1", widget: "string", required: false }
-              - { label: "Heading Two Part 2", name: "headingTwo_Part_2", widget: "string", required: false }
-              - { label: "Heading Two Part 3", name: "headingTwo_Part_3", widget: "string", required: false }
-              - label: "Disorders List"
-                name: "disorders"
-                widget: "list"
-                required: false
-                fields:
-                  - { label: "Link", name: "link", widget: "string", required: false }
-                  - { label: "Title", name: "title", widget: "string", required: false }
-                  - { label: "Image", name: "image", widget: "image", required: false }
+          
           - label: "Call to Action"
             name: "cta"
             widget: "object"

@@ -10,7 +10,7 @@
     "badgeText": "Choose Clear Path",
     "heading": "How To Choose a Spravato (Esketamine) Infusion Program?",
     "description": "To choose a Spravato (Esketamine) infusion program requires careful consideration to ensure the treatment aligns with your mental health needs and offers safe, effective care. Following a systematic approach will help you make the right choice for your recovery journey.",
-    "mainImage": "/imgs/program/eleventh.png",
+    "mainImage": "/spravato6.png",
     "mainImageAlt": "Woman relaxing in a comfortable chair with plants in background",
     "steps": [
       {
@@ -82,7 +82,7 @@
     "buttonLink": "/contact",
     "buttonTwo_Number": "+15612206505",
     "imageAlt": "Spravato therapy benefits illustration at Clear Path",
-    "imageUrl": "/imgs/program/tenth.png",
+    "imageUrl": "/spravato7.png",
     "title": "What Are the Benefits of Spravato (Esketamine) Infusions at Clear Path?",
     "content": {
       "paragraph1": "Spravato (Esketamine) infusions at Clear Path offer a highly effective treatment option for individuals with treatment-resistant depression, delivering rapid symptom relief when traditional antidepressants have failed. One of the key benefits of Spravato is its unique ability to target the brain’s glutamate system, which plays a critical role in restoring neural connections and improving mood. This fast-acting therapy is especially beneficial for individuals experiencing severe depressive episodes or acute suicidal ideation, providing relief within hours or days rather than weeks.",
@@ -112,6 +112,7 @@
       }
     ]
   },
+  "slug": "spravato",
   "about": {
     "headingOne": "Beginning Your Journey to a Healthier Mind ",
     "headingTwo": "with Spravato Therapy Sessions",
@@ -120,7 +121,7 @@
     "buttonLink": "/contact",
     "buttonTwo_Number": "+15612206505",
     "images": {
-      "imageOne": "/imgs/program_about.png",
+      "imageOne": "/spravato1.png",
       "imageTwo": ""
     },
     "textOne": "Finding effective solutions for long-term mental health and stability is imperative. At Clear Path, our Spravato (Esketamine) Infusion program offers a groundbreaking approach for individuals seeking relief from treatment-resistant depression. This innovative therapy provides targeted care in a safe and supportive environment.\n\n",
@@ -283,7 +284,7 @@
         "description": "Spravato is used as an adjunctive treatment for bipolar disorder, helping to stabilize mood and reduce depressive episodes."
       }
     ],
-    "image": "/imgs/program/twelfth.png",
+    "image": "/spravato5.png",
     "description": "The conditions treated with Spravato include treatment-resistant depression and major depressive disorder. Spravato (esketamine) nasal spray is an FDA-approved treatment for adults with treatment-resistant depression (TRD). It offers rapid relief for individuals who have not responded adequately to at least two oral antidepressants.",
     "buttonText": "Get Started"
   },
@@ -307,7 +308,7 @@
     "heading": "What are",
     "headingColored": "Spravato (Esketamine) Infusions?",
     "description": "Spravato (Esketamine) Infusions are an innovative, FDA-approved treatment specifically designed for individuals struggling with treatment-resistant depression. This groundbreaking therapy uses Esketamine, a fast-acting medication, to target the root causes of depression by stimulating key brain pathways involved in mood regulation. Administered under the supervision of healthcare professionals, Spravato infusions provide a new avenue of relief for individuals who have not responded to traditional antidepressants.\n\nAt Clear Path, our Spravato infusion services are a critical component of mental health recovery, offering cutting-edge solutions to help patients achieve lasting emotional stability and overall well-being.\n",
-    "image": "/imgs/tms_program.png",
+    "image": "/spravato2.png",
     "imageAlt": "Spravato treatment illustration"
   },
   "howWeTreat": {
@@ -357,7 +358,7 @@
     "heading": "What is the Treatment Process During Spravato (Esketamine) Infusions at Clear Path?",
     "subheading": "Treatment Process",
     "description": "The treatment process for Spravato infusions at Clear Path is designed to be straightforward, supportive, and tailored to each individual’s needs. Clear Path stands apart by offering direct, face-to-face care from experienced psychiatrists and healthcare professionals, ensuring the highest standard of safety and effectiveness.\n\nThe treatment process during Spravato Infusions include:\n",
-    "featuredImage": "/imgs/tms_treatment_process.png",
+    "featuredImage": "/spravato3.png",
     "treatments": [
       {
         "icon": "calendar",
@@ -406,7 +407,7 @@
     "buttonLink": "/contact",
     "buttonTwo_Number": "+15612206505",
     "imageAlt": "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office",
-    "imageUrl": "/imgs/why_choose_us.png",
+    "imageUrl": "/spravato4.png",
     "title": "Why Are Spravato (Esketamine) Infusions Important?",
     "content": {
       "paragraph1": "Spravato infusions are important for stabilizing mental health conditions and improving quality of life for individuals with severe depression. This therapy offers rapid symptom relief, which is particularly crucial for individuals at risk of self-harm or those who have experienced limited success with conventional medications. By working differently than traditional antidepressants, Esketamine targets glutamate receptors in the brain, promoting faster and more effective recovery.",
