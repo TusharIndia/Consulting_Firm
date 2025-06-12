@@ -1,11 +1,11 @@
 ---
-author: Clear Path Editorial Team
-slug: Managing Mental Health
+slug: managing-mental-health
 title: "Mental Health Disorders: Definition, Types, Symptoms, Treatment"
 description: A comprehensive guide to understanding Mental Health Disorders,
   symptoms, causes, effects, and how to treat and prevent it.
-featuredImg: ""
+featuredImg: /therapy.png
 date: 2025-06-10T13:14:00.000Z
+author: Clear Path Editorial Team
 tags:
   - mental health
   - anxiety

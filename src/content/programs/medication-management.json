@@ -10,7 +10,7 @@
     "badgeText": "Steps to Choose a Medication Management Program:",
     "heading": "How To Choose a Medication Management Program?",
     "description": "To choose a medication management program, it’s important to follow a systematic approach to ensure the program aligns with your specific medical and mental health needs.",
-    "mainImage": "/imgs/program/eleventh.png",
+    "mainImage": "/mm6.png",
     "mainImageAlt": "Woman relaxing in a comfortable chair with plants in background",
     "steps": [
       {
@@ -82,7 +82,7 @@
     "buttonLink": "/contact",
     "buttonTwo_Number": "+15612206505",
     "imageAlt": "MM therapy benefits illustration at Clear Path",
-    "imageUrl": "/imgs/program/tenth.png",
+    "imageUrl": "/mm7.png",
     "title": "What Are the Benefits of Medication Management at Clear Path?",
     "content": {
       "paragraph1": "The benefits of medication management at Clear Path include a personalized approach to mental health care, ensuring that each treatment plan is tailored to the individual’s unique needs. This program helps stabilize symptoms of mental health conditions such as depression, anxiety, bipolar disorder, and PTSD through the safe and effective use of medications. ",
@@ -112,6 +112,7 @@
       }
     ]
   },
+  "slug": "medication-management",
   "about": {
     "headingOne": "What is Medication Management?",
     "headingTwo": "",
@@ -120,7 +121,7 @@
     "buttonLink": "/contact",
     "buttonTwo_Number": "+15612206505",
     "images": {
-      "imageOne": "/imgs/program_about.png",
+      "imageOne": "/mm1.png",
       "imageTwo": ""
     },
     "textOne": "Medication management is a structured process where healthcare professionals monitor, prescribe, and adjust medications to ensure safe and effective treatment of withdrawal symptoms, mental health problems, and physical dependence. It emphasizes patient safety and aims to enhance overall well-being by providing medical intervention tailored to individual needs.\n",
@@ -254,35 +255,30 @@
       {
         "title": "Depression",
         "icon": "/imgs/program/Depression.svg",
-        "description": "TMS is particularly effective for individuals with treatment-resistant depression, providing a non-invasive alternative to medication."
+        "description": "Medications are particularly effective for individuals with depression."
       },
       {
         "title": "Stress and Insomnia",
         "icon": "/imgs/program/Stress and Insomnia.svg",
-        "description": "Appointments can be scheduled directly through our website using Zocdoc integration. During the initial assessment, new patients receive a comprehensive evaluation to determine if TMS is the right treatment option for their needs."
+        "description": "Medications for insomnia that are monitored can have a large effect on reducing stress levels. "
       },
       {
         "title": "Anxiety Disorders",
         "icon": "/imgs/program/Anxiety Disorders.svg",
-        "description": "TMS can help alleviate symptoms of anxiety disorders, providing relief for those who have not responded well to traditional treatments."
+        "description": "Medications can help alleviate symptoms of anxiety disorders, providing relief."
       },
       {
         "title": "Post-Traumatic Stress Disorder (PTSD)",
         "icon": "/imgs/program/Post-Traumatic Stress Disorder (PTSD).svg",
-        "description": "TMS is used to treat PTSD by targeting brain areas involved in emotional regulation, helping to reduce intrusive thoughts and hyperarousal symptoms."
-      },
-      {
-        "title": "Obsessive-Compulsive Disorder (OCD)",
-        "icon": "/imgs/program/Obsessive-Compulsive Disorder (OCD).svg",
-        "description": "TMS can be effective in reducing the severity of OCD symptoms, particularly for those who have not found relief through other therapies."
+        "description": "Medications are used to treat PTSD by targeting brain areas involved in emotional regulation, helping to reduce intrusive thoughts and hyperarousal symptoms."
       },
       {
         "title": "Bipolar Disorder",
         "icon": "/imgs/program/Bipolar Disorder.svg",
-        "description": "TMS is used as an adjunctive treatment for bipolar disorder, helping to stabilize mood and reduce depressive episodes."
+        "description": "Medication for bipolar disorder helps to stabilize mood and reduce depressive episodes."
       }
     ],
-    "image": "/imgs/program/twelfth.png",
+    "image": "/mm5.png",
     "description": "The conditions treated during the medication management program at Clear Path include a wide range of mental health disorders.\n\n",
     "buttonText": "Get Started"
   },
@@ -372,7 +368,7 @@
     "heading": "Why is Medication Management Important?",
     "headingColored": "",
     "description": "Medication Assisted Treatment is important for improving mental well-being and stabilizing mental health conditions. This program ensures that medications are prescribed, monitored, and adjusted safely to address symptoms of mental health disorders such as anxiety, depression, bipolar disorder, and schizophrenia. By optimizing treatment plans, medication management helps individuals achieve emotional stability, enhance daily functioning, and reduce the risk of worsening symptoms or relapse.",
-    "image": "/imgs/tms_program.png",
+    "image": "/mm2.png",
     "imageAlt": "Medication Management treatment illustration"
   },
   "howWeTreat": {
@@ -422,7 +418,7 @@
     "heading": "What is the Treatment Process During Medication Management at Clear Path?",
     "subheading": "Treatment Process",
     "description": "Medication management involves a simple easy process making it convenient to anyone who is struggling with mental health disorders and needs help. Clear Path differentiates itself from telehealth-only providers by ensuring patients receive direct, face-to-face treatment from experienced psychiatrists and psychiatric physician assistants (PAs). \n",
-    "featuredImage": "/imgs/tms_treatment_process.png",
+    "featuredImage": "/mm3.png",
     "treatments": [
       {
         "icon": "calendar",
@@ -466,7 +462,7 @@
     "buttonLink": "/contact",
     "buttonTwo_Number": "+15612206505",
     "imageAlt": "Medical consultation scene showing a healthcare professional examining a patient lying on an examination table in a modern medical office",
-    "imageUrl": "/imgs/why_choose_us.png",
+    "imageUrl": "/mm4.png",
     "title": "What Medications are Used During Medication Management?",
     "content": {
       "paragraph1": "The medications used in the Medication Management program offer a wide range of options tailored to treat various mental health conditions and co-occurring disorders. These treatments play a vital role in stabilizing symptoms and improving overall functioning. Common prescriptions include antidepressants such as SSRIs and SNRIs , which are effective for managing depression, anxiety, and PTSD. Antianxiety medications are also used to reduce symptoms of anxiety and panic disorders.\n",

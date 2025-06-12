@@ -4,6 +4,7 @@ backend:
 
 media_folder: "public"
 # public_folder: "public"
+public_folder: "/"
 
 collections:
   - name: "blog"
